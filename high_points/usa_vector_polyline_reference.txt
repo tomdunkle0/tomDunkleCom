@@ -1,0 +1,232 @@
+Alabama
+-------
+polyline10 (entire state)
+polyline44 (Florida border)
+polyline46 (Georgia border)
+polyline88
+
+Alaska
+------
+polyline12 (entire mainland)
+polyline14
+polyline16
+polyline18
+polyline20
+polyline22
+polyline24
+polyline26
+polyline28
+polyline30
+
+Arizona
+-------
+polyline32 (entire state)
+polyline36 (California border)
+
+Arkansas
+--------
+polyline34 (entire state)
+polyline88 (Mississippi border)
+
+California
+----------
+polyline36 (entire state)
+
+Colorado
+--------
+polyline38 (entire state)
+
+Connecticut
+-----------
+polyline40 (entire state)
+polyline80 (Massachusetts border)
+
+Delaware
+--------
+polyline42 (entire state)
+
+Florida
+-------
+polyline44 (entire state)
+polyline46
+
+Georgia
+-------
+polyline46 (entire state)
+
+Hawaii
+------
+polyline48
+polyline50
+polyline52
+polyline54
+polyline56
+polyline58
+polyline60
+
+Idaho
+-----
+polyline62 (entire state)
+
+Illinois
+--------
+polyline64 (entire state)
+polyline66 (Indiana border)
+polyline68 (Iowa border)
+polyline72 (Kentucky border)
+
+Indiana
+-------
+polyline66 (entire state)
+polyline72 (Kentucky border)
+polyline84
+
+Iowa
+----
+polyline68 (entire state)
+
+Kansas
+------
+polyline70 (entire state)
+
+Kentucky
+--------
+polyline72 (entire state)
+
+Louisiana (entire state)
+---------
+polyline74 (entire state)
+polyline88
+
+Maine
+-----
+polyline76 (entire state)
+
+Maryland
+--------
+polyline78 (entire state)
+
+Massachusetts
+-------------
+polyline80 (entire state)
+
+Michigan
+--------
+polyline82
+polyline84
+
+Minnesota
+---------
+polyline86 (entire state)
+
+Mississippi
+-----------
+polyline88 (entire state)
+
+Missouri
+--------
+polyline90 (entire state)
+
+Montana
+-------
+polyline92 (entire state)
+
+Nebraska
+--------
+polyline94 (entire state)
+
+Nevada
+------
+polyline96 (entire state)
+
+New Hampshire
+-------------
+polyline98 (entire state)
+
+New Jersey
+----------
+polyline100 (entire state)
+
+New Mexico
+----------
+polyline102 (entire state)
+
+New York
+--------
+polyline104 (entire state)
+
+North Carolina
+--------------
+polyline106 (entire state)
+
+North Dakota
+------------
+polyline108 (entire state)
+
+Ohio
+----
+polyline84
+polyline110 (entire state)
+
+Oklahoma
+--------
+polyline34
+polyline112 (entire state)
+
+Oregon
+------
+polyline114 (entire state)
+
+Pennsylvania
+------------
+polyline116 (entire state)
+
+Rhode Island
+------------
+polyline80
+polyline118 (entire state)
+
+South Carolina
+--------------
+polyline120 (entire state)
+
+South Dakota
+------------
+polyline122 (entire state)
+
+Tennessee
+---------
+polyline124 (entire state)
+
+Texas
+-----
+polyline126 (entire state)
+
+Utah
+----
+polyline138 (entire state)
+
+Vermont
+-------
+polyline128 (entire state)
+
+Virginia
+--------
+polyline130 (entire state)
+
+Washington
+----------
+polyline132 (entire state)
+
+West Virginia
+-------------
+polyline140 (entire state)
+
+Wisconsin
+---------
+polyline82
+polyline134 (entire state)
+
+Wyoming
+-------
+polyline136 (entire state)
