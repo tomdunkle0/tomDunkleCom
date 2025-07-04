@@ -1,0 +1,81 @@
+/* Styling for a column of information arranged vertically. */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: top;
+    align-items: center;
+}
+
+/* Styling for a column showing an album's title, track list, audio player, and release notes. */
+.albumInfo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: top;
+    align-items: center;
+}
+
+/* Styling for a side-by-side display of an album's cover art and albumInfo column. */
+.album {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh;
+}
+
+/* Styling for the divs housing each album title string. */
+.albumTitle {
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana;
+    text-align: center;
+}
+
+/* Styling for the divs housing each track's number, title, and duration. */
+.trackRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the divs housing each track's duration string. */
+.trackDuration {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana;
+    text-align: left;
+}
+
+/* Styling for the divs housing each album's release notes. */
+.releaseNotes {
+    font-family: Verdana;
+    text-align: right;
+    width: 80%;
+}
+
+/* Styling for the divs housing each track's title string. */
+.trackTitle {
+    cursor: pointer;
+    font-family: Verdana;
+    text-align: left;
+    width: 60%;
+}
+
+/* Styling for the divs housing each track's number string. */
+.trackNumber {
+    cursor: pointer;
+    font-family: Verdana;
+    text-align: right;
+}
+
+/* Styling that applies to all track strings (e.g. duration, number, and title). */
+.trackText {
+    color: #FFFFFF;
+    margin: 5;
+}

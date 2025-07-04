@@ -1,0 +1,748 @@
+** END WORK ON ADDING A TEST SCRIPT TO ENFORCE LINE LENGTH LIMITS OF 100 CHARACTERS. **
+--- 1 TODO in production code (including discography.html), and 6 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 84 (discography) + 3,212 (high_points) = 3,314 automated tests.
+- 5/31/25: Development
+-- Submitted a change that renames read_line_lengths.ps1 to test_line_lengths_of_JavaScript_files.ps1, and renames variables within the script to clarify that the script is only operating on JavaScript files.
+-- Submitted a change to test_line_lengths_of_JavaScript_files.ps1 that fixes a style issue with an opening curly brace, plus renames the variable 'i' to 'jsIndex'.
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 5/11/25: Development
+-- Submitted a change that rearranges all of the long lines of code containing test definitions into a format that is under 100 characters per line. This change eliminates all test failures from the discography folder in read_line_lengths.ps1. Additionally, with this change, read_line_lengths.ps1 returns 449 test failures overall.
+-
+- 5/10/25: Development
+-- Submitted a change to read_line_lengths.ps1 that changes the capitalization of the -Match operator to -match, similar to the official documentation for the operator.
+-
+- 4/27/25: Development
+-- Submitted a change to getDiscographyContent.js that defines arrays containing all MP3 file names, thereby shortening all lines of code in this file to less than 100 characters. This reduces the number of test failures from 242 to 232.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that shortens a comment to less than 100 characters. This reduces the number of test failures from 232 to 231.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js that renames the compound constant kPlayTrackFunctionCallString to kPlayTestTrack. This reduces the number of test failures from 231 to 230, and completely eliminates test failures in the discography project.
+-- Submitted a change to read_line_lengths.ps1 that updates the assignment of the variables deersimFiles, discographyFiles, and highPointsFiles to use relative paths instead of absolute paths.
+-
+- 4/26/25: Development
+-- Submitted a change to read_line_lengths.ps1 that replaces the 'greater than or equal' operator with 'greater than', so that lines of code with exactly 100 characters do not cause test failures. This reduces the number of test failures from 255 to 247.
+-- Submitted a change to getDiscographyContent.js and constants.js that shortens the IDs used for the track "I've Got to Call a Plumber Who Can Figure Out Why My Showerhead Is Spraying Cactus Needles". This reduces the number of test failures from 247 to 242.
+-
+- 4/24/25: Development
+-- Submitted a change to read_line_lengths.ps1 that adds a print to the end of the test output showing the total number of test failures that has occurred during the script's run.
+-
+- 4/21/25: Development
+-- Submitted a change to read_line_lengths.ps1 that makes the print containing the text "TEST FAILURE" occur in red text rather than the default Powershell text color.
+-
+- 2/19/25: Development
+-- Submitted a change to constants.js that removes a stale TODO comment about defining kSecondCharIndex in the high_points project, which was implemented years ago but the comment was never removed.
+-- Submitted a change that adds read_line_lengths.ps1, a script that reports which lines in discography/getDiscographyContent.js are at least 100 characters long.
+-- Submitted a change that replaces read_line_lengths.ps1 with read_discography_line_lengths.ps1, a script that reports which lines in each JavaScript file in the top-level discography directory are at least 100 characters long.
+-- Submitted a change that updates read_discography_line_lengths.ps1 to check all JavaScript files in the discography directory, recursively.
+-- Submitted a change that replaces read_discography_line_lengths.ps1 with read_line_lengths.ps1, a script that reports which lines in each JavaScript file in all of the deersim, discography, and high_points directories are at least 100 characters long.
+-
+** BEGIN WORK ON ADDING A TEST SCRIPT TO ENFORCE LINE LENGTH LIMITS OF 100 CHARACTERS. **
+** END WORK ON ADDING TEST COVERAGE OF ONMOUSELEAVE AND ONMOUSEOVER EVENTS ON TRACKTEXTDIVS. **
+--- 3 TODOs in production code (including discography.html), and 8 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 84 (discography) + 3,212 (high_points) = 3,314 automated tests.
+- 1/25/25: Development
+-- Submitted a change to constants.js that removes a TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that removes two TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 1/19/25: Development
+-- Submitted a change to constants.js, audioManager.js, and setEventCallbacksOnTrackTextDivs.test.js, that defines a 'Compound constants' block with kMakeTextBlueFunctionCall, kMakeTextWhiteFunctionCall, kOnTouchEndFunctionCall, kOnTouchStartFunctionCall, so that all constant definitions have been moved out of setEventCallbacksOnTrackTextDivs().
+-- Submitted a change to constants.js that updates the names of kMakeTextBlueFunctionCall, kMakeTextWhiteFunctionCall, kOnTouchEndFunctionCall, and kOnTouchStartFunctionCall, so that the words 'FunctionCall' are the prefix of each of these constants' names.
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that fixes a couple of magic strings by including kFunctionCallMakeTextBlue and kFunctionCallMakeTextWhite.
+-- Submitted a change to audioManager.js that rearranges the order in which event callbacks are assigned to each track text div in setEventCallbacksOnTrackTextDivs(), so that the events are assigned alphabetically by event name.
+-- Submitted a change to audioManager.js that removes four TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes four TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes three more TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes two more TODO comments regarding automated tests which have already been implemented.
+-
+- 1/18/25: Development
+-- Submitted a change to constants.js, audioManager.js, and setEventCallbacksOnTrackTextDivs.test.js, that adds test coverage for the onMouseLeave and onMouseOver events being defined on trackTextDivs. This change also defines the constants kEventNameOnMouseLeave and kEventNameOnMouseOver.
+-- Submitted a change to constants.js, audioManager.js, and setEventCallbacksOnTrackTextDivs.test.js, that defines kOnTouchStartFunctionSignature, kOnTouchEndFunctionSignature, and makes both production and test code use those new constants (in order to single-source data and clean up code in both places).
+-
+** START WORK ON ADDING TEST COVERAGE OF ONMOUSELEAVE AND ONMOUSEOVER EVENTS ON TRACKTEXTDIVS. **
+** END WORK ON FIXING MT. BANGER BUG: CASING OF "I" and "II" in vicarious song titles does not match between html and .mp3 file names. **
+--- 4 TODOs in production code (including discography.html), and 8 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 84 (discography) + 3,212 (high_points) = 3,314 automated tests.
+- 1/16/25: Development
+-- Submitted a change to onPageLoad.test.js that renames the constant numberOfSourceElementsOnPage to numberOfMp3FileReferencesOnPage in getNumberOfMp3FileReferencesOnPage().
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that clarifies the wording of the comment in the beforeAll() block.
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that clarifies the wording of the description of the suite's only automated test.
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that renames a few constants called eventValuesAreSet to eventCallbacksAreSet.
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 1/12/25: Development
+-- Submitted a change to onPageLoad.test.js that moves a large loop from its main test function into its own helper function called getNumberOfMp3FileReferencesOnPage().
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that moves the lines of code setting up the HTML contents and validating population of kEventNameOnClick from the main test function into the beforeAll() function.
+-- Submitted a change to setEventCallbacksOnTrackTextDivs.test.js that rearranges the order of operations in validateOnTouchEventValues() so that the expect statements come last.
+-
+- 1/11/25: Development
+-- Submitted a change to audioManager.js that renames setEventCallbackFunctionsOnDivsContainingTrackText() to setEventCallbackFunctionsOnTrackTextDivs().
+-- Submitted a change to audioManager.js that renames setEventCallbackFunctionsOnTrackTextDivs() to setEventCallbacksOnTrackTextDivs().
+-- Submitted a change to onPageLoad.test.js that defines confirmElementSourcePathEndsWithMp3FileExtension() to separate some lines of code out of confirmSourceElementPointsToExistingMp3File().
+-- Submitted a change to onPageLoad.test.js that refactors confirmElementSourcePathEndsWithMp3FileExtension() and refactors and renames confirmSourceElementPointsToExistingMp3File() to confirmSourceElementPointsToExistingFile().
+-
+- 1/10/25: Development
+-- Submitted a change to audioManager.js that removes a couple of TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to audioManager.js that removes two more TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes a few TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to audioManager.js that adds a TODO comment describing the remaining test coverage that needs to be added for setEventCallbackFunctionsOnDivsContainingTrackText().
+-- Submitted a change to constants.js that renames kFunctionSignatureThisOnly to kFunctionParameterThisOnly.
+-- Submitted a change to onPageLoad.test.js that adds another 'file exists' check for mp3 files which is case-sensitive, unlike the existing one which is case-insensitive.
+-
+- 1/9/25: Development
+-- Submitted a change to getDiscographyContent.js that fixes a capitalization mismatch between that file and the mp3 titles of vicarious pt I and vicarious pt II.
+-- Submitted a change to audioManager.js that fixes two magic strings in setMouseAttributesOnDivsContainingTrackText().
+-- Submitted a change to audioManager.js and constants.js that defines kEventNameOnTouchEnd, kEventNameOnTouchStart, and kFunctionSignatureThisOnly, in order to simplify setMouseAttributesOnDivsContainingTrackText() and to use the same constants in test code.
+-- Submitted a change to audioManager.js that renames setMouseAttributesOnDivsContainingTrackText() to setEventCallbackFunctionsOnDivsContainingTrackText().
+-
+** START WORK ON FIXING MT. BANGER BUG: CASING OF "I" and "II" in vicarious song titles does not match between html and .mp3 file names. **
+** END WORK ON ADDING MT. BANGER **
+--- 5 TODOs in production code (including discography.html), and 8 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 84 (discography) + 3,212 (high_points) = 3,314 automated tests.
+- 12/12/24: Development
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 12/2/24: Development
+-- Submitted a change to onPageLoad.test.js that removes an unneeded line of code from confirmSourceElementPointsToExistingMp3File().
+-- Submitted a change to onPageLoad.test.js that removes another unneeded line of code from confirmSourceElementPointsToExistingMp3File().
+-- Submitted a change to onPageLoad.test.js that renames the constant fileExtension to actualFileExtension in confirmSourceElementPointsToExistingMp3File().
+-- Submitted a change to onPageLoad.test.js that updates a variable name and a constant name in the new automated test confirming that all source elements point to existing mp3 files.
+-
+- 11/29/24: Development
+-- Submitted a change to onPageLoad.test.js that renames confirmSourceElementPointsToValidMp3File() to confirmSourceElementPointsToExistingMp3File().
+-- Submitted a change to onPageLoad.test.js that moves the declaration of the variable numberOfSongsOnPage to after the declaration of two constants that are used before the variable later in the function.
+-
+- 11/19/24: Development
+-- Submitted a change to onPageLoad.test.js that moves the definitions of the constants localNameAudioElement and localNameSourceElement to outside of their loops.
+-
+- 11/17/24: Development
+-- Submitted a change to getDiscographyContent.test.js that removes several TODO comments now that various lines of code were hand-tested.
+-
+- 11/16/24: Development
+-- Submitted a change to onPageLoad.test.js that removes several TODO comments now that various lines of code were hand-tested.
+-- Submitted a change to getDiscographyContent.js that defines the comment part of the album audio paths as a constant called audioDirectoryPath.
+-
+- 11/15/24: Development
+-- Submitted a change to onPageLoad.test.js that removes several TODO comments now that various lines of code were hand-tested.
+-
+- 11/14/24: Development
+-- Submitted a change to onPageLoad.test.js that removes several TODO comments now that various lines of code were hand-tested.
+-- Submitted a change to onPageLoad.test.js that removes several more TODO comments now that various lines of code were hand-tested.
+-
+- 11/13/24: Development
+-- Submitted a change to onPageLoad.test.js that defines an automated test confirming that every source element's src attribute points to a valid mp3 file.
+-
+- 11/12/24: Development
+-- Submitted a change to audioManager.js that removes a TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to audioManager.js that removes another TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to audioManager.js that removes several TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to audioManager.js that removes another TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes a TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to getDiscographyContent.js that removes the type definition from each source element, since it's technically unneeded because I don't offer the files in multiple formats (just in mp3).
+-
+- 11/11/24: Development
+-- Submitted a change to audioManager.js and constants.js that defines kPlayerMtBanger.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that updates the suite to acknowledge Mt. Banger.
+-
+- 11/7/24: Development
+-- Submitted a change that updates the mp3s in discography/audio/mt_banger to the (slightly edited, latest) final mp3 exports.
+-
+- 11/1/24: Development
+-- Submitted a change that updates the album notes and track times to reflect the final mp3 exports.
+-- Submitted a change to getDiscographyContent.js that changes the track title capitalization to all lower case.
+-
+- 10/31/24: Development
+-- Submitted a change that updates the mp3s in discography/audio/mt_banger to the final mp3 exports.
+-
+- 10/30/24: Development
+-- Submitted a change that updates the mp3s in discography/audio/mt_banger to the latest exports.
+-
+- 8/27/24: Development
+-- Submitted a change to getDiscographyContent.js that shortens some lines of code to less than 100 characters by removing an unnecessary instance of the word "the".
+-- Submitted a change to getDiscographyContent.js that shortens some lines of code in various albums' release notes to less than 100 characters by wrapping to the next line (which doesn't change the text's visual layout on the UI).
+-- Submitted a change to getDiscographyContent.js that wraps the titles of two songs with long names around the next line; this makes the lines of code less than 100 characters, without affecting the way that the text looks in the UI.
+-- Submitted a change to getDiscographyContent.js that defines a constant mp3_type, which replaces every instance of the string "type="audio/mpeg"".
+-
+- 8/23/24: Development
+-- Submitted a change to getDiscographyContent.js that rearranges the source elements so that most of the lines of code are less than 100 characters long.
+-
+- 8/22/24: Development
+-- Submitted a change to getDiscographyContent.js that updates the release notes for Mt. Banger (working title).
+-- Submitted a change to getDiscographyContent.js and constants.js that fixes a bug wherein the track "You've Been Exposed!" would not play, by removing the apostrophes from all IDs involving the track.
+-
+- 8/21/24: Development
+-- Submitted a change that creates and populates the directory discography/audio/mt_banger with the album's mp3 exports.
+-- Submitted a change to getDiscographyContent.js and constants.js that populates Mt. Banger (working title) with its tracks.
+-- Submitted a change that adds a working album cover for Mt. Banger.
+-
+** START WORK ON ADDING MT. BANGER **
+** END WORK ON ADDING TEST COVERAGE AND COMMENTS ABOUT NULL HANDLING **
+--- 5 TODOs in production code (including discography.html), and 8 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 82 (discography) + 2,996 (high_points) = 3,096 automated tests.
+- 7/23/24: Development
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 7/21/24: Development
+-- Submitted a change to setPlayArrowVisibility.test.js that makes the expect statements use getAttribute(), similar to other discography test suites, rather than accessing the .style.visibility attribute with dot operators.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js and updateTrackFontColor.test.js that removes the "k" prefix from the definitions of matrices of test parameters, in order to be more consistent with the high_points project.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that renames a parameter of the test matrix from "playerId" to "audioPlayerId".
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that renames a const "testTrackPlayArrow" to "playArrow", plus adds a couple of comments specifying that the test track is on the album $1320.
+-- Submitted a change to eventHandling.test.js that moves the first two lines of both tests (which are common and don't assign any constants) to the beforeEach() block.
+-- Submitted a change to setPlayArrowVisibility.test.js that replaces the constant kTestPlayArrow with kTestTrackPlayArrow from testConstants.js.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js that replaces a local constant with kTestTrackPlayArrow from testConstants.js. This change also makes testConstants.js stop exporting kTestTrackIdSuffix, since no test suites use the constant directly anymore.
+-
+- 7/20/24: Development
+-- Submitted a change to run_automated_tests.bat that makes construction of tests/environment/audioManager.js use findstr only once (rather than twice), with a string that indicates to ignore lines including both "play()" and "pause()".
+-- Submitted a change to constants.js that removes a TODO comment regarding automated testing which, although not implemented yet, would be non-trivial and should be separated out of the current changeset.
+-- Submitted a change to testConstants.js that fixes an alphabetical ordering issue in the module.exports statement.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that separates two of the automated tests out into a new test suite called eventHandling.test.js.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that replaces a magic "p" character with kPrefixPlayArrow in each of the play arrow IDs in kFirstTrackPlayArrowAndAudioPlayerIdCombinations.
+-
+- 7/19/24: Development
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that adds an automated test confirming that passing a play event to an audio player whose track is already playing causes no change in the visibility of that track's play arrow.
+-- Submitted a change to constants.js that removes another TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change that fixes several magic strings by defining kEventTypePlay in testConstants.js, and uses this new constant in addPlayEventListenerForEachAudioPlayer.test.js and stopAndResetTrack.test.js.
+-- Submitted a change to constants.js that removes seven more TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that adds a header comment to the beginning of the file, similar to high_points/constants.js.
+-- Submitted a change that renames the constants kEventTouchEnd and kTrackEnded to kEventTypeTouchEnd and kEventTypeTrackEnded, respectively.
+-
+- 7/18/24: Development
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that adds an automated test confirming that passing an ended event to an audio player causes the play arrow of the corresponding track to become hidden.
+-- Submitted a change to setPlayArrowVisibility.test.js that adds an automated test confirming that passing undefined to the function performs no action.
+-- Submitted a change to constants.js that removes four TODO comments regarding automated tests which have already been implemented.
+-- Submitted a change to constants.js that removes another TODO comment regarding automated tests which have already been implemented.
+-
+- 7/17/24: Development
+-- Submitted a change that adds a basic automated test of stopAndResetTrack() in a new file called stopAndResetTrack.test.js. This change also moves dispatchPlayEventToTestAudioPlayer() to testFunctions.js.
+-
+- 7/16/24: Development
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that adds two new automated tests to the file, which further validate the visibility of play arrow elements in response to dispatching play events to the players.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that replaces two automated tests with an automated test matrix validating that a play event causes the first track's play arrow to appear for each of the discography's albums.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that defines kFirstTrackPlayArrowAndAudioPlayerIdCombinations to more clearly represent the matrix of test cases.
+-- Submitted a change to audioManager.js that moves a block of miscellaneous constant definitions from audioManager.js to constants.js.
+-
+- 7/15/24: Development
+-- Submitted a change that adds a basic automated test of addPlayEventListenerForEachAudioPlayer() in a new file called addPlayEventListenerForEachAudioPlayer.test.js.
+-- Submitted a change that moves the definitions of audio player ID string consts from audioManager.js to constants.js, plus exports kPlayer1320 to fix a magic string in addPlayEventListenerForEachAudioPlayer.test.js.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that fixes a magic string by importing the constants kPrefixAudioPlayer and kTestTrackIdSuffix.
+-- Submitted a change to addPlayEventListenerForEachAudioPlayer.test.js that defines the helper function dispatchPlayEventToTestAudioPlayer(), and fixes a magic string within the helper function.
+-
+- 7/14/24: Development
+-- Submitted a change to audioManager.js that adds comments above onTouchEnd() and onTouchStart() explaining why the functions' parameters (both called callingDiv) are assumed to be non-null.
+-
+** START WORK ON ADDING TEST COVERAGE AND COMMENTS ABOUT NULL HANDLING **
+** END WORK ON IMPROVING NULL HANDLING AND COMMENTS ABOUT IT **
+--- 6 TODOs in production code (including discography.html), and 7 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 70 (discography) + 2,996 (high_points) = 3,084 automated tests.
+- 7/13/24: Development
+-- Submitted a change to updateTrackFontColor.test.js that reorders the declaration of consts in a couple of test matrices, to enforce that consts are declared in the order that they're used.
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 7/12/24: Development
+-- Submitted a change to updateTrackFontColor.test.js that replaces its nine automated test definitions with three automated test matrices.
+-
+- 7/11/24: Development
+-- Submitted a change to testFunctions.js that combines getTestTrackDurationDiv() and getTestTrackNumberDiv() into one function called getParentElementForChildId().
+-- Submitted a change to isDivContainingTrackTextParagraph_validInputs.test.js that makes three tests use getParentElementForChildId().
+-- Submitted a change to testFunctions.js that removes two no-longer-needed test constant include statements.
+-- Submitted a change to getAssociatedAudioPlayerForTrackTextDiv.test.js that renames createElementWithTrackRowParentAndCustomGrandparentElement() to createElementWithTrackRowParentAndCustomGrandparent().
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js that removes a no-longer-needed include statement.
+-- Submitted a change to updateTrackFontColor.test.js that moves calls to updateTrackFontColor() in arrange blocks of various tests to as early in the block as possible, to enforce a consistent pattern in const declarations.
+-
+- 7/10/24: Development
+-- Submitted a change to audioManager.js and getAssociatedAudioPlayerForTrackTextDiv.test.js that adds an isUnpopulated() check on the const albumInfo.
+-- Submitted a change to getAssociatedAudioPlayerForTrackTextDiv.test.js that fixes the issue of several lines being longer than 100 characters.
+-- Submitted a change that defines getTestTrackNumberDiv() in testFunctions.js, and then uses this new function in getTrackIdForTrackTextDiv.test.js and getAssociatedAudioPlayerForTrackTextDiv.test.js.
+-
+- 7/9/24: Development
+-- Submitted a change to audioManager.js and getAssociatedAudioPlayerForTrackTextDiv.test.js that adds an isUnpopulated() check on the const flexColumn.
+-
+- 7/7/24: Development
+-- Submitted a change to audioManager.js that adds a comment above getAssociatedAudioPlayerForTrackTextDiv() explaining why the function's parameter trackTextDiv is assumed to be non-null.
+-- Submitted a change to audioManager.js and getAssociatedAudioPlayerForTrackTextDiv.test.js that adds an isUnpopulated() check on the const trackRow.
+-
+- 7/6/24: Development
+- Submitted a change to audioManager.js and getTrackIdForTrackTextDiv.test.js that replaces a null check with a call to isUnpopulated(), plus adds three automated tests exercising the new isUnpopulated() call.
+-
+- 7/5/24: Development
+-- Submitted a change to getTrackIdForTrackTextDiv.test.js adding two tests confirming that calling the function with a track title or number returns the associated track ID.
+-- Submitted a change to getTrackIdForTrackTextDiv.test.js defining getTrackIdOfRunThatTurkey().
+-- Submitted a change that moves getTestTrackDurationDiv() to testFunctions.js and then uses the function in getTrackIdForTrackTextDiv.test.js and getFunctionCallStringForPlayTrack_validInputs.test.js.
+-- Submitted a change to updateTrackFontColor.test.js that fixes a couple of magic strings by declaring constants called expectedStyleAttributeWidthSet.
+-
+- 7/3/24: Development
+-- Submitted a change that adds a basic automated test of getTrackIdForTrackTextDiv() in a new file called getTrackIdForTrackTextDiv.test.js.
+-
+- 7/2/24: Development
+-- Submitted a change to updateTrackFontColor.test.js removing an unnecessary duplicate definition of getTestTrackDurationDiv() that was added to this file in the previous change.
+-- Submitted a change to updateTrackFontColor.test.js defining a beforeEach() block to call getDiscographyContent() before running each test in the suite.
+-- Submitted a change to updateTrackFontColor.test.js that fixes two magic strings by using getStyleAttributeForColorCode().
+-- Submitted a change to updateTrackFontColor.test.js that adds expect statements to each test so that all tests validate the style of the duration text, number text, and title text.
+-- Submitted a change to updateTrackFontColor.test.js adding three automated tests confirming that divs whose associated text is light blue can be passed to updateTrackFontColor() to set the associated text back to white.
+-- Submitted a change to updateTrackFontColor.test.js adding three automated tests confirming that divs whose associated text is white can be passed to updateTrackFontColor() to set the associated text to light blue.
+-- Submitted a change to audioManager.js that adds a comment to the top of getTrackIdForTrackTextDiv() to explain why the function doesn't include a null-check of its parameter, trackTextDiv.
+-
+- 7/1/24: Development
+-- Submitted a change that adds a basic automated test of updateTrackFontColor() in a new file called updateTrackFontColor.test.js.
+-- Submitted a change to updateTrackFontColor.test.js adding two tests confirming that calling the function with a track title or number sets the track title or number style to light blue.
+-
+** START WORK ON IMPROVING NULL HANDLING AND COMMENTS ABOUT IT **
+** END WORK ON IMPROVEMENT OF getFunctionCallStringForPlayTrack() **
+--- 7 TODOs in production code (including discography.html), and 7 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 46 (discography) + 2,996 (high_points) = 3,060 automated tests.
+- 6/29/24: Development
+-- Submitted a change to getFunctionCallStringForPlayTrack_invalidInputs() adding an automated test confirming that passing undefined makes the function return null.
+-- Submitted a change to getFunctionCallStringForPlayTrack() in audioManager.js that fixes two whitespace issues.
+-- Submitted a change to constants.js that fixes a comment which had been referring to the wrong file since the CSS styling was moved to its own file.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js that defines getTestTrackDurationDiv() and removes a few unnecessary constants from top-level test functions.
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 6/28/24: Development
+-- Submitted a change to getFunctionCallStringForPlayTrack() in audioManager.js that adds a check of textElement.className ensuring that the class name is kStyleSheetClassNameTrackText.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js adding an automated test confirming that passing a textElement to the function whose className is not "trackText" makes the function return null.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js adding an automated test confirming that passing a textElement to the function whose className is empty makes the function return null.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js that fixes a magic string in one existing test by changing which HTML element is used as a parameter, because for that test it only matters that the element passed does not have an id.
+-- Submitted a change to getFunctionCallStringForPlayTrack() in audioManager.js that makes the function check to ensure its parameter isn't null, undefined, or empty--instead of just performing a null check.
+-
+** START WORK ON IMPROVEMENT OF getFunctionCallStringForPlayTrack() **
+** END WORK ON RENAMING discographyContent() TO getDiscographyContent() **
+--- 8 TODOs in production code (including discography.html), and 9 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 43 (discography) + 2,996 (high_points) = 3,057 automated tests.
+- 6/26/24: Development
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 6/25/24: Development
+-- Submitted a change that renames discographyContent() to getDiscographyContent(), for the sake of having nomenclature consistent with the high_points project.
+-
+** START WORK ON RENAMING discographyContent() TO getDiscographyContent() **
+** END WORK ON MIGRATING FROM DEPRECATED substr() TO substring() **
+--- 10 TODOs in production code (including discography.html), and 9 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 43 (discography) + 2,996 (high_points) = 3,057 automated tests.
+- 6/25/24: Development
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 6/24/24: Development
+-- Submitted a change to audioManager.js and removeFirstCharacter.test.js that replaces the deprecated JavaScript function substr() with the non-deprecated substring().
+-- Submitted a change to audioManager.js that removes a large comment about transitioning isNullOrEmpty() to isUnpopulated(), now that the necessary work on that transition is done.
+-
+** START WORK ON MIGRATING FROM DEPRECATED substr() TO substring() **
+** END WORK ON REFACTORING CSS STYLING **
+--- 11 TODOs in production code (including discography.html), and 9 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 43 (discography) + 2,996 (high_points) = 3,057 automated tests.
+- 6/24/24: Development
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 6/23/24: Development
+-- Submitted a change to onPageLoad.test.js that renames the constant kAlbumClassName to kStyleSheetClassNameAlbum, to be consistent with constants in constants.js.
+-- Submitted a change to onPageLoad.test.js that renames a couple of variables to have verbiage more consistent with the constant kNumberOfAlbumsOnPage.
+-- Submitted a change to onPageLoad.test.js that removes getNumberOfAudioPlayers() and rewrites the test without a helper function, for consistency: since none of the other tests in that suite are written with helper functions.
+-- Submitted a change to onPageLoad.test.js that defines getZScrollColumnChildren(), and updates three of the suite's tests to use the new helper function.
+-- Submitted a change to onPageLoad.test.js that fixes the file's last magic string.
+-- Submitted a change to onPageLoad.test.js that rewrites three of the suite's tests using helper functions, so that there aren't loops in the top-level test definitions.
+-
+- 6/22/24: Development
+-- Submitted a change to onTouchStart.test.js and onTouchEnd.test.js that changes the const names parentDiv to callingDiv to match the parameter names in production code.
+-- Submitted a change to setMouseAttributesOnDivsContainingTrackText.test.js that changes the names of consts in validateOnClickEventValueForAllTrackTextDivs() to reflect the new names of CSS style classes ("album" and "albumInfo").
+-- Submitted a change to audioManager.js that renames the const "trackList" to "albumInfo" in getAssociatedAudioPlayerForTrackTextDiv().
+-
+- 6/21/24: Development
+-- Submitted a change that removes kAlbumInfoClassName from testConstants, and updates dependent tests to use the production code constant kStyleSheetClassNameAlbumInfo instead.
+-- Submitted a change to testFunctions.js that makes the verbiage in the block comment at the beginning of the file more consistent with that in audioManager.js.
+-- Submitted a change to getAssociatedAudioPlayerForTrackTextDiv.test.js that renames the constant parentDiv to trackTextDiv, to be consistent with the parameter name in production code.
+-- Submitted a change to onPageLoad.test.js defining kOneChild, thereby eliminating two magic numbers in that test suite.
+-- Submitted a change to onPageLoad.test.js defining audioElementNodeName, a constant that replaces a magic string in getNumberOfAudioPlayers().
+-- Submitted a change to getAssociatedAudioPlayerForTrackTextDiv.test.js that adds more expect statements to the suite's one test. This update also moves audioElementNodeName to testConstants.js as kAudioElementNodeName.
+-- Submitted a change to onPageLoad.test.js establishing consistency across test cases by replacing a var with a const in one test case.
+-
+- 6/20/24: Development
+-- Submitted a change that adds a basic automated test of onTouchStart() in a new file called onTouchStart.test.js.
+-- Submitted a change that adds a basic automated test of onTouchEnd() in a new file called onTouchEnd.test.js.
+-- Submitted a change that defines testFunctions.js and getStyleAttributeForColorCode(), which is used in both onTouchStart.test.js and onTouchEnd.test.js.
+-- Submitted a change that defines kArbitraryTrackTextId in testConstants.js, which is used in both onTouchStart.test.js and onTouchEnd.test.js.
+-- Submitted a change to run_automated_tests.bat that removes the one line of code including .play() (which is not compatible with jest) from audioManager.js in the generated test environment.
+-- Submitted a change that adds a basic automated test of getAssociatedAudioPlayerForTrackTextDiv() in a new file called getAssociatedAudioPlayerForTrackTextDiv.test.js.
+-- Submitted a change that removes kArbitraryTrackTextId and replaces its use with kTestTrackNumber.
+-
+- 6/17/24: Development
+-- Submitted a change that moves all CSS styling from discography.html to a new file called discography/discography_style.css.
+-- Submitted a change that defines kAlbumInfoClassName in testConstants.js, so that the constant can be used in both onPageLoad.test.js and setMouseAttributesOnDivsContainingTrackText.test.js.
+-
+- 6/16/24: Development
+-- Submitted a change to discography.html and discographyContent.js that updates the name of CSS class "trackList" to "albumInfo".
+-
+- 6/11/24: Development
+-- Submitted a change to discography.html and discographyContent.js that updates the name of CSS class "flex-row" to "album".
+-
+** START WORK ON REFACTORING CSS STYLING **
+** END WORK ON CONDENSING PRODUCTION CODE INTO ONE SOURCE FILE AND EXPANDING TEST CODE INTO MULTIPLE TEST SUITES **
+--- 12 TODOs in production code (including discography.html), and 12 TODOs in test code. At this point, the entire tomDunkleCom project has 18 (deersim) + 38 (discography) + 2,996 (high_points) = 3,052 automated tests.
+- 1/23/24: Development
+-- Submitted a change to setMouseAttributesOnDivsContainingTrackText.test.js with a few very minor points of refactoring.
+-- Submitted a change to isFinalTrackOnAlbum_invalidInputs.test.js removing the recently-introduced test, after I realized that even an invalid track ID will cause the function to return true if it begins with "f", so the test isn't meaningful. This change also reverts the introduction of kInvalidTrackId into testConstants.js.
+-- Submitted a change to isFinalTrackOnAlbum_invalidInputs.test.js and getAudioPlayerForTrack_invalidInputs.test.js removing no-longer-needed import statements for isUnpopulated().
+-- Submitted a change to index.html that updates the website's revision date.
+-
+- 1/22/24: Development
+-- Submitted a change to setMouseAttributesOnDivsContainingTrackText.test.js that updates an expect statement confirming that kEventNameOnClick isn't undefined to use isUnpopulated() (and therefore also check for null and empty strings) instead. This change fixes a pre-existing TODO comment.
+-- Submitted a change to setMouseAttributesOnDivsContainingTrackText.test.js that replaces a hardcoded zero with kOnlyChildIndex. This change fixes a pre-existing TODO comment.
+-
+- 1/21/24: Development
+-- Submitted a change to isUnpopulated.test.js that defines one new automated test confirming that passing a valid track element to the function returns false.
+-- Submitted a change to isFinalTrackOnAlbum_invalidInputs.test.js that defines one new automated test confirming that passing an invalid track ID to the function returns false. This function also defines kInvalidTrackId in testConstants.js, and updates getAudioPlayerForTrack_invalidInputs.test.js to use that new const.
+-- Submitted a change to isUnpopulated.test.js adding a blank line to one test, to fit the ARRANGE_ACT_ASSERT test format.
+-- Submitted a change to removeFirstCharacter.test.js renaming the constant multiCharString to multipleCharacterString.
+-- Submitted a change to removeFirstCharacter.test.js that defines one new automated test confirming that passing an undefined string to the function returns kUnpopulated. This change also adds a blank line to one other test in the suite, to fit the ARRANGE_ACT_ASSERT test format.
+-
+- 1/20/24: Development
+-- Submitted a change to isDivContainingTrackTextParagraph_validInputs.test.js removing the no-longer-needed constant includes kPrefixTrackDuration, kPrefixTrackNumber, and kPrefixTrackTitle. This change also adds blank lines to that suite's tests to better fit the ARRANGE_ACT_ASSERT test format.
+-- Submitted a change to isUnpopulated.test.js that defines one new automated test confirming that passing an undefined input to the function returns true.
+-
+- 1/18/24: Development
+-- Submitted a change to getAudioPlayerForTrack_validInputs.test.js adding a blank line to the suite's only test, to fit the ARRANGE_ACT_ASSERT test format.
+-- Submitted a change to onPageLoad.test.js, getFunctionCallStringForPlayTrack_invalidInputs.test.js, and isDivContainingTrackTextParagraph_invalidInputs.test.js re-wording TODO comments in each file to better reflect the new file structure of separate discography test suites.
+-- Submitted a change to getFunctionCallStringForPlayTrack_validInputs.test.js removing the no-longer-needed constant includes kPrefixTrackDuration, kPrefixTrackNumber, and kPrefixTrackTitle.
+-
+- 1/15/24: Development
+-- Submitted a change that defines kTestTrackDuration, kTestTrackNumber, and kTestTrackTitle in testConstants.js, then updates getFunctionCallStringForPlayTrack_validInputs.test.js and isDivContainingTrackTextParagraph_validInputs.test.js to use these new consts.
+-- Submitted a change to testConstants.js fixing the alphabetical order of exported constants.
+-- Submitted a change to testConstants.js, getFunctionCallStringForPlayTrack_validInputs.test.js, and isDivContainingTrackTextParagraph_validInputs.test.js adding the letters "Id" to the end of the names of kTestTrackDuration, kTestTrackNumber, and kTestTrackTitle.
+-
+- 1/14/24: Development
+-- Submitted a change to run_automated_tests.bat that moves the "cd .." line from the beginning of :run_tests to the end of :prepare_high_points_test_environment.
+-- Submitted a change to discography/tests/resources/importsAndExports/constants.js that removes kPrefixAudioPlayer, a const used only in production code and not in test code.
+-- Submitted a change to most test code files making the spacing in import statements match the format used in the high_points project.
+-- Submitted a change to discography/tests/resources/testConstants.js adding a header comment similar to the one found in the high_points project's testConstants.js.
+-- Submitted a change to getAudioPlayerForTrack_invalidInputs.test.js making the test that uses an incorrect track ID actually load the discography content before calling getAudioPlayerForTrack().
+-- Submitted a change to several test suites establishing continuity in audioManager always being imported before discographyContent.
+-- Submitted a change to getFunctionCallStringForPlayTrack_invalidInputs.test.js adding one test of handling an unpopulated input, and a comment about why I can't yet add a test of handling an undefined input.
+-- Submitted a change to isDivContainingTrackTextParagraph_invalidInputs.test.js adding one test of handling an unpopulated input, and a comment about why I can't yet add a test of handling an undefined input.
+-
+- 1/10/24: Development
+-- Submitted a change to discography.html that removes the no-longer-needed <script> elements from the document head for the functions that were put back into audioManager.js.
+-
+- 1/9/24: Development
+-- Submitted a change that moves five tests of getAudioPlayerForTrack() from discography.test.js into two new source files called getAudioPlayerForTrack_invalidInputs.test.js and getAudioPlayerForTrack_validInputs.test.js.
+-- Submitted a change that renames discography.test.js to onPageLoad.test.js.
+-- Submitted a change to onPageLoad.test.js that removes a no-longer-needed TODO comment about separating tests that need the document html from those that don't, throughout the discography test suites (this was taken care of by all the changes separating the original suite into different suites).
+-
+- 1/8/24: Development
+-- Submitted a change that moves five tests of isFinalTrackOnAlbum() from discography.test.js into two new source files called isFinalTrackOnAlbum_invalidInputs.test.js and isFinalTrackOnAlbum_validInputs.test.js.
+-
+- 1/7/24: Development
+-- Submitted a change that moves two tests of setPlayArrowVisibility() from discography.test.js into a new source file called setPlayArrowVisibility.test.js. This change also moves kTestTrackId to testConstants, now that several source files use that same constant.
+-
+- 1/5/24: Development
+-- Submitted a change that moves five tests of getFunctionCallStringForPlayTrack() from discography.test.js into two new source files called getFunctionCallStringForPlayTrack_invalidInputs.test.js and getFunctionCallStringForPlayTrack_validInputs.test.js. This change also defines testConstants.js and moves kTestTrackIdSuffix there.
+-- Submitted a change that moves five tests of isDivContainingTrackTextParagraph() from discography.test.js into two new source files called isDivContainingTrackTextParagraph_invalidInputs.test.js and isDivContainingTrackTextParagraph_validInputs.test.js.
+-
+- 1/4/24: Development
+-- Submitted a change that moves the only test of getAllElementsOnPage() from discography.test.js to a new source file called getAllElementsOnPage.test.js.
+-- Submitted a change that moves the only test of setMouseAttributesOnDivsContainingTrackText() from discography.test.js to a new source file called setMouseAttributesOnDivsContainingTrackText.test.js.
+-- Submitted a change that moves four tests of removeFirstCharacter() from discography.test.js to a new source file called removeFirstCharacter.test.js.
+-- Submitted a change that moves three tests of isUnpopulated() from discography.test.js to a new source file called isUnpopulated.test.js.
+-
+- 1/3/24: Development
+-- Submitted a change that moves discography/discography.test.js to discography/tests/discography.test.js (similar to how high_points has been developed).
+-- Submitted a change that adds support for discography automated tests in run_automated_tests.bat.
+-
+- 1/2/24: Development
+-- Submitted a change that converts dev_notes.pdf to dev_notes.txt, and reverts the code to all production functions in one source file (similar to how high_points has been developed).
+-
+** BEGIN WORK ON CONDENSING PRODUCTION CODE INTO ONE SOURCE FILE AND EXPANDING TEST CODE INTO MULTIPLE TEST SUITES **
+- End the round of test refactoring, now with only 12 TODOs in production code (including discography.html) and still 13 TODOs in test code. At this point, the entire tomDunkleCom project has 2,311 automated tests.
+- 7/30/22: Development
+-- Submitted a change to the codebase's nomenclature, so that the elements previously known as "track source" elements are now just called "tracks".
+-
+- 7/20/22: Development
+-- Submitted a change that renames the function isNullOrEmpty() to isUnpopulated().
+--- Down to 12 TODOs in production code.
+-- Submitted a change that refactors getAudioPlayerForTrack(), and defines one new automated test exercising passing an undefined parameter to that function.
+-
+- 7/18/22: Development
+-- Submitted a change that renames the constant kEmptyString to kUnpopulated.
+-
+- Begin a round of refactoring, starting at 13 TODOs in production code (including discography.html) and 13 TODOs in test code. At this point, the entire tomDunkleCom project has 2,309 automated tests.
+- End the round of test refactoring, now with only 13 TODOs in test code.
+- 11/14/21: Development
+-- Submitted a change to validateExpectedOnClickAttributeForAllTrackTextDivs so that the function defines the string "flex-column" as a constant rather than hardcoding the string.
+-- Submitted a change that renames validateExpectedOnClickAttributeForAllTrackTextDivs() to validateOnClickEventValuesForAllTrackTextDivs(), and updates the one test that calls the function to use the function in both the pre- and post-action assertions.
+-- Submitted a change that restructures the tests of getFunctionCallStringForPlayTrack() so that the code doesn't run over 100 characters on a single line.
+-
+- 11/13/21: Development
+-- Submitted a change that makes validateExpectedOnClickAttributeForAllTrackTextDivs() use various already-defined constants for style sheet class names instead of hardcoded strings.
+-
+- 11/12/21: Development
+-- Submitted a change that makes validateExpectedOnClickAttributeForAllTrackTextDivs() in discography.test.js use production code's function getTrackSourceIdForTrackTextDiv().
+-- Submitted a change that defines kEventNameOnClick, and updates validateExpectedOnClickAttributeForAllTrackTextDivs() to use this new constant.
+-- Submitted a change that defines validateExpectedOnClickAttributeForTrackTextDiv().
+-- Submitted a change that updates the expect statement for the total number of divs at the end of validateExpectedOnClickAttributeForAllTrackTextDivs() to use kTrackIds' length instead of a hardcoded number.
+-
+- Begin a round of test refactoring, starting at 23 TODOs in test code.
+- 7/1/21: Development
+-- Submitted a change that moves discography.html up out of the discography directory and into the top level of the file hierarchy.
+-- Submitted a change that updates the revision date in the top level index.html.
+-
+- 6/9/21: Development
+-- Submitted a change that expands the unit test written in the previous change to test every single track text div on the page, rather than just the one for Run That Turkey!.
+-
+- 6/4/21: Development
+-- Submitted a change that adds one unit test for setMouseAttributesOnDivsContainingTrackText().
+-
+- 6/2/21: Development
+-- Submitted a bug fix so that scrolling on mobile devices will no longer result in accidentally changing the song just because you put your finger on a title for a moment.
+-- Submitted a change that just updates the revision date on the front page index.html.
+-
+- 5/31/21: Development
+-- Submitted a change that refactors getAudioPlayerFromGroup() and getTrackSourcePrefix(). With this edit, the former has been renamed getAssociatedAudioPlayerForTrackTextDiv().
+-- Submitted a change that refactors getTrackSourcePrefix(), and changes its name to getTrackSourceIdForTrackTextDiv().
+-- Submitted a change that refactors getTrackSourceIdForTrackTextDiv().
+-- Submitted a change that just updates the revision date on the front page index.html.
+-
+- 5/30/21: Development
+-- Submitted a change that refactors onTouchStart() and onTouchEnd(), plus adds getAudioPlayerFromGroup() and getTrackSourcePrefix() to audioManager.js.
+-
+- 5/29/21: Development
+-- Submitted a change that refactors onTouchStart() and onTouchEnd().
+-
+- 5/28/21: Development
+-- Submitted a change that adds three more unit tests of getFunctionCallStringForPlayTrack().
+-- Submitted a change that adds a TODO comment to getFunctionCallStringForPlayTrack(), and slightly refactors the existing tests in sum.test.js that use that function.
+-- Submitted a bug fix for the problem where tapping song titles on mobile devices would leave the song title highlighted. This change adds proper handling of touch events in addition to just mouse click events.
+-- Submitted a change that includes minor refactoring for onTouchStart() and onTouchEnd().
+-
+- 5/27/21: Development
+-- Submitted a change that moves getFunctionCallStringForPlayTrack() to its own source file, and adds one unit test for this function.
+-- Submitted a change that adds one more unit test of getFunctionCallStringForPlayTrack().
+-
+- 5/26/21: Development
+-- Submitted a change that moves kPrefixTrackSource from audioManager.js to constants.js, and implements a bit of refactoring in sum.test.js.
+-- Submitted a change that adds one unit test for getAudioPlayerForTrack().
+-- Submitted a change that adds three more unit tests for getAudioPlayerForTrack().
+-- Submitted a change that adds two unit tests for isFinalTrackOnAlbum().
+-- Submitted a change that adds two more unit tests for isFinalTrackOnAlbum().
+-
+- 5/25/21: Development
+-- Submitted a change that adds one unit test for setPlayArrowVisibility(), plus moves kStyle and kPrefixPlayArrow to constants.js.
+-- Submitted a change that moves kPrefixTrackDuration, kPrefixTrackNumber, and kPrefixTrackTitle to constants.js, and exercises these in test code rather than using magic numbers.
+-- Submitted a change that adds a second unit test for setPlayArrowVisibility(), and incorporates some misc. refactoring in sum.test.js.
+-- Submitted a change that adds a beforeAll() setup to sum.test.js.
+-
+- 5/24/21: Development
+-- Submitted a change that adds one more unit test of removeFirstCharacter().
+-- Submitted a change that moves kSecondCharIndex to constants.js, and adds two more unit tests for removeFirstCharacter().
+-- Submitted a change that moves isDivContainingTrackText() to its own file, as well as adding one unit test for that function.
+-- Submitted a change that moves kStyleSheetClassNameTrackDuration, kStyleSheetClassNameTrackNumber, and kStyleSheetClassNameTrackTitle to constants.js, plus creates four new unit tests for isDivContainingTrackText().
+-
+- 5/22/21: Development
+-- Submitted a change that adds one unit test of removeFirstCharacter().
+-
+- 5/21/21: Development
+-- Submitted a change that adds autoTestingInstructions.txt to the discography project, and comments out the modules.export statement in discographyContent.js so that I can hand-test production code without generating HTML errors, but still pass all of the automated tests by uncommenting the export statements temporarily when necessary.
+-- Submitted a change that moves isNullOrEmpty() out of audioManager.js and into its own file, then exports the function to the jest code. Finally, added a new test that confirms that isNullOrEmpty(null) returns true.
+-- Submitted a change that creates constants.js, exports kEmptyString, and adds two more tests for isNullOrEmpty() confirming that the function handles empty and non-empty string inputs properly.
+-- Submitted a change that updates a couple of confusing consts in isNullOrEmpty.js and sum.test.js to be named "constants" instead of "kEmptyString", properly reflecting that constants is the module exported/imported and kEmptyString is retrieved from constants.
+-- Submitted a change that removes the simple sum auto-test example that I originally used when learning jest, as well as the file sum.js, which is no longer needed.
+-- Submitted a change that adds an automated test of getAllElementsOnPage().
+-
+- 5/19/21: Development
+-- Submitted a change that makes the production code and test code pull the discography's HTML content from the same source. The change involves the following edits:
+--- Move sum.js and sum.test.js up into the same directory as discography.html and audioManager.js.
+--- Delete the "tests" directory since it's empty now.
+--- Create discographyContent.js, which provides a function returning all of the inner HTML as a string.
+--- Make the test for zScrollColumn use the exported discographyContent().
+--- In audioManager.js, add a line to onPageLoad() that calls the exported discographyContent().
+--- In discography.html, remove the explicitly defined inner HTML from the body.
+-- Submitted a change that adds a test to sum.test.js which verifies there are exactly seven audio players on the page (one for each album).
+-
+- 5/18/21: Development
+-- I installed Node.js 14.17.0 LTS on my laptop. Then, I used npm to install jest, a JavaScript automated testing framework.
+-- Submitted a change that adds a simple jest example that adds two numbers in it. The file updates are adding sum.js and sum.test.js to the discography folder, plus some updates to the scripts and devDependencies sections of the project's top-level package.json. The end result is that I can run and pass the simple test by opening the Node.js command prompt, navigating to the project root directory, and running the command "npm test".
+-- Submitted a change that adds a test to sum.test.js which confirms that the only top-level child of the discography's HTML body is the element called "zScrollColumn".
+-
+- 5/12/21: Development
+-- Submitted a change that has the revision text in index.html updated, vocals credits added to a few records for me, and a comment from audioManager.js about final album playthroughs removed.
+--- This is the official v1 edit that I'm planning to upload to www.tomdunkle.com.
+--- But, unfortunately I've run into an unforeseen problem that's going to take some time to fix and might not be done today. Siteground's File Manager doesn't like the fact that two of the mp3s in Fair Use of the Cochlea begin with open square brackets and/or have periods in them, so I need to make local edits to the project that just change the name of those two files.
+---- Submitted a second change fixing this problem.
+----- Submitted a third change fixing this problem for capsule in Skunk Bass as well.
+--- Finished uploading all files except for updating the index.html.
+--- Tested on phone.
+---- Psynkhole album cover wasn't displaying correctly because the file name has the extension ".JPG" instead of ".jpg" as was written in discography.html.
+----- Submitted a change fixing this.
+-
+- 5/11/21: Development
+-- Submitted a change that updates the top-level index.html file to contain a visible link to the discography.
+-- Submitted a change that refactors to remove magic hardcoded strings in addPlayEventListenerForEachAudioPlayer().
+-- Submitted a change that includes minor refactoring for setAllTrackDurationWidthsToIdenticalValue().
+-
+- 5/10/21: Development
+-- Submitted a change that dynamically sets the width style on every trackDuration paragraph equal to that of the widest ones (i.e. The Incriminating Evidence Button and elohknysp), which fixes the problem of those two tracks being out of horizontal alignment with the other tracks.
+-
+- 5/9/21: Development
+-- Submitted a change that removes an unnecessary "margin = 5" dynamic property assignment from updateTrackFontColor().
+-- Submitted a change that removes the hyperlink tags (<a>, </a>) enclosing all of the track text paragraph contents, as they were providing no value.
+-- Submitted a change to the error case of removeFirstCharacter(), so that we now return an empty string instead of a null value, thereby eliminating the possibility of the app trying to concatenate a null to a string.
+-- Submitted a change that adds the credits for each record as a visible part of the user interface.
+-
+- 5/8/21: Development
+-- Submitted a fix for the bug introduced in the previous change. Now, there is logic to handle clicking directly on the final track of each album.
+-- Submitted a change that adds the function removeFirstCharacter(), plus some general refactoring to various functions in audioManager.js.
+-- Submitted a change that includes more general refactoring to audioManager.js, mainly in updateTrackFontColor().
+-- Submitted a change that removes an unnecessary "cursor = pointer" dynamic property assignment from updateTrackFontColor().
+-
+- 5/6/21: Development
+-- Submitted a change that adds the function getAllElementsOnPage(), thereby slightly refactoring setMouseHoverAttributesOnDivsContainingTrackText().
+-- Submitted a change that moves the onClick property assignment from each paragraph to its owning div in discography.html. This change makes it such that I can now play tracks by clicking anywhere in the track row (i.e. when the track title is highlighted), and not just on the text itself.
+-- Submitted a change that adds a dynamic mechanism for adding the onClick properties to every div containing trackText, as well as removing all of the explicit sets of that property from those divs in discography.html. However, there's a follow-up bug I still need to fix where now clicking on the final track of each album doesn't work.
+-
+- 5/5/21: Development
+-- Submitted a change that renames updateTrackFontColorNoName() to updateTrackFontColor().
+-- Submitted a change that removes the line breaks (<br>) at the end of each hyperlink (<a> element), as they appear to be ineffective now and presumably an artifact.
+-- Submitted a change that adds the function setMouseHoverAttributesOnTrackText(), thereby dynamically setting onMouseLeave and onMouseOver for every div with a trackText paragraph in it on page load. This change also includes the removal of all of the explicit assignments of these properties from discography.html.
+-- Submitted a change that creates the javascript function onPageLoad(), which is designed to call both addPlayEventListenerForEachAudioPlayer() and setMouseHoverAttributesOnTrackText().
+-- Submitted a change that renames and refactors the function that is now called setMouseHoverAttributesOnDivsContainingTrackText().
+-
+- 5/4/21: Development
+-- Submitted a change that adds the trackText CSS class and makes every paragraph in a trackDuration, trackNumber, or trackTitle div use that class for styling.
+-
+- 5/3/21: Development
+-- Submitted a change that adds the "cursor = pointer" property assignment to the trackDuration CSS class, and removes that same assignment from each trackDuration paragraph, thereby moving the behavior to the div rather than the paragraph. In this edit, I also moved the updateTrackFontColor() calls from the paragraph to the div.
+-- Submitted a change that defines updateTrackFontColorNoName() to handle updating the font color without a name parameter. This update also adds the "cursor = pointer" property assignment to the trackNumber CSS class, and moves the updateTrackFontColorNoName() calls from the paragraph to the div.
+-
+- 5/2/21: Development
+-- Submitted a change that adds proper null/empty checking of the parameters of updateTrackFontColor().
+-- Submitted a change that improves the UI by creating a trackList CSS class that only occupies 40% of its parent element's width, updating trackRow's width assignment from 90% to 100%, and updating trackTitle's width assignment from 40% to 60%.
+-- Submitted a change that puts two line breaks before each audio player's controls to create some space in the UI between the controls and the track titles.
+-- Submitted a change in which I moved the onMouseLeave and onMouseOver assignments from the paragraph elements of each track title up one level to the owning div element. In this change, I also added the "cursor = pointer" assignment to the trackTitle CSS class so the cursor becomes a pointer in an even slightly larger range over the track title.
+-- Submitted a change that removes the evidently useless "font-size = 16" property assignments from every paragraph in every trackNumber and trackTitle div.
+-
+- 5/1/21: Development
+-- Submitted a change that adds We're All Prawns to the discography.
+-- Submitted a change that fixes the track row highlighting so that now all three of (a.) track title, (b.) track duration, and (c.) track number highlight in unison when I hover over the track rows.
+-- Submitted a change that renames updateTrackTitleColor() to updateTrackFontColor().
+-- Submitted a change that removes an unnecessary 'font-size' property assignment from updateTrackFontColor().
+-
+- 4/30/21: Development
+-- Submitted a change that moves all of the "t_______" IDs from the trackDuration elements to the trackTitle elements, plus copies the calls to updateTrackTitleColor() from the trackDuration elements to the trackTitle elements.
+-- Submitted a change that splits track titles into two separate elements, where one is now the track number, although it's still using the same CSS.
+-- Submitted a change that renames the "paragraph" class in CSS to "albumTitle", as well as removing its forced width=100% property that wasn't doing anything practical since the flex-column class is still holding the width of its contents at 100%.
+-- Submitted a change in which I cloned a "trackNumber" CSS class off of "trackTitle". The new CSS class has no width assignment, and I updated all of the track numbers to adhere to it so that now the whole list of tracks moved to the left, omitting some empty space on the UI.
+-- Submitted a change that updates/removes various properties in the CSS for trackDuration, trackNumber, and trackTitle classes. This change moved the text alignment in track titles from right to left.
+-- Submitted a change that removes a few more properties that were not providing value, including the font-size = 100% property I'd previously expressed concern over.
+-
+- 4/29/21: Development
+-- Submitted a change that slightly modifies the positioning of both the track titles and track durations.
+-- Submitted a change that copies the past couple of updates which only applied to Fair Use of the Cochlea to all of the other albums as well. So, still a bunch of rework needed, but now at least the track duration is visible for every song in the discography.
+-- Submitted a change that renames the "trackTitle" CSS style to "trackDuration", and also renames the "releaseNotes2" CSS style to "trackTitle".
+-
+- 4/28/21: Development
+-- Submitted a change that removes the font-size property from every paragraph element and instead puts it in the trackTitle style class in the .html. I'm worried this didn't actually work the way I intended, though, and that the font-size being used in practice after this change is just a default.
+-- Submitted a change that removes a 3-pixel margin from the trackTitle CSS in discography.html.
+-- Submitted a change that includes a first attempt at displaying the duration of each track visually, just for Fair Use of the Cochlea, although there's still a ton of work to do to really massage the integration of this into the UI correctly.
+-
+- 4/27/21: Development
+-- Submitted a change that significantly refactors onClickAudioControls(), including removing all of the hardcoded track source IDs.
+-- Submitted a change that further refactors onClickAudioControls().
+-- Submitted a change that renames onClickAudioControls() to onPlayEvent(), as well as fixing some nomenclature within the function itself.
+-
+- 4/25/21: Development
+-- Submitted a change that fixes a bug where, after clicking audio player B's play button to switch from player A to player B, the transition from player B's first to second songs did not work correctly. This change involved ensuring that my audio players handle play events appropriately (i.e. set up event listener, set play arrow visibility).
+-- Submitted a change that updates the file name of audioPlayer.js to audioManager.js, something that was confusing now that the term 'audio player' is used widely in the code to refer to the <audio> html objects.
+-- Submitted a change that consolidates the play event-handling logic from six different functions (one per album) to one function that checks to determine which player to operate for.
+-
+- 4/23/21: Development
+-- Submitted a change that fixes a bug where clicking album B's audio player's play button would not properly stop a track playing on album A.
+-
+- 4/21/21: Development
+-- Submitted a change that refactors getCurrentTrackForAudioPlayer() and subsequently several other functions in audioPlayer.js.
+--- With this update, I saved a backup to my Google Drive.
+-
+- 4/20/21: Development
+-- Submitted a change that corrects the logic for removing event listeners, by ensuring that we remove the event listener in both cases: (a.) track automatically rolls over into the next track, and (b.) user manually clicks a different track mid-play. (Note that with the previous edit, only case (a) was working).
+-
+- 4/19/21: Development
+-- Submitted a change that adds proper null-checking to stopAndResetTrack().
+-- Submitted a change that adds proper null-checking to setPlayArrowVisibility().
+-- Submitted a change that adds a call to removeEventListener() to playNextTrack(), so that we remove event listeners that are created on each execution of playTrack().
+-
+- 4/18/21: Development
+-- Submitted a change that finishes refactoring to minimize the usage of g_CurrentTrackSourceId.
+-- Submitted a change that adds a check to playNextTrack() to ensure that the next track source index is a valid value pointing to something in the kTrackIds array before playing the track.
+-
+- 4/17/21: Development
+-- Submitted a change that further refactors stopAndResetCurrentPlayingTrack(), towards the ultimate end goal of minimizing the references to g_CurrentTrackSourceId. Still several steps to take to that end.
+-
+- 4/16/21: Development
+-- Submitted a change that refactors playTrack() and stopAndResetCurrentPlayingTrack() to remove two ugly if/else statements that existed to co-support the audioPlayer-per-song and audioPlayer-per-album architectures. Now that only the latter architecture is used, the if/else logic is no longer necessary.
+-- Submitted a change that removes a couple of no-longer-used const definitions of ID prefixes in audioPlayer.js, as well as some minor, related comment clean-up in discography.html.
+-- Submitted a change that refactores isFinalTrackOnAlbum() so that the function no longer uses the global copy of currentTrackSourceId, but instead just takes the string as a parameter. This update also introduces my local implementation of isNullOrEmpty() for string values.
+-
+- 4/15/21: Development
+-- Submitted a change that updates Cornelius Squatgood from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-- Submitted a change that updates Dumb Fun from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-- Submitted a change that updates Skunk Bass from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-- Submitted a change that updates Psynkhole from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-- Submitted a change that updates $1320 from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-- Submitted a change that re-instates the prevention mechanism for final tracks on each album not automatically rolling over into the next album. The mechanism, though previously existing, had been temporarily and knowingly broken during the transition from the audioPlayer-per-song architecture to the audioPlayer-per-album architecture.
+-
+- 4/14/21: Development
+-- Submitted a change that enables song-to-song transitions with the new audio player visible for Fair Use of the Cochlea. However, there are still several noticeable bugs and I need to continue ironing them out, one-by-one.
+-- Submitted a change that fixes a bug with play arrows not updating correctly while auto-transitioning through songs in Fair Use of the Cochlea. This was done by updating the function calls to addEventListener() to use a function pointer for playNextTrack rather than a direct call from a new function.
+-
+- 4/13/21: Development
+-- Submitted a change that adds the proof of concept for showing visible audio controls for each album. With this update, the controls are only visible for Fair Use of the Cochlea, and transitions between songs on that album are broken. All of the older records still show the previous, fully-functional behavior.
+-
+- 4/11/21: Development
+-- Submitted a change that undid an unintentional arrangement of all of the discography's audio objects in a nested fashion. With this change, I've added trailing "</audio>" tags to move them all up to the top level of the object hierarchy.
+-
+- 4/9/21: Development
+-- Submitted a change that combines the two JavaScript functions I implemented in the previous change to support blue track title highlighting down into one function: updateTrackTitleColor().
+-- Submitted a change that addresses a null-checking issue in audioPlayer.js.
+-- Submitted a change that adds a visual horizontal separator in between each album.
+-
+- 4/8/21: Development
+-- Submitted a change that updates the implementation to actually use the updated ID prefix ("f") added in the previous change. The current change adds the function isFinalTrackOnAlbum() to audioPlayer.js.
+--- With this change, I uploaded a backup to my Google Drive and removed the backup from 3/19.
+-- Submitted a change that adds the "cursor: pointer;" property to every track title, so that the mouse cursor becomes a pointing hand when you mouse over any of the track titles.
+-- Submitted a change that adds support for track titles lighting up in blue whenever the user mouses over them.
+-
+- 4/7/21: Development
+-- Submitted a change that updates the ID prefix of each album's last track from "a" to "f", as well as adding a comment explaining the ID prefixes.
+-
+- 4/6/21: Development
+-- Submitted a change that adds a prefixing "0" to any single-digit track number so that all of the track titles line up with each other.
+-- Submitted a change that adds support for automatically transitioning from one song to the next each time a song ends.
+-- Submitted a change that adds a prevention mechanism for each final track so that we do not automatically roll on from one album to the next.
+-
+- 4/5/21: Development
+-- Submitted a change that addresses two null-checking issues in audioPlayer.js.
+-- Submitted a change that addresses a minor refactor in which I changed two consts in audioPlayer.js to vars.
+-
+- 4/4/21: Development
+-- Submitted a change that adds the $1320 MP3s to the project, and makes these songs playable from the UI.
+-- Submitted a change that both (a.) updates any album artwork that I can from .jpg format to .png format, and (b.) removes all the TODO comments related to this in discography.html.
+--- With this change, I uploaded a backup to my Google Drive.
+-
+- 4/3/21: Development
+-- Submitted a change that adds the Psynkhole MP3s to the project, and makes these songs playable from the UI.
+-
+- 4/1/21: Development.
+-- Submitted a change that adds the Skunk Bass MP3s to the project, and makes these songs playable from the UI.
+-- Submitted a change that adds the Dumb Fun MP3s to the project, and makes these songs playable from the UI.
+-
+- 3/19/21: Development
+-- Submitted a change that extends the stop/reset/show/hide arrow logic for every song in Fair Use of the Cochlea and Cornelius Squatgood.
+--- With this change, I uploaded a backup to my Google Drive.
+-
+- 3/18/21: Development
+-- Submitted a change that adds a proper stop/reset/hide arrow for "Thanks", although the mechanism does not work yet for any other songs.
+-
+- 3/17/21: Development
+-- Submitted a change that adds play arrows next to every track that's already visualized in the discography.
+-- Submitted a change that makes all play arrows hidden by default, plus adds "a" prefixes to audio objects' IDs and "p" prefixes to play arrows' IDs.
+-- Submitted a change that makes play arrows visible whenever their corresponding track begins playing.
+-
+- 3/16/21: Development
+-- Submitted a change that adds a visible play arrow next to each track title in Fair Use of the Cochlea.
+-- Submitted a change to the margin size of the track rows.
+-- Submitted a change that reduces the size of the play arrows from 64x64px to 32x32px.
+-
+- 3/15/21: Development
+-- Submitted a change that adds visualization of all but my first two records, and also supports playing the songs on Fair Use of the Cochlea when the song titles are clicked on.
+-- Submitted a change that refactors two issues:
+--- Removed the unused flex-container class from the CSS styling in discography.html.
+--- Instead of using a separate JavaScript function for each playable song, now all songs play from just one JavaScript function.
+-- Submitted a change that adds support for playing the songs on Cornelius Squatgood.
+-
+- 3/13/21: Development
+-- Submitted a change containing the first proof-of-concept of a visualization of Fair Use of the Cochlea.
+-
