@@ -1,0 +1,142 @@
+/* Styling for the flex container housing all of the page's content. */
+.flex-container {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the divs housing each year string. */
+.year-div {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styling for the container housing the row of divs, each containing a year string */
+.year-row {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+/* Styling for each year string. */
+.year-string {
+    color: #FFFFFF;
+    font-family: Impact;
+    font-size: 30px;
+}
+
+/* Styling for the container housing the slider. */
+.slide-container {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Slider styling that applies to all platforms. */
+.slider {
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 10px;
+  width: 75%;
+}
+
+/* Slider's runnable track styling for Google Chrome. */
+.slider::-webkit-slider-runnable-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #21A91D;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.slider:focus::-webkit-slider-runnable-track {
+  background: #21A91D;
+}
+
+/* Slider's thumb styling for Google Chrome. */
+.slider::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+
+/* Slider's range track styling for Mozilla Firefox. */
+.slider::-moz-range-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #21A91D;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+/* Slider's range thumb styling for Mozilla Firefox. */
+.slider::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Slider's range track styling for Microsoft Edge. */
+.slider::-ms-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.slider::-ms-fill-lower {
+  background: #21A91D;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+.slider:focus::-ms-fill-lower {
+  background: #21A91D;
+}
+
+.slider::-ms-fill-upper {
+  background: #21A91D;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+.slider:focus::-ms-fill-upper {
+  background: #21A91D;
+}
+
+/* Slider's range thumb styling for Microsoft Edge. */
+.slider::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}

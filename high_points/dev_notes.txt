@@ -1,0 +1,1438 @@
+*** BEGIN WORK ON SHORTENING ALL LINES OF CODE TO LESS THAN 100 CHARACTERS ***
+--- TODOs in production code: 3 (all in Vermont.html and NewHampshire.html)
+--- TODOs in test code: 7
+--- Total tests in tomDunkleCom project: 18 (deersim) + 84 (discography) + 3,212 (high_points) = 3,314.
+- 6/29/25: Development
+-- Submitted a change to isInsignificantIsland.test.js, matchLightBlueFillForHawaiianIslands.test.js, onClickMap_validInputs.test.js, and tomHasHighPointedStateWithinSliderRange.test.js that defines constant matrices of test inputs and outputs similar to those created in the previous three changes, in order to make the test definitions more readable.
+-- Submitted a change to resetStateFillColorToDefault.test.js that removes a no-longer-needed TODO comment about shortening test definition lines to less than 100 characters.
+-- Submitted a change that updates the revision date in the website's top-level index.html.
+-
+- 6/27/25: Development
+-- Submitted a change to updateAndGetCurrentBlueState_validInputs.test.js that condenses the definition of casesForMovingBetweenACheckMarkOrBoxAndAState into multiple lines, so that it does not require lines longer than 100 characters. With this change, there are only 64 test failures in test_line_lengths_of_JavaScript_files.ps1 (down from 65). Additionally, there are no longer any test failures in the high_points module.
+-- Submitted a change to getStateIdForClickedPolygon.test.js and getStateIdForMousedOverPolygon.test.js defining kInputAndExpectedOutputPairs in order to make the test definitions more readable.
+-- Submitted a change to handleScreenOrientationChange.test.js and isCheckMarkOrBox.test.js defining variables (kInputAndExpectedOutputPairs and kInitialAndExpectedNewScreenOrientationPairs) to make the test definitions more readable.
+-
+- 6/25/25: Development
+-- Submitted a change that moves setPolygonFillColorLightBlue() to testFunctions.js, and updates matchLightBlueFillForHawaiianIslands.test.js and resetStateFillColorToDefault.test.js to import that function from testFunctions.js.
+-
+- 6/24/25: Development
+-- Submitted a change to matchLightBlueFillForHawaiianIslands.test.js that defines setPolygonFillColorLightBlue(). With this change, there are only 65 test failures in test_line_lengths_of_JavaScript_files.ps1 (down from 67).
+-- Submitted a change to updateAndGetCurrentBlueState_validInputs.test.js that removes the import of setPolygonFillColor(), which is no longer used.
+-
+- 6/23/25: Development
+-- Submitted a change that rearranges all of the long lines of code containing test definitions into a format that is under 100 characters per line. With this change, there are only 67 test failures in test_line_lengths_of_JavaScript_files.ps1 (down from 290).
+-
+- 6/18/25: Development
+-- Submitted a change to getMapContent.js that adds line breaks to the points lists of each polyline object, so that lines of code are no longer greater than 100 characters. With this change, there are only 290 test failures in test_line_lengths_of_JavaScript_files.ps1 (down from 449).
+-
+- 6/17/25: Development
+-- Submitted a change to getMapContent.js that adds commas to each set of points throughout every polyline object, for readability.
+-
+*** BEGIN WORK ON SHORTENING ALL LINES OF CODE TO LESS THAN 100 CHARACTERS ***
+*** END WORK ON EMBEDDING VIDEO FOR NEVADA ***
+- 8/16/24: Development
+-- Submitted a change that updates the file names of nv/summit_photo_7.jpg and nv/summit_photo_8.jpg to summit_photo_5 and summit_photo_6.
+-- Submitted a change that embeds the first episode of Walking Up Hills into Nevada.html.
+-- Submitted a change that updates the revision date in the website's top-level index.html.
+-
+*** BEGIN WORK ON EMBEDDING VIDEO FOR NEVADA ***
+*** END WORK ON ADDING NEVADA ***
+--- TODOs in production code: 3 (all in Vermont.html and NewHampshire.html)
+--- TODOs in test code: 11
+--- Total tests in tomDunkleCom project: 18 (deersim) + 82 (discography) + 3,212 (high_points) = 3,312.
+- 8/12/24: Development
+-- Submitted a change to getStateIdForClickedPolygon.test.js that fixes a mistake with alphabetical ordering in the matrix of automated test cases.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that removes several stale constant import statements for state polyline IDs.
+-- Submitted a change to updateAndGetCurrentBlueState_validInputs.test.js that adds a set of automated test cases for moving the mouse from California to the Nevada check mark.
+-- Submitted a change to Nevada.html with a few last-minute tweaks. This change also updates the revision date in the website's top-level index.html.
+-
+- 8/11/24: Development
+-- Submitted a change to Nevada.html that rearranges some content and adds some paragraphs and captions.
+-- Submitted a change to mapFunctions.js that removes one TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to Nevada.html that updates the page's color scheme.
+-- Submitted a change to tomHasHighPointedStateWithinSliderRange.test.js that adds automated test cases for the year 2024. This change also moves kYearSliderValueAfter2024 from onChangeValueOfSliderThumb.test.js to testConstants.js.
+-- Submitted a change to testConstants.js and testFunctions.js that fixes the file path in both of the files' header comments.
+-- Submitted a change to getStateIdForClickedPolygon.test.js and getStateIdForMousedOverPolygon.test.js that adds automated test cases for the Nevada check mark.
+-
+- 8/10/24: Development
+-- Submitted a change that assigns file names to and dumps most of the photos from the nv folder into Nevada.html.
+-- Submitted a change to Nevada.html that rearranges some content and adds some paragraphs and captions.
+-- Submitted a change to Nevada.html that rearranges more content and adds more paragraphs and captions.
+-- Submitted another change to Nevada.html that rearranges more content and adds more paragraphs and captions.
+-
+- 8/9/24: Development
+-- Submitted a change that adds the high_points/nv directory, plus all 161 of the photos from the mountain in it.
+-- Submitted a change that removes all duplicate photos from the nv folder, reducing the photo count from 161 to 71.
+-
+- 8/2/24: Development
+-- Submitted a change to constants.js that removes one more TODO comment regarding automated tests which have already been implemented.
+-- Submitted a change to mapFunctions.js that removes one TODO comment regarding automated tests which have already been implemented.
+-
+- 8/1/24: Development
+-- Submitted a change to constants.js that removes one TODO comment regarding automated tests which have already been implemented.
+-
+- 7/31/24: Development
+-- Submitted a change to mapFunctions.js that adds Nevada to g_LoadedGreenStates, so that it now changes color when the year slider's value is changed.
+-- Submitted a change to mapFunctions.js that moves the case for kNevadaCheckMark from getStateIdForClickedPolygon() to getStateIdForMousedOverPolygon(). This change also re-enables a commented out test case in updateAndGetCurrentBlueState_validInputs.test.js.
+-- Submitted a change to onClickMap_validInputs.test.js that removes a test case which can no longer pass now that all of the following are true: Nevada's check box is invisible by default, I've high-pointed Nevada, and Nevada's check box points to its own state in getStateIdForMousedOverPolygon(). Since it's impossible to click on the invisible check box, this test case is likely not providing value anyway.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that adds automated test cases involving the slider thumb being set to after 2024.
+-
+- 7/30/24: Development
+-- Submitted a change that creates a basic HTML page for Nevada.
+-- Submitted a change to getMapContent.js that defines the "year" property for rNevada.
+-- Submitted a change to getMapContent.js that updates the default value of rNevada's fill attribute from red to green.
+-- Submitted a change that adds the bulk of the remaining JavaScript code needed to show Nevada as high-pointed by default, and add 2024 to the year slider. This change encompasses all of the following:
+--- In constants.js: Updated kNevada to use the prefix kPrefixGreenState instead of kPrefixRedState. Defined kNevadaCheckMark. Added all new constants to the list of constants exported for use in test code.
+--- In getMapContent.js: Adds the '2024' year string and updates the values of the year slider's attributes to reflect the new year. Changes "rNevada" id to "gNevada", and adds definition of cursor attribute. Adds cNevada element.
+--- In mapFunctions.js: Added a case for kNevadaCheckMark to getStateIdForMousedOverPolygon() that directs to kNevada.
+--- In onClickMap_validInputs.test.js: Adds cases for Nevada to the test matrix confirming that clicking polylines which are green by default leads to the expected page. Conversely, the change removes the cases for Nevada from the test matrix validating that clicking on polylines that are red by default causes no action to be performed. Added a test case confirming that clicking on the Nevada check mark leads to Nevada.html. The change also imports kNevadaCheckMark and kStateNameNevada.
+--- In onPageLoad.test.js: Updates the values of the constants kExpectedNumberOfCheckMarks, kExpectedNumberOfGreenPolylines, and kExpectedNumberOfRedPolylines to reflect that Nevada has now been high-pointed.
+--- In updateAndGetCurrentBlueState_validInputs.test.js: Moves several array values involving Nevada from casesForMovingFromANormallyRedStateToAnotherState to casesForMovingFromANormallyGreenStateToAnotherState. Removes one case from mostCasesForMovingBetweenACheckBoxAndAState, and adds one case to mostCasesForMovingBetweenACheckMarkAndAState.
+-
+*** BEGIN WORK ON ADDING NEVADA ***
+*** END WORK ON SCRIPT FOR AUTOMATED TEST SETUP AND TEARDOWN ***
+- 11/27/23: Development
+-- Submitted a change to run_automated_tests.bat that renames the directory /high_points/tests/testEnv to /high_points/tests/environment.
+-- Submitted a change to run_automated_tests.bat that replaces all double backslashes with single backslashes.
+-- Submitted a change to run_automated_tests.bat that adds the labels run_high_points_tests and clean_up.
+-- Submitted a change to tests/importsAndExports/mapFunctions.js that adds a couple of blank lines to separate exports and getMapContent from constants.
+-- Submitted a change that just updates the publish date in the website's top-level index.html. At this point:
+--- TODOs in production code: 3 (all in Vermont.html and NewHampshire.html)
+--- TODOs in test code: 11
+--- Total tests in tomDunkleCom project: 2,996 (automated) + 51 (manual)
+-
+- 11/26/23: Development
+-- Submitted a change to run_automated_tests.bat that renames the directory /high_points/tests/combined to /high_points/tests/testEnv.
+-- Submitted a change that renames the directory /high_points/tests/testResources to /high_points/tests/resources.
+-
+- 11/21/23: Development
+-- Submitted a change that moves the mock version of goToPage() from its own source file (/high_points/tests/testResources/goToPage.mock.js) into /high_points/tests/testResources/testFunctions.js.
+-
+- 11/20/23: Development
+-- Submitted a change that removes a TODO comment from onChangeValueOfSliderThumb.test.js after I realized the comment makes no sense, since onChangeValueOfSliderThumb() only operates on states in g_LoadedGreenStates, which does not include Alaska or Hawaii.
+-- Submitted a change that renames the directory /high_points/tests/imports to /high_points/tests/testResources.
+-- Submitted a change that defines the directory /high_points/tests/testResources/importsAndExports, and pulls three files (constants.js, getMapContents.js, and mapFunctions.js) down into there from the directory above.
+-- Submitted a change that moves the files /high_points/tests/testConstants.js and /high_points/tests/testFunctions.js both a level deeper into /high_points/tests/testResources.
+-
+- 11/16/23: Development
+-- Submitted a change that moves goToPage() from its own source file into mapFunctions.js, and updates run_automated_tests.bat to filter goToPage() out of the combined mapFunctions.js when creating the file.
+-- Submitted a change that refactors run_automated_tests.bat by changing the working directory to high_points before all commands involving file set-up operations in that directory.
+-
+- 8/13/23: Development
+-- Submitted a change that defines run_automated_tests.bat in the top-level high_points directory; a batch script that runs all of the high_points automated tests and then cleans up afterwards, without the need for any manual source code edits to enable/disable import/exports.
+-
+- 8/12/23: Development
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that adds missing test cases for Iowa, Missouri, and Utah in 2022 and 2023 to the array casesForOnePolylineStatesHighPointedByTom.
+-
+*** BEGIN WORK ON SCRIPT FOR AUTOMATED TEST SETUP AND TEARDOWN ***
+*** END WORK ON ADDING VIRGINIA AND NORTH CAROLINA ***
+- 6/30/23: Development
+-- Submitted a change to Virginia.html that puts finishing touches on the page, such that I'm ready to publish it now.
+-- Submitted a change to NorthCarolina.html that puts finishing touches on the page, such that I'm ready to publish it now.
+-- Submitted a change that removes the videos subfolders from both the nc and va folders, as I copied the filtered videos/photos to my Google Drive and won't need the videos for the website anymore.
+-- Submitted a change that just updates the publish date in the website's top-level index.html. At this point:
+--- TODOs in production code: 3 (all in Vermont.html and NewHampshire.html)
+--- TODOs in test code: 12
+--- Total tests in tomDunkleCom project: 3,029
+-
+- 6/29/23: Development
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that renames several of the arrays touched in yesterday's change to make their nomenclature more clearly understandable.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that re-arranges the arrays at the top of the file into alphabetical order.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that updates several test parameter names from 'polylineId' or 'stateId' to the more accurate name 'stateName'.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that adds separate lines of code to define the constants checkBoxId and checkMarkId in a couple of test matrices.
+-
+- 6/28/23: Development
+-- Submitted a change to getStateIdForMousedOverPolygon.test.js that adds a test case for mousing over the Virginia check mark (kVirginiaCheckMark).
+-- Submitted a change that adds a few missed test cases to getStateIdForClickedPolygon.test.js and getStateIdForMousedOverPolygon.test.js.
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that creates and merges some arrays so that the test matrix definitions all don't have hardcoded arrays of their test cases anymore. This change also defines a few new test cases for the recent years that have passed since this code was written.
+-- Submitted a change to onClickMap_validInputs.test.js that adds a couple of test cases validating that clicking the check boxes of North Carolina and Virginia after moving the year slider back to before they were high pointed produces no action.
+-- Submitted a change to updateAndGetCurrentBlueState_validInputs.test.js that adds test cases involving the check boxes of North Carolina and Virginia to the constant casesForMovingBetweenACheckBoxAndAStateAfterChangingYearSliderValue.
+-
+- 6/27/23: Development
+-- Submitted a change to tomHasHighPointedStateWithinSliderRange.test.js that adds test cases for the year slider value of after 2023. This change also moves kYearSliderValueAfter2023 to testConstants.js, and updates tomHasHighPointedStateWithinSliderRange.test.js and onChangeValueOfSliderThumb.test.js accordingly.
+-- Submitted a change to getStateIdForClickedPolygon.test.js that adds test cases for various check marks which were previously forgotten.
+-
+- 6/26/23: Development
+-- Submitted a change to getStateIdForClickedPolygon.test.js that adds test cases for North Carolina's check mark, Virginia's check mark, and Alabama's check mark (previously forgotten).
+-
+- 6/25/23: Development
+-- Submitted a change to mapFunctions.js that adds a case for kNorthCarolinaCheckMark to getStateIdForMousedOverPolygon(). This change also defines new automated test cases accordingly, in various test suites.
+-- Submitted a change to mapFunctions.js that adds a case for kSouthCarolinaCheckMark to getStateIdForMousedOverPolygon(), and removes the corresponding case from getStateIdForClickedPolygon(). This change also defines new automated test cases accordingly, in various test suites.
+-- Submitted a change to mapFunctions.js that adds a case for kGeorgiaCheckMark to getStateIdForMousedOverPolygon(), and removes the corresponding case from getStateIdForClickedPolygon(). This change also defines new automated test cases accordingly, in various test suites.
+-
+- 6/23/23: Development
+-- Submitted a change that adds and rearranges some content on Virginia.html and NorthCarolina.html, and removes some unneeded images from the va folder. This changes also updates the color schemes on both pages.
+-
+- 6/22/23: Development
+-- Submitted a change that adds and rearranges some content on Virginia.html, and removes all duplicate photos from the va folder. At this point, all photos in the va folder appear in Virginia.html.
+-
+- 6/21/23: Development
+-- Submitted a change that adds and rearranges some content on NorthCarolina.html, and removes all duplicate photos from the nc folder. At this point, all photos in the nc folder appear in NorthCarolina.html.
+-
+- 6/20/23: Development
+-- Submitted a change that adds and rearranges some content on NorthCarolina.html, plus removes some duplicate images and some images that won't be used from the nc folder.
+-
+- 6/13/23: Development
+-- Submitted a change that adds and rearranges some content on NorthCarolina.html.
+-- Submitted a change that removes many duplicate photos from the nc folder.
+-
+- 6/11/23: Development
+-- Submitted a change that adds and rearranges some content on Virginia.html, and removes many images that won't be used from the va folder.
+-- Submitted a change that adds and rearranges some content on NorthCarolina.html, and removes a few images that won't be used from the nc folder.
+-
+- 6/8/23: Development
+-- Submitted a change that assigns file names to and dumps about a third of the photos from the nc folder into NorthCarolina.html, with minimal arrangement.
+-- Submitted a change that assigns file names to and dumps about another third of the photos from the nc folder into NorthCarolina.html, still with minimal arrangement.
+-- Submitted a change that assigns file names to and dumps several more photos from the nc folder into NorthCarolina.html, and adds and rearranges some content on Virginia.html.
+-
+- 6/6/23: Development
+-- Submitted a change that assigns file names to and dumps almost all, but not quite all, of the remaining photos from the va folder into Virginia.html, still with minimal arrangement.
+-- Submitted a change that assigns file names to and dumps all but three of the photo files from the va folder into Virginia.html, still with minimal arrangement.
+-
+- 6/4/23: Development
+-- Submitted a change that assigns file names to and dumps almost half of the photos from the va folder into Virginia.html, with minimal arrangement.
+-
+- 6/3/23: Development
+-- Submitted a change to onChangeValueOfSliderThumb.test.js that cuts out several hundred lines of code as a refactor by merging together casesForStatesTomHasNotYetHighPointed and casesForStatesTomHasYetHighPointed with two very-similar (but previously not identical) arrays of test cases. The test code was slightly modified (but not functionally), to make this refactor possible.
+-
+- 5/29/23: Development
+-- Submitted a change that adds the bulk of the remaining JavaScript code needed to show Virginia and North Carolina as high-pointed by default, and add 2023 to the year slider. This change encompasses all of the following:
+--- In constants.js: Updated kNorthCarolina and kVirginia to use the prefix kPrefixGreenState instead of kPrefixRedState. Defined kVirginiaCheckMark. Added all new constants to the list of constants exported for use in test code.
+--- In getMapContent.js: Adds the '2023' year string and updates the values of the year slider's attributes to reflect the new year.
+--- In mapFunctions.js: Added a case for kVirginiaCheckMark to getStateIdForMousedOverPolygon() that directs to kVirginia.
+--- In onClickMap_validInputs.test.js: Adds cases for Virginia and North Carolina to the test matrix confirming that clicking polylines which are green by default leads to the expected page. Conversely, the change removes the cases for Virginia and North Carolina from the test matrix validating that clicking on polylines that are red by default causes no action to be performed. Added a test case confirming that clicking on the Virginia check mark leads to Virginia.html. The change also imports kVirginiaCheckMark, kStateNameVirginia, and kStateNameNorthCarolina.
+--- In onPageLoad.test.js: Updates the values of the constants kExpectedNumberOfCheckMarks, kExpectedNumberOfGreenPolylines, and kExpectedNumberOfRedPolylines to reflect that Virginia and North Carolina have now been high-pointed.
+--- In updateAndGetCurrentBlueState_validInputs.test.js: Moves several array values involving Virginia and North Carolina from casesForMovingFromANormallyRedStateToAnotherState to casesForMovingFromANormallyGreenStateToAnotherState. Moves kVirginia and kNorthCarolina from normallyRedBorderStates to normallyGreenBorderStates. Moves several cases involving Virginia and North Carolina from casesForMovingFromANormallyRedStateToACheckMarkOrBox to casesForMovingFromANormallyGreenStateToACheckMarkOrBox. Removes one case from mostCasesForMovingBetweenACheckBoxAndAState, and adds one case to mostCasesForMovingBetweenACheckMarkAndAState. Adds an import for kVirginiaCheckMark. Removes two test cases which can't pass anymore now that all three of the following are true: VA/NC's check boxes are invisible by default, I've high-pointed them both, and the check boxes point to their own states in getStateIdForMousedOverPolygon(). It's not possible to click on an invisible element anyway, so any tests that fit all three of these criteria are likely not providing value.
+-- Submitted a change to mapFunctions.js that adds Virginia and North Carolina to g_LoadedGreenStates, so that those two states now change color when the year slider's value is changed. This change also adds a lot of new test cases involving Virginia and North Carolina to onChangeValueOfSliderThumb.test.js.
+-
+- 5/26/23: Development
+-- Submitted a change that adds the high_points/va and high_points/nc directories, plus all of the photos in each one.
+-- Submitted a change that creates basic .html pages for Virginia and North Carolina. This change also names a few photos and videos in the 'va' and 'nc' directories.
+-- Submitted a change to getMapContent.js that defines the "year" property on rVirginia and rNorthCarolina.
+-- Submitted a change to getMapContent.js that updates the default value of rVirginia and rNorthCarolina's fill attributes from red to green.
+-
+*** BEGIN WORK ON ADDING VIRGINIA AND NORTH CAROLINA ***
+*** END WORK ON ANOTHER ROUND OF TEST REFACTORING ***
+- 5/25/23: Development
+-- Submitted a change that replaces dev_notes.pdf with dev_notes.txt, after I transcribed all of the development notes into a text file.
+-- Submitted a change that adds all of the development notes since February 13th to dev_notes.txt (including this change note).
+-- Submitted a change that just updates the revision date on the website's top-level index.html.
+-
+- 4/21/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a few more constant arrays that are used in the test definitions to refer to pairs of significant parts of Alaska and Michigan.
+-- Submitted a change to onMouseCrossingBorder.test.js that refactors the creation of a second mouse event targeting the view box into a new helper function called createMouseOverViewBoxEvent().
+-- Submitted a change to onMouseCrossingBorder.test.js that refactors constant names and fixes a couple of minor readability issues.
+-- Submitted a change to onMouseCrossingBorder.test.js that makes onMouseCrossingBorderOfTargetPolyline() define and return the targetPolyline constant, instead of defining the constant in the calling test. This change also removes redundant expect statements from a couple of tests.
+-
+- 4/17/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test matrix validating that moving the mouse out of any of the eight insignificant islands of Alaska performs no action.
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test matrix validating that moving the mouse out of any of the three insignificant islands of Hawaii performs no action.
+-
+- 4/10/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test matrix validating that moving the mouse out of any of the four significant islands of Hawaii makes all four of the islands' fill colors change from light blue to light red.
+-- Submitted a change to onMouseCrossingBorder.test.js that defines two new automated test cases; one validating that moving the mouse out of either significant part of Alaska turns both parts of Alaska red, and another validating that moving the mouse out of either significant part of Michigan turns both parts of Michigan green.
+-
+- 3/31/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that updates one of the test matrix description strings to clarify that the test applies to significant parts of Alaska, but not to insignificant parts.
+-
+- 3/27/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that adds more assertions checking the states of Hawaii's insignificant islands to the test matrix defined in the previous change.
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test matrix validating that passing a mouseEvent whose target is any of the eight insignificant islands of Alaska to onMouseCrossingBorder() causes no action to be performed.
+-- Submitted a change to constants.js that fixes a spacing issue leftover from when Utah's prefix was changed from kPrefixRedState to kPrefixGreenState.
+-
+- 3/24/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test matrix validating that passing a mouseEvent whose target is any of the three insignificant islands of Hawaii to onMouseCrossingBorder() causes no action to be performed.
+-
+- 3/9/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that expands the test added in the previous change into a matrix handling cases for all four significant islands of Hawaii.
+-
+- 2/26/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test validating that passing a mouseEvent whose target is the island of Hawaii to onMouseCrossingBorder() causes all four of Hawaii's significant islands to be filled with a light blue color.
+-
+- 2/20/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that expands the test added in the previous change into a matrix handling cases for the significant polylines of both Alaska and Michigan.
+-
+- 2/19/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that defines a new automated test validating that passing a mouseEvent whose target is either Alaska's mainland or Kodiak Island to onMouseCrossingBorder() causes both Alaska's mainland and Kodiak Island to be filled with a light blue color.
+-
+- 2/13/23: Development
+-- Submitted a change that updates the project's dev_notes.pdf, and the publish date in the top-level index.html.
+--- At this point, there are 3 TODOs in production code (all in the HTML) and 13 TODOs in test code. The entire tomDunkleCom project has 2,690 automated tests.
+-
+- 2/10/23: Development
+-- Submitted a change to onMouseCrossingBorder.test.js that replaces the suite's only test case (which was a dummy placeholder) with a new automated test validating that calling onMouseCrossingBorder() updates mapContainer.mostRecentBlueStateId as expected.
+-- Submitted a change to onClickMap_validInputs.test.js that removes a no-longer-needed import statement for the constant kUnpopulated.
+-
+- 2/7/23: Development
+-- Submitted a change to the test description strings in onClickMap_invalidInputs.test.js and updateAndGetCurrentBlueState_invalidInputs.test.js, so that the strings match the format of those in isFilledLightBlue_invalidInputs.test.js. This was done to both shorten the names of the tests, and to alphabetize the tests in onClickMap_invalidInputs.test.js, so that the simplest test matrix (logically) comes first in the file.
+-- Submitted a change to the test description string of the only test matrix in isFilledLightBlue_invalidInputs.test.js, so that the string better matches the format used in onClickMap_invalidInputs.test.js and updateAndGetCurrentBlueState_invalidInputs.test.js.
+-
+- 2/6/23: Development
+-- Submitted a change to isFilledLightBlue_invalidInputs.test.js that replaces the suite's three separate test cases (null, undefined, and empty string) with one new test matrix handling all three cases using kUnpopulatedInputs.
+-
+- 2/2/23: Development
+-- Submitted a change that makes all automated test suites that use 'each' import it in a separate section titled "Jest includes", rather than in the "Constant includes" section, since each isn't actually being imported from constants.js.
+-
+- 2/1/23: Development
+-- Submitted a change that renames setMarginsOfYearSliderToHalfOfSlideContainerHeight() to setYearSliderMarginsToHalfOfSlideContainerHeight() throughout the project.
+-- Submitted a change that names the automated test suite onClickMap.test.js to onClickMap_validInputs.test.js.
+-
+- 1/29/23: Development
+-- Submitted a change to onClickMap_invalidInputs.test.js that defines a new automated test matrix validating that calling onClickMap() with a clickEvent input whose target has an unpopulated id attribute returns a null value. This change also removes a duplicate test case from onClickMap.test.js.
+-- Submitted a change to onClickMap.test.js that removes a TODO comment which is no longer needed now that all tests which don't require onPageLoad() have been moved to onClickMap_invalidInputs.test.js.
+-
+- 1/28/23: Development
+-- Submitted a change that defines an automated test suite called onClickMap_invalidInputs.test.js, containing one new automated test matrix validating that calling onClickMap() with an unpopulated clickEvent input returns null. This change also removes a test definition for the null input case from onClickMap.test.js, and updates one other test matrix in that suite to use the test constant kUnpopulatedInputs in its case definition.
+-- Submitted a change to onClickMap_invalidInputs.test.js that defines a new automated test matrix validating that calling onClickMap() with a clickEvent input whose target attribute is unpopulated returns a null value. This change also removes a duplicate test case from onClickMap.test.js.
+-
+- 1/25/23: Development
+-- Submitted a change that separates the automated test matrix defined in the previous change from updateAndGetCurrentBlueState.test.js into a new automated test suite called updateAndGetCurrentBlueState_invalidInputs.test.js. I decided it's worthwhile to not load the page when running tests that don't require the page to be loaded in order to pass (which are, in reality, the unit tests of this project, even if they aren't labelled as such yet).
+-
+- 1/24/23: Development
+-- Submitted a change to updateAndGetCurrentBlueState.test.js that defines an automated test matrix confirming that calling the function with an unpopulated mouseEvent input returns null. This change also removes a (now) redundant test case calling the function with a null input, as well as a TODO comment suggesting that some tests don't need the initial calls to onPageLoad(). The TODO comment was removed with the intent of not running tests that don't load the page, but the decision was reversed in the next change.
+-
+- 1/22/23: Development
+-- Submitted a change that separates the only automated test of onOrientationChange() from high_points.test.js into a new test suite called onOrientationChange.test.js.
+-- Submitted a change that separates three automated tests validating conditions when the page first loads from high_points.test.js into a new test suite called onPageLoad.test.js.
+-- Submitted a change that separates the only automated test of onMouseCrossingBorder() from high_points.test.js into a new test suite called onMouseCrossingBorder.test.js. At this point, the only tests remaining in high_points.test.js were of resetStateFillColorToDefault(), so this change also renames high_points.test.js to resetStateFillColorToDefault.test.js.
+-
+*** BEGIN WORK ON ANOTHER ROUND OF TEST REFACTORING ***
+*** END WORK ON A ROUND OF TEST REFACTORING ***
+- 1/20/23: Development
+-- Submitted a change that updates the project's dev_notes.pdf, and the publish date in the top-level index.html.
+--- At this point, there are 3 TODOs in production code (all in the HTML) and 15 TODOs in test code. The entire tomDunkleCom project has 2,684 automated tests.
+-
+- 1/19/23: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that defines a new automated test matrix confirming that updateCheckMarkAndBoxToMatchStateFillColor() performs no operation when an unpopulated highPointedWithinSliderRange input is passed after setting the year slider value to after 2018.
+-
+- 1/18/23: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that defines a new automated test matrix confirming that updateCheckMarkAndBoxToMatchStateFillColor() performs no operation when an unpopulated stateId input is passed.
+-
+- 1/17/23: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that fixes several minor issues with constant nomenclature and test description strings.
+-
+- 1/16/23: Development
+-- Submitted a change that removes an expect statement validating a state's fill color from simulateMouseHoveringOverState() in testFunctions. This change also adds this same expect statement to several (but not all) of the tests that call simulateMouseHoveringOverState().
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that updates a couple of test description strings, removes a stale (i.e. no longer used) import statement, and fixes a white space issue.
+-- Submitted a change to testFunctions.js that removes a stale (i.e. no longer used) import statement for kStyle.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that removes unneeded white space from the very first line of code in the file.
+-
+- 1/15/23: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that removes the expect statement confirming kMargin is populated from beforeAll(), and adds a comment to beforeAll() clarifying why it's still necessary to confirm that kUnitNamePixels is populated before running tests.
+-
+- 1/11/23: Development
+-- Submitted a change that refactors setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js by making the helper method mockSlideContainerHeight() return the year slider instead of letting the test methods each get the year slider separately.
+-
+- 1/10/23: Development
+-- Submitted a change to matchLightBlueFillForTwoPolylines.test.js that removes four redundant expect statements.
+-
+- 1/9/23: Development
+-- Submitted a change to both isCheckMarkOrBox.test.js and isInsignificantIsland.test.js, that makes the test description string for each test matrix report both the input and output parameters, rather than just reporting the input parameter.
+-- Submitted a change to isFilledLightBlue_invalidInputs.test.js that defines an automated test case confirming that passing an empty string to isFilledLightBlue() returns false.
+-- Submitted a change to matchLightBlueFillForHawaiianIslands.test.js that makes the only test matrix's test description string report both the input and output parameters, rather than just reporting the input parameter.
+-- Submitted a change to high_points.test.js that removes a stale (i.e. no longer used) import statement for the test function simulateMouseHoveringOverState().
+-
+- 1/7/23: Development
+-- Submitted a change to both getStateIdForClickedPolygon.test.js and getStateIdForMousedOverPolygon.test.js, that makes the test description string for each test matrix report both the input and output parameters, rather than just reporting the input parameter.
+-
+- 1/4/23: Development
+-- Submitted a change to high_points.test.js that removes the stale (i.e. no longer needed) import statement for getStateIdForClickedPolygon().
+-
+- 1/3/23: Development
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called getStateIdForClickedPolygon.test.js.
+-
+- 1/2/23: Development
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called getStateIdForMousedOverPolygon.test.js.
+-
+- 1/1/23: Development
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called setPolygonFillColor.test.js.
+-
+- 12/31/22: Development
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called isInsignificantIsland.test.js.
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called isCheckMarkOrBox.test.js.
+-- Submitted a change that separates four automated tests from high_points.test.js into a new test suite called isUnpopulated.test.js.
+-
+- 12/30/22: Development
+-- Submitted a change that separates one automated test matrix from high_points.test.js into a new test suite called matchLightBlueFillForHawaiianIslands.test.js.
+-
+- 12/28/22: Development
+-- Submitted a change that separates six automated tests from high_points.test.js into two new test suites called isFilledLightBlue_invalidInputs.test.js and isFilledLightBlue_validInputs.test.js.
+-
+- 12/27/22: Development
+-- Submitted a change that separates four automated tests from high_points.test.js into a new test suite called matchLightBlueFillForTwoPolylines.test.js.
+-
+- 12/19/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that updates several test case names.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that removes a few stale (i.e. no longer used) import statements.
+-- Submitted a change that renames kInvalidStringInputs in testConstants to kUnpopulatedInputs. This change also updates the names of a few test cases, and replaces the constant invalidBooleanInputs in updateCheckMarkAndBoxToMatchStateFillColor.test.js with kUnpopulatedInputs, thereby defining one new automated test case.
+-
+- 12/15/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that renames every constant and variable named 'slider' throughout the suite to 'yearSlider'.
+-- Submitted a change that moves the definition of kInvalidStringInputs from updateCheckMarkAndBoxToMatchStateFillColor.test.js to testConstants, and updates both that test suite and setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js to import the constant from testConstants.
+-
+- 12/13/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that fixes a magic number.
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that adds the word "Style" to the names of a couple of constants.
+-
+- 12/12/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that defines beforeAll() to ensure that kMargin and kUnitNamePixels are populated, rather than letting each test do this in its own setup block.
+-
+- 12/11/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that fixes another magic string.
+-
+- 12/9/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that fixes a magic string.
+-
+- 12/6/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that removes a pre-existing TODO comment suggesting removing the suite's beforeEach() definition after exploring the idea and finding that it can't be done without removing the tests' pre-assertions (therefore negatively impacting test coverage).
+-
+- 12/5/22: Development
+-- Submitted a change to setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js that fixes a couple of magic strings.
+-
+- 12/2/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that makes the suite's tests use kArbitraryPolylineId (imported from testConstants) rather than a kArbitraryStateId which was declared within the suite.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that removes the words "WithinSliderRange" from several constants throughout the suite in order to shorten lines of code to 100 characters or less.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that renames a test matrix and edits the matrix's case description string.
+-- Submitted a change to high_points.test.js that removes the stale (i.e. no-longer-needed) duplicate definition of mockSlideContainerHeight().
+-
+- 12/1/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that expands a test case for passing null for highPointedWithinSliderRange into a matrix that also tests an undefined value.
+-
+- 11/29/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that defines two new automated test matrices confirming that the check box and mark of Michigan update properly when either of Michigan's two polylines are passed to updateCheckMarkAndBoxToMatchStateFillColor().
+-
+- 11/25/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor() that adjusts the function's logic to not use the constant kMichigan. Since this function was the only place that kMichigan was used (everywhere else uses kMichiganMainland and kMichiganPeninsula), this change also removes kMichigan from production code entirely, and removes import statements for the constant from several test classes where it wasn't even being used.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that fixes a magic string, which was coincidentally incorrect anyway.
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that fixes another magic string.
+-
+- 11/23/22: Development
+-- Submitted a change that defines a new test suite called setMarginsOfYearSliderToHalfOfSlideContainerHeight.test.js. This change moves all tests of setMarginsOfYearSliderToHalfOfSlideContainerHeight() into the new suite from high_points.test.js, and this change also removes many stale (i.e. no longer used) import statements from high_points.test.js.
+-
+- 11/22/22: Development
+-- Submitted a change to tomHasHighPointedStateWithinSliderRange.test.js that rewrites the code in the file's only test matrix to fit the ARRANGE_ACT_ASSERT paradigm.
+-
+- 11/21/22: Development
+-- Submitted a change that corrects multiple prose errors in Missouri.html that were caught after publishing the 11/19/22 update of the high_points module to www.tomdunkle.com.
+-
+*** BEGIN WORK ON A ROUND OF TEST REFACTORING ***
+*** END WORK ON ADDING MISSOURI AND IOWA ***
+- 11/19/22: Development
+-- Submitted a change that adds more information to Missouri.html.
+-- Submitted a change that adds more information to Missouri.html and Iowa.html, and defines color schemes for both pages.
+-- Submitted a change that removes three unused photos from the 'ia' images folder.
+-- Submitted a change that renames expectTestConstantIsPopulated() in testFunctions.js to expectSliderValueIsPopulated().
+-- Submitted a change that updates the project's dev_notes.pdf, and the publish date in the top-level index.html.
+--- At this point, there are 3 TODOs in production code (all in the HTML) and 21 TODOs in test code. The entire tomDunkleCom project has 2,671 automated tests.
+--- *Note:* After publishing this update to www.tomdunkle.com, I manually edited Missouri.html in siteground's online editor to fix a couple of content mistakes. I left the site up like that for the duration of development on the next feature (a round of test refactoring), which included a permanent fix for the content.
+-
+- 11/18/22: Development
+-- Submitted a change that removes a couple of TODO comments from mapFunctions.js regarding lines of code which have already been tested.
+-- Submitted a change that removes a couple more TODO comments from mapFunctions.js regarding lines of code which have already been tested.
+-- Submitted a change that removes a couple of TODO comments from constants.js regarding lines of code which have already been tested.
+-
+- 11/17/22: Development
+-- Submitted a change that adds several test cases for the year slider being set to after 2022 to tomHasHighPointedStateWithinSliderRange.test.js.
+-
+- 11/16/22: Development
+-- Submitted a change that adds several hundred missing test cases to the test matrices in onChangeValueOfSliderThumb.test.js, mostly related to state high points that I've achieved in the past couple of years.
+-- Submitted a change that adds one missing test case (for Utah's check mark) to onClickMap.test.js.
+-
+- 11/15/22: Development
+-- Submitted a change that adds more information to Missouri.html.
+-- Submitted a change that defines two new automated test cases in high_points.test.js, validating the cases added to getStateIdForClickedPolygon() and getStateIdForMousedOverPolygon() for Missouri and Iowa.
+-
+- 11/14/22: Development
+-- Submitted a change that adds rough drafts of Missouri.html and Iowa.html, plus removes a few photos from the 'mo' images folder that I deemed uninteresting.
+-- Submitted a change that removes a commented-out test case from onClickMap.test.js which was invalidated by this feature (adding Missouri and Iowa), and is no longer needed since it's been replaced by several new test cases.
+-- Submitted a change that removes a no-longer-needed TODO comment from testFunctions.js about a rename that I decided not to do, as the new name would be too long.
+-
+- 11/11/22: Development
+-- Submitted a change that replaces a couple of remaining calls to expectTestConstantIsPopulated() in high_points.test.js and tomHasHighPointedStateWithinSliderRange.test.js with calls to changeValueOfSliderThumb(), and stops exporting the former from testConstants.js.
+-- Submitted a change that single-sources all year slider value constants in testConstants.js.
+-- Submitted a change that eliminates a magic string in moveSliderToBeforeStateWasHighPointed().
+-- Submitted a change that eliminates a magic number in moveSliderToBeforeStateWasHighPointed().
+-
+- 11/10/22: Development
+-- Submitted a change that adds a call to expectTestConstantIsPopulated() to a test matrix in updateCheckMarkAndBoxToMatchStateFillColor.test.js, plus moves the definition of changeValueOfSliderThumb() to testFunctions.js.
+-
+- 11/9/22: Development
+-- Submitted a change that adds calls to expectTestConstantIsPopulated() to all test matrices in onChangeValueOfSliderThumb.test.js.
+-
+- 11/7/22: Development
+-- Submitted a change that adds a call to expectTestConstantIsPopulated() to one of the test matrices in high_points.test.js. This change also moves the definition of expectTestConstantIsPopulated() from tomHasHighPointedStateWithinSliderRange.test.js to 
+-
+testFunctions.js.
+- 11/6/22: Development
+-- Submitted a change that defines expectTestConstantIsPopulated() in tomHasHighPointedStateWithinSliderRange.test.js, after I realized that tests can exhibit false passes if year slider value constants are not properly exported from testConstants.js.
+-
+- 11/5/22: Development
+-- Submitted a change that defines a new automated test matrix in onClickMap.test.js, validating that the action of clicking on check boxes that normally handle click events (via getStateIdForMousedOverPolygon()) after moving the year slider to before those states were high-pointed produces no result.
+-- Submitted a change that removes several stale (i.e. no longer defined) constants from the import statements in mapFunctions.js.
+-
+- 11/3/22: Development
+-- Submitted a change that defines a new automated test matrix in updateAndGetCurrentBlueState.test.js, validating that certain mouse movements from check boxes to states produce the expected results after the year slider's position has been moved back to before the respective states were high-pointed. This change also partially addresses the need to update a temporarily commented-out set of test cases due to Iowa being green now instead of red.
+-- Submitted a change that defines automated test cases in updateAndGetCurrentBlueState.test.js simulating mouse movements from the Iowa check box to Minnesota, as well as a few similar cases for other states.
+-
+- 11/2/22: Development
+-- Submitted a change that fixes two temporarily commented-out test cases, which previously expected clicking on rIowa and rMissouri not to lead anywhere, so that the test cases now expect navigating to Iowa.html and Missouri.html, respectively. This change also defines two new automated test cases asserting that clicking on cIowa and cMissouri leads to the respective pages.
+-
+- 11/1/22: Development
+-- Submitted a change that adds a case for the Missouri check mark to getStateIdForClickedPolygon(), so that the user can access Missouri.html (still non-existent) by clicking on Missouri's check mark.
+-- Submitted a change that adds a case for the Iowa check mark to getStateIdForMousedOverPolygon(), so that the user can access Iowa.html (still non-existent) by clicking on Iowa's check mark, and mousing over the check mark from within Minnesota makes Iowa turn light blue.
+-
+- 10/31/22: Development
+-- Submitted a change that removes duplicate photos from the 'ia' folder, and gives all of the usable photos human-readable file names.
+-- Submitted a change that removes duplicate photos from the 'mo' folder, and gives all of the usable photos human-readable file names.
+-
+- 10/28/22: Development
+-- Submitted a change that adds gIowa and gMissouri to g_LoadedGreenStates in mapFunctions.js, thereby making those states update in response to the year slider.
+-
+- 10/27/22: Development
+-- Submitted a change that defines cIowa (the Iowa check mark) and cMissouri (the Missouri check mark) in getMapContent.js, and changes visibility attributes such that those are displayed by default instead of the respective check boxes.
+-- Submitted a change that updates the prefixes of the Iowa and Missouri state polyline elements from "r" to "g" in both html (getMapContent.js) and JavaScript (constants.js, testConstants.js).
+-
+- 10/23/22: Development
+-- Submitted a change that updates the default value of rIowa and rMissouri's fill attributes from red to green.
+-- Submitted a change that defines the "year" property on rIowa and rMissouri in getMapContent.js. This change also disables six automated test cases temporarily.
+-
+- 10/21/22: Development
+-- Submitted a change that dumps all of my photos from 10/15/22 into a new 'mo' folder, and all of my photos from 10/16/22 into a new 'ia' folder.
+-
+*** BEGIN WORK ON ADDING MISSOURI AND IOWA ***
+*** END WORK ON TEST REFACTORING (while in Oaxaca). ***
+- 10/5/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that reverts to using the 'arbitrary' terminology to refer to the Connecticut polyline, check mark, and box, but does so by defining constants that clearly show that the arbitrarily-chosen objects all necessarily correspond to the same state.
+--- At this point, there are 3 TODOs in production code (all in the HTML) and 22 TODOs in test code. The entire tomDunkleCom project has 2,323 automated tests.
+-
+- 9/28/22: Development
+-- Submitted a change to updateCheckMarkAndBoxToMatchStateFillColor.test.js that renames kHasBeenHighPointed to kHighPointedWithinSliderRange, plus renames a local constant called hasNotBeenHighPointed to notHighPointedWithinSliderRange.
+-
+- 9/27/22: Development
+-- Submitted a change to two tests in updateCheckMarkAndBoxToMatchStateFillColor.test.js to use the constant kConnecticut instead of kArbitraryStateId, since the state ID is not actually arbitrary (the state passed to the function call must be the same state whose check mark and box are under test). This change also fixes a magic boolean in one of the two tests.
+-
+*** BEGIN WORK ON TEST REFACTORING (while in Oaxaca). ***
+*** END WORK ON ADDING UTAH ***
+- 8/20/22: Development
+-- Submitted a change that improves the color scheme on Utah.html, and updates the revision date on the top-level index.html.
+--- At this point, there are 0 TODOs in production code and 23 TODOs in test code. The entire tomDunkleCom project has 2,323 automated tests.
+-
+- 8/18/22: Development
+-- Submitted a change that updates the revision date in the website's top-level index.html.
+-
+- 8/17/22: Development
+-- Submitted a change that updates the last few image captions which were stale.
+-- Submitted a change that makes just a couple of final grammatical fixes.
+-- Submitted a change that fixes a couple of issues with incorrect numbers at the end of image file names.
+-
+- 8/10/22: Development
+-- Submitted a change that adds some progress to the writing and arrangement of Utah.html, cleans up the loose images in the day two 'second valley' folder, and moves them up into the top-level 'ut' directory.
+-- Submitted a change that adds more progress to the writing and arrangement of Utah.html, plus whittles the images folder down to 80 items (35 of which are used in the .html).
+-- Submitted a change that whittles the images folder down to 65 items (37 of which are used in the .html), plus removes unnecessary numbers from the ends of image file names.
+-- Submitted a change that equalizes the number of images in Utah.html and in the images folder, so that there are no longer any unused images in 'ut'.
+-
+- 8/9/22: Development
+-- Submitted a change that adds some progress to the writing and arrangement of Utah.html.
+-- Submitted a change that cleans up the loose images in the day one folder and moves them up into the top-level 'ut' directory.
+-- Submitted a change that cleans up the loose images in the day two folder and moves them up into the top-level 'ut' directory.
+-- Submitted a change that cleans up the loose images in the day two 'first valley' folder and moves them up into the top-level 'ut' directory.
+-- Submitted a change that cleans up the loose images in the day three folder and moves them up into the top-level 'ut' directory.
+-- Submitted a change that cleans up the loose images in the day two 'king's peak' folder and moves them up into the top-level 'ut' directory.
+-
+- 8/8/22: Development
+-- Submitted a change that adds some progress to the writing and arrangement of Utah.html.
+-- Submitted a change that adds some more progress to the writing and arrangement of Utah.html.
+-- Submitted a change that adds even more progress to the writing and arrangement of Utah.html.
+-
+- 8/4/22: Development
+-- Submitted a change that defines the constant kUtahCheckMark, adds a case for it in getStateIdForMousedOverPolygon(), and accordingly updates a few automated tests simulating the mouse moving from Utah's check mark to Wyoming.
+-- Submitted a change that fixes the organization of a few test cases in updateAndGetCurrentBlueState.test.js, and adds a few new test cases.
+-- Submitted a change that removes a commented-out test case which can't pass anymore now that all three of the following are true: Utah's check box is invisible by default, I've high-pointed Utah, and Utah's check box points to Utah in getStateIdForMousedOverPolygon(). It's not possible to click on an invisible element anyway, so any tests that fit all three of these criteria are likely not providing value.
+-
+- 8/3/22: Development
+-- Submitted a change that adds a simple placeholder Utah.html, so that clicking on Utah doesn't return a 'page not found' error.
+-- Submitted a change to the test in onClickMap.test.js that expects clicking Utah to return a null value, so that the test instead expects a valid URL for Utah.html to be returned.
+-- Submitted a change that updates several automated tests in updateAndGetCurrentBlueState.test.js to expect Utah to normally be green instead of red.
+-- Submitted a change that re-enables several test cases in updateAndGetCurrentBlueState.test.js that had been temporarily disabled while the JavaScript and HTML code were using different state ID prefixes for Utah.
+-
+- 8/2/22: Development
+-- Submitted a change that adds a "2022" string to the view underneath the year slider, and updates the year slider's default and maximum values from 2021 to 2022.
+-- Submitted a change that updates Utah's id prefix from "r" to "g", and defines the pointer property on Utah. This change disables several automated tests which need to be updated in the future to account for Utah being green instead of red.
+--- *Question: how many automated tests were there in the project both before and after these updates to the high points? Also, how about with the discography updates?*
+-- Submitted a change that updates the default value of Utah's fill attribute to green instead of red.
+-- Submitted a change to the definition of the constant kUtah, so that the constant uses the green state prefix instead of the red state prefix.
+-- Submitted a change that makes Utah's color update in response to slider motions, and makes the state clickable even though there still isn't an .html page for it.
+-
+- 8/1/22: Development
+-- Submitted a change that adds a 'ut' folder of photos to the high points project, even though only about half of the photos are sorted and named.
+-
+*** BEGIN WORK ON ADDING UTAH ***
+*** END WORK ON ADDING ALABAMA & TENNESSEE ***
+- 12/24/21: Development
+-- Submitted a change that updates the revision date on the website's top-level index.html.
+--- At this point, there are 0 TODOs in production code and 23 TODOs in test code. The entire tomDunkleCom project has 2,311 automated tests.
+-
+- 12/21/21: Development
+-- Submitted a change that makes mousing over and clicking the Mississippi check mark redirect to Tennessee instead of Mississippi, now that Tennessee is green rather than red.
+-- Submitted a change that replaces a hardcoded string in onClickMap.test.js with kStateNameTennessee.
+-- Submitted a change that adds test cases for the Alabama and Tennessee check marks to a matrix in onClickMap.test.js confirming that clicking on various check marks redirects to the desired page.
+-
+- 12/20/21: Development
+-- Submitted a change that finishes filling out the first draft of Tennessee.html.
+-- Submitted a change that finishes filling out the first draft of Alabama.html.
+-
+- 12/13/21: Development
+-- Submitted a change that fills out more of the details and photos on Tennessee.html.
+-- Submitted a change that defines kAlabamaCheckMark in constants.js, then updates production code to use this constant.
+-- Submitted a change that replaces a hardcoded string with kAlabama in the initialization of g_LoadedGreenStates.
+-- Submitted a change that replaces a hardcoded string with kTennessee in the initialization of g_LoadedGreenStates.
+-- Submitted another change that fills out more of the details and photos on Tennessee.html.
+-- Submitted a change that defines the constant kTennesseeCheckMark, and updates production code to use this string.
+-
+- 12/12/21: Development
+-- Submitted a change that fills out more of the details and photos on Alabama.html.
+-- Submitted a change that adds two new polylines for the green check marks on Alabama and Tennessee.
+-- Submitted a change that adds a visibility="hidden" assignment to the two polylines added in the previous change.
+-- Submitted a change that adds Alabama and Tennessee to g_LoadedGreenStates, thereby making those two states update in color and mark/box visibility correctly in response to the year slider.
+-- Submitted a change that adds Tennessee and Alabama to getStateIdForMousedOverPolygon() and getStateIdForClickedPolygon(), respectively.
+-- Submitted a change that moves the definitions of kAlabama and kStateNameAlabama from testConstants.js up into constants.js, then also updates production code to use this constant.
+-
+- 12/5/21: Development
+-- Submitted a change that updates polyline properties in getMapContent.js, plus updates kTennessee and several tests, thereby making Alabama and Tennessee remain green by default rather than red by default even when moused over.
+-
+- 12/4/21: Development
+-- Submitted a change that adds the high_points/al and high_points/tn directories, plus all of the photos in each one.
+-- Submitted a change that creates basic .html pages for Alabama and Tennessee.
+-- Submitted a change that updates the initial fill color (on page load) of Alabama and Tennessee from red to green.
+-
+*** BEGIN WORK ON ADDING ALABAMA & TENNESSEE ***
+- 11/4/21: Development
+-- Submitted a change that updates the function getOnlyChild() in high_points.test.js to be getScalableVectorGraphic() instead. This change also replaces one of the tests in that class with an expect statement in getScalableVectorGraphic().
+--- With this change, we're at 28 TODOs in test code.
+-- Submitted a change that removes all of the duplicate comments acknowledging that test definitions are often longer than 100 characters from all test files except for high_points.test.js, since this issue is overall a single issue that's just deserving of one comment.
+--- With this change, we're down to 0 TODOs in production code and 23 TODOs in test code. Additionally, all source files in both production and test are less than 1,000 lines of code.
+-- Submitted a change that just updates the revision date on the website's top-level index.html.
+-
+- 11/3/21: Development
+-- Submitted a change that cleans up some of the usage & comments around onPageLoad() in beforeAll() clauses throughout the test code.
+--- With this change we are back down to 0 TODOs in production code and 27 TODOs in test code, but high_points.test.js had grown to more than 1,000 lines of code.
+-- Submitted a change that moves all tests of onClickMap() to a new source file called onClickMap.test.js.
+--- With this change, we're back up to 35 TODOs in test code.
+-- Submitted a change that adds a couple of test cases for the Dakota cases in getStateIdForClickedPolygon(), which were not previously being tested.
+--- With this change, we're at 33 TODOs in test code.
+-- Submitted a change that removes no-longer-used miscellaneous constant definitions from high_points.test.js.
+--- With this change, we're at 32 TODOs in test code.
+-- Submitted a change that single-sources the definition of five different state polyline IDs used only in test code into testConstants.
+-- Submitted a change that single-sources the definition of five different state names used only in test code into testConstants.
+-- Submitted a change that refactors high_points.test.js, mostly by removing no-longer-needed constant definitions.
+-- Submitted a change that moves kArbitraryPolylineId to testConstants.js.
+-- Submitted a change that moves the definitions of insignificant Alaskan and Hawaiian islands to testConstants.js.
+--- With this change, we're at 30 TODOs in test code.
+-- Submitted a change that moves the definition of kConnecticutCheckBox to testConstants.js.
+--- With this change, we're at 29 TODOs in test code.
+-
+- 11/2/21: Development
+-- Submitted a change that expands the automated test checking for the setInterval() call to also check for the clearInterval() call.
+-- Submitted a change that cleans up a comment in handleScreenOrientationChange.test.js, as well as one in mapFunctions.js that I decided not to implement for the sake of keeping the automated test suite rigid.
+-- Submitted a change that replaces a hardcoded 0 in onOrientationChange() with kFirstChildIndex.
+-- Submitted a change that removes a TODO comment from mapFunctions.js, because I decided that it is a separate feature and out of scope of the current feature that I'm working on.
+--- With this change, we're at 29 TODOs in test code.
+-- Submitted a change that removes a useless TODO comment from one of the tests files.
+--- With this change, we're at 28 TODOs in test code.
+-
+- 11/1/21: Development
+-- Submitted a change that rips out the extra cases in handleScreenOrientationChange() after I determined that they are practically impossible to hit.
+-- Submitted a change that removes comments which are no longer meaningful following the previous change.
+-- Submitted a change that defines mapContainer.orientationChangeIntervalId, and updates onPageLoad() to store the return value of setInterval() in that property.
+-- Submitted a change that adds an automated test confirming that mapContainer.orientationChangeIntervalId is set when onPageLoad() is called.
+-- Submitted a change that makes onClickMap() call clearInterval() in cases where the app will proceed to another HTML page.
+-- Submitted a change that adds a mapContainer.orientationChangeIntervalId = kUnpopulated assignment to after the clearInterval() call.
+-
+- 10/29/21: Development
+-- Submitted a change that removes the global Javascript variable g_MapContainerHeightAt0Degrees and replaces it with an html property, mapContainer.portraitHeight. This change also adds one automated test confirming that mapContainer.portraitHeight is set as expected.
+-- Submitted a change that removes the global Javascript variable g_MapContainerHeightAtMinus90Degrees and replaces it with an html property, mapContainer.landscapeSecondaryHeight. This change also adds one automated test confirming that mapContainer.landscapeSecondaryHeight is set as expected.
+-- Submitted a change that removes the global Javascript variable g_MapContainerHeightAtPlus90Degrees and replaces it with an html property, mapContainer.landscapePrimaryHeight. This change also adds one automated test confirming that mapContainer.landscapePrimaryHeight is set as expected.
+-- Submitted a change that replaces a hardcoded 0 in handleScreenOrientationChange() with kFirstChildIndex.
+-- Submitted a change that just updates the revision date on the website's top-level index.html.
+-
+- 10/28/21: Development
+-- Submitted a change that fixes a bug where handleScreenOrientationChange() was looking for window.orientation to contain a number rather than a string. This change also adds a test to ensure that g_MapContainerHeightAt0Degrees is set by handleScreenOrientationChange().
+-
+- 10/27/21: Development
+-- Submitted a change that parameterizes the experimental test of handleScreenOrientationChange().
+-- Submitted a change that renames kScreenOrientationLandscape in testConstants.js to kScreenOrientationLandscapePrimary.
+-- Submitted a change that removes the global Javascript variable g_CurrentScreenOrientation, and replaces it with a new property on the mapContainer called currentScreenOrientation.
+-- Submitted a change that updates comments in mapFunctions.js that referred to g_CurrentScreenOrientation.
+-- Submitted a change that just updates the revision date on the website's top-level index.html.
+-
+- 10/26/21: Development
+-- Submitted a change that adds an experimental automated test spoofing window.orientation and calling onOrientationChange().
+-- Submitted a change that adds an experimental automated test spoofing window.orientation and calling handleScreenOrientationChange().
+-- Submitted a change that moves all tests of handleScreenOrientationChange() to a new source file called handleScreenOrientationChange.test.js.
+-- Submitted a change that creates tests/testConstants.js, and moves kInitialScreenOrientation and kPropertyNameOrientation into that file.
+-- Submitted a change that updates the experimental test of handleScreenOrientationChange() to actually change window.orientation from landscape to portrait.
+-- Submitted a change that makes the experimental test of handleScreenOrientationChange() test g_CurrentScreenOrientation using a temporary getter, thereby finally making the action (i.e. function call) in the test matter.
+-- Submitted a change that updates handleScreenOrientationChange.test.js to test the screen orientation change in both directions.
+-- Submitted a change that adds a clearing of window.orientation to kUnpopulated in between each test in handleScreenOrientationChange.test.js.
+-- Submitted a change that renames kInitialScreenOrientation in testConstants.js to kScreenOrientationLandscape.
+-
+- 10/25/21: Development
+-- Submitted a change that just updates the publish date on the top-level index.html of the website.
+--- *Observation:* I pushed the code live to my website in this state. The next day, I observed that my latest fix does indeed seem to drastically improve how the high points page handles screen orientation changes, but it's still not quite working 100% of the time. I had to play with it quite a bit to get it to fail, but it seems like my app is handling ~95% of orientation changes now, as opposed to ~50% that it was in the previous state.
+--- *Goal:* Keep the code in this state, and clean it up--get it back down to 0 TODOs in production and <= 27 TODOs in test code.
+-
+- 10/23/21: Development
+-- Submitted a change that defines onOrientationChange(), which is similar to onPageLoad() but does not re-establish the two-second polling interval for orientation changes.
+-- Submitted a change that defines a constant, pollingIntervalInMilliseconds, instead of a hardcoded number in onPageLoad().
+-- Submitted a change that adds a rough mechanism to also call onOrientationChange() in response to noticing that the map container is the wrong height.
+-
+- 10/22/21: Development
+-- Submitted a change that just updates the publish date in the top-level index.html of the website.
+-
+- 10/21/21: Development
+-- Submitted a change that implements a rough fix for the bug of objects not properly re-arranging themselves when the screen orientation is changed while viewing on a mobile device.
+--- With this change, 7 TODOs have been introduced into production code, however I am going to temporarily push a version of this without the comments live just to see what happens when I view the site on my phone that way.
+-
+- 10/20/21: Development
+-- Submitted a change that moves all tests of tomHasHighPointedStateWithinSliderRange() to a new source file called tomHasHighPointedStateWithinSliderRange.test.js.
+-- Submitted a change that defines kHasBeenHighPointed in updateCheckMarkAndBoxToMatchStateFillColor.test.js.
+-- Submitted a change that removes some unneeded operations involving the year slider in updateCheckMarkAndBoxToMatchStateFillColor.test.js.
+-- Submitted a change that removes ~300 lines of code from onChangeSliderValue.test.js by coupling test matrices that are using the same test cases.
+-- Submitted a change that combines two nearly-identical TODO comments in onChangeSliderValue.test.js into one TODO comment.
+--- With this change, there are 27 TODOs total in test code, and none in production code. All Javascript source files in both production and test code are <1,000 lines.
+-
+- 10/7/21: Development
+-- Submitted a change that removes all unused constant definitions from onChangeValueOfSliderThumb.test.js.
+-- Submitted a change that removes three unused helper functions from onChangeValueOfSliderThumb.test.js.
+-- Submitted a change that slightly cleans up one of the test matrices for updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that moves all tests of updateCheckMarkAndBoxToMatchStateFillColor() to a new source file called updateCheckMarkAndBoxToMatchStateFillColor.test.js.
+-- Submitted a change that removes most if not all unused constant definitions in updateCheckMarkAndBoxToMatchStateFillColor.test.js and high_points.test.js.
+-
+- 10/6/21: Development
+-- Submitted a change that moves all tests of updateAndGetCurrentBlueState() to a new source file called updateAndGetCurrentBlueState.test.js.
+-- Submitted a change that removes all of the unused constant definitions from updateAndGetCurrentBlueState.test.js.
+-- Submitted a change that moves the duplicated simulateMouseHoveringOverState() from each test source file into a new file called testFunctions.js.
+-- Submitted a change that moves all tests of onChangeValueOfSliderThumb() to a new source file called onChangeValueOfSliderThumb.test.js.
+-
+- 10/5/21: Development
+-- Submitted a change that parameterizes a couple of test matrices confirming that calling resetStateFillColorToDefault() resets both parts of Michigan to red when the slider is set to pre-2019.
+-- Submitted a change that combines both of the test matrices cleaned up in the previous change into one matrix with two parameters.
+-- Submitted a change that replaces a hardcoded string in high_points.test.js with kYearSliderId.
+-- Submitted a change that moves high_points.test.js down into a new subdirectory called high_points\tests\.
+-
+- 10/4/21: Development
+-- Submitted a change that just updates the revision date on the top-level index.html.
+--- Uploaded the changes to the website.
+--- For the record, still 27 TODOs in high_points.test.js.
+-- Submitted a change that separates a test for passing an invalid input to onClickMap() from a large test matrix into a separate test definition.
+-- Submitted a change that defines kDirectoryNameHighPoints and kFileExtensionHtml, plus exports those constants to high_points.test.js.
+-- Submitted a change that cleans up a test matrix in high_points.test.js for validating the return value of onClickMap() in cases where a polyline that's expected to lead to another page is clicked on.
+-- Submitted a change that cleans up a test matrix in high_points.test.js for validating the return value of onClickMap() in cases where a polyline that's not expected to lead anywhere is clicked on.
+-- Submitted a change that parameterizes (and really, fixes) a test confirming that onClickMap() returns null when passed a click event with an invalid target.
+-
+- 10/3/21: Development
+-- Submitted a change that adds test cases for North and South Dakota to a test matrix for onChangeSliderValue().
+-- Submitted a change that adds more progress on filling out NorthDakota.html.
+-- Submitted a change that adds more progress on filling out SouthDakota.html.
+-- Submitted a change that removes some images from the 'sd' folder which are no longer used in SouthDakota.html.
+-- Submitted a change that cleans up some of the song titles in the 'sd' folder.
+-
+- 10/1/21: Development
+-- Submitted a change that adds more progress on filling out SouthDakota.html.
+-- Submitted another change that adds even more progress on filling out SouthDakota.html.
+-- Submitted another change that adds yet even more progress on filling out SouthDakota.html.
+-- Submitted another change that adds *EVEN MOOOOORE* progress on filling out SouthDakota.html.
+-
+- 9/30/21: Development
+-- Submitted a change that defines kNorthDakota and kSouthDakota in constants.js, plus exports those two constants to high_points.test.js to replace the previously-defined constants there.
+-- Submitted a change that defines kNorthDakotaCheckMark and kSouthDakotaCheckMark in constants.js, plus exports those two constants to high_points.test.js to replace some hardcoded strings.
+-- Submitted a change that defines kStateNameNorthDakota and kStateNameSouthDakota in constants.js, plus exports those two constants to high_points.test.js to replace the previously-defined constants there.
+-- Submitted a change that adds several photos to SouthDakota.html.
+-- Submitted a change that finishes adding all of the photos to SouthDakota.html and removing the ones I don't want to use. At this point, every photo in the 'sd' folder is in SouthDakota.html.
+-
+- 9/29/21: Development
+-- Submitted a change that moves the cases involving North and South Dakota from the array casesForMovingFromANormallyRedStateToAnotherState to its counterpart casesForMovingFromANormallyGreenStateToAnotherState in high_points.test.js.
+-- Submitted a change that moves the kNorthDakota and kSouthDakota cases from the onClickMap() test matrix for red states to the matrix for green states in high_points.test.js.
+-- Submitted a change that adds North and South Dakota to getStateIdForClickedPolygon(), plus adds a couple of tests confirming that clicking on those two check marks redirects to the respective states.
+-- Submitted a change that adds more photos to NorthDakota.html.
+-- Submitted a change that adds a couple more photos to NorthDakota.html, and removes all of the unused photos from the 'nd' folder.
+-- Submitted a change that continues progress on arranging photos in NorthDakota.html.
+-
+- 9/28/21: Development
+-- Submitted a change that includes newly-defined SouthDakota.html and NorthDakota.html files, although neither are even close to complete and require quite a bit more work.
+-- Submitted a change that updates the majority of the javascript code to acknowledge that I've high-pointed North and South Dakota now.
+-- Submitted a change that adds progress on filling out NorthDakota.html.
+-- Submitted a change that adds kNorthDakota to the normallyGreenBorderStates array in high_points.test.js, now that North Dakota is normally green instead of red.
+-
+- 9/27/21: Development
+-- Submitted a change that removes the video files from the sd and nd folders since I realized that I won't be hosting them (yet?).
+-- Submitted a change that removes all duplicate photos from the sd and nd folders.
+-- Submitted a change that gives all of the photos in the nd folder unique names.
+-- Submitted a change that gives all of the photos in the sd folder unique names.
+-
+- 9/26/21: Development
+-- Submitted a change that adds the 'sd' and 'nd' folders with all images and videos in them, not renamed.
+-
+*** BEGIN WORK ON ADDING NORTH & SOUTH DAKOTA ***
+*** END WORK ON TEST REFACTORING (reduced 78 TODOs to 27 TODOs) ***
+- 9/20/21: Development
+-- Submitted a change that adds an isUnpopulated() check to the scrollHeight of the slide container in setMarginsOfYearSliderToHalfOfSlideContainerHeight().
+-- Submitted a change that defines the kAlaskaIslands(1-8) constants in high_points.test.js.
+-- Submitted a change that defines kKaula, kMolokai, and kNiihau in high_points.test.js.
+-- Submitted a change that replaces a couple of hardcoded strings in high_points.test.js with kPrefixCheckBox.
+-
+- 9/17/21: Development
+-- Submitted a change that parameterizes the test case for setting the slider's margin in setMarginsOfYearSliderToHalfOfSlideContainerHeight() when the slide container's height is not properly set.
+-
+- 9/16/21: Development
+-- Submitted a change that splits another large test matrix up into two matrices, similar to yesterday's last couple of changes.
+-- Submitted a change that adds pre-assertion expect statements to a couple of test matrices.
+-- Submitted a change that parameterizes a matrix testing that invalid inputs produce no operation in setMarginsOfYearSliderToHalfOfSlideContainerHeight().
+-- Submitted a change that converts several "TODO: <100char." comments into one summarizing comment at the top of high_points.test.js.
+-- Submitted a change that makes the mapFunction includes two-line definitions rather than one-line in high_points.test.js.
+-
+- 9/15/21: Development
+-- Submitted a change that exports the constants kMargin and kUnitNamePixels to test code, plus adds a few expect statements to various tests confirming that these constants are populated correctly.
+-- Submitted a change that makes kMargin and kUnitNamePixels be used instead of hardcoded strings throughout high_points.test.js.
+-- Submitted a change that defines mockSlideContainerHeight() and kSlideContainerHeight100Pixels in high_points.test.js.
+-- Submitted a change that adds some pre-assertion expect statements to a couple of test matrices in high_points.test.js.
+-- Submitted a change that splits one of the test matrices for cursor attributes of polylines in response to onChangeValueOfSliderThumb() down into two smaller test matrices.
+-- Submitted a change that splits a large test matrix up into two matrices, similar to the previous change.
+-
+- 9/14/21: Development
+-- Submitted a change that removes some TODO comments from high_points.test.js, now that I've confirmed that it is expected for Connecticut's check box and mark visibility attributes to be null on page load.
+-- Submitted a change that exports kStateNameAlaska from constants.js into the test code, plus adds an extra assertion to the one test that uses this constant to fix an issue where the test would erroneously pass even without a valid click target.
+-
+*** BEGIN WORK ON TEST REFACTORING (started with 78 TODOs) ***
+- 9/13/21: Development
+-- Submitted a change that refactors expandMapToMaximumAllowableSizeOnDisplay() to remove some hardcoded values.
+-- Submitted a change that removes the unnecessary " 0" (left and right margin assignment) from the CSS definition for the slider class.
+-- Submitted a change that moves the CSS definitions from high_points.html to a new file, high_points_style.css.
+-- Submitted a change that removes two of the final TODO comments from map.js, now that I believe the work for them has been done.
+-- Submitted a change that refactors the HTML for the year strings, plus defines a new CSS class and renames the existing one.
+-- Submitted a change that renames the CSS class "flex-row" to "year-row".
+-- Submitted a change that alphabetizes the property assignments in the year slider's HTML.
+-- Submitted a change that lines up the closing parenthesis in the initialization of g_LoadedGreenStates in onPageLoad().
+-- Submitted a change that removes the final TODO comment from map.js now that I believe all of the work on the slider has been done.
+-- Submitted a change that adds a " /" to the link definition in the head of high_points.html, in order to consistently close each element in the head.
+-- Submitted a change that adds comments to the class definitions in high_points_style.css.
+-- Submitted a change that renames map.js to mapFunctions.js, and adds header comments to goToPage.js and getMapContent.js.
+-- Submitted a change that updates the revision date in the website's top-level index.html.
+--- Uploaded the changes to my website!
+-
+- 9/12/21: Development
+-- Submitted a change that removes kMapContainerId from constants.js, and replaces its last use with a reference to document.body.children[kFirstChildIndex].
+-- Submitted a change that edits the code to expand the SVG size to be more clear about where it gets the magic number 60 from.
+-- Submitted a change that defines expandMapToMaximumAllowableSizeOnDisplay().
+-
+- 9/10/21: Development
+-- Submitted a change that defines kIslandNameKodiak in constants.js, and changes the polyline ID "AlaskaIslandsKodiak" to "AlaskaKodiak".
+-- Submitted a change that defines kPeninsula in constants.js, and changes the polyline "MichiganUpperPeninsula" to "MichiganPeninsula".
+-- Submitted a change that adds a font-family = Impact assignment to each year string.
+-- Submitted a change that successfully maximizes the viewing space that the map container fills. This change reassigns the height of the year-string, slide-container, and flex-row CSS classes to a hardcoded 30px, but then it adds logic to onPageLoad() that resizes the map container based on those values.
+-- Submitted a change that slightly refactors the logic added to onPageLoad() in the previous change, plus a couple of comments.
+-- Submitted a change that pulls kFirstChildIndex from test code up into production code and uses it in my new logic in onPageLoad().
+-
+- 9/9/21: Development
+-- Submitted a change that replaces a couple of hardcoded 0's in high_points.test.js with a new constant, kFirstChildIndex.
+-- Submitted a change that replaces a few hardcoded strings in high_points.test.js with kCursorAttributeValueAuto.
+-- Submitted a change that replaces several hardcoded instances of "bConnecticut" with the already-existing constant kConnecticutCheckBox in high_points.test.js.
+-- Submitted a change that splits a large test matrix for polyline fill color at different slider values into two matrices: one for cases where we expect the state to be green, and one for cases where we expect the state to be red.
+-- Submitted a change that splits the test matrix for green states mentioned in the previous change once more into a matrix just for Michigan, and a matrix for the remaining states.
+-- Submitted a change that splits a large test matrix for cursor attribute value at different slider values into two matrices: one for cases where we expect the value to be auto, and one for cases where we expect the value to be cursor.
+-- Submitted a change breaking the test matrix from the previous change down even further.
+-- Submitted a change that defines kIslandNameKauai, kIslandNameMaui, and kIslandNameOahu in constants.js.
+-- Submitted a change that defines kStateNameAlaska and kMainland in constants.js.
+-
+- 9/8/21: Development
+-- Submitted a change that updates the test matrix for check mark and box visibility at different slider values to also include test cases for Michigan, which it was previously missing.
+-- Submitted a change that updates the test matrix for polylines' cursor attributes at different slider values to also include test cases for Michigan (both mainland and peninsula), which it was previously missing.
+-- Submitted a change that removes a "style=height: 5%" assignment from the flex-rows for each year string in getMapContent(), as that assignment was being overridden by the CSS definition for flex-row anyway.
+-- Submitted a change that copies the flex-row CSS class into another class called year-string, then updates flex-row's height from 30px to 5%. This change eliminates wasted vertical space between the three top-level UI elements (the map container, the slider, and the row of year strings).
+-- Submitted a change that removes no-longer-needed width assignment statements on the year string paragraphs, plus redefines the year-string CSS class's height and width to both 100%.
+-- Submitted a change that updates the test matrix for polylines' fill colors at different slider values to also include test cases for Michigan (both mainland and peninsula), which it was previously missing.
+-- Submitted a change that replaces some stale instances of the function name "getMapContent()" in high_points.test.js with the more accurate "onPageLoad()".
+-
+- 9/7/21: Development
+-- Submitted a change that renames setMarginsOfYearSlider() to setMarginsOfYearSliderToHalfOfSlideContainerHeight().
+-- Submitted a change that adds an unpopulated check on the parameter highPointedWithinSliderRange of updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that adds unpopulated checks to the check mark and box objects that are acquired during updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that removes the function updateStateFillColorAndMouseCursorBehavior() and moves its two lines of code up into the caller, onYearSliderChange(), plus adds a couple of comments mentioning tests that are still needed for these two lines.
+-- Submitted a change that adds an automated test matrix confirming that polylines' cursor values get set correctly by onYearSliderChange().
+-- Submitted a change that adds an automated test matrix confirming that polylines' fill colors get set correctly by onYearSliderChange().
+-- Submitted a change that renames onYearSliderChange() to onChangeValueOfSliderThumb().
+-
+- 9/6/21: Development
+-- Submitted a change that adds a test case for calling setMarginsOfYearSlider() with an input that has a null parentElement property.
+-- Submitted a change that adds a test case for calling setMarginsOfYearSlider() while the slide container's scrollHeight is unset.
+-
+- 9/5/21: Development
+-- Submitted a change that adds a couple of unpopulated checks to setMarginsOfYearSlider().
+-- Submitted a change that updates setMarginsOfYearSlider() to take the slider as a parameter rather than directly accessing the global variable g_YearSlider.
+-- Submitted a change that adds a test case for passing a null input to setMarginsOfYearSlider().
+-
+- 9/4/21: Development
+-- Submitted a change that defines the state name constants (kStateName_______).
+-- Submitted a change that defines several global check box constants in high_points.test.js that don't already exist in production code.
+-- Submitted a change that replaces several hardcoded strings in high_points.test.js with state name constants that were already being imported from production code.
+-- Submitted a change that fixed the global constant kWyoming in high_points.test.js, which had the wrong string hardcoded.
+-- Submitted a change that defines state name constants in high_points.test.js that don't already exist in production code.
+-- Submitted a change that refactors setTopAndBottomMarginsOfYearSlider() and renames it to setMarginsOfYearSlider().
+-
+- 9/2/21: Development
+-- Submitted a change that edits updateCheckMarkAndBoxToMatchStateFillColor() to take a state ID as a parameter rather than the state itself.
+-- Submitted a change that adds an unpopulated check to the stateId parameter of updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that adds a test matrix for updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that adds another test matrix for updateCheckMarkAndBoxToMatchStateFillColor(), specifically to handle null, undefined, and empty string inputs.
+-- Submitted a change that slightly refactors updateStateFillColorAndMouseCursorBehavior() by combining determining and applying the new fill color into one line.
+-
+- 9/1/21: Development
+-- Submitted a change that separates logic from onYearSlider() into a helper function called updateCheckMarkAndBoxToMatchStateFillColor().
+-- Submitted a change that separates logic from onYearSlider() into a helper function called updateStateFillColorAndMouseCursorBehavior().
+-- Submitted a change that renames tomHasHighPointedStateWithinSliderTimeFrame() to tomHasHighPointedStateWithinSliderRange().
+-- Submitted a change that renames several constants in several functions called 'highPointedByNow' to 'highPointedWithinSliderRange'.
+-- Submitted a change that removes an unnecessary check against the string constant kIsUnpopulated in resetStateFillColorToDefault().
+-- Submitted a change that adds three automated test cases for resetStateFillColorToDefault(): one for an empty string input, one for a null input, and one for an undefined input.
+-- Submitted a change that partially refactors resetStateFillColorToDefault() by defining a new constant, kMichigan, which is separate from kMichiganMainland and kMichiganPeninsula.
+-
+- 8/31/21: Development
+-- Submitted a change that adds an automated test case mocking the slide container's scrollHeight property and confirming that loading the page sets the slider's margin to half the height. This change also separates the logic to do so from onPageLoad() and into a separate function called setTopAndBottomMarginsOfYearSlider().
+-- Submitted a change that removes the no-longer-needed return value from setTopAndBottomMarginsOfYearSlider().
+-- Submitted a change that adds a couple of automated tests for resetStateFillColorToDefault(), confirming that both of Michigan's parts are reset to red after mousing out of it if the year slider is first set to a year before I high-pointed Michigan.
+-- Submitted a change that makes the year slider a global object which is defined on page load in map.js, so that we don't need to keep getting it hundreds of times per minute while people interact with the page.
+-- Submitted a change that removes a stale comment from the last change--I learned that the global variables in map.js don't *technically* need their own assignment statements at the head of the file, since assigning to something that doesn't exist creates a global property. But, I removed the comment and just left the assignment statements as-is for readability.
+-- Submitted a change that slightly refactors setTopAndBottomMarginsOfYearSlider() by renaming a constant to make one magic number less ambiguous.
+-
+- 8/30/21: Development
+-- Submitted a change that refactors tomHasHighPointedByNow() by renaming a couple of local constants.
+-- Submitted a change that renames tomHasHighPointedByNow() to tomHasHighPointedStateWithinSliderTimeFrame().
+-- Submitted a change that implements a correction to the slider's margin property by applying half of the scroll height of the slide container on page load, although I left some comments pointing out that I really need to better understand why this edit is necessary before I ultimately release this feature.
+-- Submitted a change that removed a comment about scrollHeight, since I took another look and confirmed that that is indeed the correct property to use in onPageLoad().
+-
+- 8/29/21: Development
+-- Submitted a change that adds an individual test case checking the visibility of Connecticut's check mark and box after sliding the year slider to the leftmost value.
+-- Submitted a change that expands the test case added in the previous change into a test matrix for every state I've high-pointed minus Michigan.
+-- Submitted a change that adds a couple of parameters and continues expanding the test matrix edited in the previous two changes--making the test run in cases with different year slider values now.
+-- Submitted a change that expands the test matrix edited in the previous three changes--making the matrix contain cases for all normally-green states at every possible slider value.
+-- Submitted a change that partially refactors onYearSliderChange() to get rid of the magic string constants "bMichigan" and "cMichigan".
+-- Submitted a change that removes a couple of stale comments that were already implemented in previous changes from today.
+-- Submitted a change that drastically refactors tomHasHighPointedByNow().
+-- Submitted a change that removes the no-longer-needed kYearSliderValueAfter201X constants from constants.js.
+-- Submitted a change that partially refactors tomHasHighPointedByNow() by removing an unnecessary set of parenthesis and an else clause.
+-- Submitted a change that adds a test case for calling tomHasHighPointed() with an input that's a primitive value with no attributes.
+-
+- 8/28/21: Development
+-- Submitted a change that partially refactors onYearSliderChange() in order to remove some magic strings.
+-- Submitted a change that defines kCursorAttributeValueAuto and kCursorAttributeValuePointer in constants.js, plus exports the definition of the latter so that the value can be used in test code instead of the separate constant that was previously defined in high_points.test.js.
+-- Submitted a change that partially refactors onYearSliderChange() in order to remove the potentially confusing hardcoded string, "gMichigan".
+-- Submitted a change that makes the beforeAll() routine in high_points.test.js call onPageLoad() instead of just setting the body's inner HTML. This change also updates the TODO comment above beforeAll().
+-
+- 8/26/21: Development
+-- Submitted a change that adds one test case for onClickMap() and removes a no-longer-needed "return null;" statement.
+-- Submitted a change that adds another automated test for onClickMap() and removes another no-longer-needed "return null;" statement.
+-- Submitted a change that removes another no-longer needed "return null;" statement from onClickMap().
+-- Submitted a change that removes the yearId parameter from tomHasHighPointedByNow(), since every use of that function is just getting the yearId directly from the year slider.
+-- Submitted a change that renames kYearSliderValueBefore2015 to kYearSliderValueAfter2014.
+-- Submitted a change that defines kSecondCharIndex.
+-
+- 8/25/21: Development
+-- Submitted a change that adds an automated test matrix for onClickMap().
+-- Submitted a change that adds test cases for Michigan, and for all check marks, to the test matrix for onClickMap().
+-- Submitted a change that adds a test matrix validating the results of onClickMap() for red states, insignificant islands, and check boxes.
+-- Submitted a change that adds test cases for check boxes to the matrix added in the previous change.
+-- Submitted a change that updates the definition of the matrix for clicking check boxes to use as many constants from constants.js as already exist, rather than magic strings.
+-- Submitted a change that adds an isUnpopulated() check to the clickEvent parameter of onClickMap().
+-- Submitted a change that slightly refactors onClickMap().
+-- Submitted a change that moves a lone "return null;" statement out of an else clause and onto its own line in onClickMap().
+-
+- 8/24/21: Development
+-- Submitted a change that updates the numeric range of the year slider from 0-7 to 2014-2021.
+-- Submitted a change that updates the year slider ID from "myRange" to "yearSlider".
+-- Submitted a change that adds an automated test matrix for getStateIdForClickedPolygon().
+-- Submitted a change that adds an experimental test case calling onClickMap().
+-- Submitted a change that renames "map.mock.js" to "goToPage.mock.js".
+-
+- 8/23/21: Development
+-- Submitted a change that removes a TODO comment from map.js, which had already been taken care of with yesterday's first change.
+-- Submitted a change that makes onYearSliderChange() update the cursor property values of states whenever they change between green and red in response to the slider control changing.
+-- Submitted a change that defines a constant kYearSliderId for the year slider's ID.
+-- Submitted a change that adds an unpopulated check to the yearId parameter of tomHasHighPointedByNow().
+-
+- 8/22/21: Development
+-- Submitted a change that fills out the test matrix for tomHasHighPointedByNow() with cases for the slider occupying each value less than the maximum.
+-- Submitted a change that defines the strings "0" through "7" as constants for the value of the year slider.
+-
+- 8/21/21: Development
+-- Submitted a change that removes the function tomHasHighPointed(), and replaces its one remaining use with a call to tomHasHighPointedByNow(). This update also repurposes a test matrix for the former function to use the latter instead.
+-- Submitted a change that combines two separate unpopulated checks at the beginning of tomHasHighPointedByNow() into one compound unpopulated check.
+-- Submitted a change that removes the CSS definition hiding the ability to highlight the year slider with the keyboard, since I actually do want people to be able to focus on the slider with the keyboard if they want to.
+-- Submitted a change that removes the unneeded "width: 100%" definition from the slider, since the width is already defined by the slide-container.
+-- Submitted a change that replaces several magic strings with constants in onYearSliderChange().
+-
+- 8/20/21: Development
+-- Submitted a change that adds a check box for every state that's already been high-pointed, and implements the mechanism of replacing the check marks with check boxes when moving the slider back to years before the state was high-pointed.
+-- Submitted a change that makes resetStateFillColorToDefault() implement Michigan's special logic when the slider is set to a year before I high-pointed Michigan.
+-- Submitted a change that updates the slider color from blue to green, although I did this by copying and pasting a huge amount of CSS that I probably don't need in the long run.
+-- Submitted a change that refactors isCheckMarkOrBox(), and adds one test case to its matrix for the input "bConnecticut".
+-- Submitted a change that renames kPrefixCheckIcon to kPrefixCheckMark.
+-
+- 8/19/21: Development
+-- Submitted a change that moves the array of loaded green polylines out of onYearSliderChange() and into a global variable called g_LoadedGreenStates.
+-- Submitted a change that switches the ID prefix of check boxes from "c" to "b", in order to distinguish them from check marks.
+-
+- 8/18/21: Development
+-- Submitted a change that refactors onYearSliderChange() and adds a new function, tomHasHighPointedByNow().
+-- Submitted a change that updates resetStateFillColorToDefault() to take the year slider value into account when determining whether a state should default to red or green.
+-- Submitted a change that removes a TODO comment for a bug which I retroactively realized was also fixed by the previous change.
+-- Submitted a change that adds a value=0 case to the year slider, for pre-2015 when I had not high-pointed any states. This change also significantly helps the alignment (at least when viewed on my Desktop PC right now) of the year strings with the slider values.
+-- Submitted a change to various heights in an attempt to create a more uniform appearance across devices; mapContainer height -> 100%, svg height -> 90%, year strings now have a 5% height on their divs instead of themselves, and the height on the slide container is now 5%.
+-
+- 8/17/21: Development
+-- Submitted a change that fills out the whole chronology, year-by-year, in terms of which states' fill colors change in response to which slider values.
+-- Submitted a change that updates the previous change's implementation to use a new string attribute ('year') that I added to every normally-green polyline.
+-
+- 8/16/21: Development
+-- Submitted a change that adds a very rough first attempt at visualizing the slider and each year that's passed since I started working on high-pointing.
+-- Submitted a change that aligns the year strings somewhat more closely with the slider, although the alignment is still not perfect.
+-- Submitted a change that reduces the height of the flex-row containing the year strings.
+-- Submitted a change that puts each year string inside a flex-row, plus reduces the granularity of the slider control from 1-100 to 1-7 (one for each year).
+-- Submitted a change that makes California's fill color toggle between green and red for slider values 7 and 6, respectively.
+-
+*** BEGIN FEATURE DEVELOPMENT ON SLIDER. ***
+- 8/14/21: Development
+-- Submitted a change that just updates the revision date on the top-level .html, since I ran into problems yesterday with uploading files through siteground's File Manager tool, and then I found a better approach using straight FTP.
+-
+- 8/13/21: Development
+-- Submitted a change that renames updateAndGetCurrentLightBlueState() to updateAndGetCurrentBlueState().
+-- Submitted a change that corrects Delaware's date from 2019 to 2020, and updates the revision date on the website's top-level index.html.
+-
+- 8/12/21: Development
+-- Submitted a change that updates isNullOrUndefined() to isUnpopulated(), which returns true for null, undefined, and empty string inputs.
+-- Submitted a change that combines colorLightBlue(), colorLightGreen(), and colorLightRed() into one function called setPolygonFillColor().
+-- Submitted a change that removes a TODO comment from map.js, which, upon further consideration I decided not to implement.
+-
+- 8/11/21: Development
+-- Submitted a change that moves matchLightBlueFillForHawaiianIslands() and matchLightBlueFillForTwoPolygons() back into map.js.
+-- Submitted a change that moves tomHasHighPointed() back into map.js.
+-- Submitted a change that moves resetStateFillColorToDefault() back into map.js.
+-- Submitted a change that moves updateAndGetCurrentLightBlueState() back into map.js.
+-- Submitted a change that moves onMouseCrossingBorder() back into map.js.
+-- Submitted a change that moves getStateIdForMousedOverPolygon() back into map.js.
+-
+- 8/10/21: Development
+-- Submitted a change that re-combines colorLightBlue(), colorLightGreen(), and colorLightRed() into one source file called colorFunctions.js.
+-- Submitted a change that re-combines isCheckMarkOrBox(), isFilledLightBlue(), isInsignificantIsland(), and isNullOrEmpty() into one source file called is.js.
+-- Submitted a change that moves the functions in colorFunctions.js back to map.js, and removes colorFunctions.js from the project.
+-- Submitted a change that moves the functions in is.js back to map.js, and removes is.js from the project.
+-
+- 8/9/21: Development
+-- Submitted a change that updates casesForMovingFromACheckMarkOrBoxToAState in high_points.test.js to be defined by concatenation instead of explicitly.
+-- Submitted a change that renames the constant kHawaiianIslandsFilled to kHawaiianIslandsBlue.
+-- Submitted a change that updates onMouseCrossingBorder() to store the most recent blue state ID in the flex-container div in html instead of a global javascript variable.
+-- Submitted a change that adds a constant (kMapContainerId) to constants.js, and updates onMouseCrossingBorder() to use the new constant.
+-- Submitted a change that breaks onMouseCrossingBorder() out into its own source file, plus adds an experimental test calling that function.
+-
+- 8/8/21: Development
+-- Submitted a change that adds a default case for the view box to both expectCursorAttributeIsSetAsDesiredForEachPolyline() and expectMapContainsDesiredCountOfEachTypeOfPolyline() in high_points.test.js.
+-- Submitted a change that removes three TODO comments from high_points.test.js that were calling for test cases that, upon further consideration, I've decided are unnecessary.
+-- Submitted a change that removes an array of test parameters that was a duplicate of casesForMovingBetweenAStateAndACheckMarkThatRedirectsToTheSameState.
+-
+- 8/7/21: Development
+-- Submitted a change that refactors expectCursorAttributeIsSetAsDesiredForEachPolyline() and expectMapContainsDesiredCountOfEachTypeOfPolyline() in high_points.test.js.
+-- Submitted a change that refactors getOnlyChild() in high_points.test.js.
+-
+- 8/6/21: Development
+-- Submitted a change that adds a couple of test matrices for moving between check marks and the view box, and asserting that no operation is performed on the view box.
+-- Submitted a change that adds kMichiganCheckMark to one test matrix for moving the mouse in between that mark and the view box.
+-
+- 8/5/21: Development
+-- Submitted a change that adds a new test matrix for moving from one check mark to an adjacent check mark, and ensuring that the previous state changes from light blue to light green.
+-- Submitted a change that adds a new test matrix for handling the color change of the previous state when moving from a check mark/box to a new state.
+-- Submitted a change that breaks the test matrix added in the previous change down into three separate matrices.
+-
+- 8/4/21: Development
+-- Submitted a change that refactors the test matrix for resetStateFillColorToDefault().
+-- Submitted a change that adds three new test matrices for moving the mouse from states into the view box.
+-- Submitted a change that simplifies the deriving of the array with all border states, both green and red, in high_points.test.js.
+-- Submitted a change that updates several consts called "newStateId" to "toStateId", and "newState" to "toState".
+-- Submitted a change that adds Alaska, Hawaii, and Michigan to a few test matrices that were missing those states.
+-- Submitted a change that moves a couple of const declarations in tests from the arrange section to the assert section.
+-
+- 8/3/21: Development
+-- Submitted a change that removes an old comment from high_points.test.js that I decided not to implement.
+-- Submitted a change that defines a constant for the magic string "iAlaskaIslands1" in high_points.test.js.
+-- Submitted a change that shortens several >100char lines in the test definition for the matrix for matchColorsForHawaiianIslands().
+-
+- 7/25/21: Development
+-- Submitted a change that adds a couple of test matrices for moving the mouse between the view box and the far north check marks, minus Michigan (Minnesota, New York, Vermont).
+-- Submitted a change that adds constants to high_points.test.js for the expected number of check marks & boxes, green polylines, and red polylines. The constants are used by the tests checking for the expected number of polylines, and that the cursor properties are all set as expected.
+-- Submitted a change that refactors the test confirming that the only child of the document's body is the flex-container div.
+-- Submitted a change that refactors one of the tests for matchLightBlueFillForTwoPolygons().
+-- Submitted a change that refactors a couple more tests for matchLightBlueFillForTwoPolygons().
+-
+- 7/22/21: Development
+-- Submitted a change that refactors several test definitions in high_points.test.js to not have a >100 character line involving updateAndGetCurrentLightBlueState().
+-- Submitted a change that fixed the incorrect year of 2019 to 2020 in WestVirginia.html and Maryland.html. With this change, I also updated the revision date in the website's top-level index.html.
+-- Submitted a change that adds a test confirming that the cursor property is set correctly for each green/red state and check mark/box.
+-
+- 7/19/21: Development
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from one check mark to another check mark.
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from a check mark or box to a state.
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from a state to a check mark that redirects to that same state.
+-- Submitted a change that adds the missing cases from the matrix of expected inputs for tomHasHighPointed().
+-- Submitted a change that further refactors the test matrices for moving the mouse cursor from a normally-green state to another state.
+-- Submitted a change that further refactors the test matrices for moving the mouse cursor from a normally-red state to another state.
+-- Submitted a change that swaps the parameter order for the test matrices for moving from states to check marks and boxes.
+-- Submitted a change that refactors several test definitions in high_points.test.js by swapping the order of the test parameters.
+-
+- 7/18/21: Development
+-- Submitted a change that splits the test matrix for moving the mouse from a normally-green state into a new state into two tests; one with the expects for the old state, and one with the expects for the new state.
+-- Submitted a change that splits the test matrix for moving the mouse from a normally-red state into a new state into two tests; one with the expects for the old state, and one with the expects for the new state.
+-- Submitted a change that adds a cursor = pointer assignment to getMapContent() for all of the green state polylines, plus the check marks, so that the mouse cursor shows a hand when you mouse over those elements on the map.
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from the view box into a state.
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from a normally-green state to a check mark or box.
+-- Submitted a change that refactors the test matrices for moving the mouse cursor from a normally-red state to a check mark or box.
+-
+- 7/17/21: Development
+-- Submitted a change that simplifies the code in the test matrix for moving the mouse from a state into a check mark or box.
+-- Submitted a change that breaks the test matrix for moving from a state to a check mark/box into two test matrices; one for green states and one for red states.
+-- Submitted a change that breaks the test matrix for moving from one state to another down into three separate test matrices; view box, green states, red states.
+-
+- 7/16/21: Development
+-- Submitted a change that fixes some of the test code issues mentioned in the previous submission. The reason this is getting difficult to summarize is that I'm midway through breaking this monolith of a test down into many simpler cases.
+-- Submitted a change fixing the incorrect test failure messages in both of the test matrices that I've been working on recently.
+-- Submitted a change breaking the most recent test matrix I've been working on down into smaller and simpler test cases.
+-- Submitted another change of refactoring towards breaking down these huge test matrices into smaller and simpler cases.
+-
+- 7/15/21: Development
+-- Submitted a change replacing several magic strings representing check marks/boxes in the most recent set of tests to proper constants from constants.js.
+-- Submitted a change beefing up the code of the most recent set of tests, adding some more expectations, but there are still some issues to work out with the test code.
+-
+- 7/14/21: Development
+-- Submitted a change that defines constants in high_points.test.js to eliminate the remaining magic strings from the declaration of the test for moving the mouse from one state to another.
+-- Submitted a change that adds a parameterized matrix of test cases for moving the mouse between states and check marks/boxes.
+-
+- 7/13/21: Development
+-- Submitted a change that removes the four tests simulating mouse border events added in the previous change, and replaces them with a parameterized matrix of test cases.
+-- Submitted a change replacing a ton of hardcoded magic strings in the test added in the previous change with constants properly exported from constants.js.
+-
+- 7/12/21: Development
+-- Submitted a change that adds four tests simulating mouse events for scrolling into California through its borders with the ocean and neighboring states.
+-
+- 7/11/21: Development
+-- Submitted a change that moves getStateIdForMousedOverPolygon() to its own source file, plus adds a parameterized matrix of unit tests for that function.
+-- Submitted a change that moves updateStateFillColors() to its own source file, plus adds one unit test for that function.
+-- Submitted a change that slightly refactors updateStateFillColors(), plus adds kViewBox to constants.js.
+-- Submitted a change that renames updateStateFillColors() to updateAndGetCurrentLightBlueState().
+-
+- 7/10/21: Development
+-- Submitted a change that moves resetStateFillColorToDefault() to its own source file, plus adds one unit test for this function.
+-- Submitted a change that parameterizes the test submitted in the previous change, so that the test now captures all of the expected use cases for resetStateFillColorToDefault().
+-- Submitted a change that removes the usage of g_MostRecentBlueStateId from updateStateFillColor(), moving to instead using an extra parameter and a return value so that we only set the global in onMouseCrossingBorder().
+-- Submitted a change that adds a null/undefined check to isCheckMarkOrBox() and isInsignificantIsland().
+-- Submitted a change that migrates isCheckMarkOrBox() to its own source file, and adds a parameterized matrix of unit tests for that function.
+-- Submitted a change that migrates isInsignificantIsland() to its own source file, and adds a parameterized matrix of unit tests for that function.
+-
+- 7/9/21: Development
+-- Submitted a change that adds a parameterized set of unit tests for tomHasHighPointed().
+-- Submitted a change that adds a null/undefined check to tomHasHighPointed(), plus adds those two test cases to the parameter matrix for that function's test.
+-- Submitted a change that renames resetColorOfMostRecentBlueState() to resetStateFillColorToDefault(), and adds a parameter for the polygonId to this function so that the function itself no longer relies on the global variable g_MostRecentBlueStateId.
+-
+- 7/8/21: Development
+-- Submitted a change that replaces the single unit test of matchLightBlueFillForHawaiianIslands() with a matrix of 16 parameterized test cases.
+-
+- 7/7/21: Development
+-- Submitted a change that adds two more unit tests for matchLightBlueFillForTwoPolylines().
+-- Submitted a change that migrates matchLightBlueFillForHawaiianIslands() to its own source file and adds one unit test for that function.
+-
+- 7/6/21: Development
+-- Submitted a change that merged the two separate functions for matching the colors of Michigan mainland/peninsula and Alaska/Kodiak Island into one function called matchColorOfTwoPolylines().
+-- Submitted a change that separates matchColorOfTwoPolylines() into its own source file and adds two unit tests for that function.
+-- Submitted a change that renames matchColorOfTwoPolylines() -> matchLightBlueFillForTwoPolylines(), and matchColorOfHawaiianIslands() -> matchLightBlueFillForHawaiianIslands().
+-
+- 7/5/21: Development
+-- Submitted a change that adds proper null/undefined checking to colorLightGreen() and colorLightRed().
+-- Submitted a change that fills out a first draft of the prose & figure captions for the new Kentucky page.
+-- Submitted a change that refactors several tests in high_points.test.js.
+-- Submitted a change that further refactors tests in high_points.test.js by creating a helper method getAValidPolylineElement().
+-- Submitted a change that updates the revision date on the top-level index.html, and re-orders the links so that "Tom's Music" comes first and "I-84 Simulator for "the Internet"" comes last.
+-
+- 7/3/21: Development
+-- Submitted a change that adds one unit test for colorLightGreen() and one unit test for colorLightRed().
+-- Submitted a change that refactors the unit tests for colorLightBlue(), colorLightGreen(), and colorLightRed().
+-- Submitted a change that adds three unit tests for isFilledLightBlue().
+-- Submitted a change that adds isNullOrUndefined(), and updates isFilledLightBlue() to use this new function to do a proper null/undefined check on the polygon received as input. This change also adds three unit tests for isNullOrUndefined().
+-- Submitted a change that adds named photographs to a "ky" folder for Kentucky.
+-- Submitted a change that adds two unit tests for the null & undefined cases of isFilledLightBlue().
+-- Submitted a change that establishes a basic outline for the proper Kentucky page, showing all of the photographs but with placeholder captions and paragraphs.
+-- Submitted a change that adds proper null/undefined checking to colorLightBlue().
+-
+- 7/2/21: Development
+-- Submitted a change that slightly refactors the test confirming that the page contains the expected count of each type of polyline.
+-- Submitted a change that refactors several of the ID constants in constants.js to use the constant prefixes. This change also updates the test edited in the previous change to use the newly defined kPrefixRedState.
+-- Submitted a change that updates the name of the constant kFirstChar to kFirstCharIndex, plus exports that constant so that the test code now uses it.
+-- Submitted a change that adds one unit test of colorLightBlue().
+-
+- 7/1/21: Development
+-- Submitted a change that adds an automated test that confirms that the map contains the expected count of polylines of each category (check, insignificant island, green state, red state).
+-- Submitted a change that removes the simple add two numbers test and sum.js from the high_points directory, plus adds a beforeEach() call to high_points.test.js to set up the HTML before each test.
+-- Submitted a change that moves map.js and getMapContent.js down into the high_points directory.
+-
+- 6/30/21: Development
+-- Submitted a change that makes the production code dynamically set the HTML body with an onPageLoad() function in map.js.
+-- Submitted a change that updates the unit test looking for the flex-container div to use the same getMapContent() found in production code.
+-
+- 6/29/21: Development
+-- Submitted a change that adds a new jest suite for the high points project, with just a simple unit test that adds two numbers.
+-- Submitted a change that adds a second unit test that sets the body's HTML dynamically and confirms that the whole body is contained in a flex-container.
+-
+- 6/15/21: Development
+-- Submitted a change that fixes a few really minor issues I noticed with the wording of certain image captions in California.html, plus this change also updates the revision date in the website's top-level index.html again because I realized yesterday that I forgot to update that on the live site.
+-
+- 6/14/21: Development
+-- Submitted a change that slightly corrects the geographic location of the green check mark on California.
+-- Submitted a change that slightly updates and reorganizes the prose in California.html.
+-- Submitted a change that just updates the revision date on the website's top-level index.html.
+-- Submitted a change that fixes the awkward issue of certain image files in the 'ca' folder having nonsense numbers at the end of their filenames, since I've removed some photos that I originally dumped into this folder (e.g. "summit_photo_1" thru 12). With this latest change, all of the remaining filenames with numbers in them make sense.
+-- Submitted a change that addresses a few figure numbers and descriptions being wrong near the end of California.html.
+--- Uploaded the new files to my website at this point.
+-
+- 6/10/21: Development
+-- Submitted a change that adds a first, incomplete draft of California.html.
+-- Submitted a change that adds California to getStateIdForClickedPolygon() and getStateIdForMousedOverPolygon(), so that now you can click directly on the check mark on California to access California.html.
+-- Submitted a change that updates California.html to a second draft of prose/photos, and removes the following unused pictures from the project:
+--- ca/behind_whitney_1
+--- ca/behind_whitney_2
+--- ca/behind_whitney_3
+--- ca/crumbling_granite_walls
+--- ca/early_switchbacks
+--- ca/first_peak_through_the_trees
+--- ca/from_deep_in_the_valley
+--- ca/geographic_marker_without_thumb
+--- ca/jagged_range_1
+--- ca/looking_back_from_camp
+--- ca/looking_down_backside_of_whitney
+--- ca/looking_down_valley_at_sunset
+--- ca/neighbors_above_the_valley
+--- ca/other_peak_over_consultation_lake
+--- ca/ry_descending_the_ridge_2
+--- ca/scree_leading_to_more_mountains
+--- ca/scree_near_summit
+--- ca/scree_near_summit_2
+--- ca/sculpted_peaks
+--- ca/shallow_water
+--- ca/snow_patches
+--- ca/summit_photo_2
+--- ca/summit_photo_3
+--- ca/summit_view_3
+--- ca/summit_view_8
+--- ca/summit_view_10
+--- ca/switchbacks_from_above
+--- ca/the_chute_in_the_evening
+--- ca/the_sierras_and_beyond_1
+--- ca/the_valley_at_sunset_2
+--- ca/trees_before_the_valley
+--- ca/twisted_lake_guardians
+--- ca/western_deer
+-- Submitted a change that removes all remaining unused photos from the project and dumps a few more photos onto the bottom of California.html.
+--- Uploaded this backup to my Google Drive.
+-
+- 6/9/21: Development
+-- Submitted a change that updates California's polyline in high_points.html to have an id of "gCalifornia" instead of "rCalifornia", and updates cCalifornia to have a stroke of "#20CC20" instead of "red", and fixes the points so that the polygon is a check mark instead of a box.
+-- Submitted a change that creates and populates the 'ca' folder of photos for the California high point.
+-
+- 3/12/21: Development
+-- Submitted and uploaded a change that removes the font-family and text-align properties from each individual paragraph and puts those properties in the .paragraph class of the CSS stylesheets highPointPageStyleWidth80Percent.css and highPointPageStyleWidth90Percent.css.
+--- I also uploaded a copy of the latest project at this point to my Google Drive.
+-
+- 3/11/21: Development
+-- Submitted and uploaded a change that creates a 'caption' CSS class in each state high point's .html file in order to refactor the code.
+-
+- 3/6/21: Development
+-- Submitted and uploaded a change that moves the CSS styling in every one of the high point .html files to a link to one of a couple of CSS stylesheets I created called highPointPageStyleWidth80Percent.css and highPointPageStyleWidth90Percent.css.
+--- This change also removed the final TODO comment from map.js about performance optimizations that I deemed unnecessary.
+-
+- 2/27/21: Development
+-- Using siteground's online File Manager, I completed the tedious job of uploading every single photo in the project to the web. In doing this, I also compiled the list of extraneous photos which are in the project but unused.
+-- Submitted a change that removes all of the unused photos from the project, bringing the size of the .zip backups from 2.97GB down to 2.65GB. Here is the complete list of files in the high_points directory that I removed with this update:
+--- az/aligned_with_clouds
+--- az/approaching_tree_line
+--- az/slope_trails
+--- az/snowy_ridge
+--- az/sunlight_imminent
+--- az/triumphant_return
+--- ct/brushy_trail
+--- ct/connecticlouds
+--- ct/flat_connecticut
+--- ct/frissell_summit
+--- ct/horizon
+--- ct/light_in_the_woods
+--- ct/lying_plaque
+--- ct/patchy_hills
+--- ct/rock_stairwell
+--- ct/rocky_descent
+--- ct/sundown_imminent
+--- ct/tres_lagos
+--- ga/an_american_tragedy
+--- ga/big_leaves_and_cliffs
+--- ga/brasstown_bald_sign
+--- ga/carved_rocks
+--- ga/forests_to_faucets
+--- ga/gold_rush_spurs_cherokee_removal
+--- ga/north_carolina_mountains
+--- ga/showy_shrubs
+--- ga/through_the_branches
+--- ga/wagon_train_trail
+--- ga/your_american_heritage
+--- il/farm_hills_2
+--- il/fields
+--- il/parked_jeep
+--- in/hoosier_hill_entrance
+--- ma/pano_with_some_people
+--- ma/snowy_panorama
+--- me/summit_panorama_2
+--- me/the_bowl
+--- mi/geographic_marker
+--- mn/bug_hat
+--- mn/geographical_marker_being_photographed
+--- mn/minnesota
+--- mn/reflections
+--- mn/river_swirls
+--- ms/telephone_pole
+--- nh/neighboring_ridge
+--- nh/steep_ridges
+--- ny/green_forest_x1
+--- ny/green_forest_x2
+--- ny/green_forest_x3
+--- ny/snowy_branches
+--- ny/view_from_the_dam
+--- ok/road_to_black_mesa
+--- sc/cloud_coverage
+--- sc/final_trail_descent
+--- sc/fjord-esque-trail
+--- sc/high_pointers_bench
+--- sc/patchy_forests
+--- sc/ridge_top_path
+--- sc/trees
+--- sc/white_pine_seedlings
+--- sc/winter_forest
+--- vt/snow_cliff
+--- wi/eagle_scout_from_a_distance
+--- wi/eagle_scout_from_a_distance_at_night
+--- wi/no_horses_allowed_on_swimming_beach
+--- wv/tall_trees
+-- Submitted a change with some minor stylistic updates. I used siteground's web File Manager to upload each state's .html file, plus high_points.html and map.js, to www.tomdunkle.com.
+-- Submitted a bug fix where clicking on Michigan in the online version of the module (which isn't exposed yet) wasn't working because the code pointed to michigan.html (lower case) rather than Michigan.html (upper case).
+-- Submitted a bug fix where the images for New Hampshire were not showing properly in the online version of the module, because the images all had file extension ".JPG" (upper case) instead of ".jpg" (lower case). I used the Windows REN (rename) command to accomplish this.
+-- Submitted and uploaded a change that adds a small revision note in the corner of the website's front page.
+-
+- 2/26/21: Development
+-- Submitted a change that implements the concept of polyline ID prefixes.
+-- Submitted another change with minor refactoring over the above change.
+-- Finally did hand-testing in Firefox (i.e. any browser other than chrome), and realized that the toElement property isn't standardized so I submitted a change replacing its use with the target property instead.
+-- Submitted a change adding a funny placeholder page for Kentucky that I'll use for the initial release.
+-
+- 2/25/21: Development
+-- Submitted a change that finally removes the last of the layering architecture from high_points.html that was originally used for the crosshairs. The crosshairs feature is now totally removed from the project.
+-- Submitted a change that reduced the last X point in each check mark by 0.3, making all the check marks appear at a slightly tighter angle. I did this to fix quirky behavior around the Delaware check mark slightly overlapping with Pennsylvania.
+-- Submitted a bug fix for an issue where one of the minor Alaskan islands would highlight when moused over, which was unintentional. This edit introduced the function isInsignificantPolygon().
+-- Submitted a bug fix for an issue where mousing into the map through one of the northern check marks that extends the border (Minnesota, Michigan, New York, Vermont) would not cause that state to light up.
+-- Submitted a change that addressed a comment I left in the code a while ago, about making sure to thoroughly handle the cases where getStateIdForClickedPolygon() and getStateIdForMousedOverPolygon() return kUnpopulated (an empty string).
+-
+- 2/24/21: Development
+-- Submitted a change that adds mouse-over redirection for the red check boxes that are close enough to state borders for it to be an issue.
+-- Submitted a change that adds support for click-thru on check marks.
+--- At this point, all of the intended functionality exists in the project, and all of the remaining work is clean-up and refactoring.
+-
+- 2/23/21: Development
+-- Submitted a change that adds redirecting to various check marks for mouse hover events, i.e. different states will highlight now if they overlap with other states' check marks in inconvenient ways.
+-
+- 2/21/21: Development
+-- Submitted a change that makes the view_box element always invisible in .html, and removes the crosshairs although leaves some of their infrastructure in place.
+-- Submitted two more changes that are both very small refactoring changes to high_points.html, towards the goal of removing the crosshairs' no-longer-needed layering architecture.
+-
+- 2/20/21: Development
+-- Submitted a change that adds the red check boxes to the map.
+-- Submitted a change fixing a bug: refreshing the map page while moused over a check or box would make that item retain a red fill when you moused off of it. This was the case where g_MostRecentBlueState == kUnpopulated, so I moved that check to a more outer position in the logic of updateStateFillColors().
+-- Submitted one more change with some refactoring of updateStateFillColors().
+-
+- 2/19/21: Development
+-- Submitted a change fixing a bug in which a single check mark would color itself red if you refreshed the page while moused over a state, then moved over its check. This was a null-checking issue in updateStateFillColors().
+-- Submitted a change that adds a green check mark at the high point of every one of the 31 states I've completed on the map.
+-
+- 2/18/21: Development
+-- Submitted a change that adds a proof-of-concept of the green check mark on Illinois, albeit at the wrong location.
+-
+- 2/15/21: Development
+-- Submitted a change that finally completes the first draft of prose for every state except for Kentucky, which is still a dead link. As of this change, there are no longer any placeholder paragraphs in the project.
+-
+- 2/14/21: Development
+-- Submitted a change that adds a first draft of prose for every state in the mid-Atlantic and Great Lakes regions, except for one placeholder paragraph in New York.
+-- Submitted a change that adds a first draft of prose for every state in the Mountain region, except for one placeholder paragraph in Colorado.
+-- Submitted a change that adds a first draft of prose for every state in the Southeastern region except for South Carolina. This update also completes the prose in New York.
+-
+- 2/11/21: Development
+-- Submitted a change that adds a first draft of prose for every state in the New England region.
+-
+- 2/9/21: Development
+-- Submitted a change that adds a 'Figure' caption to every single photo in every single .html page in the project.
+--- Uploaded this change to my Google Drive.
+-
+- 2/4/21: Development
+-- Submitted a change that adds a deliberate color scheme for each of the 30 .html pages (not yet including Kentucky).
+-
+- 2/2/21: Development
+-- Submitted a change that adds the basic stats of each high point to each .html page.
+--- Change also includes some basic color scheme and prose work, but just bits and pieces.
+-
+- 1/29/21: Development
+-- Submitted a change that refactors a ton of code in map.js.
+-
+- 1/28/21: Development
+-- Submitted a change that adds support for four more states, leaving Kentucky as the only unsupported green state. I copied this backup to my Google Drive, removing the previous backups of this project to make space for it.
+-
+- 1/26/21: Development
+-- Submitted a change that adds .html pages for several more high points I've done, leaving only five states left to implement.
+-
+- 1/23/21: Development
+-- Submitted a change that adds .html pages for many, but not all of the high points I've done.
+-
+- 1/19/21: Development
+-- Submitted a change that adds a click-through from Colorado to a new colorado.html that I've defined, which is in a partially finished state.
+-
+- 1/18/21: Development
+-- Submitted a change that updates the conflict resolution from the previous change to use the fromElement and toElement properties of a mouse event, thereby fixing the inaccuracy problem and allowing for easy conflict resolution between almost any state. This change also included some refactoring.
+-- Submitted a change that sets the 50 states to default to either a green or red fill when not moused over, and a blue fill when moused over. Now, the states that I've highpointed so far have been accurately captured.
+-
+- 1/17/21: Development
+Submitted a change that adds a first draft of my (very messy) attempt to resolve a conflict between Texas and Louisiana. It didn't work, though, as it was super inaccurate and picked Louisiana every time.
+-
+- 1/13/21: Development
+-- Submitted a change that adds full click-and-fill support for all 50 states. Finally uploaded the very first backup of this project to my Google Drive.
+-- Submitted a change that updates the logic to fill a state on mouse hover instead of a click.
+-
+- 1/12/21: Development
+-- Refactored the code from the previous edit.
+-
+- 1/10/21: Development
+-- I set the preserveAspectRatio property on both SVGs to "none" to stop 'fixing' the scale of the image, which corrected the inaccuracies of the crosshair. I also did some refactoring.
+-- I made an update that sets the fill on Louisiana's polyline to green when you click it, and transparent when you click anywhere else.
+-- It turned out that, later in the list of polylines in the USA .svg, a ton of states are just one polyline each for the whole state. This allowed my to generalize the previous edit in a way that I'm now supporting filling 28 of the 50 states with green in response to a click. The code isn't clean at time of this writing, though, and I have some refactoring to do.
+-
+- 1/8/21: Development
+-- I created a mechanism where I encircle Louisiana with a red outline whenever you click the screen. This is to verify the max/min x/y coordinates my algorithm gets. I also added a green crosshair that gets drawn onscreen wherever click, however the x coordinate is inaccurate and I need to clean up my math.
+-
+- 1/7/21: Development
+-- I made an edit that pops up a message whenever the user clicks on the USA map. This required changing the svg from being represented by an <object> to being represented by a <svg> with a nested <script> and <img>.
+-- Next, I updated the JavaScript function to get an individual polyline element from inside the svg.
+-- Created map.js.
+-
+- 1/5/21-1/6/21: Development
+-- The first small step I took in updating www.tomdunkle.com was to create an index.html that is identical to deersim.html, except that the 'Release Notes' link points to deersim.html instead of ReleaseNotes.txt. It works!
+-- Next, I removed all unneeded code from index.html, leaving the phony "Release Notes" link intact.
+-- Next, I replaced the phony "Release Notes" link with two, more clear links: one for I-84  Simulator and one for a placeholder that will be my mountain photoblog.
+-- Next, I downloaded a public domain .svg vector of the USA from publicdomainvectors.org and put it on high_points.html.
+-- Next, I started learning flexbox (CSS) and I defined a flex-container that allows me to show three numbers centered in a column, perfectly.
+--- At this point, I saved a backup locally but I am not uploading it to Google Drive yet because these backups are going to be large due to the audio files.
+-- Next, I replaced the three numbers with appropriately-spaced links to the different subpages. I saved another local backup like this.
+-- Next, I cleaned up high_points.html to center the USA map and make it the only thing visible on the view.
