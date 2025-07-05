@@ -1,0 +1,56 @@
+/*----------------------------------------------------------------------------------------------------------------*\
+ | ID: 0001                                                                                                       |
+ | Problem: On certain loads of the game, the MusicManager's backgroundTrack will not play correctly.             |
+ |          This can usually be reproduced by opening Chrome to its home, then using Open (Ctrl+O)                |
+ |          and navigating to deersim.html. I had initially inserted a check into deersim.js>>update              |
+ |          to ensure that the music was playing. However, this didn't work exactly as intended.                  |
+ |          Now, on certain loads the music will still not play initially. However, pressing my keyboard's        |
+ |          mute button triggers the music to start playing. This is clearly a systemic limitation                |
+ |          affected by some other component (e.g. Chrome, my keyboard maybe?)                                    |
+ |          ---- Tried adding 5s delay before game load; no change.                                               |
+ |          ---- Issue is reproducible on my desktop.                                                             |
+ |          ---- Only on first play of game with Chrome open.                                                     |
+ |          ---- Issue does not reproduce w/ hyperlink on laptop.                                                 |
+ |          #NEXTSTEP: Understand exactly what line of code *normally* triggers the BGM to start playing on load. |
+ |          #NEXTSTEP: Try reproducing bug in conditions described above on different systems.                    |
+\*----------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*\
+ | ID: 0002                                                                                                                                   |
+ | Problem: When playing the game in Firefox v40.0.3, a system fault occurs during initializeGame(), pointing to the                          |
+ | BackgroundManager class being undefined. However, the BackgroundManager class is defined in aestheticObjects.js, on the live copy.         |
+ | If I try to instantiate a different class from aestheticObjects.js before BackgroundManager, e.g. a TextString, the system fault           |
+ | occurs, this time pointing to the TextString. It appears that no class defined in aestheticObjects.js can be loaded on Firefox.            |
+ | However, even commenting out all of the code in aestheticObjects.js does not solve the issue. deersim was seen to work intermittently      |
+ | on Firefox as of v0.23, and may not work as of v0.24. It's possible that this issue has something to do with Firefox optimizations.        |
+\*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*\
+ | ID: 0003 [X RESOLVED]                                                                                                                   |
+ | Problem: During development in late March 2019, I noticed that my main dev machine has fallen into a state where it shows lag, latency, |
+ |    smoothness, etc. issues when playing the game. The audio seems to intermittently skip for short durations (less than 1 second).      |
+ |    However, coupled with this observation I've seen this happening in general on the PC. As a test, I tried running the April 1 2019    |
+ |    build on my work laptop in Chrome. On the work laptop, there is a separate issue where the game will play at ~50FPS instead of the   |
+ |    desired 60FPS. Aside from the 50FPS issue, the game appeared to run perfectly without any of the lag/latency/smoothness issues       |
+ |    seen on the desktop. In general, it is clear that I have a need to maintain a greater number of test systems so that I can rule      |
+ |    out issues with individual machines like this. In this bug report, I will list some action items that I can take towards this goal:  |
+ | (-) Try my NI PC connected to my old 32" LCD TV to see if I can get this system to display and run correctly there.                     |
+ | (-) Purchase a *cheap* PCI board to put into the NI PC to see if I can make either an HDMI or DVI connection to my monitors work.       |
+ |     (issue is the NI PC only has DisplayPort input right now which isn't working)                                                       |
+ | [X RESOLVED] As of 5/2/19, re-imaging my development PC has fixed this issue.                                                           |
+\*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------*\
+ | ID: 0004                                                                                           |
+ | Problem: When I play the game on my work laptop, the game runs at only 50FPS. I need to understand |
+ |    why this is happening on that environment, and whether there is a way to correct it.            |
+ | (x) Connect work laptop to display which is otherwise known to perform @ 60FPS on desktop.         |
+ | (x) Try modifying Windows 'refresh rate' setting through advanced display properties.              |
+ | ( ) Try a few different hardware combinations while I'm in the office                              |
+ |        and confirm that there are other working cases besides my desktop of achieving ~60FPS.      |
+ | ( ) Tinker with the PCI DisplayPort board in my spare PC at home to see whether it is loose.       |
+ | ( ) Get a better understanding of how I can benefit from this information:                         |
+ |        https://isaacsukin.com/news/2015/01/detailed-explanation-javascript-game-loops-and-timing   |
+ | -- (x) De-synchronize updating and drawing to sync game to real-time.                              |
+ | -- ( ) Change update() function signature.                                                         |
+\*----------------------------------------------------------------------------------------------------*/

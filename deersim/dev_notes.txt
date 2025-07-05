@@ -1,0 +1,14 @@
+*** END WORK ON ENABLING DEERSIM TESTS IN RUN_AUTOMATED_TESTS.BAT. ***
+- 1/30/24: Development
+-- Submitted a change to tests/resources/importsAndExports/managers.js removing a "// TODO -- TEST" comment that was mistakenly left in those constant import definitions years ago.
+-- Submitted a change that deletes the file discography/autoTestInstructions.txt, which is no longer relevant or referenced anywhere in the tomDunkleCom project.
+-- Submitted a change that moves the mock of playBackgroundTrackOnEnteringMainMenu() from its own source file into a new file, tests/resources/testFunctions.js.
+-- Submitted a change that removes the no-longer-needed file tests/resources/importsAndExports/transitions.mock.js.
+-- Submitted a change to most files in tests/resources/importsAndExports/ making the constant import statements follow the same spacing convention as in the website's other two projects (discography and high_points).
+-- Submitted a change that just updates the revision date in the website's top-level index.html.
+-
+- 1/26/24: Development
+-- Submitted a change that updates the deersim project to run all automated tests from run_automated_tests.bat.
+-- Submitted a change to run_automated_tests.bat that allows passthrough of a search pattern parameter, so that the developer can choose which tests to run with the script.
+-
+*** BEGIN WORK ON ENABLING DEERSIM TESTS IN RUN_AUTOMATED_TESTS.BAT. ***
