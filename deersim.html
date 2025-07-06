@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>I-84 Simulator for "The Internet"</title>
+
+        <script type="text/javascript" src="deersim/aestheticObjects.js"></script>
+        <script type="text/javascript" src="deersim/audioEngine.js"></script>
+        <script type="text/javascript" src="deersim/bosses.js"></script>
+        <script type="text/javascript" src="deersim/constants.js"></script>
+        <script type="text/javascript" src="deersim/deer.js"></script>
+        <script type="text/javascript" src="deersim/generator.js"></script>
+        <script type="text/javascript" src="deersim/getI84SimContent.js"></script>
+        <script type="text/javascript" src="deersim/initializeCanvas.js"></script>
+        <script type="text/javascript" src="deersim/initializeGame.js"></script>
+        <script type="text/javascript" src="deersim/liveDebugger.js"></script>
+        <script type="text/javascript" src="deersim/managers.js"></script>
+        <script type="text/javascript" src="deersim/messageGenerator.js"></script>
+        <script type="text/javascript" src="deersim/obstacles.js"></script>
+        <script type="text/javascript" src="deersim/physics.js"></script>
+        <script type="text/javascript" src="deersim/powerups.js"></script>
+        <script type="text/javascript" src="deersim/profile.js"></script>
+        <script type="text/javascript" src="deersim/projectiles.js"></script>
+        <script type="text/javascript" src="deersim/splicingFunctions.js"></script>
+        <script type="text/javascript" src="deersim/transitions.js"></script>
+        <script type="text/javascript" src="deersim/vehicles.js"></script>
+        <script type="text/javascript" src="deersim/deersim.js"></script>
+
+        <!--- Experimentation with CSS transform for image rotation. I conclude that
+            the transform works, but that it isn't reflected after my call to drawImage. --->
+        <style>
+            div.rotate_right_90 {
+                display: inline-block;
+                float: left;
+                -ms-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        </style>
+    </head>
+
+    <body onload="onPageLoad()">
+    </body>
+</html>
