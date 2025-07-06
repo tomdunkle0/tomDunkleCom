@@ -1,0 +1,28 @@
+{
+  "name": "tomDunkleCom",
+  "version": "0.0.1",
+  "author": {
+    "name": "Tom Dunkle",
+    "email": "thomas.dunkle@gmail.com"
+  },
+  "licenses": "none",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomdunkle0/tomDunkleCom"
+  },
+  "bugs": {
+    "url": "https://github.com/tomdunkle0/tomDunkleCom/issues"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1"
+  }
+}
