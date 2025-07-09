@@ -93,6 +93,8 @@ Coop.prototype.update = function() {
    }
 
    if (this.state === "preentry") {
+      // Coop enters the screen 14 seconds into the song, for humor's sake.
+      // This is the moment that the fast portion of the song begins.
       if (deersim.musicManager.backgroundTrack.currentTime > 14) {
          this.state = "entry";
       }
