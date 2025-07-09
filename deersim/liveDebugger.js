@@ -9,10 +9,10 @@
 // ---- Start of object declarations. ----
 
 function LiveDebugger(a_deersim) {
-   var marginX = 15; // Add a 15-pixel margin between the text and canvas' edge, horizontally.
-   var marginY = 5;  // Add a 5-pixel margin in between each line of text, vertically.
+   var marginX = 15;
+   var marginY = 5;
 
-   { // Initialize TextStrings indicating the game's performance in FPS.
+   {
       this.FPS = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 16), // x, w/ 16 character indent
          0,                                      // y
@@ -32,7 +32,7 @@ function LiveDebugger(a_deersim) {
          );
    }
 
-   { // Initialize TextStrings indicating the number of game objects in play.
+   {
       this.numObjects = new TextString(
          marginX,                           // x
          (CONST_FONT_SIZE_SMALL + marginY), // y
@@ -41,7 +41,7 @@ function LiveDebugger(a_deersim) {
          "NUMBER OF OBJECTS  :",            // string
          "Small"                            // size
          );
-      
+
       this.numObjectsCtr = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 20),  // x, w/ 20 character indent
          (CONST_FONT_SIZE_SMALL + marginY),       // y
@@ -52,7 +52,7 @@ function LiveDebugger(a_deersim) {
          );
    }
 
-   { // Initialize TextStrings indicating the number of vehicles in play.
+   {
       this.numVehicles = new TextString(
          marginX,                                     // x
          (CONST_FONT_SIZE_SMALL * 2) + (marginY * 2), // y
@@ -61,7 +61,7 @@ function LiveDebugger(a_deersim) {
          "NUMBER OF VEHICLES :",                      // string
          "Small"                                      // size
          );
-      
+
       this.numVehiclesCtr = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 20),      // x, w/ 20 character indent
          (CONST_FONT_SIZE_SMALL * 2) + (marginY * 2), // y
@@ -72,7 +72,7 @@ function LiveDebugger(a_deersim) {
          );
    }
 
-   { // Initialize TextStrings indicating the number of obstacles in play.
+   {
       this.numObstacles = new TextString(
          marginX,                                     // x
          (CONST_FONT_SIZE_SMALL * 3) + (marginY * 3), // y
@@ -81,7 +81,7 @@ function LiveDebugger(a_deersim) {
          "NUMBER OF OBSTACLES:",                      // string
          "Small"                                      // size
          );
-      
+
       this.numObstaclesCtr = new TextString(
          (CONST_FONT_SIZE_SMALL * 20) + marginX,        // x, w/ 20 character indent
          ((CONST_FONT_SIZE_SMALL * 3) + (marginY * 3)), // y
@@ -92,7 +92,7 @@ function LiveDebugger(a_deersim) {
          );
    }
 
-   { // Initialize TextStrings indicating the number of segments scanned by certain algorithms.
+   {
       this.segmentsScanned = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 3),       // x, w/ 3 character indent
          (CONST_FONT_SIZE_SMALL * 4) + (marginY * 4), // y
@@ -101,9 +101,9 @@ function LiveDebugger(a_deersim) {
          "SEGMENTS SCANNED:",                         // string
          "Small"                                      // size
          );
-      
+
       this.segmentCounter = 0; // Initialize the count of road segments scanned.
-      
+
       this.segmentsScannedCtr = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 20),      // x, w/ 20 character indent
          (CONST_FONT_SIZE_SMALL * 4) + (marginY * 4), // y
@@ -114,7 +114,7 @@ function LiveDebugger(a_deersim) {
          );
    }
 
-   { // Initialize TextStrings indicating the number of active road segments.
+   {
       this.activeSegments = new TextString(
          marginX + (CONST_FONT_SIZE_SMALL * 4),       // x, w/ 4 character indent
          (CONST_FONT_SIZE_SMALL * 5) + (marginY * 5), // y
@@ -145,22 +145,22 @@ function LiveDebugger(a_deersim) {
 \*-----------------------------------------------------*/
 LiveDebugger.prototype.draw = function() {
    this.FPS.draw();
-   this.FPSCtr.draw();             // Display frames per second.
+   this.FPSCtr.draw();
 
    this.numObjects.draw();
-   this.numObjectsCtr.draw();      // Display number of active game objects.
+   this.numObjectsCtr.draw();
 
    this.numVehicles.draw();
-   this.numVehiclesCtr.draw();     // Display number of active vehicles.
+   this.numVehiclesCtr.draw();
 
    this.numObstacles.draw();
-   this.numObstaclesCtr.draw();    // Display number of active obstacles.
+   this.numObstaclesCtr.draw();
 
    this.segmentsScanned.draw();
-   this.segmentsScannedCtr.draw(); // Display number of road segments being scanned.
+   this.segmentsScannedCtr.draw();
 
    this.activeSegments.draw();
-   this.activeSegmentsCtr.draw();  // Display number of active road segments.
+   this.activeSegmentsCtr.draw();
 }; // LiveDebugger.draw()
 
 /*-------------------------------------------------------------------*\
@@ -170,25 +170,25 @@ LiveDebugger.prototype.draw = function() {
 LiveDebugger.prototype.update = function() {
    this.FPSCtr.updateWithStringOverwrite(
       deersim.frameTimes.length.toString()
-      ); // Update frames per second.
+      );
 
    this.numObjectsCtr.updateWithStringOverwrite(
       deersim.gameObjects.length.toString()
-      ); // Update number of active game objects.
+      );
 
    this.numVehiclesCtr.updateWithStringOverwrite(
       deersim.vehicles.length.toString()
-      ); // Update number of active vehicles.
+      );
 
    this.numObstaclesCtr.updateWithStringOverwrite(
       deersim.obstacles.length.toString()
-      ); // Update number of active obstacles.
+      );
 
    this.segmentsScannedCtr.updateWithStringOverwrite(
       this.segmentCounter.toString()
-      ); // Update number of road segments being scanned.
+      );
 
    this.activeSegmentsCtr.updateWithStringOverwrite(
       deersim.roadManager.roadSegments.length.toString()
-      ); // Update number of active road segments.
+      );
 }; // LiveDebugger.update()

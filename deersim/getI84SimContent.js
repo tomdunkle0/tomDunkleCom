@@ -7,12 +7,12 @@ function getI84SimContent()
            width="64" height="64" src="deersim/images/bagDeerStill.png" hidden>
       <img id="SA40Background"
            width="1280" height="720" src="deersim/images/sa40Background.png" hidden>
-      
+
       <img id="BossHPBarBackRectangle"
            width="256" height="256" src="deersim/images/bossHPBarBackRectangle.png" hidden>
       <img id="ConnecticutMap"
            width="246" height="234" src="deersim/images/connecticutMap.png" hidden>
-      
+
       <img id="Coop"
            width="128" height="128" src="deersim/images/coop128.png" hidden>
       <img id="Coop_C_0"
@@ -39,7 +39,7 @@ function getI84SimContent()
            width="128" height="128" src="deersim/images/coop128_C_300.png" hidden>
       <img id="Coop_C_330"
            width="128" height="128" src="deersim/images/coop128_C_330.png" hidden>
-      
+
       <img id="DeerHead"
            width="32" height="32" src="deersim/images/deerHead.png" hidden>
 
@@ -310,7 +310,7 @@ function getI84SimContent()
            width="32" height="32" src="deersim/images/numberBlock8.png" hidden>
       <img id="NumberBlock9"
            width="32" height="32" src="deersim/images/numberBlock9.png" hidden>
-      
+
       <img id="Road"
            width="1280" height="216" src="deersim/images/road.png" hidden>
       <img id="RoadLane"
@@ -329,7 +329,7 @@ function getI84SimContent()
            width="128" height="40" src="deersim/images/roadSegmentOpeningTop.png" hidden>
       <img id="RoadSideTopSegment"
            width="128" height="6" src="deersim/images/roadSideTopSegment.png" hidden>
-      
+
       <img id="SmallMono!"
            width="16" height="16" src="deersim/images/smallMono!.png" hidden>
       <img id="SmallMono$"
@@ -702,14 +702,14 @@ function getI84SimContent()
            width="16" height="16" src="deersim/images/tinyConsolasYLversion.png" hidden>
       <img id="ToggleBox"
            width="128" height="128" src="deersim/images/toggleBox.png" hidden>
-      
+
       <img id="WhiteVan"
            width="128" height="128" src="deersim/images/whiteVan128.png" hidden>
       <img id="Yorig512"
            width="512" height="512" src="deersim/images/yorigPortrait.png"hidden>
       <img id="YorigsSpeechBalloon"
            width="115" height="58" src="deersim/images/yorigsSpeechBalloon.png"hidden>
-      
+
       <canvas id="deersimcanvas" width="1280" height="720"
               style="position:     absolute;
                      margin-left:  auto;
@@ -717,7 +717,7 @@ function getI84SimContent()
                      left:         0;
                      right:        0;
                      top:          0px"></canvas>
-      
+
       <p style="text-align: center;
                 font-family: verdana;
                 font-size: 30px;
@@ -727,7 +727,7 @@ function getI84SimContent()
                 left: 0;
                 right: 0;
                 top: 700px">I-84 Simulator for "the Internet"<sup>TM</sup></p>
-      
+
       <a href="ReleaseNotes.txt"
          style="text-align: center;
                 font-family: verdana;
@@ -738,7 +738,7 @@ function getI84SimContent()
                 left: 0;
                 right: 0;
                 top: 890px">Release Notes</a>
-      
+
       <p style="text-align: center;
                 font-family: verdana;
                 font-size: 10px;

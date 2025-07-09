@@ -6,53 +6,45 @@
 \*------------------------------------------------------------------------------------*/
 
 function Profile() {
-   this.level            = 1;  // Assign this Profile's current level, in terms of experience.
-   this.previousLevel    = 0;  // Assign this Profile's previous level, in terms of experience.
-   this.remainingDeer    = 4;  // Assign this Profile's number of remaining deer.
-   this.consecutiveLvls  = 0;  // Stores number of levels grown within current environment.
+   this.level            = 1;
+   this.previousLevel    = 0;
+   this.remainingDeer    = 4;
+   this.consecutiveLvls  = 0;
    // #TODO -- implement resets of consecutiveLvls when the player enters new environments.
-   this.counter          = 80; // Assign this Profile's counter, for gating level growth.
-   this.currentLevelGate = 0;  // Assign the current level's experience gate.
-   this.nextLevelGate    = 80; // Assign the experience gate for level 2.
-   this.damage           = 0;  // Assign this Profile's amount of property damage.
-   this.xp               = 0;  // Assign this Profile's experience.
+   this.counter          = 80;
+   this.currentLevelGate = 0;
+   this.nextLevelGate    = 80;
+   this.damage           = 0;
+   this.xp               = 0;
 
    // #TODO -- add this to the objects array
-   this.levelBar = new Bar(383, 699); // Create this Profile's level bar.
+   this.levelBar = new Bar(383, 699);
 
-   // Create this Profile's NumberBlockString to display property damage to the player.
    this.numberBlockString = new NumberBlockString();
 
-   /* Create a balloon and image owned by this Profile which will occasionally
-      be used to display the map of the current level to the player.           */
    this.mapBalloon = new StaticMenuObject(
       50,                    // x
       50,                    // y
       "SpeechBalloon246x234" // imageHandle
       );
-   
+
    this.connecticutMap = new StaticMenuObject(
       50,              // x
       50,              // y
       "ConnecticutMap" // imageHandle
       );
 
-   /* Create a cursor to display the active deer herd's
-      current location, set by default to exit 1 in I-84. */
    this.locationMarker = new Cursor(
       this.mapBalloon.x + 30,  // x
       this.mapBalloon.y + 115, // y
       );
 
-   /* Create an ExitSign to display the player's
-      current Exit. By default, this is exit 1 in I-84. */
    this.exitSign = new ExitSign(
       800,                      // x, hand-chosen value
       CONST_CANVAS_HEIGHT - 48, // y, hand-chosen value
       "ExitSign01"              // imageHandle
       );
 
-   // Create an array of DeerHeads to display the number of remaining deer.
    this.createRemainingDeerHeads();
 }; // Profile()
 
@@ -62,15 +54,13 @@ function Profile() {
  | in order to return unique values for unique vehicles.           |
 \*-----------------------------------------------------------------*/
 Profile.prototype.changeDamage = function(baseValue) {
-   var randomDecimal = Math.random(); // Generate a random decimal.
+   var randomDecimal = Math.random();
 
-   // Calculate a modified value, based on the base value and the random decimal.
    var modValue = baseValue + ((randomDecimal - 0.5) * (baseValue / 10));
 
-   // Change this Profile's damage by the modified value, rounded down.
    this.damage += Math.floor(modValue);
 
-   return modValue; // Modified value can be used outside this function.
+   return modValue;
 };
 
 /*----------------------------------------------------------------------------------*\
@@ -79,13 +69,11 @@ Profile.prototype.changeDamage = function(baseValue) {
  | @param int change -- the amount by which to change the Profile's remaining Deer. |
 \*----------------------------------------------------------------------------------*/
 Profile.prototype.changeRemainingDeer = function(change) {
-   this.remainingDeer += change; // Modify the count of remaining deer.
+   this.remainingDeer += change;
 
-   // Prevent the player from owning more than the maximum allowed remaining Deer.
    if (this.remainingDeer > CONST_MAX_REMAINING_DEER)
       this.remainingDeer = CONST_MAX_REMAINING_DEER;
 
-   // Prevent the player from owning fewer than zero remaining Deer.
    if (this.remainingDeer < 0)
       this.remainingDeer = 0;
 };
@@ -94,22 +82,15 @@ Profile.prototype.changeRemainingDeer = function(change) {
  | Create an array of DeerHeads to display the number of remaining deer. |
 \*-----------------------------------------------------------------------*/
 Profile.prototype.createRemainingDeerHeads = function() {
-   // Prevent the player from owning more than the maximum allowed remaining Deer.
    if (this.remainingDeer > CONST_MAX_REMAINING_DEER)
       this.remainingDeer = CONST_MAX_REMAINING_DEER;
 
-   // Prevent the player from owning fewer than zero remaining Deer.
    if (this.remainingDeer < 0)
       this.remainingDeer = 0;
 
-   // Initialize an array for this Profile to display
-   // the number of remaining deer to the player.
    this.remainingDeerHeads = new Array(CONST_MAX_REMAINING_DEER);
 
-   // For every one of this Profile's remaining deer,
    for (var i = 0; i < CONST_MAX_REMAINING_DEER; i++) {
-      // Create a new DeerHead object to represent the remaining deer.
-      // Separate rows are defined for DeerHeads #1-10, and #11-20.
       if (i < 10) // Bottom row
          this.remainingDeerHeads[i] = new DeerHead((i * CONST_MAX_REMAINING_DEER) + 10,
                                                    CONST_CANVAS_HEIGHT - 34);
@@ -125,17 +106,15 @@ Profile.prototype.createRemainingDeerHeads = function() {
  | to the player about their progress in the game.            |
 \*------------------------------------------------------------*/
 Profile.prototype.draw = function() {
-   // For every DeerHead owned by this Profile,
    for (var i = 0; i < this.remainingDeer; i++) {
-      this.remainingDeerHeads[i].draw(); // Draw the DeerHead.
+      this.remainingDeerHeads[i].draw();
    }
 
-   this.xpString.draw();          // Draw the player profile's experience string onscreen.
-   this.levelBar.draw();          // Draw the player profile's level bar onscreen.
-   this.numberBlockString.draw(); // Draw the player profile's property damage onscreen.
-   this.exitSign.draw();          // Draw the player profile's ExitSign onscreen.
+   this.xpString.draw();
+   this.levelBar.draw();
+   this.numberBlockString.draw();
+   this.exitSign.draw();
 
-   // If the game is paused, display the map and location cursor to the player.
    if (deersim.state === "pause") {
       this.mapBalloon.draw();
       this.connecticutMap.draw();
@@ -152,26 +131,26 @@ Profile.prototype.draw = function() {
  | 0.1 as in deersim classic.                                          |
 \*---------------------------------------------------------------------*/
 Profile.prototype.getInput = function() {
-   if (deer.state === "active") { // Monitor input during a round of play.
-      var numKeysPressed = 0; // Stores the number of keys pressed during this frame.
+   if (deer.state === "active") {
+      var numKeysPressed = 0;
 
-      for (var key in keysDown) { // Iterate through each key currently pressed.
-         var value = Number(key); // Assign numeric wrapper of key to variable 'value'.
+      for (var key in keysDown) {
+         var value = Number(key);
 
          switch (value) {
             case 37: // Key pressed is left arrow key.
-               this.xp += 0.09; // Add slightly less experience.
+               this.xp += 0.09;
                numKeysPressed++;
                break;
             case 39: // Key pressed is right arrow key.
-               this.xp += 0.12; // Add slightly more experience.
+               this.xp += 0.12;
                numKeysPressed++;
                break;
          }
       }
 
-      if (numKeysPressed === 0) { // If no keys are currently pressed...
-         this.xp += 0.1; // ...then the player profile gains 0.1 experience.
+      if (numKeysPressed === 0) {
+         this.xp += 0.1;
       }
    }
 };
@@ -181,7 +160,6 @@ Profile.prototype.getInput = function() {
  | @returns TextString[] textStrings -- this Profile's level and experience TextStrings. |
 \*---------------------------------------------------------------------------------------*/
 Profile.prototype.initTextStrings = function() {
-   // Initialize a TextString to display this Profile's experience.
    this.xpString = new TextString(220, 686, CONST_FONT_SIZE_SMALL, "default", "XP:  ", "Small");
 };
 
@@ -190,15 +168,13 @@ Profile.prototype.initTextStrings = function() {
  | experience gate, and calculates new member variables if so. |
 \*-------------------------------------------------------------*/
 Profile.prototype.setLevel = function() {
-   // If this Profile's experience has exceeded the next level's gate...
    if (this.xp >= this.nextLevelGate) {
-      this.level++;                               // ...then increment its level...
-      this.consecutiveLvls++;                     // ...increase consecutive levels...
-      this.counter += 10;                         // ...slightly increase its counter...
-      this.currentLevelGate = this.nextLevelGate; // ...relay next to current level gate...
-      this.nextLevelGate += this.counter;         // ...and jump to next gate, based on counter.
+      this.level++;
+      this.consecutiveLvls++;
+      this.counter += 10;
+      this.currentLevelGate = this.nextLevelGate;
+      this.nextLevelGate += this.counter;
 
-      // Modify this Profile's cursor location based on its level.
       switch (this.level) {
          case 0:  this.locationMarker.x = 80;  this.locationMarker.y = 165; break; // EXIT 1
          case 1:  this.locationMarker.x = 84;  this.locationMarker.y = 166; break; // EXIT 2
@@ -269,7 +245,7 @@ Profile.prototype.setLevel = function() {
          case 66: this.locationMarker.x = 199; this.locationMarker.y = 104; break; // EXIT 67
          case 67: this.locationMarker.x = 203; this.locationMarker.y = 101; break; // EXIT 68
          case 68: this.locationMarker.x = 207; this.locationMarker.y = 98;  break; // EXIT 69
-         case 69: this.locationMarker.x = 210; this.locationMarker.y = 95;  break; // EXIT 70 
+         case 69: this.locationMarker.x = 210; this.locationMarker.y = 95;  break; // EXIT 70
          case 70: this.locationMarker.x = 213; this.locationMarker.y = 92;  break; // EXIT 71
          case 71: this.locationMarker.x = 217; this.locationMarker.y = 90;  break; // EXIT 72
          case 72: this.locationMarker.x = 218; this.locationMarker.y = 88;  break; // EXIT 73
@@ -282,14 +258,12 @@ Profile.prototype.setLevel = function() {
  | Updates this Profile. |
 \*-----------------------*/
 Profile.prototype.update = function() {
-   this.setLevel();          // Set this Profile's level.
-   this.updateTextStrings(); // Update this Profile's TextStrings.
-   this.updateLevelBar();    // Update this Profile's level bar.
+   this.setLevel();
+   this.updateTextStrings();
+   this.updateLevelBar();
 
-   // Update this Profile's NumberBlockString's property damage value.
    this.numberBlockString.updatePropertyDamage(this.damage);
 
-   // Update this Profile's ExitSign.
    this.exitSign.update(
       this.level
       );
@@ -299,7 +273,6 @@ Profile.prototype.update = function() {
  | Updates this Profile's level bar. |
 \*-----------------------------------*/
 Profile.prototype.updateLevelBar = function() {
-   // Update this Profile's level bar using this Profile's member variables.
    this.levelBar.updateFrontWidth(this.xp, this.currentLevelGate, this.nextLevelGate);
 };
 
@@ -307,6 +280,5 @@ Profile.prototype.updateLevelBar = function() {
  | Updates the level and experience TextStrings owned by this Profile. |
 \*---------------------------------------------------------------------*/
 Profile.prototype.updateTextStrings = function() {
-   // Update this Profile's experience TextString.
    this.xpString.updateWithStringOverwrite("XP:  " + Math.floor(this.xp));
 };

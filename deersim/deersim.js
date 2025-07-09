@@ -39,20 +39,14 @@ var transitionCounter;   // Stores a counter used to manage timing of state tran
  | @param int y -- this Cursor's y position.      |
 \*------------------------------------------------*/
 function Cursor(x, y) {
-   this.x = x;                     // Assign this Cursor's x position.
-   this.y = y;                     // Assign this Cursor's y position.
-   this.d = CONST_FONT_SIZE_LARGE; // Assign this Cursor's dimension.
+   this.x = x;
+   this.y = y;
+   this.d = CONST_FONT_SIZE_LARGE;
 
-   // Assign this Cursor's menu item to a default value of 1.
-   // This 1-indexed value tracks which item in the menu this Cursor points to.
    this.menuItem = 1;
 
-   // Initialize this Cursor's animation counter,
-   // used to control timing of the Cursor's blinking.
    this.animationCounter = 0;
 
-   // Initialize this Cursor's key counter,
-   // used to control timing of the Cursor's vertical movement.
    this.keyCounter = 0;
 };
 
@@ -77,13 +71,11 @@ function DeerSim() {
 function RoadSegment(x, y, type, lane) {
    this.x      = x;
    this.y      = y;
-   this.width  = 128;  // Constant.
-   this.height = 40;   // Constant.
+   this.width  = 128;
+   this.height = 40;
    this.type   = type;
    this.lane   = lane;
 
-   /* After assigning this RoadSegment's type, also assign it an image handle
-      based on its type. The image handle is used when drawing this RoadSegment. */
    switch (this.type) {
       case "bottom":            this.imageHandle = "RoadSideBottomSegment";        break;
       case "closingBottomLane": this.imageHandle = "RoadSegmentClosingBottomLane"; break;
@@ -106,12 +98,12 @@ function RoadSegment(x, y, type, lane) {
  | @param int y2 -- this ToggleBox's second y coordinate.      |
 \*-------------------------------------------------------------*/
 function ToggleBox(x1, x2, y1, y2) {
-   this.x1 = x1; // Assign this ToggleBox's first x coordinate.
-   this.x2 = x2; // Assign this ToggleBox's second x coordinate.
-   this.y1 = y1; // Assign this ToggleBox's first y coordinate.
-   this.y2 = y2; // Assign this ToggleBox's second y coordinate.
+   this.x1 = x1;
+   this.x2 = x2;
+   this.y1 = y1;
+   this.y2 = y2;
 
-   this.coordinateSet = 0; // Assign this ToggleBox the default coordinate set.
+   this.coordinateSet = 0;
 };
 
 // ---- End of object declarations. ----
@@ -131,7 +123,7 @@ var onPageLoad = function()
    startMainMenu(deersim);
    animationTimer = 0;
    keyTimer = 0;
-   animate(gameLoop); // Execute first iteration of the game loop.
+   animate(gameLoop);
 } // onPageLoad()
 
 /*-------------------------------------------------*\
@@ -139,10 +131,9 @@ var onPageLoad = function()
  | Cursors blink based on their animation counter. |
 \*-------------------------------------------------*/
 Cursor.prototype.draw = function() {
-    // If this Cursor's animation counter is in the first half of its phase,
     if (this.animationCounter < 12) {
         deersim.canvasContext.drawImage(document.getElementById("DeerHead"),
-                                this.x, this.y); // Then draw a deer head icon.
+                                this.x, this.y);
     }
 };
 
@@ -150,23 +141,18 @@ Cursor.prototype.draw = function() {
  | Updates this Cursor's counters. |
 \*---------------------------------*/
 Cursor.prototype.update = function() {
-    // If this Cursor's animation counter has not yet elapsed,
     if (this.animationCounter < 24) {
-        // Then increment this Cursor's animation counter.
         this.animationCounter++;
     }
     else {
-        // Else, reset this Cursor's animation counter.
         this.animationCounter = 0;
     }
 
-    // If this Cursor's key counter is started and has not yet elapsed,
     if ((this.keyCounter > 0) && (this.keyCounter < 18)) {
-        this.keyCounter++; // Then increment this Cursor's key counter.
+        this.keyCounter++;
     }
-    // Else if this Cursor's key counter has elapsed,
     else if (this.keyCounter >= 18) {
-        this.keyCounter = 0; // Reset this Cursor's key counter.
+        this.keyCounter = 0;
     }
 };
 
@@ -174,11 +160,11 @@ Cursor.prototype.update = function() {
  | Generates a pothole. |
 \*----------------------*/
 var generatePothole = function() {
-   if (deersim.generator.vehicleCounter === 0) {         // If the vehicle counter has elapsed...
-      var pothole = deersim.generator.generatePothole(); // ...then attempt to generate a pothole.
+   if (deersim.generator.vehicleCounter === 0) {
+      var pothole = deersim.generator.generatePothole();
 
-      if (pothole !== null)               // If chance allows...
-         deersim.obstacles.push(pothole); // ...then push a new pothole onto the obstacles array.
+      if (pothole !== null)
+         deersim.obstacles.push(pothole);
    }
 };
 
@@ -189,50 +175,49 @@ var generatePothole = function() {
 // var getInput = function() {
 // #TODO -- documentation
 var getInput = function(dt) {
-   if ((deersim.state === "bossBattle") // If the player is playing a round or a boss battle...
+   if ((deersim.state === "bossBattle")
     || (deersim.state === "round")) {
-      // deer.getInput();          // ...then get key input for control of the active deer.
+      // deer.getInput();
       // #TODO -- documentation
-      deer.getInput(dt);          // ...then get key input for control of the active deer.
-      playerProfile.getInput(); // ...and get player input and convert to experience.
+      deer.getInput(dt);
+      playerProfile.getInput();
    }
 
-   var randomDecimal = Math.random(); // Generate a random decimal.
+   var randomDecimal = Math.random();
 
-   // Iterate through each key which is currently pressed.
    for (var key in keysDown) {
-      var value = Number(key); // Assign numeric wrapper of key to variable 'value'.
+      var value = Number(key);
 
       switch (value) { // #TODO -- consider functionalizing the repetitious sfx logic below
          case 13: // Key pressed is Enter.
-            if (deersim.state === "gameOver") { // If the game is displaying the game over screen,
-               startMainMenu(deersim);          // Transition to the main menu.
-               keyTimer++;                      // Start the key timer.
+            if (deersim.state === "gameOver") {
+               startMainMenu(deersim);
+               keyTimer++;
                pauseAndReplaySoundEffect(CONST_SOUND_INDEX_MENU_SELECTION_HIGH);
             }
-            else if ((deersim.state === "main")  // If the player is viewing the main menu...
-                  && (keyTimer === 0)) {         // ...and the key timer has elapsed...
-               if (deersim.mainMenuCursor.menuItem === 1) { // If the first option is selected...
-                  startRound();                             // ...then start a round of play.
-                  deersim.pauseTimer++;                     // ...start the pause timer.
+            else if ((deersim.state === "main")
+                  && (keyTimer === 0)) {
+               if (deersim.mainMenuCursor.menuItem === 1) {
+                  startRound();
+                  deersim.pauseTimer++;
                   pauseAndReplaySoundEffect(CONST_SOUND_INDEX_MENU_SELECTION_HIGH);
                }
-               else if (deersim.mainMenuCursor.menuItem === 2) { // If the second option is selected...
-                  showCreditsMenu = !showCreditsMenu;            // ...then invert flag to show credits...
-                  keyTimer++;                                    // ...and start the key timer.
+               else if (deersim.mainMenuCursor.menuItem === 2) {
+                  showCreditsMenu = !showCreditsMenu;
+                  keyTimer++;
                   pauseAndReplaySoundEffect(CONST_SOUND_INDEX_FRENCH_CANADIAN_GRUNT_2);
                }
-               else if (deersim.mainMenuCursor.menuItem === 3) { // If the third option is selected...
-                  if (deersim.obscenities === CONST_FALSE) {  // If obscenities are off...
-                     deersim.obscenities = CONST_TRUE;        // ...then turn them on.
-                     deersim.toggleBox.x = 1035;              // ...move the toggle box ro the right.
-                     keyTimer++;                              // ...and start the key timer.
+               else if (deersim.mainMenuCursor.menuItem === 3) {
+                  if (deersim.obscenities === CONST_FALSE) {
+                     deersim.obscenities = CONST_TRUE;
+                     deersim.toggleBox.x = 1035;
+                     keyTimer++;
                      pauseAndReplaySoundEffect(CONST_SOUND_INDEX_FRENCH_CANADIAN_GRUNT_2);
                   }
-                  else if (deersim.obscenities === CONST_TRUE) { // If obscenities are on...
-                     deersim.obscenities = CONST_FALSE;          // ...then turn them off.
-                     deersim.toggleBox.x = 961;                  // ...move the toggle box to the left.
-                     keyTimer++;                                 // ...and start the key timer.
+                  else if (deersim.obscenities === CONST_TRUE) {
+                     deersim.obscenities = CONST_FALSE;
+                     deersim.toggleBox.x = 961;
+                     keyTimer++;
                      pauseAndReplaySoundEffect(CONST_SOUND_INDEX_FRENCH_CANADIAN_GRUNT_1);
                   }
                }
@@ -241,58 +226,42 @@ var getInput = function(dt) {
          case 27: // Key pressed is Escape.
             if (((deersim.state === "round") || (deersim.state === "bossBattle"))
              && (deersim.pauseTimer === 0))
-                                  // If we are in the middle of a round
-                                  // And the pause timer has elapsed
-               pause();           // Then transition to the pause state
+               pause();
             else if ((deersim.state === "pause")
                   && (deersim.pauseTimer === 0))
-                                  // If we are paused,
-                                  // And the pause timer has elapsed
-               unpause();         // Then transition to the round state
+               unpause();
                break;
          case 76: // Key pressed is L.
-            if ((deersim.state !== "main")     // If the game is in a state other than the main menu...
-             && (deersim.state !== "pause")) { // ...or pause...
-               // If the active Deer is carrying the lightning powerup
-               // and the projectile delay has elapsed...
+            if ((deersim.state !== "main")
+             && (deersim.state !== "pause")) {
                if ((deer.powerup === "lightning")
                && (deersim.projectileCounter === 0)) {
-                  // Create a LightningBolt.
                   var lightningBolt = new LightningBolt(deer.x + 59, deer.lane);
 
-                  deersim.projectileCounter++; // Start the projectile counter.
+                  deersim.projectileCounter++;
 
-                  // Add the LightningBolt to the projectiles array.
                   deersim.projectiles.push(lightningBolt);
 
                   if (randomDecimal <= 0.33)
-                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_LOW); // LightningBoltC#6
+                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_LOW);
                   else if (randomDecimal <= 0.66)
-                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_MID); // LightningBoltD#6
+                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_MID);
                   else
-                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_HIGH); // LightningBoltF6
+                     pauseAndReplaySoundEffect(CONST_SOUND_INDEX_LIGHTNING_BOLT_HIGH);
                }
             }
                break;
          case 87: // Key pressed is W.
-            // If the player is viewing the main menu,
             if (deersim.state === "main") {
-               // If the main menu cursor's key counter has elapsed,
-               // And the main menu cursor is pointed to an option
-               // underneath the uppermost option, then
                if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem > 1)) {
-                  toggleMainMenuCursor(1); // Move the cursor up and play a sound effect.
+                  toggleMainMenuCursor(1);
                }
             }
                break;
          case 83: // Key pressed is S.
-            // If the player is viewing the main menu,
             if (deersim.state === "main") {
-               // If the main menu cursor's key counter has elapsed,
-               // And the main menu cursor is pointed to an option
-               // above the bottom option, then
                if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem < 3)) {
-                  toggleMainMenuCursor(-1); // Move the cursor down and play a sound effect.
+                  toggleMainMenuCursor(-1);
                }
             }
                break;
@@ -305,34 +274,31 @@ var getInput = function(dt) {
  | from a Deer that's just been killed to the next Deer.   |
 \*---------------------------------------------------------*/
 var replaceDeer = function() {
-   // If the active deer has a powerup other than irradiation...
    if (deer.powerup !== "none") {
-      if (deer.powerup === "lightning") { // If the powerup is lightning...
-         deersim.soundEffects[CONST_SOUND_INDEX_DRUID_CHANT].pause();         // ...then pause the druid chant.
-         deersim.soundEffects[CONST_SOUND_INDEX_DRUID_CHANT].currentTime = 0; // ...and reset its playback position to zero.
+      if (deer.powerup === "lightning") {
+         deersim.soundEffects[CONST_SOUND_INDEX_DRUID_CHANT].pause();
+         deersim.soundEffects[CONST_SOUND_INDEX_DRUID_CHANT].currentTime = 0;
       } // #TODO -- implement cases for other powerups once they are implemented.
    }
 
-   var dyingDeer   = deer;              // Create a variable to assign the dying deer to.
+   var dyingDeer   = deer;
    // #TODO -- can the line below be removed?
-   dyingDeer.state = "dying";           // Set the dying Deer's state accordingly.
+   dyingDeer.state = "dying";
 
-   // If the player has extra Deer remaining,
    if (playerProfile.remainingDeer > 0) {
-      deer = new Deer();              // Then create a new Deer to set as active.
-      deersim.gameObjects.push(deer); // Add the newly created Deer to the game objects Array.
+      deer = new Deer();
+      deersim.gameObjects.push(deer);
 
-      // Decrement the count of Deer owned by the player Profile.
       playerProfile.changeRemainingDeer(-1);
 
-      if (deersim.state === "bossBattle") // If the player is fighting a boss...
-         boss.target = deer;      // ...then set the new deer as the boss's target.
+      if (deersim.state === "bossBattle")
+         boss.target = deer;
    }
    else {
-      if (deersim.state === "bossBattle") // If the player is fighting a boss...
-         boss.state = "exiting";  // ...then trigger that boss to exit the screen.
+      if (deersim.state === "bossBattle")
+         boss.state = "exiting";
 
-      startGameOverMenu(); // Otherwise, start the game over menu.
+      startGameOverMenu();
    }
 }
 
@@ -359,17 +325,14 @@ RoadSegment.prototype.update = function() {
  | @param int direction -- (1 = up), (-1 = down), (anything else = invalid)              |
 \*---------------------------------------------------------------------------------------*/
 var toggleMainMenuCursor = function(direction) {
-   const dyOptions = 30; // Vertical distance between menu options.
+   const dyOptions = 30;
 
-   deersim.mainMenuCursor.y        -= (dyOptions * direction); // Align cursor with its menu option.
-   deersim.mainMenuCursor.menuItem -= direction;               // (In/dec)rement, direction-dependent.
-   deersim.mainMenuCursor.keyCounter++;                        // Start the cursor's key counter.
+   deersim.mainMenuCursor.y        -= (dyOptions * direction);
+   deersim.mainMenuCursor.menuItem -= direction;
+   deersim.mainMenuCursor.keyCounter++;
 
-   /* Depending on which menu item the cursor lands on, pull the
-      correct sound effect object out of the sound effects array. */
    var soundEffect = deersim.soundEffects[3 + deersim.mainMenuCursor.menuItem];
 
-   // Pause (in case already playing), seek to t0, and play the sound effect.
    soundEffect.pause();
    soundEffect.currentTime = 0;
    soundEffect.play();
@@ -381,59 +344,47 @@ var toggleMainMenuCursor = function(direction) {
 // var update = function() {
 // #TODO -- documentation
 var update = function(dt) {
-   // If the debugger is enabled, then update it.
    if (deersim.debuggerEnabled === CONST_TRUE) {
       deersim.liveDebugger.update();
    }
 
-   // Update the touch manager first so that UI changes occur as quickly as possible.
    deersim.touchManager.update();
 
    if ((deersim.state === "bossBattle")
     || (deersim.state === "round")) {
-      collisionDetection();  // Perform collision detection.
-      vicinityDetection();   // Perform vicinity detection.
-      projectileDetection(); // Perform projectile detection.
+      collisionDetection();
+      vicinityDetection();
+      projectileDetection();
 
-      deersim.generator.update(); // Update the Generator.
+      deersim.generator.update();
 
-      // Update all of the game objects currently in play.
       for (var gameObject in deersim.gameObjects)
          // gameObjects[gameObject].update();
          deersim.gameObjects[gameObject].update(dt); // #TODO -- documentation
 
-      // Update all of the obstacles currently in play.
       for (var obstacle in deersim.obstacles)
          deersim.obstacles[obstacle].update();
 
-      // Update all of the powerups currently in play.
       for (var powerup in deersim.powerups)
          deersim.powerups[powerup].update();
 
-      // Update all of the projectiles currently in play.
       for (var projectile in deersim.projectiles)
          deersim.projectiles[projectile].update();
 
-      // Update all of the vehicles currently in play.
       for (var vehicle in deersim.vehicles)
          deersim.vehicles[vehicle].update();
 
-      // Remove all finished AnimationBlocks from the objects array.
       clearFinishedAnimations();
 
-      powerupDetection(); // Perform powerup detection.
+      powerupDetection();
 
-      if (deer.state === "dying") { // If the active Deer is dying...
-         replaceDeer();             // Then replace the active Deer with a new Deer.
+      if (deer.state === "dying") {
+         replaceDeer();
       }
 
-      playerProfile.update();                // Update the player profile.
-      playerProfile.locationMarker.update(); // Update the profile's cursor location marker.
+      playerProfile.update();
+      playerProfile.locationMarker.update();
 
-      /* Check the player profile's level to determine whether the player has just
-         levelled up. If they have, then execute the following series of conditional
-         checks. At specific levels, trigger the road manager's flags to open or close
-         new lanes as needed to manage the progression of the road through the environment. */
       if (playerProfile.level !== playerProfile.levelPreviousFrame) {
          if (playerProfile.level === 3) {
             deersim.roadManager.openBottomLaneRequested = CONST_TRUE;
@@ -449,15 +400,12 @@ var update = function(dt) {
          }
       }
 
-      /* Keep a rolling record of the player profile's level from
-         the previous game frame, in order to perform the check above. */
       playerProfile.levelPreviousFrame = playerProfile.level;
    }
 
-   if (deersim.state === "round") {  // If the player is currently playing a round,
-      kidnapDetection();     // Perform kidnap detection.
+   if (deersim.state === "round") {
+      kidnapDetection();
 
-      // Triggers Coop boss battle.
       if (playerProfile.consecutiveLvls >= 8) {
          startBossBattle();
       }
@@ -472,61 +420,52 @@ var update = function(dt) {
          preparePlayerForCoopsEntry();
       }
 
-      if (boss.hp <= 0) {      // If Coop has been killed...
-         boss.state = "dying"; // ...then set his state to dying.
+      if (boss.hp <= 0) {
+         boss.state = "dying";
          startRound();
       }
    }
 
-   if ((deersim.state === "gameOver") // If the game is presenting the game over menu,
-    || (deersim.state === "main")) {  // Or the main menu,
-      deersim.generator.update(); // Then update the Generator, and...
-      collisionDetection();       // Perform collision detection.
+   if ((deersim.state === "gameOver")
+    || (deersim.state === "main")) {
+      deersim.generator.update();
+      collisionDetection();
 
-      // Update all of the game objects currently in play.
       for (var gameObject in deersim.gameObjects) {
          deersim.gameObjects[gameObject].update();
       }
 
-      // Update all of the vehicles currently in play.
       for (var vehicle in deersim.vehicles) {
          deersim.vehicles[vehicle].update();
       }
 
-      // Update all of the obstacles currently in play.
       for (var obstacle in deersim.obstacles)
          deersim.obstacles[obstacle].update();
 
-      // Update all of the powerups currently in play.
       for (var powerup in deersim.powerups) {
          deersim.powerups[powerup].update();
       }
 
-      // Update all of the projectiles currently in play.
       for (var projectile in deersim.projectiles) {
          deersim.projectiles[projectile].update();
       }
 
-      // Remove all finished AnimationBlocks from the objects array.
       clearFinishedAnimations();
    }
 
    /* NOTE: This check & replay is included to mitigate the
       effects of bug 0001. See bugs.txt for more info.      */
    if (deersim.state === "main") {
-      // If the background track erroneously failed to start playing, play it.
       if ((deersim.musicCounter === 0)
        && (deersim.musicManager.backgroundTrack.currentTime === 0)) {
             deersim.musicManager.backgroundTrack.play();
          }
    }
 
-   // Even if the game is paused, the profile's cursor needs to update so that it can blink.
    if (deersim.state === "pause") {
       playerProfile.locationMarker.update();
    }
 
-   // Perform functions necessary to exit transition states.
    if (deersim.state === "transitionToSA40PhaseTwo")
       transitionToSA40PhaseTwo();
    if (deersim.state === "transitionToSA40PhaseFour")
@@ -538,10 +477,10 @@ var update = function(dt) {
    if (deersim.state === "transitionToSA40PhaseTen")
       transitionToSA40PhaseTen();
 
-   clearPassedObjects();               // Dispose of objects which have moved offscreen.
-   updateTimers();                     // Increment the animation timer.
-   deersim.backgroundManager.update(); // Update the background manager.
-   deersim.roadManager.update();       // Update the road manager.
+   clearPassedObjects();
+   updateTimers();
+   deersim.backgroundManager.update();
+   deersim.roadManager.update();
    clearExpiredGameObjects();
 }; // update()
 
@@ -556,36 +495,34 @@ var update = function(dt) {
  | occur no more frequently than once every 0.4 (24/60) seconds.  |
 \*----------------------------------------------------------------*/
 var updateTimers = function() {
-   if (deersim.state !== "pause") // If the game is not currently paused,
-      animationTimer++;   // Then increment the animation timer.
-   if (animationTimer >= 29) // If the animation timer has reached 29,
-      animationTimer = 0;    // reset it to 0.
+   if (deersim.state !== "pause")
+      animationTimer++;
+   if (animationTimer >= 29)
+      animationTimer = 0;
 
-   // If the kill counter is running...
    if ((deersim.killCounter > 0) && (deersim.killCounter < 18))
-      deersim.killCounter++; // ...then increment the kill counter.
-   if (deersim.killCounter >= 18) // If the kill counter has elapsed...
-      deersim.killCounter = 0;    // ...then reset the kill counter to 0.
+      deersim.killCounter++;
+   if (deersim.killCounter >= 18)
+      deersim.killCounter = 0;
 
-   if ((keyTimer > 0) && (keyTimer < 11)) // If the key timer is running,
-      keyTimer++;                         // Increment the key timer.
-   if (keyTimer >= 11) // If the key timer has elapsed,
-      keyTimer = 0;    // Reset the key timer to 0.
+   if ((keyTimer > 0) && (keyTimer < 11))
+      keyTimer++;
+   if (keyTimer >= 11)
+      keyTimer = 0;
 
-   deersim.musicCounter++; // Increment the music counter and reset it every half second.
+   deersim.musicCounter++;
    if (deersim.musicCounter >= 29)
       deersim.musicCounter = 0;
 
-   if ((deersim.pauseTimer > 0) && (deersim.pauseTimer < 30)) // If the pause timer is running,
-      deersim.pauseTimer++;                                   // Increment the pause timer.
-   if (deersim.pauseTimer >= 30) // If the pause timer has elapsed,
-      deersim.pauseTimer = 0;    // Reset the pause timer to 0.
+   if ((deersim.pauseTimer > 0) && (deersim.pauseTimer < 30))
+      deersim.pauseTimer++;
+   if (deersim.pauseTimer >= 30)
+      deersim.pauseTimer = 0;
 
-   // If the projectile counter is running...
    if ((deersim.projectileCounter > 0) && (deersim.projectileCounter < 24))
-      deersim.projectileCounter++; // ...then increment the projectile counter.
-   if (deersim.projectileCounter >= 24) // If the projectile counter has elapsed...
-      deersim.projectileCounter = 0;    // ...then reset the projectile counter.
+      deersim.projectileCounter++;
+   if (deersim.projectileCounter >= 24)
+      deersim.projectileCounter = 0;
 };
 
 // ---- End of function declarations. ----
@@ -608,7 +545,6 @@ var animate =  window.requestAnimationFrame
  | All game destruction code executes after the game loop has exited.    |
 \*-----------------------------------------------------------------------*/
 var gameLoop = function() {
-   // Add the current frame's time to the frame times array.
    deersim.frameTimes.push(Date.now());
    deersim.realTimeEngine = CONST_TRUE;
 
@@ -626,12 +562,12 @@ var gameLoop = function() {
             deersim.deltaT -= deersim.timeStep;
          }
 
-         draw(deersim.canvasContext); // Draw all game objects.
+         draw(deersim.canvasContext);
       }
       else {
-         getInput();                  // Get the user's key input for this iteration.
-         update();                    // Update all game objects.
-         draw(deersim.canvasContext); // Draw all game objects.
+         getInput();
+         update();
+         draw(deersim.canvasContext);
       }
    }
    catch (e) {
@@ -639,13 +575,11 @@ var gameLoop = function() {
       alert(e.message);
    }
 
-   // While there are frame times that are more than a full
-   // second old remaining in the frame times array...
    while (deersim.frameTimes[deersim.frameTimes.length - 1] - (deersim.frameTimes[0]) > 1000) {
-      deersim.frameTimes.splice(0, 1); // ...remove said old frames from the array.
+      deersim.frameTimes.splice(0, 1);
    }
 
-   animate(gameLoop);   // Execute next iteration of the game loop.
+   animate(gameLoop);
 };
 
 /*------------------------*\
@@ -654,41 +588,40 @@ var gameLoop = function() {
 var draw = function(canvasContext) {
    deersim.backgroundManager.bg1.draw();
    deersim.backgroundManager.bg2.draw();
-   deersim.roadManager.draw(); // Have the RoadManager draw all RoadSegments.
+   deersim.roadManager.draw();
 
-   for (var gameObject in deersim.gameObjects) { // Draw each game object currently in play.
+   for (var gameObject in deersim.gameObjects) {
       deersim.gameObjects[gameObject].draw();
    }
 
-   for (var vehicle in deersim.vehicles) { // Draw each vehicle currently in play.
+   for (var vehicle in deersim.vehicles) {
       deersim.vehicles[vehicle].draw();
    }
 
-   for (var obstacle in deersim.obstacles) { // Draw each obstacle currently in play.
+   for (var obstacle in deersim.obstacles) {
       deersim.obstacles[obstacle].draw();
    }
 
-   for (var powerup in deersim.powerups) { // Draw each powerup currently in play.
+   for (var powerup in deersim.powerups) {
       deersim.powerups[powerup].draw();
    }
 
-   for (var projectile in deersim.projectiles) { // Draw each projectile currently in play.
+   for (var projectile in deersim.projectiles) {
       deersim.projectiles[projectile].draw();
    }
 
-   // If the debugger is enabled, then draw its TextStrings to indicate game performance.
    if (deersim.debuggerEnabled) {
       deersim.liveDebugger.draw();
    }
 
    if (deersim.state === "main") {
       if (showCreditsMenu) {
-         deersim.creditsMenu.draw(); // Draw the credits menu.
+         deersim.creditsMenu.draw();
       }
    }
 
-   if (deersim.state !== "main") { // If the player is in any state other than the main menu...
-      playerProfile.draw(); // ...then draw the player profile.
+   if (deersim.state !== "main") {
+      playerProfile.draw();
    }
 };
 
@@ -716,14 +649,10 @@ window.addEventListener("touchend", function(touchEndEvent) {
    touchEndEvent.preventDefault(); // Cancel the default response to the touchend event.
 
    try {
-      /* Notify the TouchManager that this touchend
-         event is the most recent such event to occur. */
       deersim.touchManager.lastTouchEnded = touchEndEvent.changedTouches[0];
 
-      /* Notify the TouchManager of the time that this touchend event occurred. */
       deersim.touchManager.lastTouchEndedTS = Date.now();
 
-      /* Notify the TouchManager that it should process a swipe action. */
       deersim.touchManager.shouldProcessSwipe = CONST_TRUE;
    }
    catch (exception) {
@@ -736,21 +665,18 @@ window.addEventListener("touchend", function(touchEndEvent) {
  | Defines an event listener that responds to touchmove events. |
 \*--------------------------------------------------------------*/
 window.addEventListener("touchmove", function(touchMoveEvent) {
-   touchMoveEvent.preventDefault(); // Cancel the default response to the touchmove event.
+   touchMoveEvent.preventDefault();
 }, {passive: false}); // eventListener(touchmove)
 
 /*---------------------------------------------------------------*\
  | Defines an event listener that responds to touchstart events. |
 \*---------------------------------------------------------------*/
 window.addEventListener("touchstart", function(touchStartEvent) {
-   touchStartEvent.preventDefault(); // Cancel the default response to the touchstart event.
+   touchStartEvent.preventDefault();
 
    try {
-      /* Notify the TouchManager that this touchstart
-         event is the most recent such event to occur. */
       deersim.touchManager.lastTouchStarted = touchStartEvent.changedTouches[0];
 
-      /* Notify the TouchManager of the time that this touchstart event occurred. */
       deersim.touchManager.lastTouchStartedTS = Date.now();
    }
    catch (exception) {

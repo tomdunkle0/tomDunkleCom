@@ -15,15 +15,13 @@
  | and present a similar threat to the active Deer.       |
 \*--------------------------------------------------------*/
 function Pothole(lane) {
-   this.lane           = lane;                  // Assign this Pothole's lane.
-   this.speed          = 3;                     // Default speed.
-   this.d              = CONST_FONT_SIZE_SMALL; // Default Pothole dimension.
+   this.lane           = lane;
+   this.speed          = 3;
+   this.d              = CONST_FONT_SIZE_SMALL;
    this.collisionWidth = 8;    // #TODO -- change this when I implement the proper sprite.
-   
-   // Assign this Pothole's x position as adjacent to the canvas boundary.
+
    this.x = CONST_CANVAS_WIDTH - this.d;
-   
-   // Assign this Pothole's y position based on its lane.
+
    this.y = CONST_LANE_0_BASE - (CONST_LANE_HEIGHT * this.lane) - 64;
 };
 
@@ -43,7 +41,7 @@ Pothole.prototype.draw = function() {
  | Updates this Pothole. |
 \*-----------------------*/
 Pothole.prototype.update = function() {
-   this.x -= this.speed; // Move this Pothole to the left, proportional to its speed.
+   this.x -= this.speed;
 };
 
 // ---- End of function declarations. ----

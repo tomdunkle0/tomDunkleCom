@@ -5,8 +5,8 @@
 \*----------------------------------------------------------------------*/
 
 function Generator() {
-   this.vehicleCounter = 0; // Initialize this Generator's vehicle counter.
-   this.powerupCounter = 0; // Initialize this Generator's powerup counter.
+   this.vehicleCounter = 0;
+   this.powerupCounter = 0;
 }
 
 /*--------------------------------------------------------------------------*\
@@ -16,14 +16,11 @@ function Generator() {
  | @returns int lane -- the lane value to be passed to a generated Vehicle. |
 \*--------------------------------------------------------------------------*/
 Generator.prototype.calculateLane = function() {
-   var randomDecimal = Math.random(); // Generate a random decimal.
+   var randomDecimal = Math.random();
 
-   // Calculate the number of lanes that the road manager is managing.
    var numLanes = (deersim.roadManager.maxLane - deersim.roadManager.minLane) + 1;
 
-   /* Depending on min/max lane, use the value of randomDecimal to
-      decide which lane the Vehicle/Powerup in question is generated in. */
-   if (numLanes === 3) { // When three active lanes, each has a 33% chance.
+   if (numLanes === 3) {
       if (randomDecimal < 0.33)
          return deersim.roadManager.minLane;
       else if ((randomDecimal >= 0.33) && (randomDecimal < 0.66))
@@ -31,7 +28,7 @@ Generator.prototype.calculateLane = function() {
       else if (randomDecimal >= 0.66)
          return (deersim.roadManager.minLane + 2);
    }
-   else if (numLanes === 4) { // When four active lanes, each has a 25% chance.
+   else if (numLanes === 4) {
       if (randomDecimal < 0.25)
          return deersim.roadManager.minLane;
       else if ((randomDecimal >= 0.25) && (randomDecimal < 0.5))
@@ -41,7 +38,7 @@ Generator.prototype.calculateLane = function() {
       else if (randomDecimal >= 0.75)
          return (deersim.roadManager.minLane + 3);
    }
-   else if (numLanes === 5) { // When five active lanes, each has a 20% chance.
+   else if (numLanes === 5) {
       if (randomDecimal < 0.2)
          return deersim.roadManager.minLane;
       else if ((randomDecimal >= 0.2) && (randomDecimal < 0.4))
@@ -63,19 +60,19 @@ Generator.prototype.calculateLane = function() {
  | @returns int speed -- the speed value to be passed to a generated Vehicle. |
 \*----------------------------------------------------------------------------*/
 Generator.prototype.calculateSpeed = function() {
-   var randomDecimal = Math.random(); // Generate a random decimal.
+   var randomDecimal = Math.random();
 
-   if (randomDecimal < 0.25) { // If the random decimal is between 0 and 0.25,
-      return 3;               // Return a speed value of 3
+   if (randomDecimal < 0.25) {
+      return 3;
    }
    else if ((randomDecimal >= 0.25) && (randomDecimal < 0.5)) {
-      return 4; // Else if the random decimal is between 0.25 and 0.5,
-   }             // Return a speed value of 4
+      return 4;
+   }
    else if ((randomDecimal >= 0.5) && (randomDecimal < 0.75)) {
-      return 5; // Else if the random decimal is between 0.5 and 0.75,
-   }             // Return a speed value of 5
-   else {        // Else if the random decimal is between 0.75 and 1,
-      return 6; // Return a speed value of 6
+      return 5;
+   }
+   else {
+      return 6;
    }
 }; // calculateSpeed
 
@@ -85,9 +82,8 @@ Generator.prototype.calculateSpeed = function() {
  | @returns <any> boss -- the newly generated boss.             |
 \*--------------------------------------------------------------*/
 Generator.prototype.generateBoss = function() {
-   // If the current environment is I-84...
    if (deersim.backgroundManager.environment === CONST_ENVIRONMENT_I84) {
-      return new Coop(); // ...then generate a Coop for the player to fight.
+      return new Coop();
    }
 };
 
@@ -95,17 +91,15 @@ Generator.prototype.generateBoss = function() {
  | Generates a Pothole with 40% probability. Otherwise, returns null. |
 \*--------------------------------------------------------------------*/
 Generator.prototype.generatePothole = function() {
-   var randomDecimal = Math.random(); // Generate a random decimal.
-   
-   // If the random decimal is within the desired range...
+   var randomDecimal = Math.random();
+
    if ((randomDecimal >= 0.3)
     && (randomDecimal < 0.7)) {
-      // ...then generate and return a Pothole.
       var pothole = new Pothole(this.calculateLane());
       return pothole;
    }
    else
-      return null; // ...otherwise, return null.
+      return null;
 };
 
 /*--------------------------------------------------------------*\
@@ -114,15 +108,13 @@ Generator.prototype.generatePothole = function() {
  | @returns <any> powerup -- the newly generated powerup.       |
 \*--------------------------------------------------------------*/
 Generator.prototype.generatePowerup = function() {
-   var randomDecimal = Math.random(); // Generate a random decimal.
-   
+   var randomDecimal = Math.random();
+
    // #TODO -- modify the frequency with which powerups are generated.
-   // Use the random decimal to determine the powerup type.
    if (randomDecimal < 0.5) {
-      // Create a new LightningRobe.
       return new LightningRobe(this.calculateLane());
    }
-   else { // Create a new Irradiation.
+   else {
       return new Irradiation(this.calculateLane());
    }
 }
@@ -133,10 +125,8 @@ Generator.prototype.generatePowerup = function() {
  | @returns <any> vehicle -- the newly generated vehicle.       |
 \*--------------------------------------------------------------*/
 Generator.prototype.generateVehicle = function() {
-   var randomDecimal = Math.random(); // Generate a random decimal.
-   
-   // Based off of the environment and the random decimal,
-   // Determine which vehicle will be returned by this function.
+   var randomDecimal = Math.random();
+
    if (deersim.backgroundManager.environment === CONST_ENVIRONMENT_I84) {
       if (randomDecimal < 0.11)
          return new Vehicle(this.calculateLane(), this.calculateSpeed(),
@@ -191,7 +181,7 @@ Generator.prototype.generateVehicle = function() {
       else
          return new DeerTruck(this.calculateLane(), this.calculateSpeed());
    }
-   
+
    return new WeenieMobile(this.calculateLane(), this.calculateSpeed());
 };
 
@@ -199,31 +189,29 @@ Generator.prototype.generateVehicle = function() {
  | Updates this Generator. |
 \*-------------------------*/
 Generator.prototype.update = function() {
-   this.vehicleCounter++; // Increment this Generator's vehicle counter.
-   this.powerupCounter++; // Increment this Generator's powerup counter.
+   this.vehicleCounter++;
+   this.powerupCounter++;
 
-   if (this.vehicleCounter === 58) { // If this Generator's vehicle counter has elapsed,
-      if (deersim.state === "bossBattle") { // If the player is fighting a boss...
-         var potholeBuffer = generatePothole(); // Generate a potential Pothole.
-         
-         if (potholeBuffer instanceof Pothole)     // If there was a real Pothole generated...
-            deersim.obstacles.push(potholeBuffer); // ...add it to the obstacles array.
+   if (this.vehicleCounter === 58) {
+      if (deersim.state === "bossBattle") {
+         var potholeBuffer = generatePothole();
+
+         if (potholeBuffer instanceof Pothole)
+            deersim.obstacles.push(potholeBuffer);
       }
       else
-         deersim.vehicles.push(this.generateVehicle()); // Otherwise, generate a new vehicle.
-      
-      // Reset this Generator's vehicle counter.
+         deersim.vehicles.push(this.generateVehicle());
+
       this.vehicleCounter = 0;
    }
 
-   if (this.powerupCounter === 29) { // If this Generator's powerup counter has elapsed,
-                                     // Then generate a random decimal.
+   if (this.powerupCounter === 29) {
       var randomDecimal = Math.random();
 
-      if (randomDecimal < 0.1) {                // With a 10% probability...
-         deersim.powerups.push(this.generatePowerup()); // Generate a new powerup.
+      if (randomDecimal < 0.1) {
+         deersim.powerups.push(this.generatePowerup());
       }
 
-      this.powerupCounter = 0; // Reset this Generator's powerup counter.
+      this.powerupCounter = 0;
    }
 };
