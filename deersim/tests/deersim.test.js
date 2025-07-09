@@ -124,6 +124,16 @@ test('calling initializeGame() populates the voices array', () => {
     expectArrayIsPopulatedWithAudioReferences(testDeerSim.voices, expectedSourceFilePaths);
 }); // calling initializeGame() populates the voices array
 
+test('calling startMainMenu() increases the number of GameObjects owned by the DeerSim object', () => {
+    const testDeerSim = initializeCanvasAndGame();
+    const gameObjects = testDeerSim.gameObjects;
+    expect(gameObjects.length).toBe(0);
+
+    startMainMenu(testDeerSim);
+
+    expect(gameObjects.length).toBeGreaterThan(0);
+}); // calling startMainMenu() increases the number of GameObjects owned by the DeerSim object
+
 test('calling startMainMenu() initializes the main menu cursor', () => {
     const testDeerSim = initializeCanvasAndGame();
     expect(testDeerSim.mainMenuCursor).toBe(undefined);
