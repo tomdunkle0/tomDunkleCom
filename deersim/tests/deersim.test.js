@@ -144,6 +144,16 @@ test('calling startMainMenu() initializes the toggle box', () => {
     // TODO: Consider what else to assert on with regards to the toggle box.
 }); // calling startMainMenu() initializes the toggle box
 
+test('calling startMainMenu() initially populates the GameObjects array', () => {
+    const testDeerSim = initializeCanvasAndGame();
+    const gameObjects = testDeerSim.gameObjects;
+    expect(gameObjects.length).toBe(0);
+
+    startMainMenu(testDeerSim);
+
+    expect(gameObjects.length).toBeGreaterThan(0);
+}); // calling startMainMenu() initially populates the GameObjects array
+
 test('calling startMainMenu() sets the game state to main', () => {
     const testDeerSim = initializeCanvasAndGame();
     expect(testDeerSim.state).toBe(undefined);
