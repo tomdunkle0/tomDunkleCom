@@ -129,7 +129,6 @@ var onPageLoad = function()
    initializeCanvas(deersim);
    initializeGame(deersim);
    startMainMenu(deersim);
-   document.body.appendChild(deersim.canvas); // Append the canvas to the HTML document. // TODO: Maybe unnecessary?
    animationTimer = 0;
    keyTimer = 0;
    animate(gameLoop); // Execute first iteration of the game loop.
