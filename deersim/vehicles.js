@@ -13,20 +13,18 @@
  | @param float speed -- this DeerTruck's speed.          |
 \*--------------------------------------------------------*/
 function DeerTruck(lane, speed) {
-   this.state          = "default"; // Assign this DeerTruck to the default state.
-   this.lane           = lane;      // Assign this DeerTruck's lane.
-   this.speed          = speed;     // Assign this DeerTruck's speed.
-   this.d              = 64;        // Assign this DeerTruck's dimension.
-   this.value          = 7500;      // Assign this DeerTruck's value.
-   this.collisionWidth = 41;        // Assign this DeerTruck's collision width.
-   
-   // Assign this DeerTruck's x position as adjacent to the canvas boundary.
+   this.state          = "default";
+   this.lane           = lane;
+   this.speed          = speed;
+   this.d              = 64;
+   this.value          = 7500;
+   this.collisionWidth = 41;
+
    this.x = deersim.canvas.width - this.d;
-   
-   // Assign this DeerTruck's y position based on its lane.
+
    this.y = CONST_LANE_0_BASE - (CONST_LANE_HEIGHT * this.lane);
-   
-   this.yVelocity = -7; // Initialze a y velocity in case this DeerTruck dies.
+
+   this.yVelocity = -7;
 };
 
 /*----------------------------------------------------------------------------*\
@@ -39,24 +37,22 @@ function DeerTruck(lane, speed) {
  |                                  used in collisionDetection().             |
 \*----------------------------------------------------------------------------*/
 function Vehicle(lane, speed, type, value, collisionWidth) {
-   this.state          = "default";      // Assign this Vehicle to the default state.
-   this.lane           = lane;           // Assign this Vehicle's lane.
-   this.speed          = speed;          // Assign this Vehicle's speed.
-   this.type           = type;           // Assign this Vehicle's type.
-   this.d              = 128;            // Assign this Vehicle's dimension.
-   this.value          = value;          // Assign this Vehicle's value.
-   this.collisionWidth = collisionWidth; // Assign this Vehicle's collision width.
-   
-   // Assign this Vehicle's x position as adjacent to the canvas boundary.
+   this.state          = "default";
+   this.lane           = lane;
+   this.speed          = speed;
+   this.type           = type;
+   this.d              = 128;
+   this.value          = value;
+   this.collisionWidth = collisionWidth;
+
    this.x = CONST_CANVAS_WIDTH - this.d;
-   
-   // Assign this Vehicle's y position based on its lane.
+
    this.y = CONST_LANE_0_BASE - (CONST_LANE_HEIGHT * this.lane) - 64;
-   
-   this.yVelocity       = -7; // Initialze a y velocity in case this Vehicle dies.
-   this.rotationCounter = 0;  // Controls this Vehicle's angle when it dies.
-   this.angleOfRotation = 0;  // Tracks this Vehicle's angle when it dies.
-   this.imageHandle     = ""; // Image handle variable for this Vehicle.
+
+   this.yVelocity       = -7;
+   this.rotationCounter = 0;
+   this.angleOfRotation = 0;
+   this.imageHandle     = "";
 };
 
 /*--------------------------------------------------------*\
@@ -66,18 +62,14 @@ function Vehicle(lane, speed, type, value, collisionWidth) {
  | @param float speed -- this WhiteVan's speed.           |
 \*--------------------------------------------------------*/
 function WhiteVan(lane, speed) {
-   this.lane           = lane;      // Assign this WhiteVan's lane.
-   this.speed          = speed;     // Assign this WhiteVan's speed.
-   this.d              = 128;       // Assign this WhiteVan's dimension.
-   this.collisionWidth = 79;        // Assign this WhiteVan's collision width.
-   
+   this.lane           = lane;
+   this.speed          = speed;
+   this.d              = 128;
+   this.collisionWidth = 79;
+
    // #TODO -- Make all vehicles generate offscreen as opposed to onscreen.
-   // Assign this WhiteVan's x position as adjacent to the canvas boundary.
    this.x = deersim.canvas.width - this.d;
-   
-   /* Assign this WhiteVan's y position based on its lane. |
-   |  Subtract an extra 64 pixels due to the increased     |
-   |  size of the WhiteVan (128x128 as opposed to 64x64).  */
+
    this.y = (CONST_LANE_0_BASE - (CONST_LANE_HEIGHT * this.lane) - 64);
 };
 
@@ -90,19 +82,19 @@ function WhiteVan(lane, speed) {
 \*-----------------------*/
 DeerTruck.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById("DeerTruck"),
-                           this.x, this.y); // Draw this DeerTruck's image.
+                           this.x, this.y);
 };
 
 /*-------------------------*\
  | Updates this DeerTruck. |
 \*-------------------------*/
 DeerTruck.prototype.update = function() {
-   if (this.state === "default") // If this DeerTruck is in the default state,
-      this.x -= this.speed;      // Move this DeerTruck to the left, proportional to its speed.
-   else if (this.state === "dying") { // If this DeerTruck is dying,
-      this.x += 5;                    // Propel this DeerTruck to the right.
-      this.y += this.yVelocity;       // Propel this DeerTruck up or down, as...
-      this.yVelocity += 0.1;          // ...its y velocity continually increases.
+   if (this.state === "default")
+      this.x -= this.speed;
+   else if (this.state === "dying") {
+      this.x += 5;
+      this.y += this.yVelocity;
+      this.yVelocity += 0.1;
    }
 };
 
@@ -110,22 +102,19 @@ DeerTruck.prototype.update = function() {
  | Draws this Vehicle. |
 \*---------------------*/
 Vehicle.prototype.draw = function() {
-   this.imageHandle = this.type; // Use this Vehicle's type as a base image handle.
-   
-   // Use i to determine an angle of rotation based on this Vehicle's rotation counter.
+   this.imageHandle = this.type;
+
    var i = this.rotationCounter / 3;
    i = Math.ceil(i);
-   if (i == 0) // In the case where rotationCounter = 0, i = 0 which is undesirable.
-      i = 12;  // Setting i to 12 in this case yields an equal distribution of angles.
+   if (i == 0)
+      i = 12;
    this.angleOfRotation = (i - 1) * 30;
-   
-   // If this Vehicle is dying, concatenate its angle of rotation to its image handle...
+
    if (this.state === "dying") {
       this.imageHandle = this.imageHandle.concat("_C_");
       this.imageHandle = this.imageHandle.concat(this.angleOfRotation);
    }
-   
-   // Display this Vehicle's current frame.
+
    deersim.canvasContext.drawImage(document.getElementById(this.imageHandle), this.x, this.y);
 };
 
@@ -133,15 +122,14 @@ Vehicle.prototype.draw = function() {
  | Updates this Vehicle. |
 \*-----------------------*/
 Vehicle.prototype.update = function() {
-   if (this.state === "default") // If this Vehicle is in the default state,
-      this.x -= this.speed;      // Move this Vehicle to the left, proportional to its speed.
-   else if (this.state === "dying") { // If this Vehicle is dying,
-      this.x += 5;                    // Propel this Vehicle to the right.
-      this.y += this.yVelocity;       // Propel this Vehicle up or down, as...
-      this.yVelocity += 0.1;          // ...its y velocity continually increases.
+   if (this.state === "default")
+      this.x -= this.speed;
+   else if (this.state === "dying") {
+      this.x += 5;
+      this.y += this.yVelocity;
+      this.yVelocity += 0.1;
    }
-   
-   // Increment this Vehicle's rotation counter, and reset the counter if it has elapsed.
+
    this.rotationCounter++;
    if (this.rotationCounter > 35) {
       this.rotationCounter = 0;
@@ -153,13 +141,12 @@ Vehicle.prototype.update = function() {
 \*----------------------*/
 WhiteVan.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById("WhiteVan"),
-                           this.x, this.y); // Draw the WhiteVan's image.
+                           this.x, this.y);
 };
 
 /*------------------------*\
  | Updates this WhiteVan. |
 \*------------------------*/
 WhiteVan.prototype.update = function() {
-   // Move this WhiteVan to the left, proportional to its speed.
    this.x -= this.speed;
 };

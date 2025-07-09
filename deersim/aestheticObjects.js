@@ -16,21 +16,17 @@
  | @param string imagePrefix -- the prefix for each frame's image handle.    |
 \*---------------------------------------------------------------------------*/
 function AnimationBlock(x, y, dim, length, imagePrefix) {
-   this.x   = x;   // Assign this AnimationBlock's x position.
-   this.y   = y;   // Assign this AnimationBlock's y position.
-   this.dim = dim; // Assign this AnimationBlock's dimension.
+   this.x   = x;
+   this.y   = y;
+   this.dim = dim;
    // #TODO -- as of writing this comment, this.dim is unused for this object. Remove it.
-   
-   // Assign this AnimationBlock's length (e.g. number of frames).
+
    this.length = length;
-   
-   // Assign the prefix for this AnimationBlock's image handles.
+
    this.imagePrefix = imagePrefix;
-   
-   // Initialize a counter for game iterations with respect to the animation's start.
+
    this.frameCounter = 0;
-   
-   // Initialize a flag for this AnimationBlock having finished.
+
    this.over = CONST_FALSE;
 };
 
@@ -41,9 +37,9 @@ function AnimationBlock(x, y, dim, length, imagePrefix) {
  | active Deer is covering distance while running along the road.             |
 \*----------------------------------------------------------------------------*/
 function Background(x, imageHandle) {
-   this.x           = x;           // Assign this Background's x position.
-   this.y           = 0;           // Backgrounds must always exist at y = 0, to fill the canvas.
-   this.imageHandle = imageHandle; // Assign this Background's image handle.
+   this.x           = x;
+   this.y           = 0;
+   this.imageHandle = imageHandle;
 };
 
 /*---------------------------------------------------------------------------------------*\
@@ -53,13 +49,13 @@ function Background(x, imageHandle) {
  | @param int y -- this Bar's y position.                                                |
 \*---------------------------------------------------------------------------------------*/
 function Bar(x, y) {
-   this.x          = x;                // Assign this Bar's x position.
-   this.y          = y;                // Assign this Bar's y position.
-   this.backWidth  = CONST_BAR_WIDTH;  // Assign this Bar's back rectangle's width.
-   this.frontWidth = 0;                // Assign this Bar's front rectangle its default width.
-   this.height     = CONST_BAR_HEIGHT; // Assign this Bar's height.
-   this.function   = "default";        // Assign a default value for this Bar's function.
-   this.done       = CONST_FALSE;      // By default, Bars are not done.
+   this.x          = x;
+   this.y          = y;
+   this.backWidth  = CONST_BAR_WIDTH;
+   this.frontWidth = 0;
+   this.height     = CONST_BAR_HEIGHT;
+   this.function   = "default";
+   this.done       = CONST_FALSE;
 }; // Bar()
 
 /*----------------------------------------------------------------------------*\
@@ -72,12 +68,11 @@ function Bar(x, y) {
  | @param size           -- the size of this Character.                       |
 \*----------------------------------------------------------------------------*/
 function Character(x, y, dim, a_state, ASCIICharacter, size) {
-   this.x    = x;    // Assign this Character's x position.
-   this.y    = y;    // Assign this Character's y position.
-   this.dim  = dim;  // Assign this Character's dimension.
-   this.size = size; // Assign this Character's size.
+   this.x    = x;
+   this.y    = y;
+   this.dim  = dim;
+   this.size = size;
 
-   // Assign this Character's ASCII character.
    this.ASCIICharacter = ASCIICharacter;
 
    var minUpper = "A"; // 65
@@ -85,7 +80,6 @@ function Character(x, y, dim, a_state, ASCIICharacter, size) {
    var minLower = "a"; // 97
    var maxLower = "z"; // 122
 
-   // Assign a font and color ID based on this Character's state (i.e. function).
    switch (a_state) {
       case "default":
          this.font  = "Mono";
@@ -105,7 +99,7 @@ function Character(x, y, dim, a_state, ASCIICharacter, size) {
          break;
    }
 
-   this.image = // the object identified by a string of this Character's qualities, concatenated.
+   this.image =
       document.getElementById(this.size + this.font + this.ASCIICharacter + this.colorID);
 };
 
@@ -117,16 +111,16 @@ function Character(x, y, dim, a_state, ASCIICharacter, size) {
  | @param int y -- this DeerHead's y position.           |
 \*-------------------------------------------------------*/
 function DeerHead(x, y) {
-    this.x = x; // Assign this DeerHead's x position.
-    this.y = y; // Assign this DeerHear's y position.
+    this.x = x;
+    this.y = y;
 };
 
 /*--------------------------------------------------------------------------*\
  | Defines the DeerStill, an object which represents a Deer standing still. |
 \*--------------------------------------------------------------------------*/
 function DeerStill(x, y) {
-   this.x = x; // Assign this DeerStill's x position.
-   this.y = y; // Assign this DeerStill's y position.
+   this.x = x;
+   this.y = y;
 };
 
 /*---------------------------------------------------------------*\
@@ -135,13 +129,10 @@ function DeerStill(x, y) {
  | @param int intensity -- (0..1..2) = (yellow..orange..red)     |
 \*---------------------------------------------------------------*/
 function Exclamation(intensity) {
-   // Initialize a counter for game iterations with respect to the Exclamation's start.
    this.frameCounter = 0;
-   
-   this.intensity = intensity; // Essentially tracks how obnoxious the Exclamation is.
-   
-   // Assign this Exclamation's positional coordinates based on its intensity.
-   // These hardcoded values are based on the static canvas size used as of v0.21.
+
+   this.intensity = intensity;
+
    if (this.intensity === 0) {
       this.x = (CONST_CANVAS_WIDTH / 2) - 61;
       this.y = 286;
@@ -205,23 +196,18 @@ function ExpiringObject(x, y, imageHandle, remainingFrames) {
  | owns an array of NumberBlocks which are used as its characters.           |
 \*---------------------------------------------------------------------------*/
 function NumberBlockString() {
-   // Assign this NumberBlockString's x position.
    this.x = CONST_CANVAS_WIDTH - (23 * 11) - 480;
-   
-   // Assign this NumberBlockString's y position.
+
    this.y = CONST_CANVAS_HEIGHT - 41;
-   
-   this.propertyDamage = 0;           // Assign the default property damage value.
-   this.pdString       = "";          // Assign the default property damage string.
-   this.numberBlocks   = new Array(); // Stores this NumberBlockString's NumberBlocks.
-   
-   // Create the first NumberBlock, which is always the one displaying '$'.
+
+   this.propertyDamage = 0;
+   this.pdString       = "";
+   this.numberBlocks   = new Array();
+
    this.numberBlocks[0] = new StaticMenuObject(this.x, this.y, "NumberBlock$");
-   
-   // Convert this Profile's property damage value to a string representation.
+
    this.intToString();
-   
-   // Create NumberBlocks and use them to populate this NumberBlockString's NumberBlock array.
+
    this.storeCharacters();
 }; // NumberBlockString()
 
@@ -230,9 +216,9 @@ function NumberBlockString() {
  | game objects exist during a round of play.  |
 \*---------------------------------------------*/
 function Road(x, y) {
-   this.x = x;                // Assign this Road's x position.
-   this.y = y;                // Assign this Road's y position.
-   this.imageHandle = "Road"; // Assign this Road's image handle to the default value.
+   this.x = x;
+   this.y = y;
+   this.imageHandle = "Road";
 };
 
 /*---------------------------------------------------------------------*\
@@ -245,25 +231,22 @@ function SpeakingYorig() {
    this.x = 900;
    this.y = CONST_CANVAS_HEIGHT;
 
-   // Counters used to control SpeakingYorig's sequence of events.
    this.animationCounter  = 0;
    this.ascendBeforeFrame = 50;
    this.descendAfterFrame = 170;
 
-   // Speech balloon to be displayed in between ascending and descending.
    this.speechBalloon = new StaticMenuObject(
       this.x - 50,
       this.y - 125,
       "YorigsSpeechBalloon"
       );
 
-   // Key icon to be displayed in between ascending and descending.
    this.keyIcon = new StaticMenuObject(
       this.x - 11,
       this.y - 116,
       "KeyIconL"
       );
-   
+
 }; // SpeakingYorig()
 
 /*--------------------------------------------------------*\
@@ -271,13 +254,13 @@ function SpeakingYorig() {
  | scenarios in order to exclaim something to the player. |
 \*--------------------------------------------------------*/
 function Starburst(x, y, imageHandle, purpose) {
-   this.x             = x;           // Assign this Starburst's x position.
-   this.y             = y;           // Assign this Starburst's y position.
-   this.yOrig         = y;           // Separately track the original y position.
-   this.imageHandle   = imageHandle; // Assign this Starburst's image handle.
-   this.slideDistance = 60;          // Distance this Starburst will slide upward visually.
-   this.purpose       = purpose;     // Assign this Starburst's purpose.
-   this.done          = CONST_FALSE; // By default, Starbursts are not done.
+   this.x             = x;
+   this.y             = y;
+   this.yOrig         = y;
+   this.imageHandle   = imageHandle;
+   this.slideDistance = 60;
+   this.purpose       = purpose;
+   this.done          = CONST_FALSE;
 }; // Starburst()
 
 /*-------------------------------------------------------------------------*\
@@ -288,9 +271,9 @@ function Starburst(x, y, imageHandle, purpose) {
  | @param string imageHandle -- a handle to this StaticMenuObject's image. |
 \*-------------------------------------------------------------------------*/
 function StaticMenuObject(x, y, imageHandle) {
-   this.x           = x;           // Assign this StaticMenuObject's x position.
-   this.y           = y;           // Assign this StaticMenuObject's y position.
-   this.imageHandle = imageHandle; // Assign this StaticMenuObject's image handle.
+   this.x           = x;
+   this.y           = y;
+   this.imageHandle = imageHandle;
 };
 
 /*-----------------------------------------------------------*\
@@ -299,15 +282,14 @@ function StaticMenuObject(x, y, imageHandle) {
  | large amount of information to the player at one time.    |
 \*-----------------------------------------------------------*/
 function TextBox(x, y) {
-   this.x             = x;  // Assign this TextBox's x position.
-   this.y             = y;  // Assign this TextBox's y position.
-   this.numberOfLines = 14; // This TextBox's number of lines of text.
+   this.x             = x;
+   this.y             = y;
+   this.numberOfLines = 14;
    // planning to parameterize this when necessary.
 
-   // Determine this TextBox's height based on its number of lines of text.
    this.height = (24 * (this.numberOfLines + 2));
 
-   this.linesOfText = new Array(); // Stores this TextBox's TextStrings.
+   this.linesOfText = new Array();
 
    // Manually compile the credits as TextStrings, plus the line length.
    // #TODO -- automate reading of this from a text file.
@@ -398,14 +380,12 @@ function TextBox(x, y) {
                                          "Small");                     // size
    this.lineLength      = this.linesOfText[0].length;
 
-   // Determine this TextBox's width based on the length of its lines of text.
    this.width = (CONST_SIZE_SMALL * (this.lineLength + 2));
 
    // #DEBUG
    // For reference, under current conditions the height
    // and width evaluate to 312 and 448, respectively.
 
-   // This TextBox's DialogBox forms a space in which to display its lines of text.
    // #TODO -- automate choice of speech balloon based on width/height
    this.dialogBox = new StaticMenuObject(this.x, this.y - 90, "SpeechBalloon448x362");
 }; // TextBox()
@@ -421,22 +401,20 @@ function TextBox(x, y) {
  | @param size     -- the size of the text to be drawn.      |
 \*-----------------------------------------------------------*/
 function TextString(x, y, charSize, a_state, string, size) {
-   this.x        = x;           // Assign this TextString's x position.
-   this.y        = y;           // Assign this TextString's y position.
-   this.yOrig    = y;           // Separate variable for this TextString's original y position.
-   this.charSize = charSize;    // Assign this TextString's Character size.
-   this.done     = CONST_FALSE; // By default, TextStrings are not done.
-   this.state    = a_state;     // Assign this TextString's state.
-   this.string   = string;      // Assign this TextString's string.
-   this.size     = size;        // Assign this TextString's size.
-   
-   // Create an array to store the characters in this TextString's string.
+   this.x        = x;
+   this.y        = y;
+   this.yOrig    = y;
+   this.charSize = charSize;
+   this.done     = CONST_FALSE;
+   this.state    = a_state;
+   this.string   = string;
+   this.size     = size;
+
    this.characters = new Array();
-   
-   // By default, TextStrings can be removed by the clearTextStrings function.
+
    this.removable = CONST_TRUE;
-   
-   this.storeCharacters(); // Create Character objects for this TextString.
+
+   this.storeCharacters();
 };
 
 // ---- End of object declarations. ----
@@ -447,17 +425,12 @@ function TextString(x, y, charSize, a_state, string, size) {
  | Draws this AnimationBlock at a rate of 12 FPS. |
 \*------------------------------------------------*/
 AnimationBlock.prototype.draw = function() {
-   // Assign frame number (of animation) based on frame counter (of game).
    var frameNumber = Math.floor(this.frameCounter / 7);
-   
-   // Create a string version of the frame number.
+
    var frameNumberString = frameNumber.toString();
-   
-   // Put together this AnimationBlock's current image handle,
-   // based on its prefix and frame number.
+
    var imageHandle = this.imagePrefix.concat(frameNumberString);
-   
-   // Draw the current animation frame.
+
    deersim.canvasContext.drawImage(document.getElementById(imageHandle), this.x, this.y);
 }
 
@@ -465,8 +438,8 @@ AnimationBlock.prototype.draw = function() {
  | Updates this AnimationBlock. |
 \*------------------------------*/
 AnimationBlock.prototype.update = function() {
-   this.frameCounter++; // Increment this AnimationBlock's frame counter.
-   
+   this.frameCounter++;
+
    // If this animation is over...
    /* if (this.frameCounter >= (7 * this.length)) {
       this.over = CONST_TRUE; // ...then mark this AnimationBlock 'over'.
@@ -478,14 +451,14 @@ AnimationBlock.prototype.update = function() {
 \*------------------------*/
 Background.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById(this.imageHandle),
-                           this.x, this.y); // Draw this Background's image.
+                           this.x, this.y);
 };
 
 /*--------------------------*\
  | Updates this Background. |
 \*--------------------------*/
 Background.prototype.update = function() {
-   this.x -= 3; // Continuously move this Background to the left.
+   this.x -= 3;
 };
 
 /*-----------------*\
@@ -498,26 +471,25 @@ Bar.prototype.draw = function() {
 
       deersim.canvasContext.fillStyle = "#F6FF00"; // Set the front fill color to electric yellow.
    }
-   else if (this.function === "hp") { // Draw this Bar's back rectangle & border.
+   else if (this.function === "hp") {
       deersim.canvasContext.drawImage(document.getElementById("BossHPBarBackRectangle"),
                               (this.x - 3), (this.y - 237));
 
       deersim.canvasContext.fillStyle = "#FF0000"; // Set the front fill color to light red.
    }
-   else if (this.function === "irradiated") { // Draw this Bar's back rectangle & border.
+   else if (this.function === "irradiated") {
       deersim.canvasContext.drawImage(document.getElementById("IrradiatedBarBackRectangle"),
                               (this.x - 3), (this.y - 237));
 
       deersim.canvasContext.fillStyle = "#4FFF51"; // Set the front fill color to radioactive green.
    }
-   else { // Draw this Bar's back rectangle & border.
+   else {
       deersim.canvasContext.drawImage(document.getElementById("LevelBarBackRectangle"),
                               (this.x - 3), (this.y - 237));
 
       deersim.canvasContext.fillStyle = "#0000ff"; // Set the front fill color to dark blue.
    }
 
-   // Draw this Bar's front rectangle.
    deersim.canvasContext.fillRect(this.x, this.y, this.frontWidth, this.height);
 };
 
@@ -526,7 +498,6 @@ Bar.prototype.draw = function() {
 \*-------------------*/
 Bar.prototype.update = function() {
    if (this.function === "hp") {
-      // Assign this Bar's front width based on its owner's hit points.
       this.frontWidth = ((boss.hp / boss.maxHP) * CONST_BAR_WIDTH);
    }
    // else if (this.function === "powerup") {
@@ -535,7 +506,6 @@ Bar.prototype.update = function() {
       this.frontWidth = ((Math.abs(deer.powerupCounter - CONST_POWERUP_LEN_FRAMES))
                        / (CONST_POWERUP_LEN_FRAMES / CONST_BAR_WIDTH));
 
-      // Mark this bar 'done' if it is a powerup Bar that has fully depleted.
       if (this.frontWidth <= 0)
          this.done = CONST_TRUE;
    }
@@ -550,7 +520,6 @@ Bar.prototype.update = function() {
  | @param int nextGate    -- experience gate of the upcoming level.         |
 \*--------------------------------------------------------------------------*/
 Bar.prototype.updateFrontWidth = function(xp, currentGate, nextGate) {
-   // Calculate and assign a new front width for this Bar.
    this.frontWidth = ((xp - currentGate) / (nextGate - currentGate)) * this.backWidth;
 };
 
@@ -558,9 +527,7 @@ Bar.prototype.updateFrontWidth = function(xp, currentGate, nextGate) {
  | Draws this Character onscreen. |
 \*--------------------------------*/
 Character.prototype.draw = function() {
-   // If this Character is not a space...
    if (this.ASCIICharacter !== " ") {
-      // ...then draw this Character's image.
       deersim.canvasContext.drawImage(this.image, this.x, this.y);
    }
 };
@@ -570,7 +537,7 @@ Character.prototype.draw = function() {
 \*----------------------*/
 DeerHead.prototype.draw = function() {
     deersim.canvasContext.drawImage(document.getElementById("DeerHead"),
-                            this.x, this.y); // Draw a deer head icon.
+                            this.x, this.y);
 }; // DeerHead.draw()
 
 /*-----------------------*\
@@ -578,7 +545,7 @@ DeerHead.prototype.draw = function() {
 \*-----------------------*/
 DeerStill.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById("BagDeerStill"),
-                           this.x, this.y); // Draw the default DeerStill image.
+                           this.x, this.y);
 };
 
 /*--------------------------*\
@@ -592,9 +559,7 @@ DeerStill.prototype.update = function() {}; // Necessary for inclusion in game o
 \*---------------------------------------------------------*/
 Exclamation.prototype.draw = function() {
    // #TODO -- give the Exclamation's blink a 75% (rather than 50%) duty cycle.
-   // If the game's animation timer is in the first half of its duty cycle...
    if (animationTimer < 15) {
-      // ...then draw this Exclamation's image, which depends on its intensity.
       switch (this.intensity) {
          case 0:
             deersim.canvasContext.drawImage(document.getElementById("ExclamationGraphic"),
@@ -616,7 +581,7 @@ Exclamation.prototype.draw = function() {
  | Updates this Exclamation. |
 \*---------------------------*/
 Exclamation.prototype.update = function() {
-   this.frameCounter++; // Increment this Exclamation's frame counter.
+   this.frameCounter++;
 };
 
 /*----------------------*\
@@ -639,9 +604,6 @@ ExitSign.prototype.update = function(level) {
    var prefix = "ExitSign";
    var suffix = "";
 
-   /* Determine the suffix (exit). All handles are double-digited:
-      Exits less than ten have image handles as "01", "02", etc.
-      Exits ten and above have image handles as "10", "11", etc. */
    if (level <= 9) {
       suffix = "0";
       suffix = suffix.concat(level);
@@ -650,11 +612,8 @@ ExitSign.prototype.update = function(level) {
       suffix = suffix.concat(level);
    }
 
-   // Build the full imageHandle by concatenating the prefix and suffix.
    var handle = prefix.concat(suffix);
 
-   /* If the image handle has changed since the previous game loop
-      iteration, then re-assign this ExitSign's image handle.      */
    if (handle !== this.imageHandle) {
       this.imageHandle = handle;
    }
@@ -677,15 +636,11 @@ ExpiringCursor.prototype.draw = function() {
  | Updates this ExpiringCursor. |
 \*------------------------------*/
 ExpiringCursor.prototype.update = function() {
-   /* If this ExpiringCursor's animation counter has not yet
-      elapsed, then increment it. Otherwise, reset it to zero. */
    if (this.animationCounter < 24)
       this.animationCounter++;
    else
       this.animationCounter = 0;
 
-   /* Keep a running downward count of remaining
-      game frames before this ExpiringCursor expires. */
    if (this.remainingFrames > 0)
       this.remainingFrames--;
 }; // ExpiringCursor.update()
@@ -715,7 +670,6 @@ ExpiringObject.prototype.update = function() {
  | Draws this NumberBlockString. |
 \*-------------------------------*/
 NumberBlockString.prototype.draw = function() {
-   // Draw each one of this NumberBlockString's NumberBlocks.
    for (var numberBlock in this.numberBlocks) {
       this.numberBlocks[numberBlock].draw();
    }
@@ -726,19 +680,15 @@ NumberBlockString.prototype.draw = function() {
  | to a string, in the format expected to be displayed by a NumberBlockString. |
 \*-----------------------------------------------------------------------------*/
 NumberBlockString.prototype.intToString = function() {
-   // Create a string representation of this NumberBlockString's property damage.
    var pdSuffix = this.propertyDamage.toString();
-   
-   // Stores the number of zeroes necessary to pad this NumberBlockString's property damage
-   // in order to meet the 11 character standardization of NumberBlockStrings.
+
    var numNecessaryZeroes = 10 - pdSuffix.length;
-   
-   var pdPrefix = "$"; // Stores all characters which must precede pdSuffix.
-   
-   // Add each necessary zero to pdPrefix.
+
+   var pdPrefix = "$";
+
    for (var i = 0; i < numNecessaryZeroes; i++)
       pdPrefix += "0";
-   
+
    this.pdString = pdPrefix + pdSuffix;
 };
 
@@ -747,9 +697,7 @@ NumberBlockString.prototype.intToString = function() {
  | populate this NumberBlockString's NumberBlock array. |
 \*------------------------------------------------------*/
 NumberBlockString.prototype.storeCharacters = function() {
-   // For each position in this NumberBlockString after the initial '$'...
    for (var i = 1; i < this.pdString.length; i++) {
-      // ...create a new NumberBlock to occupy the position.
       this.numberBlocks[i] = new StaticMenuObject(this.x + (i * 22),
                                              this.y,
                                              "NumberBlock" + this.pdString[i]);
@@ -761,12 +709,10 @@ NumberBlockString.prototype.storeCharacters = function() {
  | updates this NumberBlockString's NumberBlocks accordingly.       |
 \*------------------------------------------------------------------*/
 NumberBlockString.prototype.updatePropertyDamage = function(newPDvalue) {
-   this.propertyDamage = newPDvalue; // Assign the new property damage value.
-   
-   // Convert this Profile's property damage value to a string representation.
+   this.propertyDamage = newPDvalue;
+
    this.intToString();
-   
-   // Create NumberBlocks and use them to populate this NumberBlockString's NumberBlock array.
+
    this.storeCharacters();
 };
 
@@ -775,7 +721,7 @@ NumberBlockString.prototype.updatePropertyDamage = function(newPDvalue) {
 \*------------------*/
 Road.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById(this.imageHandle),
-                           this.x, this.y); // Draw this Road's image.
+                           this.x, this.y);
 };
 
 /*---------------------*\
@@ -790,14 +736,12 @@ Road.prototype.update = function() {};
  | (i.e. after it finishes ascending, and before it begins descending).    |
 \*-------------------------------------------------------------------------*/
 SpeakingYorig.prototype.draw = function() {
-   deersim.canvasContext.drawImage( // Draw Yorig.
+   deersim.canvasContext.drawImage(
       document.getElementById("SpeakingYorig"), // imageHandle
       this.x,                                   // x
       this.y                                    // y
       );
 
-   /* If this SpeakingYorig currently exists between relative game frames
-      50-150, then also draw this SpeakingYorig's speech balloon and key icon. */
    if ((this.animationCounter >= this.ascendBeforeFrame)
     && (this.animationCounter <= this.descendAfterFrame))
    {
@@ -814,10 +758,10 @@ SpeakingYorig.prototype.draw = function() {
 \*-------------------------------------------------------------------------------*/
 SpeakingYorig.prototype.update = function() {
    if (this.animationCounter < this.ascendBeforeFrame)
-      this.y = this.y - 3; // Ascend before 50 game frames.
+      this.y = this.y - 3;
 
    if (this.animationCounter > this.descendAfterFrame)
-      this.y = this.y + 3; // Descend after 150 game frames.
+      this.y = this.y + 3;
 
    this.animationCounter++;
 }; // SpeakingYorig.update()
@@ -827,7 +771,7 @@ SpeakingYorig.prototype.update = function() {
 \*-----------------------*/
 Starburst.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById(this.imageHandle),
-                           this.x, this.y); // Draw this Starburst's image.
+                           this.x, this.y);
 };
 
 /*------------------------------------------------------------*\
@@ -846,7 +790,7 @@ Starburst.prototype.update = function() {
 \*------------------------------*/
 StaticMenuObject.prototype.draw = function() {
    deersim.canvasContext.drawImage(document.getElementById(this.imageHandle),
-                           this.x, this.y); // Draw this StaticMenuObject's image.
+                           this.x, this.y);
 };
 
 /*---------------------------------*\
@@ -859,7 +803,7 @@ StaticMenuObject.prototype.update = function() {};
  | Draws this TextBox. |
 \*---------------------*/
 TextBox.prototype.draw = function() {
-   this.dialogBox.draw(); // Draw this TextBox's DialogBox.
+   this.dialogBox.draw();
 
    for (var lineOfText in this.linesOfText)
       this.linesOfText[lineOfText].draw();
@@ -874,10 +818,9 @@ TextBox.prototype.update = function() {}; // Necessary for inclusion in game obj
  | Draws this TextString onscreen by drawing |
  | each of its Characters, one by one.       |
 \*-------------------------------------------*/
-TextString.prototype.draw = function() {    
-   // For each Character in this TextString,
+TextString.prototype.draw = function() {
    for (var i = 0; i < this.characters.length; i++) {
-      this.characters[i].draw(); // Draw the Character.
+      this.characters[i].draw();
    }
 };
 
@@ -928,16 +871,11 @@ TextString.prototype.update = function() {
  | @param {string} newString -- value to write over this TextString's string |
 \*---------------------------------------------------------------------------*/
 TextString.prototype.updateWithStringOverwrite = function(newString) {
-   // If the new string is not equal to this TextString's current string,
    if (newString !== this.string) {
-      // Assign the new string to this TextString.
       this.string = newString;
-      
-      // Allocate a new array for this TextString's
-      // characters, and forget about the old array.
+
       this.characters = new Array();
-      
-      // Store this TextString's characters in its new array.
+
       this.storeCharacters();
    }
 };

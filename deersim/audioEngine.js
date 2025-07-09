@@ -32,15 +32,13 @@ const CONST_VOICE_INDEX_WEENIEMOBILE_2 = 5;
  | @param string bgTrackName -- the new background track's HTML ID. |
 \*------------------------------------------------------------------*/
 var loadMusic = function(bgTrackName, bgTrackID) {
-   // Create variable to store the background music owned by the MusicManager.
    var bgTrack = deersim.musicManager.backgroundTrack;
 
-   if (!bgTrack.paused) { // If the current background music is not paused...
-      bgTrack.pause(); // ...pause and restart the existing background track.
+   if (!bgTrack.paused) {
+      bgTrack.pause();
       bgTrack.currentTime = 0;
    }
 
-   // Load and play the new background track.
    deersim.musicManager.backgroundTrack   = document.getElementById(bgTrackName);
    deersim.musicManager.backgroundTrackID = bgTrackID;
    deersim.musicManager.backgroundTrack.play();

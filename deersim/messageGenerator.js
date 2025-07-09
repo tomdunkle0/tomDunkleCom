@@ -11,7 +11,7 @@ var line3; // Third line of message, in TextString form.
 var line4; // Fourth line of message, in TextString form.
 
 function MessageGenerator() {
-   this.randomDecimal = 0; // Initialize this MessageGenerator's random decimal.
+   this.randomDecimal = 0;
 };
 
 /*-----------------------------------------------------------------------*\
@@ -20,11 +20,10 @@ function MessageGenerator() {
  |                                     comprising the game over message. |
 \*-----------------------------------------------------------------------*/
 MessageGenerator.prototype.gameOverMessage = function() {
-   var lines = new Array(); // Create an array to store all TextStrings.
-   
-   this.randomDecimal = Math.random(); // Generate a new random decimal.
-   
-   // Assign four lines based on the random decimal generated.
+   var lines = new Array();
+
+   this.randomDecimal = Math.random();
+
    if (this.randomDecimal < 0.25) {
       line1 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              235,
@@ -32,21 +31,21 @@ MessageGenerator.prototype.gameOverMessage = function() {
                              "default",
                              "It is not in the nature of the",
                              "Small");
-                             
+
       line2 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              260,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "          deer to give up",
                              "Small");
-                             
+
       line3 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              285,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "   from the writings of Yorig",
                              "Small");
-                             
+
       line4 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              310,
                              CONST_FONT_SIZE_SMALL,
@@ -61,21 +60,21 @@ MessageGenerator.prototype.gameOverMessage = function() {
                              "default",
                              "Impossible! A deer will simply not stay",
                              "Small");
-                             
+
       line2 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              260,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              " irradiated for more than seven seconds!",
                              "Small");
-                             
+
       line3 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              285,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "      from the writings of Yorig",
                              "Small");
-                             
+
       line4 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              310,
                              CONST_FONT_SIZE_SMALL,
@@ -90,21 +89,21 @@ MessageGenerator.prototype.gameOverMessage = function() {
                              "default",
                              "x633------------------FATAL ERRO",
                              "Small");
-                             
+
       line2 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              260,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "   $ | $ || $ | $ ||| $ |",
                              "Small");
-                             
+
       line3 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              285,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "R TRANSMISSIONS ERROR FOR MORE INF",
                              "Small");
-                             
+
       line4 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              310,
                              CONST_FONT_SIZE_SMALL,
@@ -119,21 +118,21 @@ MessageGenerator.prototype.gameOverMessage = function() {
                              "default",
                              "   HELLO PLEASED TO SEE YOU ARE ENJOYING",
                              "Small");
-                             
+
       line2 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              260,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "         YOU     ARE ENJOYING  THE GAME",
                              "Small");
-                             
+
       line3 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              285,
                              CONST_FONT_SIZE_SMALL,
                              "default",
                              "                        - MIKE (DEV)",
                              "Small");
-                             
+
       line4 = new TextString(((CONST_CANVAS_WIDTH / 2) - (20 * CONST_FONT_SIZE_SMALL)),
                              310,
                              CONST_FONT_SIZE_SMALL,
@@ -141,12 +140,11 @@ MessageGenerator.prototype.gameOverMessage = function() {
                              " P.S. PLEASE USE GAMESHARK FOR ENHANCES",
                              "Small");
    }
-   
-   // Add each line to the lines array.
+
    lines.push(line1);
    lines.push(line2);
    lines.push(line3);
    lines.push(line4);
-   
+
    return lines;
 };
