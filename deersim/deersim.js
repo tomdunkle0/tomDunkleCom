@@ -206,21 +206,21 @@ var getInput = function(dt) {
 
       switch (value) { // #TODO -- consider functionalizing the repetitious sfx logic below
          case 13: // Key pressed is Enter.
-            if (deersim.state === "gameOver") {     // If the game is displaying the game over screen,
-               startMainMenu(deersim);                                           // Transition to the main menu.
-               keyTimer++;                                                       // Start the key timer.
+            if (deersim.state === "gameOver") { // If the game is displaying the game over screen,
+               startMainMenu(deersim);          // Transition to the main menu.
+               keyTimer++;                      // Start the key timer.
                pauseAndReplaySoundEffect(CONST_SOUND_INDEX_MENU_SELECTION_HIGH);
             }
             else if ((deersim.state === "main")  // If the player is viewing the main menu...
                   && (keyTimer === 0)) {         // ...and the key timer has elapsed...
                if (deersim.mainMenuCursor.menuItem === 1) { // If the first option is selected...
-                  startRound();                                                     // ...then start a round of play.
-                  deersim.pauseTimer++;                                             // ...start the pause timer.
+                  startRound();                             // ...then start a round of play.
+                  deersim.pauseTimer++;                     // ...start the pause timer.
                   pauseAndReplaySoundEffect(CONST_SOUND_INDEX_MENU_SELECTION_HIGH);
                }
                else if (deersim.mainMenuCursor.menuItem === 2) { // If the second option is selected...
-                  showCreditsMenu = !showCreditsMenu; // ...then invert flag to show credits...
-                  keyTimer++;                         // ...and start the key timer.
+                  showCreditsMenu = !showCreditsMenu;            // ...then invert flag to show credits...
+                  keyTimer++;                                    // ...and start the key timer.
                   pauseAndReplaySoundEffect(CONST_SOUND_INDEX_FRENCH_CANADIAN_GRUNT_2);
                }
                else if (deersim.mainMenuCursor.menuItem === 3) { // If the third option is selected...
