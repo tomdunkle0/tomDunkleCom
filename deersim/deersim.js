@@ -253,14 +253,16 @@ var getInput = function(dt) {
                break;
          case 87: // Key pressed is W.
             if (deersim.state === "main") {
-               if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem > 1)) {
+               if ((deersim.mainMenuCursor.keyCounter === 0)
+                && (deersim.mainMenuCursor.menuItem > 1)) {
                   toggleMainMenuCursor(1);
                }
             }
                break;
          case 83: // Key pressed is S.
             if (deersim.state === "main") {
-               if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem < 3)) {
+               if ((deersim.mainMenuCursor.keyCounter === 0)
+                && (deersim.mainMenuCursor.menuItem < 3)) {
                   toggleMainMenuCursor(-1);
                }
             }
@@ -552,7 +554,8 @@ var gameLoop = function() {
       if (deersim.realTimeEngine === CONST_TRUE) {
          // #TODO -- documentation
          if (deersim.frameTimes.length >= 2)
-            deersim.deltaT += (deersim.frameTimes[deersim.frameTimes.length - 1] - deersim.frameTimes[deersim.frameTimes.length - 2]);
+            deersim.deltaT += (deersim.frameTimes[deersim.frameTimes.length - 1]
+               - deersim.frameTimes[deersim.frameTimes.length - 2]);
 
          // #TODO -- documentation
          while (deersim.deltaT >= deersim.timeStep) {
