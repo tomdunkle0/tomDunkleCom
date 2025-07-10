@@ -23,7 +23,8 @@ var collisionDetection = function() {
 
                clearPowerupBars();
 
-               collisionValue = Math.floor(playerProfile.changeDamage(deersim.vehicles[vehicle].value));
+               collisionValue
+                  = Math.floor(playerProfile.changeDamage(deersim.vehicles[vehicle].value));
 
                collisionString = CONST_TRUE;
 
@@ -39,7 +40,8 @@ var collisionDetection = function() {
 
                deersim.killCounter++;
 
-               collisionValue = Math.floor(playerProfile.changeDamage(deersim.vehicles[vehicle].value));
+               collisionValue
+                  = Math.floor(playerProfile.changeDamage(deersim.vehicles[vehicle].value));
 
                collisionString = CONST_TRUE;
 
@@ -54,7 +56,16 @@ var collisionDetection = function() {
    }
 
    if (collisionString) {
-      deersim.gameObjects.push(new TextString(deer.x, deer.y - 64, CONST_FONT_SIZE_SMALL, "pickup", "$" + collisionValue, "Small"));
+      deersim.gameObjects.push(
+         new TextString(
+            deer.x,
+            deer.y - 64,
+            CONST_FONT_SIZE_SMALL,
+            "pickup",
+            "$" + collisionValue,
+            "Small"
+         )
+      );
 
       collisionString = false;
    }

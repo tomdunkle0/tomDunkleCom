@@ -380,7 +380,13 @@ var transitionToSA40PhaseOne = function() {
 		}
 	}
 
-   transitionAnimation = new AnimationBlock(deer.x - 62, deer.y - 66, 128, 19, "KidnappingAnimation");
+   transitionAnimation = new AnimationBlock(
+      deer.x - 62,
+      deer.y - 66,
+      128,
+      19,
+      "KidnappingAnimation"
+   );
 
    deersim.gameObjects.push(transitionAnimation);
 

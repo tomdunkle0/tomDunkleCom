@@ -107,7 +107,9 @@ var clearFinishedAnimations = function() {
 
    while (i < deersim.projectiles.length) {
       if (deersim.projectiles[i] instanceof LightningBolt) {
-         if (deersim.projectiles[i].animation.frameCounter >= (7 * deersim.projectiles[i].animation.length)) {
+         if ( deersim.projectiles[i].animation.frameCounter
+          >= (7 * deersim.projectiles[i].animation.length)
+            ) {
             deersim.projectiles.splice(i, 1);
          }
          else {

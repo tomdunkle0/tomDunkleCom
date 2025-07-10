@@ -254,16 +254,18 @@ MusicManager.prototype.loadMusic = function() {
          this.backgroundTrackID = "I-84 Simulator Theme (Classic)";
       }
       else if (randomDecimal < 0.50) {
-         this.backgroundTrack   = document.getElementById("MrWsNewSegway");
-         this.backgroundTrackID = "entropics - 'mr. w~s new segway (I-84 Simulator for 'the Internet' Remix)'";
+         this.backgroundTrack = document.getElementById("MrWsNewSegway");
+         this.backgroundTrackID
+            = "entropics - 'mr. w~s new segway (I-84 Simulator for 'the Internet' Remix)'";
       }
       else if (randomDecimal < 0.75) {
          this.backgroundTrack   = document.getElementById("DuelOnTheBlackKeys");
          this.backgroundTrackID = "Discount Musician - 'Duel on the Black Keys'";
       }
       else {
-         this.backgroundTrack   = document.getElementById("Startlingly");
-         this.backgroundTrackID = "Cornelius Squatgood - 'startlingly, ||YOURFEARISREAL|| & in_another_time'";
+         this.backgroundTrack = document.getElementById("Startlingly");
+         this.backgroundTrackID
+            = "Cornelius Squatgood - 'startlingly, ||YOURFEARISREAL|| & in_another_time'";
       }
    }
    else if (this.environment === "sa40") {
@@ -272,8 +274,9 @@ MusicManager.prototype.loadMusic = function() {
          this.backgroundTrackID = "Cornelius Squatgood - 'preview of your death / terlingua sun'";
       }
       else {
-         this.backgroundTrack   = document.getElementById("Bakery");
-         this.backgroundTrackID = "Cornelius Squatgood - 'it seems i~ve wandered into the wrong bakery again'";
+         this.backgroundTrack = document.getElementById("Bakery");
+         this.backgroundTrackID
+            = "Cornelius Squatgood - 'it seems i~ve wandered into the wrong bakery again'";
       }
    }
 
@@ -595,7 +598,8 @@ TouchManager.prototype.update = function() {
 
          if (shouldChangeMenu === CONST_TRUE) {
             var swipeRise =
-               (deersim.touchManager.lastTouchEnded.pageY - deersim.touchManager.lastTouchStarted.pageY);
+               (deersim.touchManager.lastTouchEnded.pageY
+                  - deersim.touchManager.lastTouchStarted.pageY);
 
             var direction = 0;
             var threshold = 100;
@@ -605,12 +609,14 @@ TouchManager.prototype.update = function() {
                direction = -1;
 
             if (direction === 1) {
-               if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem > 1)) {
+               if ((deersim.mainMenuCursor.keyCounter === 0)
+                && (deersim.mainMenuCursor.menuItem > 1)) {
                   toggleMainMenuCursor(1);
                }
             }
             else if (direction === -1) {
-               if ((deersim.mainMenuCursor.keyCounter === 0) && (deersim.mainMenuCursor.menuItem < 3)) {
+               if ((deersim.mainMenuCursor.keyCounter === 0)
+                && (deersim.mainMenuCursor.menuItem < 3)) {
                   toggleMainMenuCursor(-1);
                }
             }
