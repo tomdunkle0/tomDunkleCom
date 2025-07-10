@@ -34,8 +34,8 @@ const startMainMenu    = require('./environment/transitions'); // TODO: Needs to
 
 // Miscellaneous constants:
 const kArbitraryImageHandle = "ImageHandle";
-const kArbitraryXPosition   = 100;
-const kArbitraryYPosition   = 200;
+const kArbitraryX           = 100;
+const kArbitraryY           = 200;
 const kAudioFolderPath      = "http://localhost/deersim/audio/";
 
 beforeEach(() => {
@@ -164,9 +164,9 @@ test('calling startMainMenu() sets the game state to main', () => {
 }); // calling startMainMenu() sets the game state to main
 
 test('creating a Background populates its x, y, and imageHandle', () => {
-    const background = new Background(kArbitraryXPosition, kArbitraryImageHandle);
+    const background = new Background(kArbitraryX, kArbitraryImageHandle);
 
-    expect(background.x).toBe(kArbitraryXPosition);
+    expect(background.x).toBe(kArbitraryX);
     expect(background.y).toBe(0); // TODO: Magic number.
     expect(background.imageHandle).toBe(kArbitraryImageHandle);
 }); // creating a Background populates its x, y, and imageHandle
@@ -244,10 +244,11 @@ test('creating a RoadManager populates its initial properties', () => {
 
 test('creating a RoadSegment populates its initial properties', () => {
     const arbitraryLane = 2;
-    const roadSegment = new RoadSegment(kArbitraryXPosition, kArbitraryYPosition, "standard", arbitraryLane); // TODO: Magic string.
+    // TODO: Magic string:
+    const roadSegment = new RoadSegment(kArbitraryX, kArbitraryY, "standard", arbitraryLane);
 
-    expect(roadSegment.x).toBe(kArbitraryXPosition);
-    expect(roadSegment.y).toBe(kArbitraryYPosition);
+    expect(roadSegment.x).toBe(kArbitraryX);
+    expect(roadSegment.y).toBe(kArbitraryY);
     expect(roadSegment.width).toBe(128); // TODO: Magic number.
     expect(roadSegment.height).toBe(40); // TODO: Magic number.
     expect(roadSegment.type).toBe("standard"); // TODO: Magic string.
@@ -256,10 +257,10 @@ test('creating a RoadSegment populates its initial properties', () => {
 }); // creating a RoadSegment populates its initial properties
 
 test('creating a StaticMenuObject populates its x, y, and imageHandle', () => {
-    const staticMenuObject = new StaticMenuObject(kArbitraryXPosition, kArbitraryYPosition, kArbitraryImageHandle);
+    const staticMenuObject = new StaticMenuObject(kArbitraryX, kArbitraryY, kArbitraryImageHandle);
 
-    expect(staticMenuObject.x).toBe(kArbitraryXPosition);
-    expect(staticMenuObject.y).toBe(kArbitraryYPosition);
+    expect(staticMenuObject.x).toBe(kArbitraryX);
+    expect(staticMenuObject.y).toBe(kArbitraryY);
     expect(staticMenuObject.imageHandle).toBe(kArbitraryImageHandle);
 }); // creating a StaticMenuObject populates its x, y, and imageHandle
 
