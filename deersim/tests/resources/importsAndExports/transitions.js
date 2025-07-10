@@ -19,7 +19,9 @@ const Cursor = deerSim.Cursor;
 const splicingFunctions = require('./splicingFunctions');
 const clearMenuObjects = splicingFunctions.clearMenuObjects;
 const clearTextStrings = splicingFunctions.clearTextStrings;
-// TODO: Consider adding more granular testing for the code in the real playBackgroundTrackOnEnteringMainMenu().
+/* TODO: Consider adding more granular testing for the code
+    in the real playBackgroundTrackOnEnteringMainMenu(). */
 
 const testFunctions = require('../resources/testFunctions');
-const playBackgroundTrackOnEnteringMainMenu = testFunctions.playBackgroundTrackOnEnteringMainMenu; // TODO: Needs to be more granular.
+// TODO: Needs to be more granular:
+const playBackgroundTrackOnEnteringMainMenu = testFunctions.playBackgroundTrackOnEnteringMainMenu;
