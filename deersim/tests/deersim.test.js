@@ -285,7 +285,9 @@ function expectArrayIsPopulatedWithAudioReferences(arrayUnderTest, expectedSourc
 function initializeCanvasAndGame()
 {
     const testDeerSim = new DeerSim();
-    initializeCanvas(testDeerSim); // TODO: Consider making production code fail initializeGame() if initializeCanvas() hasn't completed.
+    /* TODO: Consider making production code fail initializeGame()
+        if initializeCanvas() hasn't completed: */
+    initializeCanvas(testDeerSim);
     initializeGame(testDeerSim);
     return testDeerSim;
 } // initializeCanvasAndGame()
