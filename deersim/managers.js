@@ -49,10 +49,10 @@ function RoadManager() {
    this.generateFlags[CONST_LANE_3_INDEX] = CONST_TRUE;
    this.generateFlags[CONST_LANE_4_INDEX] = CONST_FALSE;
 
-   this.closeBottomLaneRequested = CONST_FALSE; // Set to true when the bottom lane should close.
-   this.closeTopLaneRequested    = CONST_FALSE; // Set to true when the top lane should close.
-   this.openBottomLaneRequested  = CONST_FALSE; // Set to true when a new bottom lane should open.
-   this.openTopLaneRequested     = CONST_FALSE; // Set to true when a new top lane should open.
+   this.closeBottomLaneRequested = CONST_FALSE;
+   this.closeTopLaneRequested    = CONST_FALSE;
+   this.openBottomLaneRequested  = CONST_FALSE;
+   this.openTopLaneRequested     = CONST_FALSE;
 
    this.maxLane = 4;
    this.minLane = 2;
@@ -81,8 +81,8 @@ function RoadManager() {
    this.segmentWidth     = 128;  // The width of all RoadSegments managed by the RoadManager.
    this.segmentHeight    = 40;   // The height of all RoadSegments managed by the RoadManager.
 
-   this.sideHeightBottom = this.kBottomHeightMid; // The y position of the bottom side of the Road.
-   this.sideHeightTop    = this.kTopHeightMid;    // The y position of the top side of the Road.
+   this.sideHeightBottom = this.kBottomHeightMid;
+   this.sideHeightTop    = this.kTopHeightMid;
 
    var arrayIndex = 0;
    var numColumns = 10;
@@ -415,19 +415,18 @@ RoadManager.prototype.generateNewRoadSegments = function() {
  | generated and how boundaries are determined for other game objects (e.g. Deer, Vehicles). |
 \*-------------------------------------------------------------------------------------------*/
 RoadManager.prototype.update = function() {
-   // Reset member variables used by this function on every game frame.
-   this.maxXValue               = 0;           // Keeps track of max X standard RoadSegment.
-   this.minXValue               = 1500;        // Keeps track of min X standard RoadSegment.
-   this.topMaxXValue            = 0;           // Keeps track of max X top RoadSegment.
-   this.topMinXValue            = 1500;        // Keeps track of min X top RoadSegment.
-   this.bottomMaxXValue         = 0;           // Keeps track of max X bottom RoadSegment.
-   this.bottomMinXValue         = 1500;        // Keeps track of min X bottom RoadSegment.
-   this.indexOfMinXValue        = -1;          // Array index of min X standard RoadSegment.
-   this.indexOfTopMinXValue     = -1;          // Array index of min X top RoadSegment.
-   this.indexOfBottomMinXValue  = -1;          // Array index of min X bottom RoadSegment.
-   this.newSegmentsNeeded       = CONST_FALSE; // Triggers new standard RoadSegment generation.
-   this.newTopSegmentsNeeded    = CONST_FALSE; // Triggers new top RoadSegment generation.
-   this.newBottomSegmentsNeeded = CONST_FALSE; // Triggers new bottom RoadSegment generation.
+   this.maxXValue               = 0;
+   this.minXValue               = 1500;
+   this.topMaxXValue            = 0;
+   this.topMinXValue            = 1500;
+   this.bottomMaxXValue         = 0;
+   this.bottomMinXValue         = 1500;
+   this.indexOfMinXValue        = -1;
+   this.indexOfTopMinXValue     = -1;
+   this.indexOfBottomMinXValue  = -1;
+   this.newSegmentsNeeded       = CONST_FALSE;
+   this.newTopSegmentsNeeded    = CONST_FALSE;
+   this.newBottomSegmentsNeeded = CONST_FALSE;
 
    for (var roadSegment in this.roadSegments) {
       this.roadSegments[roadSegment].update();
