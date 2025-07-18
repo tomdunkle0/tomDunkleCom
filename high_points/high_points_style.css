@@ -1,6 +1,6 @@
 /* Styling for the flex container housing all of the page's content. */
 .flex-container {
-    display: flex;
+    display: grid;
     height: 100%;
     flex-wrap: wrap;
     justify-content: center;

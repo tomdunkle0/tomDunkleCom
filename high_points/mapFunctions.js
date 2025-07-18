@@ -10,15 +10,35 @@ function expandMapToMaximumAllowableSizeOnDisplay()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
 
-    const secondChildIndex = 1;
+    // const secondChildIndex = 1; // TODO -- TEST
+    const secondChildIndex = 2; // TODO -- TEST
     const slideContainer = mapContainer.children[secondChildIndex];
-    const thirdChildIndex = 2;
+    // const thirdChildIndex = 2; // TODO -- TEST
+    const thirdChildIndex = 3; // TODO -- TEST
     const flexRow = mapContainer.children[thirdChildIndex];
     const height = mapContainer.scrollHeight - slideContainer.scrollHeight - flexRow.scrollHeight;
 
-    const scalableVectorGraphic = mapContainer.children[kFirstChildIndex];
-    const styleAssignment = "height: " + height + ";";
-    scalableVectorGraphic.setAttribute(kStyle, styleAssignment);
+    const mapContainerWidth = mapContainer.scrollWidth; // TODO -- TEST
+    // TODO: create equal spaces above and below the SVG.
+    // const scalableVectorGraphic = mapContainer.children[kFirstChildIndex]; // TODO -- TEST
+    const scalableVectorGraphic = mapContainer.children[1]; // TODO: Magic number. // TODO -- TEST
+    if (mapContainer.scrollHeight > mapContainerWidth) // TODO -- TEST
+    {
+        const desiredHeight = (mapContainerWidth * 1440) / 2560; // TODO: Magic numbers. // TODO -- TEST
+        const styleAssignment = "height: " + desiredHeight + ";"; // TODO -- TEST
+        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
+        const remainder = height - desiredHeight - slideContainer.scrollHeight - flexRow.scrollHeight;
+        const topDiv = mapContainer.children[0]; // TODO: Magic number. // TODO -- TEST
+        topDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";");
+        const bottomDiv = mapContainer.children[4]; // TODO: Magic number. // TODO -- TEST
+        bottomDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";");
+    }
+    else
+    {
+        const styleAssignment = "height: " + height + ";"; // TODO -- TEST
+        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
+    }
+    // scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
 } // expandMapToMaximumAllowableSizeOnDisplay()
 
 function getStateIdForClickedPolygon(polygonId)
