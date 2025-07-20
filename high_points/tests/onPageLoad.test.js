@@ -142,5 +142,5 @@ function getScalableVectorGraphic()
     const expectedClassName = "flex-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
-    return mapContainer.children[kFirstChildIndex];
+    return mapContainer.children[1]; // TODO: Magic number. // TODO -- TEST
 } // getScalableVectorGraphic()

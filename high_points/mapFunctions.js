@@ -10,35 +10,39 @@ function expandMapToMaximumAllowableSizeOnDisplay()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
 
-    // const secondChildIndex = 1; // TODO -- TEST
-    const secondChildIndex = 2; // TODO -- TEST
+    const secondChildIndex = 2; // TODO: Make sure that this line is tested.
     const slideContainer = mapContainer.children[secondChildIndex];
-    // const thirdChildIndex = 2; // TODO -- TEST
-    const thirdChildIndex = 3; // TODO -- TEST
+    const thirdChildIndex = 3; // TODO: Make sure that this line is tested.
     const flexRow = mapContainer.children[thirdChildIndex];
     const height = mapContainer.scrollHeight - slideContainer.scrollHeight - flexRow.scrollHeight;
 
-    const mapContainerWidth = mapContainer.scrollWidth; // TODO -- TEST
-    // TODO: create equal spaces above and below the SVG.
-    // const scalableVectorGraphic = mapContainer.children[kFirstChildIndex]; // TODO -- TEST
-    const scalableVectorGraphic = mapContainer.children[1]; // TODO: Magic number. // TODO -- TEST
-    if (mapContainer.scrollHeight > mapContainerWidth) // TODO -- TEST
+    const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
+    const scalableVectorGraphic = mapContainer.children[1]; // TODO: Magic number. // TODO: Make sure that this line is tested.
+    if (mapContainer.scrollHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
     {
-        const desiredHeight = (mapContainerWidth * 1440) / 2560; // TODO: Magic numbers. // TODO -- TEST
-        const styleAssignment = "height: " + desiredHeight + ";"; // TODO -- TEST
-        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
-        const remainder = height - desiredHeight - slideContainer.scrollHeight - flexRow.scrollHeight;
-        const topDiv = mapContainer.children[0]; // TODO: Magic number. // TODO -- TEST
-        topDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";");
-        const bottomDiv = mapContainer.children[4]; // TODO: Magic number. // TODO -- TEST
-        bottomDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";");
+        const desiredHeight = (mapContainerWidth * 1440) / 2560; // TODO: Magic numbers. // TODO: Make sure that this line is tested.
+        const styleAssignment = "height: " + desiredHeight + ";"; // TODO: Make sure that this line is tested.
+        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+        const remainder = height - desiredHeight - slideContainer.scrollHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
+        const topDiv = mapContainer.children[0]; // TODO: Magic number. // TODO: Make sure that this line is tested.
+        topDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";"); // TODO: Make sure that this line is tested.
+        const bottomDiv = mapContainer.children[4]; // TODO: Magic number. // TODO: Make sure that this line is tested.
+        bottomDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";"); // TODO: Make sure that this line is tested.
     }
     else
     {
-        const styleAssignment = "height: " + height + ";"; // TODO -- TEST
-        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
+        const styleAssignment = "height: " + height + ";"; // TODO: Make sure that this line is tested.
+        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
     }
-    // scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO -- TEST
+    const offset = (mapContainerWidth - slideContainer.children[0].scrollWidth) / 2; // TODO: Make sure that this line is tested.
+    let currentLeft = parseInt(flexRow.style.left) || 0; // TODO: Make sure that this line is tested.
+    const numberOfYearsShown = flexRow.children.length; // TODO: Make sure that this line is tested.
+    const positionRelative = "relative"; // TODO: Make sure that this line is tested.
+    for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
+    {
+        flexRow.children[i].style.position = positionRelative; // TODO: Make sure that this line is tested.
+        flexRow.children[i].style.left = (currentLeft + offset) + "px"; // TODO: Make sure that this line is tested.
+    }
 } // expandMapToMaximumAllowableSizeOnDisplay()
 
 function getStateIdForClickedPolygon(polygonId)
