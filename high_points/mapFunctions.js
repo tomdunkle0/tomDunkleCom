@@ -10,38 +10,45 @@ function expandMapToMaximumAllowableSizeOnDisplay()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
 
-    const secondChildIndex = 2; // TODO: Make sure that this line is tested.
-    const slideContainer = mapContainer.children[secondChildIndex];
-    const thirdChildIndex = 3; // TODO: Make sure that this line is tested.
-    const flexRow = mapContainer.children[thirdChildIndex];
-    const height = mapContainer.scrollHeight - slideContainer.scrollHeight - flexRow.scrollHeight;
+    const thirdChildIndex = 2; // TODO: Make sure that this line is tested.
+    const slideContainer = mapContainer.children[thirdChildIndex]; // TODO: Make sure that this line is tested.
+    const slideContainerHeight = slideContainer.scrollHeight; // TODO: Make sure that this line is tested.
+    const fourthChildIndex = 3; // TODO: Make sure that this line is tested.
+    const flexRow = mapContainer.children[fourthChildIndex];
+    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
+    const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
 
     const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
-    const scalableVectorGraphic = mapContainer.children[1]; // TODO: Magic number. // TODO: Make sure that this line is tested.
-    if (mapContainer.scrollHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
+    const secondChildIndex = 1; // TODO: Make sure that this line is tested.
+    const scalableVectorGraphic = mapContainer.children[secondChildIndex]; // TODO: Make sure that this line is tested.
+    const heightAttribute = "height: "; // TODO -- TEST
+    if (mapContainerHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
     {
-        const desiredHeight = (mapContainerWidth * 1440) / 2560; // TODO: Magic numbers. // TODO: Make sure that this line is tested.
-        const styleAssignment = "height: " + desiredHeight + ";"; // TODO: Make sure that this line is tested.
+        const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
+        const desiredHeight = mapAreaYtoXRatio * mapContainerWidth; // TODO: Make sure that this line is tested.
+        const styleAssignment = heightAttribute + desiredHeight; // TODO: Make sure that this line is tested.
         scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
-        const remainder = height - desiredHeight - slideContainer.scrollHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
-        const topDiv = mapContainer.children[0]; // TODO: Magic number. // TODO: Make sure that this line is tested.
-        topDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";"); // TODO: Make sure that this line is tested.
-        const bottomDiv = mapContainer.children[4]; // TODO: Magic number. // TODO: Make sure that this line is tested.
-        bottomDiv.setAttribute(kStyle, "height: " + (remainder / 2) + ";"); // TODO: Make sure that this line is tested.
+        const remainder = heightAvailableForMap - desiredHeight; // TODO: Make sure that this line is tested.
+        const topDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
+        topDiv.setAttribute(kStyle, heightAttribute + (remainder / 2)); // TODO: Make sure that this line is tested.
+        const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
+        const bottomDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
+        bottomDiv.setAttribute(kStyle, heightAttribute + (remainder / 2)); // TODO: Make sure that this line is tested.
     }
     else
     {
-        const styleAssignment = "height: " + height + ";"; // TODO: Make sure that this line is tested.
+        const styleAssignment = heightAttribute + heightAvailableForMap; // TODO: Make sure that this line is tested.
         scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
     }
-    const offset = (mapContainerWidth - slideContainer.children[0].scrollWidth) / 2; // TODO: Make sure that this line is tested.
-    let currentLeft = parseInt(flexRow.style.left) || 0; // TODO: Make sure that this line is tested.
+    const offset = (mapContainerWidth - g_YearSlider.scrollWidth) / 2; // TODO: Make sure that this line is tested.
     const numberOfYearsShown = flexRow.children.length; // TODO: Make sure that this line is tested.
     const positionRelative = "relative"; // TODO: Make sure that this line is tested.
+    var yearDivStyle; // TODO: Make sure that this line is tested.
     for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
     {
-        flexRow.children[i].style.position = positionRelative; // TODO: Make sure that this line is tested.
-        flexRow.children[i].style.left = (currentLeft + offset) + "px"; // TODO: Make sure that this line is tested.
+        yearDivStyle = flexRow.children[i].style; // TODO: Make sure that this line is tested.
+        yearDivStyle.position = positionRelative; // TODO: Make sure that this line is tested.
+        yearDivStyle.left = offset; // TODO: Make sure that this line is tested.
     }
 } // expandMapToMaximumAllowableSizeOnDisplay()
 
