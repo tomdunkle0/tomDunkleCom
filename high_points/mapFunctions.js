@@ -6,29 +6,6 @@
 var g_LoadedGreenStates = kUnpopulated;
 var g_YearSlider        = kUnpopulated;
 
-function expandMapToMaximumAllowableSizeOnDisplay()
-{
-    const mapContainer = document.body.children[kFirstChildIndex];
-    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
-    const thirdChildIndex = 2; // TODO: Make sure that this line is tested.
-    const slideContainer = mapContainer.children[thirdChildIndex]; // TODO: Make sure that this line is tested.
-    const slideContainerHeight = slideContainer.scrollHeight; // TODO: Make sure that this line is tested.
-    const fourthChildIndex = 3; // TODO: Make sure that this line is tested.
-    const flexRow = mapContainer.children[fourthChildIndex];
-    const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
-    const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
-    if (mapContainerHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
-    {
-        positionMapOnPortraitDisplay(mapContainerWidth, heightAvailableForMap, mapContainer); // TODO: Make sure that this line is tested.
-    }
-    else
-    {
-        positionMapOnLandscapeDisplay(heightAvailableForMap); // TODO: Make sure that this line is tested.
-    }
-    const yearDivs = flexRow.children; // TODO: Make sure that this line is tested.
-    positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues(mapContainerWidth, yearDivs); // TODO: Make sure that this line is tested.
-} // expandMapToMaximumAllowableSizeOnDisplay()
-
 function getStateIdForClickedPolygon(polygonId)
 {
     switch (polygonId)
@@ -336,10 +313,10 @@ function onOrientationChange()
     mapContainer.currentScreenOrientation = window.orientation;
     g_YearSlider = document.getElementById(kYearSliderId);
     setYearSliderMarginsToHalfOfSlideContainerHeight(g_YearSlider);
-    expandMapToMaximumAllowableSizeOnDisplay();
+    positionMapOnScreen();
 } // onOrientationChange()
 
-function positionMapOnPortraitDisplay(mapContainerWidth, heightAvailableForMap, mapContainer) // TODO -- TEST
+function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer) // TODO -- TEST
 {
     const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
     const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
@@ -352,28 +329,51 @@ function positionMapOnPortraitDisplay(mapContainerWidth, heightAvailableForMap, 
     const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
     const bottomDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
     bottomDiv.setAttribute(kStyle, kHeight + boundingDivHeight); // TODO: Make sure that this line is tested.
-} // positionMapOnPortraitDisplay()
+} // positionMapOnPortraitScreen()
 
-function positionMapOnLandscapeDisplay(heightAvailableForMap) // TODO -- TEST
+function positionMapOnLandscapeScreen(heightAvailableForMap) // TODO -- TEST
 {
     const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
     const styleAssignment = kHeight + heightAvailableForMap; // TODO: Make sure that this line is tested.
     scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
-} // positionMapOnLandscapeDisplay()
+} // positionMapOnLandscapeScreen()
 
-function positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues(mapContainerWidth, yearDivs)
+function positionMapOnScreen() // TODO -- TEST
+{
+    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
+    const thirdChildIndex = 2; // TODO: Make sure that this line is tested.
+    const slideContainer = mapContainer.children[thirdChildIndex]; // TODO: Make sure that this line is tested.
+    const slideContainerHeight = slideContainer.scrollHeight; // TODO: Make sure that this line is tested.
+    const flexRow = mapContainer.children[kFourthChildIndex];
+    const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
+
+    const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
+    if (mapContainerHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
+    {
+        positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer); // TODO: Make sure that this line is tested.
+    }
+    else
+    {
+        positionMapOnLandscapeScreen(heightAvailableForMap); // TODO: Make sure that this line is tested.
+    }
+
+    const yearDivs = flexRow.children; // TODO: Make sure that this line is tested.
+    positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(mapContainerWidth, yearDivs); // TODO: Make sure that this line is tested.
+} // positionMapOnScreen()
+
+function positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(mapContainerWidth, yearDivs)
 {
     const offset = (mapContainerWidth - g_YearSlider.scrollWidth) / 2; // TODO: Make sure that this line is tested.
     const numberOfYearsShown = yearDivs.length; // TODO: Make sure that this line is tested.
-    const positionRelative = "relative"; // TODO: Make sure that this line is tested.
     var yearDivStyle; // TODO: Make sure that this line is tested.
     for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
     {
-        yearDivStyle = yearDivs[i].style; // TODO: Make sure that this line is tested.
-        yearDivStyle.position = positionRelative; // TODO: Make sure that this line is tested.
-        yearDivStyle.left = offset; // TODO: Make sure that this line is tested.
+        yearDivStyle = yearDivs[i].style;
+        yearDivStyle.position = kPositionRelative;
+        yearDivStyle.left = offset;
     }
-} // positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues()
+} // positionYearDivsToAlignHorizontallyOnScreenWithSliderValues()
 
 function resetStateFillColorToDefault(polygonId)
 {

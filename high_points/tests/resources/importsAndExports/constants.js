@@ -23,6 +23,7 @@ module.exports =
     kFirstChildIndex,
     kFlorida,
     kFloridaCheckBox,
+    kFourthChildIndex, // TODO -- TEST
     kGeorgia,
     kGeorgiaCheckMark,
     kHawaii,
@@ -93,6 +94,7 @@ module.exports =
     kOregonCheckBox,
     kPennsylvania,
     kPennsylvaniaCheckMark,
+    kPositionRelative, // TODO: Make sure that this line is tested.
     kPrefixCheckBox,
     kPrefixCheckMark,
     kPrefixGreenState,
@@ -101,7 +103,7 @@ module.exports =
     kRhodeIsland,
     kRhodeIslandCheckMark,
     kSecondCharIndex,
-    kSecondChildIndex, // TODO -- TEST
+    kSecondChildIndex, // TODO: Make sure that this line is tested.
     kSouthCarolina,
     kSouthCarolinaCheckMark,
     kSouthDakota,

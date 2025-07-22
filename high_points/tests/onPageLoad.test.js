@@ -3,11 +3,14 @@ const constants = require('./environment/constants');
 const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
 const kFirstCharIndex              = constants.kFirstCharIndex;
 const kFirstChildIndex             = constants.kFirstChildIndex;
+const kFourthChildIndex            = constants.kFourthChildIndex; // TODO: Make sure that this line is tested.
+const kPositionRelative            = constants.kPositionRelative; // TODO: Make sure that this line is tested.
 const kPrefixCheckBox              = constants.kPrefixCheckBox;
 const kPrefixCheckMark             = constants.kPrefixCheckMark;
 const kPrefixGreenState            = constants.kPrefixGreenState;
 const kPrefixInsignificantIsland   = constants.kPrefixInsignificantIsland;
 const kPrefixRedState              = constants.kPrefixRedState;
+const kSecondChildIndex            = constants.kSecondChildIndex; // TODO: Make sure that this line is tested.
 const kViewBox                     = constants.kViewBox;
 
 // Test Constant includes:
@@ -49,8 +52,24 @@ test(`calling onPageLoad() retrieves the desired number of polylines of each cat
     expectMapContainsDesiredCountOfEachTypeOfPolyline(getScalableVectorGraphic());
 }); /* calling onPageLoad() retrieves the desired number of polylines of each category */
 
+test(`calling onPageLoad() sets the position attribute of each year div to relative`, () => {
+    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
+    const yearRow = mapContainer.children[kFourthChildIndex]; // TODO: Make sure that this line is tested.
+    const yearRowClassName = "year-row"; // TODO -- TEST
+    expect(yearRow.className).toBe(yearRowClassName); // TODO -- TEST
+    expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow); // TODO -- TEST
+}); /* calling onPageLoad() sets the position attribute of each year div to relative */
+
 test(`calling onPageLoad() sets the map container to the maximum allowable height`, () => {
-    // TODO
+    // TODO: Expand on this.
+    //        This means getting better test coverage of positionMapOnScreen(). Production code
+    //        that uses screen properties like scrollWidth and scrollHeight currently cannot be
+    //        tested, because the jest environment does not initialize such properties. In order to
+    //        have test coverage, I will need to set up a test framework that assigns a customized
+    //        HTML set to document.body.innerHTML. The customized set should have those properties
+    //        set, even though there is no physical screen (just a simulated, imaginary one). Doing
+    //        this necessitates carefully defining the customized HTML in a way that it consumes
+    //        the production HTML, so that I don't need to maintain both.
 }); /* calling onPageLoad() sets the map container to the maximum allowable height */
 
 function expectCursorAttributeIsSetAsDesiredForEachPolyline(scalableVectorGraphic)
@@ -132,6 +151,19 @@ function expectMapContainsDesiredCountOfEachTypeOfPolyline(scalableVectorGraphic
     expect(numberOfRedPolylines).toBe(kExpectedNumberOfRedPolylines);
 } // expectMapContainsDesiredCountOfEachTypeOfPolyline()
 
+function expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow) // TODO -- TEST
+{
+    const yearDivs = yearRow.children; // TODO -- TEST
+    const numberOfYearsShown = yearDivs.length; // TODO -- TEST
+    const expectedNumberOfYearsShown = 10; // TODO -- TEST
+    expect(numberOfYearsShown).toBe(expectedNumberOfYearsShown); // TODO -- TEST
+    for (var i = 0; i < numberOfYearsShown; i++)
+    {
+        const yearDiv = yearDivs[i];
+        expect(yearDiv.style.position).toBe(kPositionRelative);
+    }
+} // expectPositionAttributeIsSetToRelativeForEachYearDiv()
+
 function getScalableVectorGraphic()
 {
     const bodyChildren = document.body.children;
@@ -142,5 +174,5 @@ function getScalableVectorGraphic()
     const expectedClassName = "flex-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
-    return mapContainer.children[1]; // TODO: Magic number. // TODO -- TEST
+    return mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
 } // getScalableVectorGraphic()
