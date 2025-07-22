@@ -9,47 +9,24 @@ var g_YearSlider        = kUnpopulated;
 function expandMapToMaximumAllowableSizeOnDisplay()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
-
+    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
     const thirdChildIndex = 2; // TODO: Make sure that this line is tested.
     const slideContainer = mapContainer.children[thirdChildIndex]; // TODO: Make sure that this line is tested.
     const slideContainerHeight = slideContainer.scrollHeight; // TODO: Make sure that this line is tested.
     const fourthChildIndex = 3; // TODO: Make sure that this line is tested.
     const flexRow = mapContainer.children[fourthChildIndex];
-    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
     const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
-
     const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
-    const secondChildIndex = 1; // TODO: Make sure that this line is tested.
-    const scalableVectorGraphic = mapContainer.children[secondChildIndex]; // TODO: Make sure that this line is tested.
-    const heightAttribute = "height: "; // TODO -- TEST
     if (mapContainerHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
     {
-        const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
-        const desiredHeight = mapAreaYtoXRatio * mapContainerWidth; // TODO: Make sure that this line is tested.
-        const styleAssignment = heightAttribute + desiredHeight; // TODO: Make sure that this line is tested.
-        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
-        const remainder = heightAvailableForMap - desiredHeight; // TODO: Make sure that this line is tested.
-        const topDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
-        topDiv.setAttribute(kStyle, heightAttribute + (remainder / 2)); // TODO: Make sure that this line is tested.
-        const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
-        const bottomDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
-        bottomDiv.setAttribute(kStyle, heightAttribute + (remainder / 2)); // TODO: Make sure that this line is tested.
+        positionMapOnPortraitDisplay(mapContainerWidth, heightAvailableForMap, mapContainer); // TODO: Make sure that this line is tested.
     }
     else
     {
-        const styleAssignment = heightAttribute + heightAvailableForMap; // TODO: Make sure that this line is tested.
-        scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+        positionMapOnLandscapeDisplay(heightAvailableForMap); // TODO: Make sure that this line is tested.
     }
-    const offset = (mapContainerWidth - g_YearSlider.scrollWidth) / 2; // TODO: Make sure that this line is tested.
-    const numberOfYearsShown = flexRow.children.length; // TODO: Make sure that this line is tested.
-    const positionRelative = "relative"; // TODO: Make sure that this line is tested.
-    var yearDivStyle; // TODO: Make sure that this line is tested.
-    for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
-    {
-        yearDivStyle = flexRow.children[i].style; // TODO: Make sure that this line is tested.
-        yearDivStyle.position = positionRelative; // TODO: Make sure that this line is tested.
-        yearDivStyle.left = offset; // TODO: Make sure that this line is tested.
-    }
+    const yearDivs = flexRow.children; // TODO: Make sure that this line is tested.
+    positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues(mapContainerWidth, yearDivs); // TODO: Make sure that this line is tested.
 } // expandMapToMaximumAllowableSizeOnDisplay()
 
 function getStateIdForClickedPolygon(polygonId)
@@ -361,6 +338,42 @@ function onOrientationChange()
     setYearSliderMarginsToHalfOfSlideContainerHeight(g_YearSlider);
     expandMapToMaximumAllowableSizeOnDisplay();
 } // onOrientationChange()
+
+function positionMapOnPortraitDisplay(mapContainerWidth, heightAvailableForMap, mapContainer) // TODO -- TEST
+{
+    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
+    const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
+    const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth; // TODO: Make sure that this line is tested.
+    const styleAssignment = kHeight + desiredMapHeight; // TODO: Make sure that this line is tested.
+    scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+    const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2; // TODO: Make sure that this line is tested.
+    const topDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
+    topDiv.setAttribute(kStyle, kHeight + boundingDivHeight); // TODO: Make sure that this line is tested.
+    const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
+    const bottomDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
+    bottomDiv.setAttribute(kStyle, kHeight + boundingDivHeight); // TODO: Make sure that this line is tested.
+} // positionMapOnPortraitDisplay()
+
+function positionMapOnLandscapeDisplay(heightAvailableForMap) // TODO -- TEST
+{
+    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
+    const styleAssignment = kHeight + heightAvailableForMap; // TODO: Make sure that this line is tested.
+    scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+} // positionMapOnLandscapeDisplay()
+
+function positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues(mapContainerWidth, yearDivs)
+{
+    const offset = (mapContainerWidth - g_YearSlider.scrollWidth) / 2; // TODO: Make sure that this line is tested.
+    const numberOfYearsShown = yearDivs.length; // TODO: Make sure that this line is tested.
+    const positionRelative = "relative"; // TODO: Make sure that this line is tested.
+    var yearDivStyle; // TODO: Make sure that this line is tested.
+    for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
+    {
+        yearDivStyle = yearDivs[i].style; // TODO: Make sure that this line is tested.
+        yearDivStyle.position = positionRelative; // TODO: Make sure that this line is tested.
+        yearDivStyle.left = offset; // TODO: Make sure that this line is tested.
+    }
+} // positionYearDivsToAlignHorizontallyOnDisplayWithSliderValues()
 
 function resetStateFillColorToDefault(polygonId)
 {

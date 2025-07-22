@@ -27,6 +27,7 @@ module.exports =
     kGeorgiaCheckMark,
     kHawaii,
     kHawaiiCheckBox,
+    kHeight, // TODO -- TEST
     kIllinois,
     kIllinoisCheckMark,
     kIndiana,
@@ -100,6 +101,7 @@ module.exports =
     kRhodeIsland,
     kRhodeIslandCheckMark,
     kSecondCharIndex,
+    kSecondChildIndex, // TODO -- TEST
     kSouthCarolina,
     kSouthCarolinaCheckMark,
     kSouthDakota,
