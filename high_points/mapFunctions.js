@@ -321,21 +321,22 @@ function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, m
     const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
     const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
     const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth; // TODO: Make sure that this line is tested.
-    const styleAssignment = kHeight + desiredMapHeight; // TODO: Make sure that this line is tested.
-    scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+    const svgStyleAssignment = kHeight + desiredMapHeight; // TODO: Make sure that this line is tested.
+    scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment); // TODO: Make sure that this line is tested.
     const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2; // TODO: Make sure that this line is tested.
-    const topDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
-    topDiv.setAttribute(kStyle, kHeight + boundingDivHeight); // TODO: Make sure that this line is tested.
+    const topBoundingDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
+    const boundingDivStyleAssignment = kHeight + boundingDivHeight; // TODO: Make sure that this line is tested.
+    topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment); // TODO: Make sure that this line is tested.
     const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
-    const bottomDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
-    bottomDiv.setAttribute(kStyle, kHeight + boundingDivHeight); // TODO: Make sure that this line is tested.
+    const bottomBoundingDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
+    bottomBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment); // TODO: Make sure that this line is tested.
 } // positionMapOnPortraitScreen()
 
-function positionMapOnLandscapeScreen(heightAvailableForMap) // TODO -- TEST
+function positionMapOnLandscapeScreen(heightAvailableForMap)
 {
-    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
-    const styleAssignment = kHeight + heightAvailableForMap; // TODO: Make sure that this line is tested.
-    scalableVectorGraphic.setAttribute(kStyle, styleAssignment); // TODO: Make sure that this line is tested.
+    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex];
+    const styleAssignment = kHeight + heightAvailableForMap;
+    scalableVectorGraphic.setAttribute(kStyle, styleAssignment);
 } // positionMapOnLandscapeScreen()
 
 function positionMapOnScreen() // TODO -- TEST
@@ -349,29 +350,28 @@ function positionMapOnScreen() // TODO -- TEST
     const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
 
     const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
-    if (mapContainerHeight > mapContainerWidth) // TODO: Make sure that this line is tested.
+    if (mapContainerHeight >= mapContainerWidth) // TODO: Make sure that this line is tested.
     {
         positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer); // TODO: Make sure that this line is tested.
     }
     else
     {
-        positionMapOnLandscapeScreen(heightAvailableForMap); // TODO: Make sure that this line is tested.
+        positionMapOnLandscapeScreen(heightAvailableForMap);
     }
 
-    const yearDivs = flexRow.children; // TODO: Make sure that this line is tested.
-    positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(mapContainerWidth, yearDivs); // TODO: Make sure that this line is tested.
+    positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(flexRow);
 } // positionMapOnScreen()
 
-function positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(mapContainerWidth, yearDivs)
+function positionYearDivsToAlignHorizontallyOnScreenWithSliderValues(flexRow)
 {
-    const offset = (mapContainerWidth - g_YearSlider.scrollWidth) / 2; // TODO: Make sure that this line is tested.
-    const numberOfYearsShown = yearDivs.length; // TODO: Make sure that this line is tested.
-    var yearDivStyle; // TODO: Make sure that this line is tested.
-    for (var i = 0; i < numberOfYearsShown; i++) // TODO: Make sure that this line is tested.
+    const yearDivs = flexRow.children;
+    const numberOfYearsShown = yearDivs.length;
+    var yearDivStyle;
+    for (var i = 0; i < numberOfYearsShown; i++)
     {
         yearDivStyle = yearDivs[i].style;
         yearDivStyle.position = kPositionRelative;
-        yearDivStyle.left = offset;
+        yearDivStyle.left = g_YearSlider.offsetLeft;
     }
 } // positionYearDivsToAlignHorizontallyOnScreenWithSliderValues()
 

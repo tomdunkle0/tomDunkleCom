@@ -64,12 +64,14 @@ test(`calling onPageLoad() sets the map container to the maximum allowable heigh
     // TODO: Expand on this.
     //        This means getting better test coverage of positionMapOnScreen(). Production code
     //        that uses screen properties like scrollWidth and scrollHeight currently cannot be
-    //        tested, because the jest environment does not initialize such properties. In order to
-    //        have test coverage, I will need to set up a test framework that assigns a customized
-    //        HTML set to document.body.innerHTML. The customized set should have those properties
-    //        set, even though there is no physical screen (just a simulated, imaginary one). Doing
-    //        this necessitates carefully defining the customized HTML in a way that it consumes
-    //        the production HTML, so that I don't need to maintain both.
+    //        tested, because the jest environment does not initialize such properties. In
+    //        particular, this means that there is no test coverage at all for
+    //        positionMapOnLandscapeScreen(). In order to have test coverage, I will need to set up
+    //        a test framework that assigns a customized HTML set to document.body.innerHTML. The
+    //        customized set should have those properties set, even though there is no physical
+    //        screen (just a simulated, imaginary one). Doing this necessitates carefully defining
+    //        the customized HTML in a way that it consumes the production HTML, so that I don't
+    //        need to maintain both.
 }); /* calling onPageLoad() sets the map container to the maximum allowable height */
 
 function expectCursorAttributeIsSetAsDesiredForEachPolyline(scalableVectorGraphic)
