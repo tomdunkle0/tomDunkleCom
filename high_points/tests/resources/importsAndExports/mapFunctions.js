@@ -41,6 +41,7 @@ const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
 const kDelaware                    = constants.kDelaware;
 const kDelawareCheckMark           = constants.kDelawareCheckMark;
 const kDirectoryNameHighPoints     = constants.kDirectoryNameHighPoints;
+const kFifthChildIndex             = constants.kFifthChildIndex; // TODO -- TEST
 const kFileExtensionHtml           = constants.kFileExtensionHtml;
 const kFirstCharIndex              = constants.kFirstCharIndex;
 const kFirstChildIndex             = constants.kFirstChildIndex;

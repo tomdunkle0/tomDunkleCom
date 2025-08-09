@@ -1,6 +1,7 @@
 // Constant includes:
 const constants = require('./environment/constants');
 const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
+const kFifthChildIndex             = constants.kFifthChildIndex; // TODO: Make sure that this line is tested.
 const kFirstCharIndex              = constants.kFirstCharIndex;
 const kFirstChildIndex             = constants.kFirstChildIndex;
 const kFourthChildIndex            = constants.kFourthChildIndex; // TODO: Make sure that this line is tested.
@@ -22,6 +23,7 @@ const mapFunctions = require('./environment/mapFunctions');
 const onPageLoad = mapFunctions.onPageLoad;
 
 // Miscellaneous constants:
+const kExpectedInitialHeight                = "0px"; // TODO -- TEST
 const kExpectedNumberOfCheckBoxes           = 50;
 const kExpectedNumberOfCheckMarks           = 42;
 const kExpectedNumberOfGreenPolylines       = 43; // 42 completed states + Michigan upper peninsula.
@@ -51,6 +53,26 @@ test(`calling onPageLoad() results in every green & red state and check mark/box
 test(`calling onPageLoad() retrieves the desired number of polylines of each category`, () => {
     expectMapContainsDesiredCountOfEachTypeOfPolyline(getScalableVectorGraphic());
 }); /* calling onPageLoad() retrieves the desired number of polylines of each category */
+
+test(`calling onPageLoad() sets the height attribute of the bottom bounding div`, () => {
+    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
+    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex]; // TODO -- TEST
+    const bottomBoundingDivInitialHeight = bottomBoundingDiv.style.height; // TODO -- TEST
+    expect(bottomBoundingDivInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+}); /* calling onPageLoad() sets the height attribute of the bottom bounding div */
+
+test(`calling onPageLoad() sets the height attribute of the map scalable vector graphic`, () => {
+    const scalableVectorGraphic = getScalableVectorGraphic(); // TODO -- TEST
+    const svgInitialHeight = scalableVectorGraphic.style.height; // TODO -- TEST
+    expect(svgInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+}); /* calling onPageLoad() sets the height attribute of the map scalable vector graphic */
+
+test(`calling onPageLoad() sets the height attribute of the top bounding div`, () => {
+    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
+    const topBoundingDiv = mapContainer.children[kFirstChildIndex]; // TODO -- TEST
+    const topBoundingDivInitialHeight = topBoundingDiv.style.height; // TODO -- TEST
+    expect(topBoundingDivInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+}); /* calling onPageLoad() sets the height attribute of the top bounding div */
 
 test(`calling onPageLoad() sets the position attribute of each year div to relative`, () => {
     const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST

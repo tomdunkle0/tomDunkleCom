@@ -18,6 +18,7 @@ module.exports =
     kDelaware,
     kDelawareCheckMark,
     kDirectoryNameHighPoints,
+    kFifthChildIndex, // TODO -- TEST
     kFileExtensionHtml,
     kFirstCharIndex,
     kFirstChildIndex,

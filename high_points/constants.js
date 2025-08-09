@@ -6,6 +6,7 @@
 // Miscellaneous constants:
 const kCursorAttributeValueAuto    = "auto";
 const kCursorAttributeValuePointer = "pointer";
+const kFifthChildIndex             = 4; // TODO: Make sure that this line is tested.
 const kFileExtensionHtml           = ".html";
 const kFirstCharIndex              = 0;
 const kFirstChildIndex             = 0;

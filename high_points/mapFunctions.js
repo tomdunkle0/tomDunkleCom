@@ -324,12 +324,11 @@ function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, m
     const svgStyleAssignment = kHeight + desiredMapHeight; // TODO: Make sure that this line is tested.
     scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment); // TODO: Make sure that this line is tested.
     const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2; // TODO: Make sure that this line is tested.
-    const topBoundingDiv = mapContainer.children[kFirstChildIndex]; // TODO: Make sure that this line is tested.
-    const boundingDivStyleAssignment = kHeight + boundingDivHeight; // TODO: Make sure that this line is tested.
-    topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment); // TODO: Make sure that this line is tested.
-    const fifthChildIndex = 4; // TODO: Make sure that this line is tested.
-    const bottomBoundingDiv = mapContainer.children[fifthChildIndex]; // TODO: Make sure that this line is tested.
-    bottomBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment); // TODO: Make sure that this line is tested.
+    const topBoundingDiv = mapContainer.children[kFirstChildIndex];
+    const boundingDivStyleAssignment = kHeight + boundingDivHeight;
+    topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
+    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex];
+    bottomBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
 } // positionMapOnPortraitScreen()
 
 function positionMapOnLandscapeScreen(heightAvailableForMap)
