@@ -316,14 +316,14 @@ function onOrientationChange()
     positionMapOnScreen();
 } // onOrientationChange()
 
-function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer) // TODO -- TEST
+function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer)
 {
-    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
-    const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels // TODO: Make sure that this line is tested.
-    const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth; // TODO: Make sure that this line is tested.
-    const svgStyleAssignment = kHeight + desiredMapHeight; // TODO: Make sure that this line is tested.
-    scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment); // TODO: Make sure that this line is tested.
-    const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2; // TODO: Make sure that this line is tested.
+    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex];
+    const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels
+    const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth;
+    const svgStyleAssignment = kHeight + desiredMapHeight;
+    scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment);
+    const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2;
     const topBoundingDiv = mapContainer.children[kFirstChildIndex];
     const boundingDivStyleAssignment = kHeight + boundingDivHeight;
     topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
