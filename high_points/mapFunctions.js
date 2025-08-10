@@ -338,20 +338,20 @@ function positionMapOnLandscapeScreen(heightAvailableForMap)
     scalableVectorGraphic.setAttribute(kStyle, styleAssignment);
 } // positionMapOnLandscapeScreen()
 
-function positionMapOnScreen() // TODO -- TEST
+function positionMapOnScreen()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
-    const mapContainerHeight = mapContainer.scrollHeight; // TODO: Make sure that this line is tested.
-    const thirdChildIndex = 2; // TODO: Make sure that this line is tested.
-    const slideContainer = mapContainer.children[thirdChildIndex]; // TODO: Make sure that this line is tested.
-    const slideContainerHeight = slideContainer.scrollHeight; // TODO: Make sure that this line is tested.
+    const mapContainerHeight = mapContainer.scrollHeight;
+    const thirdChildIndex = 2;
+    const slideContainer = mapContainer.children[thirdChildIndex];
+    const slideContainerHeight = slideContainer.scrollHeight;
     const flexRow = mapContainer.children[kFourthChildIndex];
-    const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight; // TODO: Make sure that this line is tested.
+    const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight;
 
-    const mapContainerWidth = mapContainer.scrollWidth; // TODO: Make sure that this line is tested.
-    if (mapContainerHeight >= mapContainerWidth) // TODO: Make sure that this line is tested.
+    const mapContainerWidth = mapContainer.scrollWidth;
+    if (mapContainerHeight >= mapContainerWidth)
     {
-        positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer); // TODO: Make sure that this line is tested.
+        positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer);
     }
     else
     {
