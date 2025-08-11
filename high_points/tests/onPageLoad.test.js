@@ -1,17 +1,17 @@
 // Constant includes:
 const constants = require('./environment/constants');
 const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
-const kFifthChildIndex             = constants.kFifthChildIndex; // TODO: Make sure that this line is tested.
+const kFifthChildIndex             = constants.kFifthChildIndex;
 const kFirstCharIndex              = constants.kFirstCharIndex;
 const kFirstChildIndex             = constants.kFirstChildIndex;
-const kFourthChildIndex            = constants.kFourthChildIndex; // TODO: Make sure that this line is tested.
-const kPositionRelative            = constants.kPositionRelative; // TODO: Make sure that this line is tested.
+const kFourthChildIndex            = constants.kFourthChildIndex;
+const kPositionRelative            = constants.kPositionRelative;
 const kPrefixCheckBox              = constants.kPrefixCheckBox;
 const kPrefixCheckMark             = constants.kPrefixCheckMark;
 const kPrefixGreenState            = constants.kPrefixGreenState;
 const kPrefixInsignificantIsland   = constants.kPrefixInsignificantIsland;
 const kPrefixRedState              = constants.kPrefixRedState;
-const kSecondChildIndex            = constants.kSecondChildIndex; // TODO: Make sure that this line is tested.
+const kSecondChildIndex            = constants.kSecondChildIndex;
 const kViewBox                     = constants.kViewBox;
 
 // Test Constant includes:
@@ -23,7 +23,7 @@ const mapFunctions = require('./environment/mapFunctions');
 const onPageLoad = mapFunctions.onPageLoad;
 
 // Miscellaneous constants:
-const kExpectedInitialHeight                = "0px"; // TODO -- TEST
+const kExpectedInitialHeight                = "0px";
 const kExpectedNumberOfCheckBoxes           = 50;
 const kExpectedNumberOfCheckMarks           = 42;
 const kExpectedNumberOfGreenPolylines       = 43; // 42 completed states + Michigan upper peninsula.
@@ -55,31 +55,31 @@ test(`calling onPageLoad() retrieves the desired number of polylines of each cat
 }); /* calling onPageLoad() retrieves the desired number of polylines of each category */
 
 test(`calling onPageLoad() sets the height attribute of the bottom bounding div`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
-    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex]; // TODO -- TEST
-    const bottomBoundingDivInitialHeight = bottomBoundingDiv.style.height; // TODO -- TEST
-    expect(bottomBoundingDivInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+    const mapContainer = document.body.children[kFirstChildIndex];
+    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex];
+    const bottomBoundingDivInitialHeight = bottomBoundingDiv.style.height;
+    expect(bottomBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
 }); /* calling onPageLoad() sets the height attribute of the bottom bounding div */
 
 test(`calling onPageLoad() sets the height attribute of the map scalable vector graphic`, () => {
-    const scalableVectorGraphic = getScalableVectorGraphic(); // TODO -- TEST
-    const svgInitialHeight = scalableVectorGraphic.style.height; // TODO -- TEST
-    expect(svgInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+    const scalableVectorGraphic = getScalableVectorGraphic();
+    const svgInitialHeight = scalableVectorGraphic.style.height;
+    expect(svgInitialHeight).toBe(kExpectedInitialHeight);
 }); /* calling onPageLoad() sets the height attribute of the map scalable vector graphic */
 
 test(`calling onPageLoad() sets the height attribute of the top bounding div`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
-    const topBoundingDiv = mapContainer.children[kFirstChildIndex]; // TODO -- TEST
-    const topBoundingDivInitialHeight = topBoundingDiv.style.height; // TODO -- TEST
-    expect(topBoundingDivInitialHeight).toBe(kExpectedInitialHeight); // TODO -- TEST
+    const mapContainer = document.body.children[kFirstChildIndex];
+    const topBoundingDiv = mapContainer.children[kFirstChildIndex];
+    const topBoundingDivInitialHeight = topBoundingDiv.style.height;
+    expect(topBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
 }); /* calling onPageLoad() sets the height attribute of the top bounding div */
 
 test(`calling onPageLoad() sets the position attribute of each year div to relative`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex]; // TODO -- TEST
-    const yearRow = mapContainer.children[kFourthChildIndex]; // TODO: Make sure that this line is tested.
-    const yearRowClassName = "year-row"; // TODO -- TEST
-    expect(yearRow.className).toBe(yearRowClassName); // TODO -- TEST
-    expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow); // TODO -- TEST
+    const mapContainer = document.body.children[kFirstChildIndex];
+    const yearRow = mapContainer.children[kFourthChildIndex];
+    const yearRowClassName = "year-row";
+    expect(yearRow.className).toBe(yearRowClassName);
+    expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow);
 }); /* calling onPageLoad() sets the position attribute of each year div to relative */
 
 test(`calling onPageLoad() sets the map container to the maximum allowable height`, () => {
@@ -175,12 +175,12 @@ function expectMapContainsDesiredCountOfEachTypeOfPolyline(scalableVectorGraphic
     expect(numberOfRedPolylines).toBe(kExpectedNumberOfRedPolylines);
 } // expectMapContainsDesiredCountOfEachTypeOfPolyline()
 
-function expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow) // TODO -- TEST
+function expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow)
 {
-    const yearDivs = yearRow.children; // TODO -- TEST
-    const numberOfYearsShown = yearDivs.length; // TODO -- TEST
-    const expectedNumberOfYearsShown = 10; // TODO -- TEST
-    expect(numberOfYearsShown).toBe(expectedNumberOfYearsShown); // TODO -- TEST
+    const yearDivs = yearRow.children;
+    const numberOfYearsShown = yearDivs.length;
+    const expectedNumberOfYearsShown = 10;
+    expect(numberOfYearsShown).toBe(expectedNumberOfYearsShown);
     for (var i = 0; i < numberOfYearsShown; i++)
     {
         const yearDiv = yearDivs[i];
@@ -198,5 +198,5 @@ function getScalableVectorGraphic()
     const expectedClassName = "flex-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
-    return mapContainer.children[kSecondChildIndex]; // TODO: Make sure that this line is tested.
+    return mapContainer.children[kSecondChildIndex];
 } // getScalableVectorGraphic()

@@ -18,18 +18,18 @@ module.exports =
     kDelaware,
     kDelawareCheckMark,
     kDirectoryNameHighPoints,
-    kFifthChildIndex, // TODO -- TEST
+    kFifthChildIndex,
     kFileExtensionHtml,
     kFirstCharIndex,
     kFirstChildIndex,
     kFlorida,
     kFloridaCheckBox,
-    kFourthChildIndex, // TODO -- TEST
+    kFourthChildIndex,
     kGeorgia,
     kGeorgiaCheckMark,
     kHawaii,
     kHawaiiCheckBox,
-    kHeight, // TODO -- TEST
+    kHeight,
     kIllinois,
     kIllinoisCheckMark,
     kIndiana,
@@ -95,7 +95,7 @@ module.exports =
     kOregonCheckBox,
     kPennsylvania,
     kPennsylvaniaCheckMark,
-    kPositionRelative, // TODO: Make sure that this line is tested.
+    kPositionRelative,
     kPrefixCheckBox,
     kPrefixCheckMark,
     kPrefixGreenState,
@@ -104,7 +104,7 @@ module.exports =
     kRhodeIsland,
     kRhodeIslandCheckMark,
     kSecondCharIndex,
-    kSecondChildIndex, // TODO: Make sure that this line is tested.
+    kSecondChildIndex,
     kSouthCarolina,
     kSouthCarolinaCheckMark,
     kSouthDakota,
