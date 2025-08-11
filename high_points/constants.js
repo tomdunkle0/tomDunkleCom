@@ -6,22 +6,22 @@
 // Miscellaneous constants:
 const kCursorAttributeValueAuto    = "auto";
 const kCursorAttributeValuePointer = "pointer";
-const kFifthChildIndex             = 4; // TODO: Make sure that this line is tested.
+const kFifthChildIndex             = 4;
 const kFileExtensionHtml           = ".html";
 const kFirstCharIndex              = 0;
 const kFirstChildIndex             = 0;
-const kFourthChildIndex            = 3; // TODO: Make sure that this line is tested.
+const kFourthChildIndex            = 3;
 const kSecondCharIndex             = 1;
-const kSecondChildIndex            = 1; // TODO: Make sure that this line is tested.
+const kSecondChildIndex            = 1;
 const kDirectoryNameHighPoints     = "high_points/";
-const kHeight                      = "height: "; // TODO: Make sure that this line is tested.
+const kHeight                      = "height: ";
 const kLightBlueFill               = "fill: #99CCFF";
 const kLightGreenFill              = "fill: #C7FFC4";
 const kLightRedFill                = "fill: #FF9999";
 const kMainland                    = "Mainland";
 const kMargin                      = "margin: ";
 const kPeninsula                   = "Peninsula";
-const kPositionRelative            = "relative"; // TODO: Make sure that this line is tested.
+const kPositionRelative            = "relative";
 const kStyle                       = "style";
 const kUnitNamePixels              = "px;";
 const kUnpopulated                 = "";
