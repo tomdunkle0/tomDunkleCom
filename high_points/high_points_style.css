@@ -2,9 +2,7 @@
 .flex-container {
     display: grid;
     height: 100%;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 /* Styling for the divs housing each year string. */
