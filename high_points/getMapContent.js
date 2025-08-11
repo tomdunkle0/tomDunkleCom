@@ -11,7 +11,7 @@ function getMapContent()
              currentScreenOrientation=""
              mostRecentBlueStateId=""
              orientationChangeIntervalId="">
-            <div></div>
+            <div></div> <!--- Top bounding div. -->
             <svg height="90%"
                width="100vw"
                onClick="onClickMap(event)"
@@ -763,7 +763,7 @@ function getMapContent()
                     <p class="year-string">2024</p>
                 </div>
             </div>
-            <div></div>
+            <div></div> <!--- Bottom bounding div. -->
         </div>
     `;
 } // getMapContent()
