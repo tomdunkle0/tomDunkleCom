@@ -4,8 +4,8 @@ const each = require('jest-each').default;
 // Constant includes:
 const constants = require('./environment/constants');
 const kAlaskaMainland    = constants.kAlaskaMainland;
-const kFirstChildIndex   = constants.kFirstChildIndex;
 const kHawaii            = constants.kHawaii;
+const kIndexFirstChild   = constants.kIndexFirstChild;
 const kKauai             = constants.kKauai;
 const kKodiakIsland      = constants.kKodiakIsland;
 const kLightBlueFill     = constants.kLightBlueFill;
@@ -368,7 +368,7 @@ describe(`given a mouseEvent input whose target is the view_box while all four s
 test(`given a valid mouseEvent input, onMouseCrossingBorder() sets
         mapContainer.mostRecentBlueStateId to the id of the state polyline targeted by the
         mouseEvent`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     const arbitraryPolyline = document.getElementById(kArbitraryPolylineId);
     const mouseEvent = { target: arbitraryPolyline };
     expect(mapContainer.mostRecentBlueStateId).toBe(undefined);

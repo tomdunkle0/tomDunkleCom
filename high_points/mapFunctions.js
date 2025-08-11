@@ -82,7 +82,7 @@ function goToPage(relativeUrl)
 
 function handleScreenOrientationChange()
 {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     if (window.orientation !== mapContainer.currentScreenOrientation)
     {
         onOrientationChange();
@@ -93,7 +93,7 @@ function isCheckMarkOrBox(polygonId)
 {
     if (!isUnpopulated(polygonId))
     {
-        const polygonIdPrefix = polygonId.charAt(kFirstCharIndex);
+        const polygonIdPrefix = polygonId.charAt(kIndexFirstChar);
         return polygonIdPrefix === kPrefixCheckBox || polygonIdPrefix === kPrefixCheckMark;
     }
     else
@@ -118,7 +118,7 @@ function isInsignificantIsland(polygonId)
 {
     if (!isUnpopulated(polygonId))
     {
-        return polygonId.charAt(kFirstCharIndex) === kPrefixInsignificantIsland;
+        return polygonId.charAt(kIndexFirstChar) === kPrefixInsignificantIsland;
     }
     else
     {
@@ -216,7 +216,7 @@ function onClickMap(clickEvent)
             {
                 if (tomHasHighPointedStateWithinSliderRange(clickedPolygon))
                 {
-                    const mapContainer = document.body.children[kFirstChildIndex];
+                    const mapContainer = document.body.children[kIndexFirstChild];
                     clearInterval(mapContainer.orientationChangeIntervalId);
                     mapContainer.orientationChangeIntervalId = kUnpopulated;
 
@@ -224,7 +224,7 @@ function onClickMap(clickEvent)
                                    || clickedPolygonId === kMichiganPeninsula
                                     ) ?
                         kStateNameMichigan
-                      : clickedPolygonId.substr(kSecondCharIndex);
+                      : clickedPolygonId.substr(kIndexSecondChar);
                     return goToPage(kDirectoryNameHighPoints + stateId + kFileExtensionHtml);
                 }
             }
@@ -236,7 +236,7 @@ function onClickMap(clickEvent)
 
 function onMouseCrossingBorder(mouseEvent)
 {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     const mostRecentBlueStateId = mapContainer.mostRecentBlueStateId;
     const currentBlueStateId = updateAndGetCurrentBlueState(mouseEvent, mostRecentBlueStateId);
     if (currentBlueStateId !== null)
@@ -252,7 +252,7 @@ function onMouseCrossingBorder(mouseEvent)
 function onPageLoad()
 {
     onOrientationChange();
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     const func = handleScreenOrientationChange;
     const milliseconds = 500;
     mapContainer.orientationChangeIntervalId = setInterval(func, milliseconds);
@@ -309,7 +309,7 @@ function onOrientationChange()
         document.getElementById(kWisconsin        )
     ];
 
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     mapContainer.currentScreenOrientation = window.orientation;
     g_YearSlider = document.getElementById(kYearSliderId);
     setYearSliderMarginsToHalfOfSlideContainerHeight(g_YearSlider);
@@ -318,33 +318,33 @@ function onOrientationChange()
 
 function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, mapContainer)
 {
-    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex];
+    const scalableVectorGraphic = mapContainer.children[kIndexSecondChild];
     const mapAreaYtoXRatio = 0.5625; // 1440 pixels / 2560 pixels
     const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth;
     const svgStyleAssignment = kHeight + desiredMapHeight;
     scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment);
     const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2;
-    const topBoundingDiv = mapContainer.children[kFirstChildIndex];
+    const topBoundingDiv = mapContainer.children[kIndexFirstChild];
     const boundingDivStyleAssignment = kHeight + boundingDivHeight;
     topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
-    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex];
+    const bottomBoundingDiv = mapContainer.children[kIndexFifthChild];
     bottomBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
 } // positionMapOnPortraitScreen()
 
 function positionMapOnLandscapeScreen(heightAvailableForMap)
 {
-    const scalableVectorGraphic = mapContainer.children[kSecondChildIndex];
+    const scalableVectorGraphic = mapContainer.children[kIndexSecondChild];
     const styleAssignment = kHeight + heightAvailableForMap;
     scalableVectorGraphic.setAttribute(kStyle, styleAssignment);
 } // positionMapOnLandscapeScreen()
 
 function positionMapOnScreen()
 {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     const mapContainerHeight = mapContainer.scrollHeight;
-    const slideContainer = mapContainer.children[kThirdChildIndex];
+    const slideContainer = mapContainer.children[kIndexThirdChild];
     const slideContainerHeight = slideContainer.scrollHeight;
-    const flexRow = mapContainer.children[kFourthChildIndex];
+    const flexRow = mapContainer.children[kIndexFourthChild];
     const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight;
 
     const mapContainerWidth = mapContainer.scrollWidth;
@@ -513,7 +513,7 @@ function updateCheckMarkAndBoxToMatchStateFillColor(stateId, highPointedWithinSl
     {
         const stateName = stateId === kMichiganMainland || stateId === kMichiganPeninsula ?
             kStateNameMichigan
-          : stateId.substr(kSecondCharIndex);
+          : stateId.substr(kIndexSecondChar);
         const checkBox  = document.getElementById(kPrefixCheckBox + stateName);
         const checkMark = document.getElementById(kPrefixCheckMark + stateName);
         if ( !isUnpopulated(checkBox)

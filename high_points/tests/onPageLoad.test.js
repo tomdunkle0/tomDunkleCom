@@ -1,17 +1,17 @@
 // Constant includes:
 const constants = require('./environment/constants');
 const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
-const kFifthChildIndex             = constants.kFifthChildIndex;
-const kFirstCharIndex              = constants.kFirstCharIndex;
-const kFirstChildIndex             = constants.kFirstChildIndex;
-const kFourthChildIndex            = constants.kFourthChildIndex;
+const kIndexFifthChild             = constants.kIndexFifthChild;
+const kIndexFirstChar              = constants.kIndexFirstChar;
+const kIndexFirstChild             = constants.kIndexFirstChild;
+const kIndexFourthChild            = constants.kIndexFourthChild;
+const kIndexSecondChild            = constants.kIndexSecondChild;
 const kPositionRelative            = constants.kPositionRelative;
 const kPrefixCheckBox              = constants.kPrefixCheckBox;
 const kPrefixCheckMark             = constants.kPrefixCheckMark;
 const kPrefixGreenState            = constants.kPrefixGreenState;
 const kPrefixInsignificantIsland   = constants.kPrefixInsignificantIsland;
 const kPrefixRedState              = constants.kPrefixRedState;
-const kSecondChildIndex            = constants.kSecondChildIndex;
 const kViewBox                     = constants.kViewBox;
 
 // Test Constant includes:
@@ -55,8 +55,8 @@ test(`calling onPageLoad() retrieves the desired number of polylines of each cat
 }); /* calling onPageLoad() retrieves the desired number of polylines of each category */
 
 test(`calling onPageLoad() sets the height attribute of the bottom bounding div`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex];
-    const bottomBoundingDiv = mapContainer.children[kFifthChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const bottomBoundingDiv = mapContainer.children[kIndexFifthChild];
     const bottomBoundingDivInitialHeight = bottomBoundingDiv.style.height;
     expect(bottomBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
 }); /* calling onPageLoad() sets the height attribute of the bottom bounding div */
@@ -68,15 +68,15 @@ test(`calling onPageLoad() sets the height attribute of the map scalable vector 
 }); /* calling onPageLoad() sets the height attribute of the map scalable vector graphic */
 
 test(`calling onPageLoad() sets the height attribute of the top bounding div`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex];
-    const topBoundingDiv = mapContainer.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const topBoundingDiv = mapContainer.children[kIndexFirstChild];
     const topBoundingDivInitialHeight = topBoundingDiv.style.height;
     expect(topBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
 }); /* calling onPageLoad() sets the height attribute of the top bounding div */
 
 test(`calling onPageLoad() sets the position attribute of each year div to relative`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex];
-    const yearRow = mapContainer.children[kFourthChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const yearRow = mapContainer.children[kIndexFourthChild];
     const yearRowClassName = "year-row";
     expect(yearRow.className).toBe(yearRowClassName);
     expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow);
@@ -108,7 +108,7 @@ function expectCursorAttributeIsSetAsDesiredForEachPolyline(scalableVectorGraphi
         {
             ++numberOfTotalPolylines;
             const polylineId = child.id;
-            switch (polylineId.charAt(kFirstCharIndex))
+            switch (polylineId.charAt(kIndexFirstChar))
             {
                 case kPrefixCheckMark:
                 case kPrefixGreenState:
@@ -155,7 +155,7 @@ function expectMapContainsDesiredCountOfEachTypeOfPolyline(scalableVectorGraphic
             ++numberOfTotalPolylines;
 
             const polylineId = child.id;
-            switch (polylineId.charAt(kFirstCharIndex))
+            switch (polylineId.charAt(kIndexFirstChar))
             {
                 case kPrefixCheckBox:            { ++numberOfCheckBoxes;              break; }
                 case kPrefixCheckMark:           { ++numberOfCheckMarks;              break; }
@@ -194,9 +194,9 @@ function getScalableVectorGraphic()
     const oneChild = 1;
     expect(bodyChildren.length).toBe(oneChild);
 
-    const mapContainer = bodyChildren[kFirstChildIndex];
+    const mapContainer = bodyChildren[kIndexFirstChild];
     const expectedClassName = "flex-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
-    return mapContainer.children[kSecondChildIndex];
+    return mapContainer.children[kIndexSecondChild];
 } // getScalableVectorGraphic()
