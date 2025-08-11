@@ -23,6 +23,7 @@ const kMargin                      = "margin: ";
 const kPeninsula                   = "Peninsula";
 const kPositionRelative            = "relative";
 const kStyle                       = "style";
+const kThirdChildIndex             = 2;
 const kUnitNamePixels              = "px;";
 const kUnpopulated                 = "";
 const kViewBox                     = "view_box";

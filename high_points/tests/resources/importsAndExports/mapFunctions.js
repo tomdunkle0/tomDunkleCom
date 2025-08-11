@@ -138,6 +138,7 @@ const kTennesseeCheckBox           = constants.kTennesseeCheckBox;
 const kTennesseeCheckMark          = constants.kTennesseeCheckMark;
 const kTexas                       = constants.kTexas;
 const kTexasCheckMark              = constants.kTexasCheckMark;
+const kThirdChildIndex             = constants.kThirdChildIndex;
 const kUnitNamePixels              = constants.kUnitNamePixels;
 const kUnpopulated                 = constants.kUnpopulated;
 const kUtah                        = constants.kUtah;

@@ -342,8 +342,7 @@ function positionMapOnScreen()
 {
     const mapContainer = document.body.children[kFirstChildIndex];
     const mapContainerHeight = mapContainer.scrollHeight;
-    const thirdChildIndex = 2;
-    const slideContainer = mapContainer.children[thirdChildIndex];
+    const slideContainer = mapContainer.children[kThirdChildIndex];
     const slideContainerHeight = slideContainer.scrollHeight;
     const flexRow = mapContainer.children[kFourthChildIndex];
     const heightAvailableForMap = mapContainerHeight - slideContainerHeight - flexRow.scrollHeight;

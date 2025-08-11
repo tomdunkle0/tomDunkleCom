@@ -158,6 +158,7 @@ module.exports =
     kTennesseeCheckMark,
     kTexas,
     kTexasCheckMark,
+    kThirdChildIndex,
     kUnitNamePixels,
     kUnpopulated,
     kUtah,
