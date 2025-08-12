@@ -83,7 +83,7 @@ test(`calling onPageLoad() sets the position attribute of each year div to relat
 }); /* calling onPageLoad() sets the position attribute of each year div to relative */
 
 test(`calling onPageLoad() sets the map container to the maximum allowable height`, () => {
-    // TODO: Expand on this.
+    // TODO: https://github.com/tomdunkle0/tomDunkleCom/issues/34 (GitHub Issue #34)
     //        This means getting better test coverage of positionMapOnScreen(). Production code
     //        that uses screen properties like scrollWidth and scrollHeight currently cannot be
     //        tested, because the jest environment does not initialize such properties. In
