@@ -7,10 +7,11 @@ function getMapContent()
 {
     return `
         <div id="mapContainer"
-             class="flex-container"
+             class="map-container"
              currentScreenOrientation=""
              mostRecentBlueStateId=""
              orientationChangeIntervalId="">
+            <div></div> <!--- Top bounding div. -->
             <svg height="90%"
                width="100vw"
                onClick="onClickMap(event)"
@@ -762,6 +763,7 @@ function getMapContent()
                     <p class="year-string">2024</p>
                 </div>
             </div>
+            <div></div> <!--- Bottom bounding div. -->
         </div>
     `;
 } // getMapContent()

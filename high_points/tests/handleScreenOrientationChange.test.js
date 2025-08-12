@@ -3,7 +3,7 @@ const each = require('jest-each').default;
 
 // Constant includes:
 const constants = require('./environment/constants');
-const kFirstChildIndex = constants.kFirstChildIndex;
+const kIndexFirstChild = constants.kIndexFirstChild;
 const kUnpopulated     = constants.kUnpopulated;
 
 // Test Constant includes:
@@ -54,7 +54,7 @@ describe(`calling handleScreenOrientationChange() updates the current screen ori
 
 function getCurrentScreenOrientation()
 {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     return mapContainer.currentScreenOrientation;
 } // getCurrentScreenOrientation()
 

@@ -1,8 +1,12 @@
 // Constant includes:
 const constants = require('./environment/constants');
 const kCursorAttributeValuePointer = constants.kCursorAttributeValuePointer;
-const kFirstCharIndex              = constants.kFirstCharIndex;
-const kFirstChildIndex             = constants.kFirstChildIndex;
+const kIndexFifthChild             = constants.kIndexFifthChild;
+const kIndexFirstChar              = constants.kIndexFirstChar;
+const kIndexFirstChild             = constants.kIndexFirstChild;
+const kIndexFourthChild            = constants.kIndexFourthChild;
+const kIndexSecondChild            = constants.kIndexSecondChild;
+const kPositionRelative            = constants.kPositionRelative;
 const kPrefixCheckBox              = constants.kPrefixCheckBox;
 const kPrefixCheckMark             = constants.kPrefixCheckMark;
 const kPrefixGreenState            = constants.kPrefixGreenState;
@@ -19,6 +23,7 @@ const mapFunctions = require('./environment/mapFunctions');
 const onPageLoad = mapFunctions.onPageLoad;
 
 // Miscellaneous constants:
+const kExpectedInitialHeight                = "0px";
 const kExpectedNumberOfCheckBoxes           = 50;
 const kExpectedNumberOfCheckMarks           = 42;
 const kExpectedNumberOfGreenPolylines       = 43; // 42 completed states + Michigan upper peninsula.
@@ -49,8 +54,46 @@ test(`calling onPageLoad() retrieves the desired number of polylines of each cat
     expectMapContainsDesiredCountOfEachTypeOfPolyline(getScalableVectorGraphic());
 }); /* calling onPageLoad() retrieves the desired number of polylines of each category */
 
+test(`calling onPageLoad() sets the height attribute of the bottom bounding div`, () => {
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const bottomBoundingDiv = mapContainer.children[kIndexFifthChild];
+    const bottomBoundingDivInitialHeight = bottomBoundingDiv.style.height;
+    expect(bottomBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
+}); /* calling onPageLoad() sets the height attribute of the bottom bounding div */
+
+test(`calling onPageLoad() sets the height attribute of the map scalable vector graphic`, () => {
+    const scalableVectorGraphic = getScalableVectorGraphic();
+    const svgInitialHeight = scalableVectorGraphic.style.height;
+    expect(svgInitialHeight).toBe(kExpectedInitialHeight);
+}); /* calling onPageLoad() sets the height attribute of the map scalable vector graphic */
+
+test(`calling onPageLoad() sets the height attribute of the top bounding div`, () => {
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const topBoundingDiv = mapContainer.children[kIndexFirstChild];
+    const topBoundingDivInitialHeight = topBoundingDiv.style.height;
+    expect(topBoundingDivInitialHeight).toBe(kExpectedInitialHeight);
+}); /* calling onPageLoad() sets the height attribute of the top bounding div */
+
+test(`calling onPageLoad() sets the position attribute of each year div to relative`, () => {
+    const mapContainer = document.body.children[kIndexFirstChild];
+    const yearRow = mapContainer.children[kIndexFourthChild];
+    const yearRowClassName = "year-row";
+    expect(yearRow.className).toBe(yearRowClassName);
+    expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow);
+}); /* calling onPageLoad() sets the position attribute of each year div to relative */
+
 test(`calling onPageLoad() sets the map container to the maximum allowable height`, () => {
-    // TODO
+    // TODO: https://github.com/tomdunkle0/tomDunkleCom/issues/34 (GitHub Issue #34)
+    //        This means getting better test coverage of positionMapOnScreen(). Production code
+    //        that uses screen properties like scrollWidth and scrollHeight currently cannot be
+    //        tested, because the jest environment does not initialize such properties. In
+    //        particular, this means that there is no test coverage at all for
+    //        positionMapOnLandscapeScreen(). In order to have test coverage, I will need to set up
+    //        a test framework that assigns a customized HTML set to document.body.innerHTML. The
+    //        customized set should have those properties set, even though there is no physical
+    //        screen (just a simulated, imaginary one). Doing this necessitates carefully defining
+    //        the customized HTML in a way that it consumes the production HTML, so that I don't
+    //        need to maintain both.
 }); /* calling onPageLoad() sets the map container to the maximum allowable height */
 
 function expectCursorAttributeIsSetAsDesiredForEachPolyline(scalableVectorGraphic)
@@ -65,7 +108,7 @@ function expectCursorAttributeIsSetAsDesiredForEachPolyline(scalableVectorGraphi
         {
             ++numberOfTotalPolylines;
             const polylineId = child.id;
-            switch (polylineId.charAt(kFirstCharIndex))
+            switch (polylineId.charAt(kIndexFirstChar))
             {
                 case kPrefixCheckMark:
                 case kPrefixGreenState:
@@ -112,7 +155,7 @@ function expectMapContainsDesiredCountOfEachTypeOfPolyline(scalableVectorGraphic
             ++numberOfTotalPolylines;
 
             const polylineId = child.id;
-            switch (polylineId.charAt(kFirstCharIndex))
+            switch (polylineId.charAt(kIndexFirstChar))
             {
                 case kPrefixCheckBox:            { ++numberOfCheckBoxes;              break; }
                 case kPrefixCheckMark:           { ++numberOfCheckMarks;              break; }
@@ -132,15 +175,28 @@ function expectMapContainsDesiredCountOfEachTypeOfPolyline(scalableVectorGraphic
     expect(numberOfRedPolylines).toBe(kExpectedNumberOfRedPolylines);
 } // expectMapContainsDesiredCountOfEachTypeOfPolyline()
 
+function expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow)
+{
+    const yearDivs = yearRow.children;
+    const numberOfYearsShown = yearDivs.length;
+    const expectedNumberOfYearsShown = 10;
+    expect(numberOfYearsShown).toBe(expectedNumberOfYearsShown);
+    for (var i = 0; i < numberOfYearsShown; i++)
+    {
+        const yearDiv = yearDivs[i];
+        expect(yearDiv.style.position).toBe(kPositionRelative);
+    }
+} // expectPositionAttributeIsSetToRelativeForEachYearDiv()
+
 function getScalableVectorGraphic()
 {
     const bodyChildren = document.body.children;
     const oneChild = 1;
     expect(bodyChildren.length).toBe(oneChild);
 
-    const mapContainer = bodyChildren[kFirstChildIndex];
-    const expectedClassName = "flex-container";
+    const mapContainer = bodyChildren[kIndexFirstChild];
+    const expectedClassName = "map-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
-    return mapContainer.children[kFirstChildIndex];
+    return mapContainer.children[kIndexSecondChild];
 } // getScalableVectorGraphic()

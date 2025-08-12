@@ -20,7 +20,6 @@ const kDelaware                = constants.kDelaware;
 const kDelawareCheckMark       = constants.kDelawareCheckMark;
 const kDirectoryNameHighPoints = constants.kDirectoryNameHighPoints;
 const kFileExtensionHtml       = constants.kFileExtensionHtml;
-const kFirstChildIndex         = constants.kFirstChildIndex;
 const kFlorida                 = constants.kFlorida;
 const kFloridaCheckBox         = constants.kFloridaCheckBox;
 const kGeorgia                 = constants.kGeorgia;
@@ -29,6 +28,7 @@ const kHawaii                  = constants.kHawaii;
 const kHawaiiCheckBox          = constants.kHawaiiCheckBox;
 const kIllinois                = constants.kIllinois;
 const kIllinoisCheckMark       = constants.kIllinoisCheckMark;
+const kIndexFirstChild         = constants.kIndexFirstChild;
 const kIndiana                 = constants.kIndiana;
 const kIndianaCheckMark        = constants.kIndianaCheckMark;
 const kIowa                    = constants.kIowa;
@@ -236,7 +236,7 @@ beforeEach(() => {
 //        and show that it can't be used to call clearInterval() again.
 test(`calling onClickMap() with a valid green state clears
         mapContainer.orientationChangeIntervalId`, () => {
-    const mapContainer = document.body.children[kFirstChildIndex];
+    const mapContainer = document.body.children[kIndexFirstChild];
     const arbitraryPolyline = document.getElementById(kArbitraryPolylineId);
     const clickEvent = { target: arbitraryPolyline };
     expect(isUnpopulated(mapContainer.orientationChangeIntervalId)).toBe(false);
