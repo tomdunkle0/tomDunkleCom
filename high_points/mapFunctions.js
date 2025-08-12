@@ -323,8 +323,8 @@ function positionMapOnPortraitScreen(mapContainerWidth, heightAvailableForMap, m
     const desiredMapHeight = mapAreaYtoXRatio * mapContainerWidth;
     const svgStyleAssignment = kHeight + desiredMapHeight;
     scalableVectorGraphic.setAttribute(kStyle, svgStyleAssignment);
-    const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2;
     const topBoundingDiv = mapContainer.children[kIndexFirstChild];
+    const boundingDivHeight = (heightAvailableForMap - desiredMapHeight) / 2;
     const boundingDivStyleAssignment = kHeight + boundingDivHeight;
     topBoundingDiv.setAttribute(kStyle, boundingDivStyleAssignment);
     const bottomBoundingDiv = mapContainer.children[kIndexFifthChild];
