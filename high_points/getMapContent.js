@@ -7,7 +7,7 @@ function getMapContent()
 {
     return `
         <div id="mapContainer"
-             class="flex-container"
+             class="map-container"
              currentScreenOrientation=""
              mostRecentBlueStateId=""
              orientationChangeIntervalId="">

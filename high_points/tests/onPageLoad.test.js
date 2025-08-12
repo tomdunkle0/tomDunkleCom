@@ -195,7 +195,7 @@ function getScalableVectorGraphic()
     expect(bodyChildren.length).toBe(oneChild);
 
     const mapContainer = bodyChildren[kIndexFirstChild];
-    const expectedClassName = "flex-container";
+    const expectedClassName = "map-container";
     expect(mapContainer.className).toBe(expectedClassName);
 
     return mapContainer.children[kIndexSecondChild];
