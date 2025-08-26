@@ -15,13 +15,14 @@ const kMaui              = constants.kMaui;
 const kMichiganMainland  = constants.kMichiganMainland;
 const kMichiganPeninsula = constants.kMichiganPeninsula;
 const kOahu              = constants.kOahu;
+const kPrefixRedState    = constants.kPrefixRedState;
+const kStateNameMontana  = constants.kStateNameMontana;
 const kStyle             = constants.kStyle;
 const kUnpopulated       = constants.kUnpopulated;
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
 const kHawaiianIslandsBlue      = testConstants.kHawaiianIslandsBlue;
-const kIdaho                    = testConstants.kIdaho;
 const kYearSliderValueAfter2014 = testConstants.kYearSliderValueAfter2014;
 const kYearSliderValueAfter2015 = testConstants.kYearSliderValueAfter2015;
 const kYearSliderValueAfter2016 = testConstants.kYearSliderValueAfter2016;
@@ -53,10 +54,12 @@ const kAlaskaAndKodiak      = [kAlaskaMainland, kKodiakIsland];
 const kHawaiianIslands      = [kHawaii, kKauai, kMaui, kOahu];
 const kMichiganAndPeninsula = [kMichiganMainland, kMichiganPeninsula];
 
+const kMontana = kPrefixRedState + kStateNameMontana;
+
 describe(`validate results of resetStateFillColorToDefault() in expected cases`, () => {
     each([
         [[kConnecticut],        kConnecticut,       [kLightGreenFill]         ],
-        [[kIdaho      ],        kIdaho,             [kLightRedFill  ]         ],
+        [[kMontana    ],        kMontana,           [kLightRedFill  ]         ],
         [kMichiganAndPeninsula, kMichiganMainland,  kMichiganAndPeninsulaGreen],
         [kMichiganAndPeninsula, kMichiganPeninsula, kMichiganAndPeninsulaGreen],
         [kAlaskaAndKodiak,      kAlaskaMainland,    kAlaskaAndKodiakRed       ],

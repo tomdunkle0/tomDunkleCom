@@ -17,12 +17,10 @@ const kUnpopulated               = constants.kUnpopulated;
 const kIslandNameKaula     = "Kaula";
 const kIslandNameMolokai   = "Molokai";
 const kIslandNameNiihau    = "Niihau";
-const kStateNameIdaho      = "Idaho";
 const kStateNameWashington = "Washington";
 const kStateNameWyoming    = "Wyoming";
 
 // State polyline IDs:
-const kIdaho      = kPrefixRedState + kStateNameIdaho;
 const kWashington = kPrefixRedState + kStateNameWashington;
 const kWyoming    = kPrefixRedState + kStateNameWyoming;
 
@@ -48,6 +46,7 @@ const kYearSliderValueAfter2021          = "2021";
 const kYearSliderValueAfter2022          = "2022";
 const kYearSliderValueAfter2023          = "2023";
 const kYearSliderValueAfter2024          = "2024";
+const kYearSliderValueAfter2025          = "2025";
 
 // Insignificant Islands:
 const kAlaskaIslands1 = kPrefixInsignificantIsland + kStateNameAlaska + kIslands + "1";
@@ -75,14 +74,12 @@ module.exports =
     kArbitraryPolylineId,
     kConnecticutCheckBox,
     kHawaiianIslandsBlue,
-    kIdaho,
     kKaula,
     kLocalNamePolyline,
     kMolokai,
     kNiihau,
     kPropertyNameOrientation,
     kScreenOrientationLandscapePrimary,
-    kStateNameIdaho,
     kStateNameWashington,
     kStateNameWyoming,
     kUnpopulatedInputs,
@@ -98,5 +95,6 @@ module.exports =
     kYearSliderValueAfter2021,
     kYearSliderValueAfter2022,
     kYearSliderValueAfter2023,
-    kYearSliderValueAfter2024
+    kYearSliderValueAfter2024,
+    kYearSliderValueAfter2025
 };

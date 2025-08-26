@@ -26,6 +26,8 @@ const kGeorgia                 = constants.kGeorgia;
 const kGeorgiaCheckMark        = constants.kGeorgiaCheckMark;
 const kHawaii                  = constants.kHawaii;
 const kHawaiiCheckBox          = constants.kHawaiiCheckBox;
+const kIdaho                   = constants.kIdaho;
+const kIdahoCheckMark          = constants.kIdahoCheckMark;
 const kIllinois                = constants.kIllinois;
 const kIllinoisCheckMark       = constants.kIllinoisCheckMark;
 const kIndexFirstChild         = constants.kIndexFirstChild;
@@ -105,6 +107,7 @@ const kStateNameColorado       = constants.kStateNameColorado;
 const kStateNameConnecticut    = constants.kStateNameConnecticut;
 const kStateNameDelaware       = constants.kStateNameDelaware;
 const kStateNameGeorgia        = constants.kStateNameGeorgia;
+const kStateNameIdaho          = constants.kStateNameIdaho;
 const kStateNameIllinois       = constants.kStateNameIllinois;
 const kStateNameIndiana        = constants.kStateNameIndiana;
 const kStateNameIowa           = constants.kStateNameIowa;
@@ -174,11 +177,9 @@ const kAlaskaIslands7      = testConstants.kAlaskaIslands7;
 const kAlaskaIslands8      = testConstants.kAlaskaIslands8;
 const kArbitraryPolylineId = testConstants.kArbitraryPolylineId;
 const kConnecticutCheckBox = testConstants.kConnecticutCheckBox;
-const kIdaho               = testConstants.kIdaho;
 const kKaula               = testConstants.kKaula;
 const kMolokai             = testConstants.kMolokai;
 const kNiihau              = testConstants.kNiihau;
-const kStateNameIdaho      = testConstants.kStateNameIdaho;
 const kStateNameWashington = testConstants.kStateNameWashington;
 const kStateNameWyoming    = testConstants.kStateNameWyoming;
 const kWashington          = testConstants.kWashington;
@@ -288,6 +289,8 @@ const polylinesWithUsableLinks = [
     [kDelawareCheckMark,      kStateNamePennsylvania ],
     [kGeorgia,                kStateNameGeorgia      ],
     [kGeorgiaCheckMark,       kStateNameGeorgia      ],
+    [kIdaho,                  kStateNameIdaho        ],
+    [kIdahoCheckMark,         kStateNameIdaho        ],
     [kIllinois,               kStateNameIllinois     ],
     [kIllinoisCheckMark,      kStateNameWisconsin    ],
     [kIndiana,                kStateNameIndiana      ],
@@ -397,7 +400,6 @@ const polylinesWithoutUsableLinks = [
     kGeorgiaCheckBox,
     kHawaii,
     kHawaiiCheckBox,
-    kIdaho,
     kIdahoCheckBox,
     kIllinoisCheckBox,
     kIndianaCheckBox,

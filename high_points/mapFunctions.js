@@ -42,6 +42,7 @@ function getStateIdForMousedOverPolygon(polygonId)
         case kFloridaCheckBox:        { return kFlorida;           }
         case kGeorgiaCheckMark:       { return kGeorgia;           }
         case kHawaiiCheckBox:         { return kHawaii;            }
+        case kIdahoCheckMark:         { return kIdaho;             }
         case kIllinoisCheckMark:      { return kWisconsin;         }
         case kIowaCheckBox:           { return kIowa;              }
         case kIowaCheckMark:          { return kIowa;              }
@@ -272,6 +273,7 @@ function onOrientationChange()
         document.getElementById(kCalifornia       ),
         document.getElementById(kDelaware         ),
         document.getElementById(kGeorgia          ),
+        document.getElementById(kIdaho            ),
         document.getElementById(kIllinois         ),
         document.getElementById(kIndiana          ),
         document.getElementById(kIowa             ),

@@ -25,9 +25,9 @@ const onPageLoad = mapFunctions.onPageLoad;
 // Miscellaneous constants:
 const kExpectedInitialHeight                = "0px";
 const kExpectedNumberOfCheckBoxes           = 50;
-const kExpectedNumberOfCheckMarks           = 42;
-const kExpectedNumberOfGreenPolylines       = 43; // 42 completed states + Michigan upper peninsula.
-const kExpectedNumberOfRedPolylines         = 12; // 8 incomplete states + Alaskan/Hawaiian islands.
+const kExpectedNumberOfCheckMarks           = 43;
+const kExpectedNumberOfGreenPolylines       = 44; // 43 completed states + Michigan upper peninsula.
+const kExpectedNumberOfRedPolylines         = 11; // 7 incomplete states + Alaskan/Hawaiian islands.
 const kExpectedNumberOfInsignificantIslands = 11; // 8 (Alaska) + 3 (Hawaii).
 
 // Compound constants:
@@ -179,7 +179,7 @@ function expectPositionAttributeIsSetToRelativeForEachYearDiv(yearRow)
 {
     const yearDivs = yearRow.children;
     const numberOfYearsShown = yearDivs.length;
-    const expectedNumberOfYearsShown = 10;
+    const expectedNumberOfYearsShown = 11;
     expect(numberOfYearsShown).toBe(expectedNumberOfYearsShown);
     for (var i = 0; i < numberOfYearsShown; i++)
     {
