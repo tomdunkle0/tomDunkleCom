@@ -18,6 +18,7 @@ const kFloridaCheckBox        = constants.kFloridaCheckBox;
 const kGeorgia                = constants.kGeorgia;
 const kGeorgiaCheckMark       = constants.kGeorgiaCheckMark;
 const kHawaii                 = constants.kHawaii;
+const kIdaho                  = constants.kIdaho;
 const kIllinois               = constants.kIllinois;
 const kIllinoisCheckMark      = constants.kIllinoisCheckMark;
 const kIndiana                = constants.kIndiana;
@@ -103,7 +104,6 @@ const updateAndGetCurrentBlueState   = mapFunctions.updateAndGetCurrentBlueState
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
-const kIdaho      = testConstants.kIdaho;
 const kWashington = testConstants.kWashington;
 const kWyoming    = testConstants.kWyoming;
 
@@ -120,10 +120,13 @@ const casesForMovingFromANormallyGreenStateToAnotherState = [
     [kArizona,           kCalifornia       ],
     [kNevada,            kCalifornia       ],
     [kCalifornia,        kOregon           ],
+    [kIdaho,             kOregon           ],
     [kNevada,            kOregon           ],
+    [kIdaho,             kWashington       ],
     [kArizona,           kNevada           ],
     [kCalifornia,        kNevada           ],
     [kUtah,              kNevada           ],
+    [kIdaho,             kNevada           ],
     [kCalifornia,        kArizona          ],
     [kColorado,          kArizona          ],
     [kNevada,            kArizona          ],
@@ -131,6 +134,7 @@ const casesForMovingFromANormallyGreenStateToAnotherState = [
     [kUtah,              kArizona          ],
     [kArizona,           kUtah             ],
     [kColorado,          kUtah             ],
+    [kIdaho,             kUtah             ],
     [kNevada,            kUtah             ],
     [kNewMexico,         kUtah             ],
     [kNevada,            kIdaho            ],
@@ -147,9 +151,11 @@ const casesForMovingFromANormallyGreenStateToAnotherState = [
     [kOklahoma,          kColorado         ],
     [kUtah,              kColorado         ],
     [kColorado,          kWyoming          ],
+    [kIdaho,             kWyoming          ],
     [kNebraska,          kWyoming          ],
     [kSouthDakota,       kWyoming          ],
     [kUtah,              kWyoming          ],
+    [kIdaho,             kMontana          ],
     [kNorthDakota,       kMontana          ],
     [kSouthDakota,       kMontana          ],
     [kArkansas,          kTexas            ],
@@ -351,22 +357,16 @@ describe(`when moving the mouse from normally-green state A to state B, calling
 
 const casesForMovingFromANormallyRedStateToAnotherState = [
     [kOregon,     kCalifornia ],
-    [kIdaho,      kOregon     ],
     [kWashington, kOregon     ],
-    [kIdaho,      kWashington ],
     [kOregon,     kWashington ],
-    [kIdaho,      kNevada     ],
     [kOregon,     kNevada     ],
-    [kIdaho,      kUtah       ],
     [kWyoming,    kUtah       ],
     [kOregon,     kIdaho      ],
     [kMontana,    kIdaho      ],
     [kWashington, kIdaho      ],
     [kWyoming,    kIdaho      ],
     [kWyoming,    kColorado   ],
-    [kIdaho,      kWyoming    ],
     [kMontana,    kWyoming    ],
-    [kIdaho,      kMontana    ],
     [kWyoming,    kMontana    ],
     [kWyoming,    kNebraska   ],
     [kMontana,    kSouthDakota],
@@ -416,6 +416,7 @@ describe(`when moving the mouse from normally-red state A to state B, calling
 const normallyGreenBorderStates = [
     kCalifornia,
     kArizona,
+    kIdaho,
     kNewMexico,
     kTexas,
     kNorthDakota,
@@ -451,7 +452,6 @@ const normallyRedBorderStates = [
     kKodiakIsland,
     kOregon,
     kWashington,
-    kIdaho,
     kHawaii,
     kMaui,
     kOahu,

@@ -161,13 +161,14 @@ function getMapContent()
                     stroke-miterlimit="10" stroke-width=".28222" fill="none"/>
                 <polyline id="iMolokai" stroke="#000" points="50.28,67.32 49.38,66.82"
                     stroke-miterlimit="10" stroke-width=".28222" fill="none"/>
-                <polyline id="rIdaho" stroke="#000" points="44.53,18.16 43.89,17.84 43.31,17.84
-                    42.73,18.01 41.98,18.17 40.81,18.01 40.98,17.34 40.48,16.84 40.31,16.18
-                    39.82,15.6 39.9,15.1 39.74,14.18 39.48,14.35 39.07,14.44 38.74,14.68
-                    38.65,14.18 38.82,12.94 39.41,11.68 39.15,11.44 38.91,11.35 38.49,10.94
-                    38.32,10.28 37.91,9.61 37.41,9.11 37.25,8.28 37.32,6.78 37.43,4.83 35.99,4.53
-                    35.24,8.12 34.75,10.25 34.31,11.91 31.84,22.5 37.61,23.95 43.41,25 44.53,18.16"
-                    stroke-miterlimit="10" stroke-width=".28222" fill="#FF9999"/>
+                <polyline id="gIdaho" cursor="pointer" stroke="#000" year="2025"
+                    points="44.53,18.16 43.89,17.84 43.31,17.84 42.73,18.01 41.98,18.17 40.81,18.01
+                    40.98,17.34 40.48,16.84 40.31,16.18 39.82,15.6 39.9,15.1 39.74,14.18
+                    39.48,14.35 39.07,14.44 38.74,14.68 38.65,14.18 38.82,12.94 39.41,11.68
+                    39.15,11.44 38.91,11.35 38.49,10.94 38.32,10.28 37.91,9.61 37.41,9.11
+                    37.25,8.28 37.32,6.78 37.43,4.83 35.99,4.53 35.24,8.12 34.75,10.25 34.31,11.91
+                    31.84,22.5 37.61,23.95 43.41,25 44.53,18.16" stroke-miterlimit="10"
+                    stroke-width=".28222" fill="#C7FFC4"/>
                 <polyline id="gIllinois" cursor="pointer" stroke="#000" year="2019"
                     points="90.66,37.56 90.08,37.98 89.99,38.56 89.5,38.81 89.42,39.31 88.8,39.87
                     87.96,40.57 87.5,40.23 86.84,39.64 87,39.47 87.17,38.97 86.43,38.4 85.76,37.9
@@ -502,8 +503,11 @@ function getMapContent()
                 <polyline id="bHawaii" stroke="red" points="53.71,70.36 54.71,70.36 54.71,71.36
                     53.71,71.36 53.71,70.36" stroke-miterlimit="10" stroke-width=".28222"
                     fill="transparent"/>
-                <polyline id="bIdaho" stroke="red" points="38.71,17.76 39.71,17.76 39.71,18.76
-                    38.71,18.76 38.71,17.76" stroke-miterlimit="10" stroke-width=".28222"
+                <polyline id="bIdaho" stroke="red" visibility="hidden" points="38.71,17.76
+                    39.71,17.76 39.71,18.76 38.71,18.76 38.71,17.76" stroke-miterlimit="10"
+                    stroke-width=".28222" fill="transparent"/>
+                <polyline id="cIdaho" cursor="pointer" stroke="#20CC20" points="38.71,17.76
+                    39.21,18.76 39.91,15.76" stroke-miterlimit="10" stroke-width=".28222"
                     fill="transparent"/>
                 <polyline id="bIllinois" stroke="red" visibility="hidden" points="84.01,24.36
                     85.01,24.36 85.01,25.36 84.01,25.36 84.01,24.36" stroke-miterlimit="10"
@@ -725,11 +729,11 @@ function getMapContent()
             <div class="slide-container">
                 <input class="slider"
                        id="yearSlider"
-                       max="2024"
+                       max="2025"
                        min="2014"
                        onchange="onChangeValueOfSliderThumb()"
                        type="range"
-                       value="2024">
+                       value="2025">
             </div>
             <div class="year-row">
                 <div class="year-div">
@@ -761,6 +765,9 @@ function getMapContent()
                 </div>
                 <div class="year-div">
                     <p class="year-string">2024</p>
+                </div>
+                <div class="year-div">
+                    <p class="year-string">2025</p>
                 </div>
             </div>
             <div></div> <!--- Bottom bounding div. -->

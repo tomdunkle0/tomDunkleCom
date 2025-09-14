@@ -14,6 +14,7 @@ const kDelaware          = constants.kDelaware;
 const kFlorida           = constants.kFlorida;
 const kGeorgia           = constants.kGeorgia;
 const kHawaii            = constants.kHawaii;
+const kIdaho             = constants.kIdaho;
 const kIllinois          = constants.kIllinois;
 const kIndiana           = constants.kIndiana;
 const kIowa              = constants.kIowa;
@@ -66,7 +67,6 @@ const tomHasHighPointedStateWithinSliderRange
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
-const kIdaho                    = testConstants.kIdaho;
 const kWashington               = testConstants.kWashington;
 const kWyoming                  = testConstants.kWyoming;
 const kYearSliderValueAfter2014 = testConstants.kYearSliderValueAfter2014;
@@ -80,12 +80,70 @@ const kYearSliderValueAfter2021 = testConstants.kYearSliderValueAfter2021;
 const kYearSliderValueAfter2022 = testConstants.kYearSliderValueAfter2022;
 const kYearSliderValueAfter2023 = testConstants.kYearSliderValueAfter2023;
 const kYearSliderValueAfter2024 = testConstants.kYearSliderValueAfter2024;
+const kYearSliderValueAfter2025 = testConstants.kYearSliderValueAfter2025;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
 const changeValueOfSliderThumb = testFunctions.changeValueOfSliderThumb;
 
 const kInputAndExpectedOutputSets = [
+    [kYearSliderValueAfter2025, null,               false],
+    [kYearSliderValueAfter2025, undefined,          false],
+    [kYearSliderValueAfter2025, kAlabama,           true ],
+    [kYearSliderValueAfter2025, kAlaskaMainland,    false],
+    [kYearSliderValueAfter2025, kArizona,           true ],
+    [kYearSliderValueAfter2025, kArkansas,          true ],
+    [kYearSliderValueAfter2025, kCalifornia,        true ],
+    [kYearSliderValueAfter2025, kColorado,          true ],
+    [kYearSliderValueAfter2025, kConnecticut,       true ],
+    [kYearSliderValueAfter2025, kDelaware,          true ],
+    [kYearSliderValueAfter2025, kFlorida,           false],
+    [kYearSliderValueAfter2025, kGeorgia,           true ],
+    [kYearSliderValueAfter2025, kHawaii,            false],
+    [kYearSliderValueAfter2025, kIdaho,             true ],
+    [kYearSliderValueAfter2025, kIllinois,          true ],
+    [kYearSliderValueAfter2025, kIndiana,           true ],
+    [kYearSliderValueAfter2025, kIowa,              true ],
+    [kYearSliderValueAfter2025, kKansas,            true ],
+    [kYearSliderValueAfter2025, kKauai,             false],
+    [kYearSliderValueAfter2025, kKentucky,          true ],
+    [kYearSliderValueAfter2025, kKodiakIsland,      false],
+    [kYearSliderValueAfter2025, kLouisiana,         true ],
+    [kYearSliderValueAfter2025, kMaine,             true ],
+    [kYearSliderValueAfter2025, kMaryland,          true ],
+    [kYearSliderValueAfter2025, kMassachusetts,     true ],
+    [kYearSliderValueAfter2025, kMaui,              false],
+    [kYearSliderValueAfter2025, kMichiganMainland,  true ],
+    [kYearSliderValueAfter2025, kMichiganPeninsula, true ],
+    [kYearSliderValueAfter2025, kMinnesota,         true ],
+    [kYearSliderValueAfter2025, kMississippi,       true ],
+    [kYearSliderValueAfter2025, kMissouri,          true ],
+    [kYearSliderValueAfter2025, kMontana,           false],
+    [kYearSliderValueAfter2025, kNebraska,          true ],
+    [kYearSliderValueAfter2025, kNevada,            true ],
+    [kYearSliderValueAfter2025, kNewHampshire,      true ],
+    [kYearSliderValueAfter2025, kNewJersey,         true ],
+    [kYearSliderValueAfter2025, kNewMexico,         true ],
+    [kYearSliderValueAfter2025, kNewYork,           true ],
+    [kYearSliderValueAfter2025, kNorthCarolina,     true ],
+    [kYearSliderValueAfter2025, kNorthDakota,       true ],
+    [kYearSliderValueAfter2025, kOahu,              false],
+    [kYearSliderValueAfter2025, kOhio,              true ],
+    [kYearSliderValueAfter2025, kOklahoma,          true ],
+    [kYearSliderValueAfter2025, kOregon,            false],
+    [kYearSliderValueAfter2025, kPennsylvania,      true ],
+    [kYearSliderValueAfter2025, kRhodeIsland,       true ],
+    [kYearSliderValueAfter2025, kSouthCarolina,     true ],
+    [kYearSliderValueAfter2025, kSouthDakota,       true ],
+    [kYearSliderValueAfter2025, kTennessee,         true ],
+    [kYearSliderValueAfter2025, kTexas,             true ],
+    [kYearSliderValueAfter2025, kUtah,              true ],
+    [kYearSliderValueAfter2025, kVermont,           true ],
+    [kYearSliderValueAfter2025, kVirginia,          true ],
+    [kYearSliderValueAfter2025, kWashington,        false],
+    [kYearSliderValueAfter2025, kWestVirginia,      true ],
+    [kYearSliderValueAfter2025, kWisconsin,         true ],
+    [kYearSliderValueAfter2025, kWyoming,           false],
     [kYearSliderValueAfter2024, null,               false],
     [kYearSliderValueAfter2024, undefined,          false],
     [kYearSliderValueAfter2024, kAlabama,           true ],
