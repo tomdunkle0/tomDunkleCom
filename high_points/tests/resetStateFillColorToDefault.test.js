@@ -14,9 +14,8 @@ const kLightRedFill      = constants.kLightRedFill;
 const kMaui              = constants.kMaui;
 const kMichiganMainland  = constants.kMichiganMainland;
 const kMichiganPeninsula = constants.kMichiganPeninsula;
+const kMontana           = constants.kMontana;
 const kOahu              = constants.kOahu;
-const kPrefixRedState    = constants.kPrefixRedState;
-const kStateNameMontana  = constants.kStateNameMontana;
 const kStyle             = constants.kStyle;
 const kUnpopulated       = constants.kUnpopulated;
 
@@ -53,8 +52,6 @@ const kMichiganAndPeninsulaGreen = [kLightGreenFill, kLightGreenFill];
 const kAlaskaAndKodiak      = [kAlaskaMainland, kKodiakIsland];
 const kHawaiianIslands      = [kHawaii, kKauai, kMaui, kOahu];
 const kMichiganAndPeninsula = [kMichiganMainland, kMichiganPeninsula];
-
-const kMontana = kPrefixRedState + kStateNameMontana;
 
 describe(`validate results of resetStateFillColorToDefault() in expected cases`, () => {
     each([
