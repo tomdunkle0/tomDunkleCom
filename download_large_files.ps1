@@ -5,3 +5,4 @@
 
 gdown https://drive.google.com/uc?id=1A4yYhlgMtY5yV-Mxbdk7jIWNrv8OyZF3 -O .\deersim\audio\startlinglyYOURFEARISREALinanothertime.wav
 gdown https://drive.google.com/uc?id=1Hj3G0y0QNlfq-lRnH59wOJtGjl_ANwIM -O .\high_points\nv\walking_up_hills_ep_01.mp4
+gdown https://drive.google.com/uc?id=1IKvxuUmDatY4L6VFVGwiEW8eItzUKS4F -O .\high_points\id\walking_up_hills_ep_04.mp4
