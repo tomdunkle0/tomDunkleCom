@@ -15,10 +15,7 @@ const gStaticUrl = "[href=\"https://fonts.gstatic.com\"]";
 const oswaldFontUrl = "[href=\"https://fonts.googleapis.com/css2?family=Oswald&display=swap\"]";
 
 beforeAll(() => {
-    const htmlFileRelativePath = "../../high_points.html";
-    const htmlFileAbsolutePath = path.join(__dirname, htmlFileRelativePath);
-    const utf8EncodingOption = "utf8";
-    document.documentElement.innerHTML = fs.readFileSync(htmlFileAbsolutePath, utf8EncodingOption);
+    populateHTMLHead();
 }); // beforeAll()
 
 test(`the HTML head contains the page title`, () => {
@@ -48,3 +45,11 @@ test(`the HTML head contains the stylesheets necessary to render the user interf
     expect(isUnpopulated(cssStyleSheetLink)).toBe(false);
     expect(isUnpopulated(oswaldFontLink)).toBe(false);
 }); /* the HTML head contains the stylesheets necessary to render the user interface */
+
+function populateHTMLHead()
+{
+    const htmlFileRelativePath = "../../high_points.html";
+    const htmlFileAbsolutePath = path.join(__dirname, htmlFileRelativePath);
+    const utf8EncodingOption = "utf8";
+    document.documentElement.innerHTML = fs.readFileSync(htmlFileAbsolutePath, utf8EncodingOption);
+}
