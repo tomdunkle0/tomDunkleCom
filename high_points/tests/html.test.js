@@ -18,14 +18,6 @@ beforeAll(() => {
     populateHTMLHead();
 }); // beforeAll()
 
-test(`the HTML head contains the page title`, () => {
-    const titleElementSelector = "title";
-    const titleElement = document.head.querySelector(titleElementSelector);
-    const pageTitle = titleElement.textContent;
-    const expectedPageTitle = "United States High Points";
-    expect(pageTitle).toBe(expectedPageTitle);
-}); /* the HTML head contains the page title */
-
 test(`the HTML head contains preconnect links for the year string font`, () => {
     const relationship = "[rel=\"preconnect\"]";
     const googleAPIsSelector = kElementTypeLink + relationship + googleAPIsUrl;
@@ -36,6 +28,14 @@ test(`the HTML head contains preconnect links for the year string font`, () => {
     expect(isUnpopulated(googleAPIsLinkElement)).toBe(false);
     expect(isUnpopulated(gStaticLinkElement)).toBe(false);
 }); /* the HTML head contains preconnect links for the year string font */
+
+test(`the HTML head contains the page title`, () => {
+    const titleElementSelector = "title";
+    const titleElement = document.head.querySelector(titleElementSelector);
+    const pageTitle = titleElement.textContent;
+    const expectedPageTitle = "United States High Points";
+    expect(pageTitle).toBe(expectedPageTitle);
+}); /* the HTML head contains the page title */
 
 test(`the HTML head contains the stylesheets necessary to render the user interface`, () => {
     const relationship = "[rel=\"stylesheet\"]";
