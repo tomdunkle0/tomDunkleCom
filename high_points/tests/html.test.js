@@ -19,10 +19,11 @@ beforeAll(() => {
 }); // beforeAll()
 
 test(`the HTML head contains the page title`, () => {
-    const elementTypeTitle = "title";
-    const titleElement = document.head.querySelector(elementTypeTitle);
+    const titleElementSelector = "title";
+    const titleElement = document.head.querySelector(titleElementSelector);
+    const pageTitle = titleElement.textContent;
     const expectedPageTitle = "United States High Points";
-    expect(titleElement.textContent).toBe(expectedPageTitle);
+    expect(pageTitle).toBe(expectedPageTitle);
 }); /* the HTML head contains the page title */
 
 test(`the HTML head contains preconnect links for the year string font`, () => {
