@@ -20,30 +20,30 @@ beforeAll(() => {
 
 test(`the HTML head contains the page title`, () => {
     const elementTypeTitle = "title";
-    const title = document.head.querySelector(elementTypeTitle);
+    const titleElement = document.head.querySelector(elementTypeTitle);
     const expectedPageTitle = "United States High Points";
-    expect(title.textContent).toBe(expectedPageTitle);
+    expect(titleElement.textContent).toBe(expectedPageTitle);
 }); /* the HTML head contains the page title */
 
 test(`the HTML head contains preconnect links for the year string font`, () => {
     const relationship = "[rel=\"preconnect\"]";
     const googleAPIsSelector = kElementTypeLink + relationship + googleAPIsUrl;
-    const googleAPIsLink = document.head.querySelector(googleAPIsSelector);
+    const googleAPIsLinkElement = document.head.querySelector(googleAPIsSelector);
     const crossOriginAttribute = "[crossorigin]";
     const gStaticSelector = kElementTypeLink + relationship + gStaticUrl + crossOriginAttribute;
-    const gStaticLink = document.head.querySelector(gStaticSelector);
-    expect(isUnpopulated(googleAPIsLink)).toBe(false);
-    expect(isUnpopulated(gStaticLink)).toBe(false);
+    const gStaticLinkElement = document.head.querySelector(gStaticSelector);
+    expect(isUnpopulated(googleAPIsLinkElement)).toBe(false);
+    expect(isUnpopulated(gStaticLinkElement)).toBe(false);
 }); /* the HTML head contains preconnect links for the year string font */
 
 test(`the HTML head contains the stylesheets necessary to render the user interface`, () => {
     const relationship = "[rel=\"stylesheet\"]";
     const cssStyleSheetSelector = kElementTypeLink + relationship + cssStyleSheetUrl;
-    const cssStyleSheetLink = document.head.querySelector(cssStyleSheetSelector);
+    const cssStyleSheetLinkElement = document.head.querySelector(cssStyleSheetSelector);
     const oswaldFontSelector = kElementTypeLink + relationship + oswaldFontUrl;
-    const oswaldFontLink = document.head.querySelector(oswaldFontSelector);
-    expect(isUnpopulated(cssStyleSheetLink)).toBe(false);
-    expect(isUnpopulated(oswaldFontLink)).toBe(false);
+    const oswaldFontLinkElement = document.head.querySelector(oswaldFontSelector);
+    expect(isUnpopulated(cssStyleSheetLinkElement)).toBe(false);
+    expect(isUnpopulated(oswaldFontLinkElement)).toBe(false);
 }); /* the HTML head contains the stylesheets necessary to render the user interface */
 
 function populateHTMLHead()
