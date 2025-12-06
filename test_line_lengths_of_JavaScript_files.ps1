@@ -9,9 +9,19 @@ for ($jsIndex=0; $jsIndex -lt $allJavaScripts.Count; $jsIndex++)
 {
     try
     {
+        $numberOfLines = 0
         $content = Get-Content -Path $allJavaScripts[$jsIndex].FullName
         foreach ($line in $content)
         {
+            ++$numberOfLines
+            if ($numberOfLines -gt 1000)
+            {
+                ++$numberOfTestFailures
+                Write-Host TEST FAILURE in $allJavaScripts[$jsIndex].FullName -ForegroundColor Red
+                Write-Host File is longer than 1000 lines.
+                Write-Host -----------------------------------
+                break
+            }
             if ($line.Length -gt 100)
             {
                 ++$numberOfTestFailures
