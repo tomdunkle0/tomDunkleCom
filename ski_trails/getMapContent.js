@@ -132,7 +132,7 @@ function getMapContent()
                     points="57.88,20.62 58.63,19.52 59.43,19.02 60.33,17.92
                     60.83,17.42 61.53,16.92 61.58,16.32 62.08,15.82
                     63.13,14.82 64.63,13.52"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Cannonball" fill="transparent"
                     points="19.17,26.4 20.67,26.35 22.67,26.85 24.27,27
                     26.97,27.1 28.57,27.7 30.17,27.85 31.92,28.15"
@@ -219,7 +219,7 @@ function getMapContent()
                     60.68,21.87 60.73,22.57 60.33,22.87 59.83,23.07
                     59.23,23.17 58.43,23.27 57.13,23.67 57.08,24.37
                     55.68,25.37"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Eldorado" fill="transparent"
                     points="101.81,21.37 106.94,21.3 112.35,21.09 114.43,20.93"
                     stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
@@ -231,7 +231,7 @@ function getMapContent()
                     points="61.34,21.29 62.34,21.52 65.34,21.46 68.34,21.46
                     69.54,21.53 70.93,21.68 72.98,21.93 76.98,22.48
                     80.84,23.17"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Forever Eva" fill="transparent"
                     points="37.34,17.96 37.94,17.35 39.14,16.74 40.14,16.24
                     41.14,15.84 42.14,15.44 43.29,15.34 45.04,15.24
@@ -241,7 +241,7 @@ function getMapContent()
                     33.24,18.11 35.34,17.55 37.14,17.24 39.14,16.74
                     41.54,16.14 43.54,15.64 44.14,15.49 45.04,15.24
                     46.14,14.74 47.44,14.24"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Forget-Me-Not" fill="transparent"
                     points="60.68,21.37 61.34,21.27 61.84,21.15 62.24,20.82
                     63.06,20.1 63.71,19.28 64.35,18.34 64.86,17.79
@@ -249,7 +249,7 @@ function getMapContent()
                     69.19,15.36 70.39,15.01 71.49,14.69 72.99,14.09
                     74.49,13.49 76.99,12.74 79.49,12.16 81.14,11.96
                     81.64,12.01 82.14,12.21"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Freeriders" fill="transparent"
                     points="33.15,31.75 33.45,31.45 42.5,27.38"
                     stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
@@ -326,13 +326,13 @@ function getMapContent()
                 <polyline id="Johnstones Junction" fill="transparent"
                     points="46.73,19.11 47.03,18.61 48.09,17.43 49.09,16.5
                     49.89,15.72 50.89,14.99 51.49,14.59"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Juniper" fill="transparent"
                     points="61.84,21.15 62.74,20.77 63.99,19.92 64.59,19.22
                     65.59,18.57 66.89,18.17 69.19,16.87 70.19,16.57
                     71.19,16.32 71.89,16.02 71.89,15.62 71.59,15.32
                     71.44,14.59"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Key Hole" fill="transparent"
                     points="39.85,27.61 39.22,26.85 37.61,26.27 35.99,26.08
                     35.99,26.08 37.91,26.19 39.82,26.8 40.85,27.51"
@@ -343,12 +343,12 @@ function getMapContent()
                     points="54.23,20.22 55.03,19.22 55.53,18.72 56.53,18.12
                     57.43,17.72 58.43,17.12 59.03,16.62 59.73,15.62
                     60.23,14.62 60.38,14.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Larkspur" fill="transparent"
                     points="62.19,21.24 62.44,21.09 64.03,20.24 67.03,18.99
                     69.03,18.64 71.03,18.46 75.03,18.14 79.03,18.06
                     82.03,17.86"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Larry Sale" fill="transparent"
                     points="21.74,55.04 22.93,55.28 23.53,55.22 25.98,54.97
                     27.04,54.83 28.63,54.18 30.61,53.92 32.73,53.96
@@ -408,7 +408,7 @@ function getMapContent()
                 <polyline id="Lupin" fill="transparent"
                     points="60.94,21.81 64.24,21.81 67.51,22.12 69.51,22.64
                     71.95,23.58 74.18,24.61"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Mad Tea Party" fill="transparent"
                     points="63.17,50.66 65.69,50.79 67.8,50.93 68.86,51.07
                     69.89,51.48 72.61,51.72"
@@ -484,7 +484,7 @@ function getMapContent()
                     points="60.78,20.97 61.58,20.47 61.98,19.87 61.38,19.27
                     61.88,18.77 62.98,17.77 63.68,17.07 64.18,16.07
                     64.38,15.57 64.88,15.07 66.18,14.07 68.18,12.97"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Parrys Peek" fill="transparent"
                     points="35.84,16.01 35.99,16.55 35.84,16.85 35.34,17.55
                     34.84,17.81 34.44,17.87 33.94,17.92 33.24,18.06
@@ -497,7 +497,7 @@ function getMapContent()
                     69.88,12.77 71.08,12.52 72.68,12.12 74.18,11.87
                     75.68,11.71 78.48,11.6 79.48,11.7 80.68,11.78
                     81.14,11.96"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Phantom Bridge" fill="transparent"
                     points="32.9,31.85 33.36,30.67 34.61,29.49 38.12,27.73"
                     stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
@@ -513,7 +513,7 @@ function getMapContent()
                     stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Primrose" fill="transparent"
                     points="60.84,21.88 62.12,23.34 63.7,24.68"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Quick Getaway" fill="transparent"
                     points="52.01,44.86 52.61,44.76 54.7,45.17 57.79,45.13
                     59.48,45.48"
@@ -597,7 +597,7 @@ function getMapContent()
                 <polyline id="Sky Pilot" fill="transparent"
                     points="61.84,21.15 62.34,21.24 62.84,21.15 63.84,20.85
                     66.84,20.13 68.04,20.13 74.04,20.82 82.04,21.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Sleeper" fill="transparent"
                     points="21.07,37.05 20.92,36.6 20.9,36.1 21.1,35.9
                     21.5,35.7 28,33.55 31,32.45 32.9,31.85
@@ -714,7 +714,7 @@ function getMapContent()
                     82.04,21.32 82.12,20.45 82.03,17.86 81.85,16.5
                     81.47,15.53 80.48,13.58 81.04,12.89 81.8,12.41
                     81.57,12.21"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <polyline id="Village Way - Parkway Bypass" fill="transparent"
                     points="30.74,58.86 32.73,59.43 33.79,59.58 35.51,59.91
                     35.91,60.08 38.82,60.23 40.54,60.14 42.26,59.92
@@ -794,7 +794,7 @@ function getMapContent()
                 <polyline id="Willets Way" fill="transparent"
                     points="52.98,20.22 53.88,19.22 54.38,18.22 54.58,17.22
                     55.08,16.52 56.18,15.52 57.18,14.52"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"//>
+                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
                 <image
                     href="ski_trails/winter_park.png"
                     id="winterParkMap"
