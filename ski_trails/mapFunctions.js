@@ -1,7 +1,7 @@
-/*--------------------------------------------------------------------------*\
- | File: mapFunctions.js                                                    |
- | Purpose: Defines functions related to the United States High Points map. |
-\*--------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*\
+ | File: mapFunctions.js                                                 |
+ | Purpose: Defines functions related to the Winter Park ski resort map. |
+\*-----------------------------------------------------------------------*/
 
 var gDisplayCurrentStatus = true;
 var gTrailData = null;
@@ -18,7 +18,6 @@ function assignTrailColors()
             const actualTrail = document.getElementById(trail.Name);
             if (actualTrail !== null)
             {
-                actualTrail.setAttribute("stroke-width", "0.3px");
                 if ((trail.Status === kTrailStatusOpen) || (!gDisplayCurrentStatus))
                 {
                     switch (trail.Difficulty)
