@@ -6,11 +6,7 @@
 function getMapContent()
 {
     return `
-        <div id="mapContainer"
-             class="map-container"
-             currentScreenOrientation=""
-             mostRecentBlueStateId=""
-             orientationChangeIntervalId="">
+        <div>
             <div></div> <!--- Top bounding div. -->
             <svg height="100%"
                width="100vw"
@@ -23,11 +19,11 @@ function getMapContent()
                stroke-miterlimit="10"
                stroke-width="0.3px"
                font-family="'Times New Roman'">
-                <title id="title4"/>
                 <!--- Reference circle. Use these to fix trail coordinate positioning. -->
                 <circle cx="43.98" cy="61.97" r="0.2" fill="green"/>
-                <polyline id="view_box" stroke="transparent" points="0,0 129.71,0 129.71,63.28
-                    0,63.28 0,0" stroke-miterlimit="10" stroke-width=".28222"/>
+                <polyline id="view_box" points=
+                    "0,0 129.71,0 129.71,63.28 0,63.28 0,0"
+                    stroke="transparent" stroke-width=".28222"/>
                 <!--- All polylines' colors are set to grey instead of the default black.
                        This is because, in a case where we fail to retrieve a trail's metadata,
                        we want the trail to visually default to grey so that it's obvious that

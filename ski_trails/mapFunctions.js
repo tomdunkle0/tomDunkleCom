@@ -11,42 +11,42 @@ function assignTrailColors()
     const mtnAreas = gTrailData.MountainAreas;
     for (var areaIndex = 0; areaIndex < mtnAreas.length; areaIndex++)
     {
-        const mtnArea = mtnAreas[areaIndex];
-        for (var trailIndex = 0; trailIndex < mtnArea.Trails.length; trailIndex++)
+        const trails = mtnAreas[areaIndex].Trails;
+        for (var trailIndex = 0; trailIndex < trails.length; trailIndex++)
         {
-            const trail = mtnArea.Trails[trailIndex];
-            const actualTrail = document.getElementById(trail.Name);
-            if (actualTrail !== null)
+            const trailData = trails[trailIndex];
+            const trailPolyline = document.getElementById(trailData.Name);
+            if (trailPolyline !== null)
             {
-                if ((trail.Status === kTrailStatusOpen) || (!gDisplayCurrentStatus))
+                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentStatus))
                 {
-                    switch (trail.Difficulty)
+                    switch (trailData.Difficulty)
                     {
                         case kTrailDifficultyAdvancedIntermediate:
-                            actualTrail.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
+                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
                             break;
                         case kTrailDifficultyEasy:
-                            actualTrail.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
+                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
                             break;
                         case kTrailDifficultyExpert:
                         case kTrailDifficultyExtremeTerrain:
-                            actualTrail.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
                             break;
                         case kTrailDifficultyIntermediate:
-                            actualTrail.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
+                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
                             break;
                     }
                 }
 
                 if (gDisplayCurrentStatus)
                 {
-                    const trailStatus = trail.Status;
+                    const trailStatus = trailData.Status;
                     if ((trailStatus === kTrailStatusClosed1)
                      || (trailStatus === kTrailStatusClosed2)
                      || (trailStatus === kTrailStatusClosed3)
                     )
                     {
-                        actualTrail.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+                        trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
                     }
                 }
             }
