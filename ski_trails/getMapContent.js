@@ -18,657 +18,560 @@ function getMapContent()
                preserveAspectRatio="none"
                viewBox="0 0 129.71 63.28"
                version="1.1"
-               stroke-miterlimit="10" stroke-width="0.3px"
+               fill="transparent"
+               stroke="grey"
+               stroke-miterlimit="10"
+               stroke-width="0.3px"
                font-family="'Times New Roman'">
                 <title id="title4"/>
                 <!--- Reference circle. Use these to fix trail coordinate positioning. -->
                 <circle cx="43.98" cy="61.97" r="0.2" fill="green"/>
                 <polyline id="view_box" stroke="transparent" points="0,0 129.71,0 129.71,63.28
-                    0,63.28 0,0" stroke-miterlimit="10" stroke-width=".28222" fill="transparent"/>
+                    0,63.28 0,0" stroke-miterlimit="10" stroke-width=".28222"/>
                 <!--- All polylines' colors are set to grey instead of the default black.
                        This is because, in a case where we fail to retrieve a trail's metadata,
                        we want the trail to visually default to grey so that it's obvious that
                        something is wrong, instead of inadvertently setting the trail to black
                        and thereby indicating that it's a hard difficulty. -->
-                <polyline id="100s" fill="transparent" points=
-                    "104.25,18.41 108.65,18.36 112.35,18.22"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Aces & Eights" fill="transparent" points=
-                    "81.49,49.38 81.14,48.67 81.71,48.16 81.88,47.76 82.03,47.31 83.08,46.01
-                    84.33,44.71"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Allan Phipps" fill="transparent" points=
-                    "48.15,57.75 50.56,56.85 51.13,55.99 54.96,53.5 56.55,52.61 60.26,51.3
-                    60.56,51 62.91,50.59"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Ambush" fill="transparent" points=
-                    "37.26,54.25 35.76,54.05 34.76,54.32 33.76,54.6 31.85,54.77 30.02,54.94
-                    28.39,55.13 27.38,55.16 25.97,54.98"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Arrowhead Loop Lower" fill="transparent" points=
-                    "26.5,42.46 31.68,40.74 34.85,38.89 38.08,36.45 38.17,35.85 38.29,34.51
-                    38.3,34.01"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Arrowhead Loop Upper" fill="transparent" points=
-                    "38.3,34.01 39.8,33.91 43.47,33.08 46.27,32.85"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Balch" fill="transparent" points=
-                    "41.28,53.38 41.04,52.88 40.94,52.08 41.44,51.08 41.84,50.58 42.24,49.78
-                    43.24,48.78 44.54,47.88 45.54,47.28 46.54,46.88 47.54,46.58 48.34,46.48"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
+                <polyline id="100s" points=
+                    "104.25,18.41 108.65,18.36 112.35,18.22"/>
+                <polyline id="Aces & Eights" points=
+                    "81.49,49.38 81.14,48.67 81.71,48.16 81.88,47.76 82.03,47.31
+                    83.08,46.01 84.33,44.71"/>
+                <polyline id="Allan Phipps" points=
+                    "48.15,57.75 50.56,56.85 51.13,55.99 54.96,53.5 56.55,52.61
+                    60.26,51.3 60.56,51 62.91,50.59"/>
+                <polyline id="Ambush" points=
+                    "37.26,54.25 35.76,54.05 34.76,54.32 33.76,54.6 31.85,54.77
+                    30.02,54.94 28.39,55.13 27.38,55.16 25.97,54.98"/>
+                <polyline id="Arrowhead Loop Lower" points=
+                    "26.5,42.46 31.68,40.74 34.85,38.89 38.08,36.45 38.17,35.85
+                    38.29,34.51 38.3,34.01"/>
+                <polyline id="Arrowhead Loop Upper" points=
+                    "38.3,34.01 39.8,33.91 43.47,33.08 46.27,32.85"/>
+                <polyline id="Balch" points=
+                    "41.28,53.38 41.04,52.88 40.94,52.08 41.44,51.08 41.84,50.58
+                    42.24,49.78 43.24,48.78 44.54,47.88 45.54,47.28 46.54,46.88
+                    47.54,46.58 48.34,46.48"/>
                 <!--- NOTE: Manual inspection shows a typo here. The Json data retrieves this
                              trail as Belle Fourche, but on the map it shows as Belle Foursche. -->
-                <polyline id="Belle Fourche" fill="transparent" points=
-                    "81.9,22 86.07,21.39 91.23,20.94 95.47,21.12 98.51,21.6 99.98,22.37
-                    100.3,23.34 101.42,24.06"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Bellmar Bowl" fill="transparent" points=
-                    "46.25,26.78 45.85,26.35 45.75,26.18 45.85,26.02 47.08,26.04 47.9,26
-                    49.54,26.01 50.54,25.96 51.14,25.57 51.54,25.55 52.83,26.03"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Big Valley" fill="transparent" points=
-                    "90.45,59.99 90.32,59.17 90.29,58.63 89.24,58.06 88.42,57.64 88.25,56.96
-                    88.07,55.01 88.42,54.64 88.92,54.16 89.89,53.14 91.85,51.95 93.08,51.16
-                    94.34,50.24 95.04,49.97 95.38,49.35 95.53,48.59 95.65,47.78"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Bill Wilsons Way" fill="transparent" points=
-                    "42.64,55.15 42.39,55.96 42.46,56.38 42.66,56.89 43.32,57.37 44.43,58.19"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Black Coal" fill="transparent" points=
-                    "89.02,24.65 90.41,25.7 91.79,26.94 93.75,29.23"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Bluebell" fill="transparent" points=
-                    "32.08,18.96 33.63,19.35 36.57,19.34 39.57,19.14 42.45,19.24 44.45,19.17
-                    47.35,19.67 48,20.3 48.33,20.56 48.35,20.92 47.29,21.64 46.94,22.16
-                    46.79,22.68 46.82,23.25 48.94,23.98 51.25,24.71 55.68,25.37"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Bobcat" fill="transparent" points=
-                    "33.09,58.64 34.65,57.87 35.31,57.46 36.16,57.15"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Boiler" fill="transparent" points=
-                    "14.72,33.6 15.07,32.3 17.17,31.3 20.72,30.4"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Bradleys Bash" fill="transparent" points=
-                    "42.93,53.23 42.9,52.81 43.07,52.39 43.91,51.55 44.75,50.61 45.59,49.86
-                    47.27,48.17 48.34,46.48 50.56,45.61 51.19,45.14 52.01,44.86"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Brakeman" fill="transparent" points=
-                    "17.42,28.1 18.17,28.65 19.22,29.1 21.52,29.25 22.42,29.4 24.72,30.4"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Branch Line" fill="transparent" points=
-                    "22.49,40.1 23.95,39.55 22.4,39.95 23.95,39.55 26.2,38.45 27.6,37.65
-                    28.3,36.9 28.9,36.5 28.3,36.9 27.6,37.65 26.2,38.45 27.1,37.65
-                    27.9,36.9 28.1,36.55"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Brians Run" fill="transparent" points=
-                    "23.18,53.51 30.48,51.06"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Buckaroo" fill="transparent" points=
-                    "84.18,58.3 83.22,57.14 83.46,56.69 84.32,56.07 84.48,55.52 83.89,55.01
-                    82.79,54.57 82.17,53.69 81.06,53.22 81.02,52.41 81.44,52.13 81.97,51.69
-                    82.36,51.23 83.42,50.79 83.55,50.71 83.69,50.3 83.79,49.8 85.85,48.92
-                    86.01,48.82 85.69,47.94 85.95,47.62 86.43,47.08 87.31,46.62 87.29,46.22
-                    87.64,45.63 87.01,44.99 87.28,44.43 86.07,43.87 85.64,43.43"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Butchs Breezeway" fill="transparent" points=
-                    "51.26,57.91 54.7,58.32 57.61,58.56 60.39,58.19 61.98,57.53 62.51,56.93
-                    63.89,54.94 64.93,52.88"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Calypso" fill="transparent" points=
-                    "57.88,20.62 58.63,19.52 59.43,19.02 60.33,17.92 60.83,17.42 61.53,16.92
-                    61.58,16.32 62.08,15.82 63.13,14.82 64.63,13.52"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Cannonball" fill="transparent" points=
-                    "19.17,26.4 20.67,26.35 22.67,26.85 24.27,27 26.97,27.1 28.57,27.7
-                    30.17,27.85 31.92,28.15"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Cheshire Cat" fill="transparent" points=
-                    "69.13,44.69 70.95,45.57 71.44,45.88 72.97,46.7 73.56,47.31 73.56,48.22
-                    73.5,48.6 74.31,49.47 74.85,50.04 74.95,51.94 74.31,52.44"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Columbine Lower" fill="transparent" points=
-                    "36.57,19.34 36.88,19.81 37.39,20.27 39,21.2 42.02,21.85"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Columbine Upper" fill="transparent" points=
-                    "42.02,21.85 43.02,21.95 46.82,23.25"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Corona Way" fill="transparent" points=
-                    "21.07,37.05 17.17,35 14.72,33.6 13.52,33.1 11.92,31.5 12.02,30.8
-                    12.52,30.25 13.52,29.55 14.62,29.05 16.02,28.35 17.42,28.1 18.42,27.4
-                    19.17,26.4 19.57,25.8 19.47,24.95 20.97,22.7 21.97,21.9 23.47,21.2
-                    25.47,20.6 28.47,19.7 30.47,18.9"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Corridor Mary Jane to Winter Park" fill="transparent" points=
-                    "22.01,41.82 22.09,42.18 22.42,42.39 22.31,42.68 21.86,43.09 20.84,43.73
-                    19.64,44.14 18.18,44.65 18.3,45.17 18.26,45.61 18.17,45.92 18.4,46.47
-                    19.3,47.33 20.23,47.84 20.85,48.56 21.09,48.8 21.15,49.21 21.05,49.72
-                    20.68,50.27 20.25,50.55 20.39,50.89 20.92,51.4 21.31,52.05 21.81,52.71
-                    22.37,53.21 22.92,53.65 22.9,53.72 22.4,53.92 21.35,54.16"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Coupler" fill="transparent" points=
-                    "14.62,29.05 20.72,30.4 21.87,30.3 23.87,30.55"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Cranmer" fill="transparent" points=
-                    "47.19,58.32 47.79,57.7 48.25,56.1 49.24,54.83 50.46,53.63 53.24,52.02
-                    55.49,51.01 57.82,49.76 59.52,48.46 59.98,47.96 59.93,47.47 59.48,46.47
-                    59.45,45.93 59.43,44.83 58.94,44.08"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Derailer" fill="transparent" points=
-                    "20.9,36.1 19.9,35.63 19.29,34.95 20.08,34.1 22.16,32.9 23.69,31.65
-                    24.72,30.4 27.37,29.96 29,29.39 30.02,28.32 31.92,28.15 35.07,27.95
-                    36.27,27.85 37.62,27.8 38.12,27.73 38.35,27.71 39.85,27.61 40.85,27.51
-                    42.05,27.41"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Dormouse" fill="transparent" points=
-                    "55.01,37.62 54.84,37.98 55.25,38.68 55.26,39.39 57.02,40.55 58.44,41.92
-                    56.55,41.99 55.3,42.16 56.55,41.99 57.61,42.19 59.33,42.74 60.26,43.01
-                    60.99,43.26 61.32,43.73 61.4,44.72"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Drunken Frenchman" fill="transparent" points=
-                    "39.24,39.57 40.28,39.48 41.14,39.23 42,38.77 43.71,38.45 48.56,37.88
-                    51.41,38.12 52.84,37.94 54.26,37.36"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Eagle Wind" fill="transparent" points=
-                    "87.66,37.02 86.11,35.02 85.44,34.22 87.43,35.14 85.44,34.22 84.36,33.02
-                    82.71,31.02 82.01,30.12"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Easy Way" fill="transparent" points=
-                    "43.68,59.97 43.98,59.97 45.57,60.26 46.06,60.18 47.93,58.97 48.31,58.77
-                    47.29,59.15 46.1,59.54 45.79,58.75 45.16,58.02 46.01,59.54 44.3,60.03
-                    46.01,59.54 46.13,59.78 46.47,59.9 46.64,59.74 46.67,59.4 48.31,58.77
-                    48.78,58.73 49.89,57.89 50.12,57.94 50.13,58.24 48.78,58.73 48.26,59.47
-                    48.51,59.92 48.51,60.46 48.64,60.67 48.36,61.18 48.3,61.75 48.71,61.69
-                    48.84,61.41 50.46,59.94 51.79,59.69 54.04,59.77 55.1,59.83 56.42,60.11
-                    57.08,60.21 58.14,60.14 59.3,59.39 59.54,59.27"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Edelweiss" fill="transparent" points=
-                    "32.03,18.86 35.63,18.36 38.63,18.66 43.13,18.46 46.33,18.86 46.73,19.11
-                    47.38,19.41 48.38,19.76 49.38,20.01 50.78,20.16 51.78,20.12 52.98,20.22
-                    55.88,20.22 56.88,20.32 57.88,20.62 58.78,20.67 59.78,20.77 60.78,20.97
-                    60.68,21.37 60.78,21.47 60.68,21.87 60.73,22.57 60.33,22.87 59.83,23.07
-                    59.23,23.17 58.43,23.27 57.13,23.67 57.08,24.37 55.68,25.37"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Eldorado" fill="transparent" points=
-                    "101.81,21.37 106.94,21.3 112.35,21.09 114.43,20.93"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Engeldive" fill="transparent" points=
-                    "48.15,57.94 53.64,56.58 55.01,56.07 57.21,55.72 59.99,55.62 61.85,55.34
-                    62.78,55.1 64.14,54.53"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Fireberry Glade" fill="transparent" points=
-                    "61.34,21.29 62.34,21.52 65.34,21.46 68.34,21.46 69.54,21.53 70.93,21.68
-                    72.98,21.93 76.98,22.48 80.84,23.17"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Forever Eva" fill="transparent" points=
-                    "37.34,17.96 37.94,17.35 39.14,16.74 40.14,16.24 41.14,15.84 42.14,15.44
-                    43.29,15.34 45.04,15.24 45.04,15.24 42.94,16.26 40.94,17.26 40.14,17.56
-                    38.64,17.76 37.34,17.96 36.04,18.06 32.34,18.56 31.84,18.61 31.84,18.61
-                    32.14,18.46 32.54,18.31 33.24,18.11 35.34,17.55 37.14,17.24 39.14,16.74
-                    41.54,16.14 43.54,15.64 44.14,15.49 45.04,15.24 46.14,14.74 47.44,14.24"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Forget-Me-Not" fill="transparent" points=
-                    "60.68,21.37 61.34,21.27 61.84,21.15 62.24,20.82 63.06,20.1 63.71,19.28
-                    64.35,18.34 64.86,17.79 65.8,17.25 66.39,16.73 67.29,16.29 68.19,15.96
-                    69.19,15.36 70.39,15.01 71.49,14.69 72.99,14.09 74.49,13.49 76.99,12.74
-                    79.49,12.16 81.14,11.96 81.64,12.01 82.14,12.21"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Freeriders" fill="transparent" points=
-                    "33.15,31.75 33.45,31.45 42.5,27.38"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Gambler" fill="transparent" points=
-                    "82.03,47.31 80.64,46.03 80.34,45.44 81.04,44.74 82.64,43.66 83.14,42.92
-                    83.24,42.17"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Gandy Dancer" fill="transparent" points=
-                    "36.85,39.81 39.24,39.57 40.43,39.03 44,37.64 47.48,36.75 50.55,36.06"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Golden Spike" fill="transparent" points=
-                    "41,36.9 41.07,35.8 42.07,35.1 43.67,34.1 44.77,33.5 46.27,32.85
-                    48.22,32.3"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Gunbarrel" fill="transparent" points=
-                    "69.26,41.46 71.91,41.27 73.07,40.91 74.42,40.75 76.67,41.39 80.51,41.98
-                    83.24,42.17 83.88,42.19 84.19,42.13 84.32,41.98 84.28,41.84 83.39,41.43"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="High Lonesome Trail" fill="transparent" points=
-                    "56,27.96 57.7,29.71 58.45,30.56 63.35,35.46 63.35,35.76 64.65,37.06
-                    69.26,41.46 69.16,41.56 69.53,42.06 70.28,42.71"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Hobo Alley" fill="transparent" points=
-                    "54,26.21 54.1,26.51 55,26.81 56.1,27.91 59.65,28.73 60.23,29.59
-                    60,30.15"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Hole in the Wall" fill="transparent" points=
-                    "31.79,26.38 34.79,26.1 35.99,26.08 36.91,26.24 37.62,26.4 38.35,27.71
-                    38.12,27.73 37.12,27.09 36.91,26.24"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Hook Up" fill="transparent" points=
-                    "58.44,40.41 62.11,40.51 65.02,40.72 65.55,40.72"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Hughes" fill="transparent" points=
-                    "31.87,52.53 30.52,51.27 30.48,51.06 31.27,50.65 33.16,49.7 35.44,48.88
-                    37.73,48.42 39.78,48.11 41.73,47.62 43.71,47.28 44.91,46.97 45.73,46.52
-                    46.36,46.05 48.88,45.78 50.56,45.61"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Iron Horse Trail" fill="transparent" points=
-                    "38.17,35.85 45.17,32.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Jabberwocky" fill="transparent" points=
-                    "72.53,51.53 72.45,50.92 72.59,50.55 72.64,50.24 72.6,49.93 72.4,49.6
-                    72.14,49.38 71.58,49.04 71.23,48.76 70.78,47.55 70.37,47.2 69.91,46.76
-                    69.59,46.09 69.19,45.5 67.8,44.89 65.16,44.14 64.53,43.46 64.16,42.88
-                    63.54,42.48 63.04,42.32 61.98,41.76 60.66,41.45 59.66,41.11"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Jack Kendrick" fill="transparent" points=
-                    "48.74,57.37 49.8,57.84 50.86,57.95 53.91,58.74 57.21,59.15 59.99,59.32
-                    62.38,59.41 64.63,58.94 66.05,58.32 66.28,58.08 66.25,57.82 65.65,56.92
-                    65.05,55.95 64.95,55.25 65.11,54.51 65.17,53.38 65.08,52.83"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Jeffs Chute" fill="transparent" points=
-                    "34.79,26.1 34.95,26.58 35.11,27.05 36.07,27.43 37.62,27.8 38.12,27.73
-                    34.95,26.58"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Jelly Roll" fill="transparent" points="
-                    112.95,28.46 118.65,26.66 119.85,25.66 120.45,24.96 121.45,23.26 121.51,21.76"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Jelly Roll Glades" fill="transparent" points=
-                    "98.58,26.35 99.98,26.35 104.18,26.65 107.66,27.83 111.28,28.35"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Johnstones Junction" fill="transparent" points=
-                    "46.73,19.11 47.03,18.61 48.09,17.43 49.09,16.5 49.89,15.72 50.89,14.99
-                    51.49,14.59"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Juniper" fill="transparent" points=
-                    "61.84,21.15 62.74,20.77 63.99,19.92 64.59,19.22 65.59,18.57 66.89,18.17
-                    69.19,16.87 70.19,16.57 71.19,16.32 71.89,16.02 71.89,15.62 71.59,15.32
-                    71.44,14.59"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Key Hole" fill="transparent" points=
-                    "39.85,27.61 39.22,26.85 37.61,26.27 35.99,26.08 35.99,26.08 37.91,26.19
-                    39.82,26.8 40.85,27.51"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
+                <polyline id="Belle Fourche" points=
+                    "81.9,22 86.07,21.39 91.23,20.94 95.47,21.12 98.51,21.6
+                    99.98,22.37 100.3,23.34 101.42,24.06"/>
+                <polyline id="Bellmar Bowl" points=
+                    "46.25,26.78 45.85,26.35 45.75,26.18 45.85,26.02 47.08,26.04
+                    47.9,26 49.54,26.01 50.54,25.96 51.14,25.57 51.54,25.55
+                    52.83,26.03"/>
+                <polyline id="Big Valley" points=
+                    "90.45,59.99 90.32,59.17 90.29,58.63 89.24,58.06 88.42,57.64
+                    88.25,56.96 88.07,55.01 88.42,54.64 88.92,54.16 89.89,53.14
+                    91.85,51.95 93.08,51.16 94.34,50.24 95.04,49.97 95.38,49.35
+                    95.53,48.59 95.65,47.58"/>
+                <polyline id="Bill Wilsons Way" points=
+                    "42.64,55.15 42.39,55.96 42.46,56.38 42.66,56.89 43.32,57.37
+                    44.43,58.19"/>
+                <polyline id="Black Coal" points=
+                    "89.02,24.65 90.41,25.7 91.79,26.94 93.75,29.23"/>
+                <polyline id="Bluebell" points=
+                    "32.08,18.96 33.63,19.35 36.57,19.34 39.57,19.14 42.45,19.24
+                    44.45,19.17 47.35,19.67 48,20.3 48.33,20.56 48.35,20.92
+                    47.29,21.64 46.94,22.16 46.79,22.68 46.82,23.25 48.94,23.98
+                    51.25,24.71 55.68,25.37"/>
+                <polyline id="Bobcat" points=
+                    "33.09,58.64 34.65,57.87 35.31,57.46 36.16,57.15"/>
+                <polyline id="Boiler" points=
+                    "14.72,33.6 15.07,32.3 17.17,31.3 20.72,30.4"/>
+                <polyline id="Bradleys Bash" points=
+                    "42.93,53.23 42.9,52.81 43.07,52.39 43.91,51.55 44.75,50.61
+                    45.59,49.86 47.27,48.17 48.34,46.48 50.56,45.61 51.19,45.14
+                    52.01,44.86"/>
+                <polyline id="Brakeman" points=
+                    "17.42,28.1 18.17,28.65 19.22,29.1 21.52,29.25 22.42,29.4
+                    24.72,30.4"/>
+                <polyline id="Branch Line" points=
+                    "22.49,40.1 23.95,39.55 22.4,39.95 23.95,39.55 26.2,38.45
+                    27.6,37.65 28.3,36.9 28.9,36.5 28.3,36.9 27.6,37.65
+                    26.2,38.45 27.1,37.65 27.9,36.9 28.1,36.55"/>
+                <polyline id="Brians Run" points=
+                    "23.18,53.51 30.48,51.06"/>
+                <polyline id="Buckaroo" points=
+                    "84.18,58.3 83.22,57.14 83.46,56.69 84.32,56.07 84.48,55.52
+                    83.89,55.01 82.79,54.57 82.17,53.69 81.06,53.22 81.02,52.41
+                    81.44,52.13 81.97,51.69 82.36,51.23 83.42,50.79 83.55,50.71
+                    83.69,50.3 83.79,49.8 85.85,48.92 86.01,48.82 85.69,47.94
+                    85.95,47.62 86.43,47.08 87.31,46.62 87.29,46.22 87.64,45.63
+                    87.01,44.99 87.28,44.43 86.07,43.87 85.64,43.43"/>
+                <polyline id="Butchs Breezeway" points=
+                    "51.26,57.91 54.7,58.32 57.61,58.56 60.39,58.19 61.98,57.53
+                    62.51,56.93 63.89,54.94 64.93,52.88"/>
+                <polyline id="Calypso" points=
+                    "57.88,20.62 58.63,19.52 59.43,19.02 60.33,17.92 60.83,17.42
+                    61.53,16.92 61.58,16.32 62.08,15.82 63.13,14.82 64.63,13.52"/>
+                <polyline id="Cannonball" points=
+                    "19.17,26.4 20.67,26.35 22.67,26.85 24.27,27 26.97,27.1
+                    28.57,27.7 30.17,27.85 31.92,28.15"/>
+                <polyline id="Cheshire Cat" points=
+                    "69.13,44.69 70.95,45.57 71.44,45.88 72.97,46.7 73.56,47.31
+                    73.56,48.22 73.5,48.6 74.31,49.47 74.85,50.04 74.95,51.94
+                    74.31,52.44"/>
+                <polyline id="Columbine Lower" points=
+                    "36.57,19.34 36.88,19.81 37.39,20.27 39,21.2 42.02,21.85"/>
+                <polyline id="Columbine Upper" points=
+                    "42.02,21.85 43.02,21.95 46.82,23.25"/>
+                <polyline id="Corona Way" points=
+                    "21.07,37.05 17.17,35 14.72,33.6 13.52,33.1 11.92,31.5
+                    12.02,30.8 12.52,30.25 13.52,29.55 14.62,29.05 16.02,28.35
+                    17.42,28.1 18.42,27.4 19.17,26.4 19.57,25.8 19.47,24.95
+                    20.97,22.7 21.97,21.9 23.47,21.2 25.47,20.6 28.47,19.7
+                    30.47,18.9"/>
+                <polyline id="Corridor Mary Jane to Winter Park" points=
+                    "22.01,41.82 22.09,42.18 22.42,42.39 22.31,42.68 21.86,43.09
+                    20.84,43.73 19.64,44.14 18.18,44.65 18.3,45.17 18.26,45.61
+                    18.17,45.92 18.4,46.47 19.3,47.33 20.23,47.84 20.85,48.56
+                    21.09,48.8 21.15,49.21 21.05,49.72 20.68,50.27 20.25,50.55
+                    20.39,50.89 20.92,51.4 21.31,52.05 21.81,52.71 22.37,53.21
+                    22.92,53.65 22.9,53.72 22.4,53.92 21.3,54.16"/>
+                <polyline id="Coupler" points=
+                    "14.62,29.05 20.72,30.4 21.87,30.3 23.87,30.55"/>
+                <polyline id="Cranmer" points=
+                    "47.19,58.32 47.79,57.7 48.25,56.1 49.24,54.83 50.46,53.63
+                    53.24,52.02 55.49,51.01 57.82,49.76 59.52,48.46 59.98,47.96
+                    59.93,47.47 59.48,46.47 59.45,45.93 59.43,44.83 58.94,44.08"/>
+                <polyline id="Derailer" points=
+                    "20.9,36.1 19.9,35.63 19.29,34.95 20.08,34.1 22.16,32.9
+                    23.69,31.65 24.72,30.4 27.37,29.96 29,29.39 30.02,28.32
+                    31.92,28.15 35.07,27.95 36.27,27.85 37.62,27.8 38.12,27.73
+                    38.35,27.71 39.85,27.61 40.85,27.51 42.05,27.41"/>
+                <polyline id="Dormouse" points=
+                    "55.01,37.62 54.84,37.98 55.25,38.68 55.26,39.39 57.02,40.55
+                    58.44,41.92 56.55,41.99 55.3,42.16 56.55,41.99 57.61,42.19
+                    59.33,42.74 60.26,43.01 60.99,43.26 61.32,43.73 61.4,44.72"/>
+                <polyline id="Drunken Frenchman" points=
+                    "39.24,39.57 40.28,39.48 41.14,39.23 42,38.77 43.71,38.45
+                    48.56,37.88 51.41,38.12 52.84,37.94 54.26,37.36"/>
+                <polyline id="Eagle Wind" points=
+                    "87.66,37.02 86.11,35.02 85.44,34.22 87.43,35.14 85.44,34.22
+                    84.36,33.02 82.71,31.02 82.01,30.12"/>
+                <polyline id="Easy Way" points=
+                    "43.68,59.97 43.98,59.97 45.57,60.26 46.06,60.18 47.93,58.97
+                    48.31,58.77 47.29,59.15 46.1,59.54 45.79,58.75 45.16,58.02
+                    46.01,59.54 44.3,60.03 46.01,59.54 46.13,59.78 46.47,59.9
+                    46.64,59.74 46.67,59.4 48.31,58.77 48.78,58.73 49.89,57.89
+                    50.12,57.94 50.13,58.24 48.78,58.73 48.26,59.47 48.51,59.92
+                    48.51,60.46 48.64,60.67 48.36,61.18 48.3,61.75 48.71,61.69
+                    48.84,61.41 50.46,59.94 51.79,59.69 54.04,59.77 55.1,59.83
+                    56.42,60.11 57.08,60.21 58.14,60.14 59.3,59.39 59.54,59.27"/>
+                <polyline id="Edelweiss" points=
+                    "32.03,18.86 35.63,18.36 38.63,18.66 43.13,18.46 46.33,18.86
+                    46.73,19.11 47.38,19.41 48.38,19.76 49.38,20.01 50.78,20.16
+                    51.78,20.12 52.98,20.22 55.88,20.22 56.88,20.32 57.88,20.62
+                    58.78,20.67 59.78,20.77 60.78,20.97 61.26,21.06 60.78,20.97
+                    61,21.09 60.98,21.27 60.78,21.47 60.68,21.87 60.73,22.57
+                    60.33,22.87 59.83,23.07 59.23,23.17 58.43,23.27 57.13,23.67
+                    57.08,24.37 55.68,25.37"/>
+                <polyline id="Eldorado" points=
+                    "101.81,21.37 106.94,21.3 112.35,21.09 114.43,20.93"/>
+                <polyline id="Engeldive" points=
+                    "48.15,57.94 53.64,56.58 55.01,56.07 57.21,55.72 59.99,55.62
+                    61.85,55.34 62.78,55.1 64.14,54.53"/>
+                <polyline id="Fireberry Glade" points=
+                    "61.34,21.29 62.34,21.52 65.34,21.46 68.34,21.46 69.54,21.53
+                    70.93,21.68 72.98,21.93 76.98,22.48 80.84,23.17"/>
+                <polyline id="Forever Eva" points=
+                    "37.34,17.96 37.94,17.35 39.14,16.74 40.14,16.24 41.14,15.84
+                    42.14,15.44 43.29,15.34 45.04,15.24 45.04,15.24 42.94,16.26
+                    40.94,17.26 40.14,17.56 38.64,17.76 37.34,17.96 36.04,18.06
+                    32.34,18.56 31.84,18.61 31.84,18.61 32.14,18.46 32.54,18.31
+                    33.24,18.11 35.34,17.55 37.14,17.24 39.14,16.74 41.54,16.14
+                    43.54,15.64 44.14,15.49 45.04,15.24 46.14,14.74 47.44,14.24"/>
+                <polyline id="Forget-Me-Not" points=
+                    "60.23,21.37 61.34,21.27 61.84,21.15 62.24,20.82 63.06,20.1
+                    63.71,19.28 64.35,18.34 64.86,17.79 65.8,17.25 66.39,16.73
+                    67.29,16.29 68.19,15.96 69.19,15.36 70.39,15.01 71.49,14.69
+                    72.99,14.09 74.49,13.49 76.99,12.74 79.49,12.16 81.14,11.96
+                    81.64,12.01 82.14,12.21"/>
+                <polyline id="Freeriders" points=
+                    "33.15,31.75 33.45,31.45 42.5,27.38"/>
+                <polyline id="Gambler" points=
+                    "82.03,47.31 80.64,46.03 80.34,45.44 81.04,44.74 82.64,43.66
+                    83.14,42.92 83.24,42.17"/>
+                <polyline id="Gandy Dancer" points=
+                    "36.85,39.81 39.24,39.57 40.43,39.03 44,37.64 47.48,36.75
+                    50.55,36.06"/>
+                <polyline id="Golden Spike" points=
+                    "41,36.9 41.07,35.8 42.07,35.1 43.67,34.1 44.77,33.5
+                    46.27,32.85 48.22,32.3"/>
+                <polyline id="Gunbarrel" points=
+                    "69.26,41.46 71.91,41.27 73.07,40.91 74.42,40.75 76.67,41.39
+                    80.51,41.98 83.24,42.17 83.88,42.19 84.19,42.13 84.32,41.98
+                    84.28,41.84 83.39,41.43"/>
+                <polyline id="High Lonesome Trail" points=
+                    "56,27.96 57.7,29.71 58.45,30.56 63.35,35.46 63.35,35.76
+                    64.65,37.06 69.26,41.46 69.16,41.56 69.53,42.06 70.38,42.81"/>
+                <polyline id="Hobo Alley" points=
+                    "54,26.21 54.1,26.51 55,26.81 56.1,27.91 59.65,28.73
+                    60.23,29.59 60,30.15"/>
+                <polyline id="Hole in the Wall" points=
+                    "31.79,26.38 34.79,26.1 35.99,26.08 36.91,26.24 37.62,26.4
+                    38.35,27.71 38.12,27.73 37.12,27.09 36.91,26.24"/>
+                <polyline id="Hook Up" points=
+                    "58.44,40.41 62.11,40.51 65.02,40.72 65.55,40.72"/>
+                <polyline id="Hughes" points=
+                    "31.87,52.53 30.52,51.27 30.48,51.06 31.27,50.65 33.16,49.7
+                    35.44,48.88 37.73,48.42 39.78,48.11 41.73,47.62 43.71,47.28
+                    44.91,46.97 45.73,46.52 46.36,46.05 48.88,45.78 50.56,45.61"/>
+                <polyline id="Iron Horse Trail" points=
+                    "38.17,35.85 45.17,32.95"/>
+                <polyline id="Jabberwocky" points=
+                    "72.53,51.53 72.45,50.92 72.59,50.55 72.64,50.24 72.6,49.93
+                    72.4,49.6 72.14,49.38 71.58,49.04 71.23,48.76 70.78,47.55
+                    70.37,47.2 69.91,46.76 69.59,46.09 69.19,45.5 67.8,44.89
+                    65.16,44.14 64.53,43.46 64.16,42.88 63.54,42.48 63.04,42.32
+                    61.98,41.76 60.66,41.45 59.66,41.11"/>
+                <polyline id="Jack Kendrick" points=
+                    "48.74,57.37 49.8,57.84 50.86,57.95 53.91,58.74 57.21,59.15
+                    59.99,59.32 62.38,59.41 64.63,58.94 66.05,58.32 66.28,58.08
+                    66.25,57.82 65.65,56.92 65.05,55.95 64.95,55.25 65.11,54.51
+                    65.17,53.38 65.08,52.83"/>
+                <polyline id="Jeffs Chute" points=
+                    "34.79,26.1 34.95,26.58 35.11,27.05 36.07,27.43 37.62,27.8
+                    38.12,27.73 34.95,26.58"/>
+                <polyline id="Jelly Roll" points=
+                    "112.95,28.46 118.65,26.66 119.85,25.66 120.45,24.96 121.45,23.26
+                    121.51,21.76"/>
+                <polyline id="Jelly Roll Glades" points=
+                    "98.58,26.35 99.98,26.35 104.18,26.65 107.66,27.83 111.28,28.35"/>
+                <polyline id="Johnstones Junction" points=
+                    "46.73,19.11 47.03,18.61 48.09,17.43 49.09,16.5 49.89,15.72
+                    50.89,14.99 51.49,14.59"/>
+                <polyline id="Juniper" points=
+                    "61.84,21.15 62.74,20.77 63.99,19.92 64.59,19.22 65.59,18.57
+                    66.89,18.17 69.19,16.87 70.19,16.57 71.19,16.32 71.89,16.02
+                    71.89,15.62 71.59,15.32 71.44,14.59"/>
+                <polyline id="Key Hole" points=
+                    "39.85,27.61 39.22,26.85 37.61,26.27 35.99,26.08 35.99,26.08
+                    37.91,26.19 39.82,26.8 40.85,27.51"/>
                 <!--- NOTE: Manual inspection shows a typo here. The Json data retrieves this
                              trail as Kinnikinnic, but on the map it shows as Kinnikinic. -->
-                <polyline id="Kinnikinnic" fill="transparent" points=
-                    "54.23,20.22 55.03,19.22 55.53,18.72 56.53,18.12 57.43,17.72 58.43,17.12
-                    59.03,16.62 59.73,15.62 60.23,14.62 60.38,14.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Larkspur" fill="transparent" points=
-                    "62.19,21.24 62.44,21.09 64.03,20.24 67.03,18.99 69.03,18.64 71.03,18.46
-                    75.03,18.14 79.03,18.06 82.03,17.86"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Larry Sale" fill="transparent" points=
-                    "21.74,55.04 22.93,55.28 23.53,55.22 25.98,54.97 27.04,54.83 28.63,54.18
-                    30.61,53.92 32.73,53.96 34.45,53.73 35.51,53.36 36.7,52.88 38.02,52.91
-                    38.78,52.87 39.08,52.77"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Left Hand" fill="transparent" points=
-                    "74.88,25.13 77.41,25.32 81.03,25.39 84.72,24.95 89.02,24.65 90.73,24.75
-                    92.22,24.96 93.48,25.36 94.85,25.81 95.73,26.41 96.27,27.11 96.54,27.75"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Little Pierre" fill="transparent" points=
-                    "31.87,52.53 31.85,52.29 32.2,51.78 33.77,51.06 34.58,50.48 36.14,49.77
-                    37.22,49.18 37.73,48.42"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Little Raven" fill="transparent" points=
-                    "81.03,25.39 82.13,26.14 84.43,28.29 86.53,29.94 87.08,30.57 87.83,31.19"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Little Ten" fill="transparent" points=
-                    "40.35,30.15 40.09,29.66 40.23,29.07 40.5,28.58 42.05,27.41 44,26.8"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lonesome Whistle Lower" fill="transparent" points=
-                    "74.59,52.93 76.09,52.43 77.29,52.18 81.02,52.41 77.29,52.18 78.74,51.38
-                    79.19,50.78 80.39,49.98 81.49,49.38 81.55,48.83 82.15,48.03 81.88,47.76
-                    79.88,47.21 78.68,46.61 77.08,46.11 76.38,45.21 75.58,44.71 75.38,44.11
-                    73.88,43.21 71.88,42.21 70.38,42.11"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lonesome Whistle Upper" fill="transparent" points=
-                    "52.33,30 55.32,29.56 56.61,29.49 57.7,29.71 60,30.15 62.9,31.5
-                    63.75,31.75"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Long Haul" fill="transparent" points=
-                    "18.42,27.4 20.27,27.78 22.12,27.53 23.42,27.83 24.42,27.88 25.97,27.92
-                    26.82,28.27 30.02,28.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lower Egress" fill="transparent" points=
-                    "87.66,37.02 88.98,37.73 91.5,38.83 92.06,39.28 92.42,39.72 92.82,40.13
-                    95.2,40.85 96.46,41.54 96.89,42.16 97.06,42.67 96.69,43.39 96.66,44.66
-                    96.5,45.21 96.23,45.54 96.16,45.86 96.33,46.27 96.46,46.57 96.27,47.12
-                    95.67,47.66"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lower Hughes" fill="transparent" points=
-                    "21.88,54.25 23.99,53.8 25.05,53.7 25.98,53.51 27.83,52.81 28.23,52.81
-                    29.55,52.71 31.87,52.53 33.13,52.16 36.57,51.89 38.01,52.13"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lower Parkway" fill="transparent" points=
-                    "23.08,55.9 25.45,55.87 27.04,56.05 28.59,56.15 28.91,56.79 28.99,57.74
-                    29.19,58.24 29.59,58.61 30.94,59.16"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Lupin" fill="transparent" points=
-                    "60.94,21.81 64.24,21.81 67.51,22.12 69.51,22.64 71.95,23.58 74.18,24.61"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Mad Tea Party" fill="transparent" points=
-                    "63.17,50.66 65.69,50.79 67.8,50.93 68.86,51.07 69.89,51.48 72.61,51.72"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="March Hare Upper" fill="transparent" points=
-                    "54.4,43.16 55.54,42.97 56.55,43.02 58.8,43.67 60.26,44.15 61.4,44.72
-                    62.79,45.49 64.68,47.01 65.76,47.49 67.24,47.77 68.52,48.14 67.24,47.77
-                    65.76,47.49 66.38,48.23 67.16,48.78 67.74,49.29 68.4,49.68 69.13,50.02
-                    70.52,50.35 71.61,51.18 72.52,51.5 72.8,51.78 74.33,52.43"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Marmot Flats" fill="transparent" points=
-                    "39.89,55.35 39.78,56.1 40.74,57.34 41.2,57.75 42.26,58.02 43.05,58.09
-                    44.06,58.19"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Mary Jane" fill="transparent" points=
-                    "22.9,41.96 24.5,42.36 26.5,42.46 28.6,42.36 30.6,42.16 31.8,41.76
-                    32.75,41.41 33.45,41.21 34.85,40.91 36.85,39.81 37.15,39.46 37.55,38.96
-                    38.65,38.36 42.35,36.86 44.35,36.46 46.15,36.21 48.25,36.01 49.85,35.96
-                    50.55,36.06 52.41,36.91 54.36,37.36 52.41,36.91 50.55,36.06 51.56,35.21
-                    52.16,35.51 53.16,36.06 54.36,36.96"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Medicine Man" fill="transparent" points=
-                    "84.72,24.95 87,26.6 88.88,28.24 89.86,29.78 91.03,31.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Mock Turtle" fill="transparent" points=
-                    "75.55,58.32 75.75,57.57 76.16,57.11 75.81,56.38 76.11,55.97"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Mulligans Mile" fill="transparent" points=
-                    "38.01,52.13 37.97,51.84 38.62,51.59 39.07,51.28 39.28,50.37 39.45,49.73
-                    39.6,48.88 39.56,48.36 39.78,48.11"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Narrow Gauge" fill="transparent" points=
-                    "50.46,31.15 50.51,31.95 51.21,32.8 51.71,33.6 51.71,34.3"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Needles Eye" fill="transparent" points=
-                    "20.08,34.1 19.33,33.37 19.31,32.95 19.48,32.53 21.48,31.29, 23.87,30.55
-                    24.72,30.4"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Nirvana" fill="transparent" points=
-                    "102.52,22.99 104.57,22.59 106.57,22.45 108.07,22.76 109.17,23.22 110.37,23.22
-                    113.37,22.62 114.47,22.74 115.37,22.42 115.13,21.96 115.93,21.38 116.85,21.21"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Norwegian" fill="transparent" points=
-                    "28.23,52.81 29.05,51.97 29.85,51.51 30.52,51.27"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Olympia Spur" fill="transparent" points=
-                    "50.55,36.06 51.56,35.21 53.34,34.38 54.36,33.59 54.44,33.11 54.11,32.57
-                    53.45,32.26 50.46,31.15 49.92,30.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Outhouse" fill="transparent" points=
-                    "33.45,41.21 36.85,41.51 39.05,41.81 41.85,42.06 45.05,42.56 50.45,43.71
-                    52.25,43.61 53.05,43.71"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Outrigger Trail" fill="transparent" points=
-                    "52.88,51.16 52.86,51.06 53.39,50.17 53.29,49.77 53.04,49.17 53.69,48.17
-                    54.5,46.67 54.85,45.82 54.7,45.17"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Over n Underwood" fill="transparent" points=
-                    "53.48,54.73 59.88,54.03 64.88,52.63"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Paintbrush" fill="transparent" points=
-                    "60.78,20.97 61.58,20.47 61.98,19.87 61.38,19.27 61.88,18.77 62.98,17.77
-                    63.68,17.07 64.18,16.07 64.38,15.57 64.88,15.07 66.18,14.07 68.18,12.97"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Parrys Peek" fill="transparent" points=
-                    "35.84,16.01 35.99,16.55 35.84,16.85 35.34,17.55 34.84,17.81 34.44,17.87
-                    33.94,17.92 33.24,18.06 32.74,18.17 32.14,18.29 31.64,18.36 31.34,18.31
-                    31.84,18.01 32.74,17.41 33.84,16.91 34.74,16.51 35.84,16.01 36.64,15.61
-                    37.24,15.11 38.24,14.11 38.74,13.71 39.44,13.61 40.44,13.64 43.44,13.74
-                    45.44,13.94 47.44,14.24 49.74,14.39 51.49,14.59 57.18,14.52 60.38,14.32
-                    64.63,13.52 68.18,12.97 69.88,12.77 71.08,12.52 72.68,12.12 74.18,11.87
-                    75.68,11.71 78.48,11.6 79.48,11.7 80.68,11.78 81.14,11.96"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Phantom Bridge" fill="transparent" points=
-                    "32.9,31.85 33.36,30.67 34.61,29.49 38.12,27.73"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Pine Cliffs" fill="transparent" points=
-                    "42.57,31.14 43.52,31.04 44.92,31.14 45.52,31.29 47.42,31.04 48.72,31
-                    49.97,30.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Pony Express Trail" fill="transparent" points=
-                    "24.1,40.66 29.22,38.19 34.75,35.91"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Porcupine" fill="transparent" points=
-                    "32.53,58.56 34.05,57.45 36.24,56.44 39.71,54.29"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Primrose" fill="transparent" points=
-                    "60.84,21.88 62.12,23.34 63.7,24.68"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Quick Getaway" fill="transparent" points=
-                    "52.01,44.86 52.61,44.76 54.7,45.17 57.79,45.13 59.48,45.48"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Quickdraw" fill="transparent" points=
-                    "86.05,48.82 86.5,49.14 87.39,49.2 88.42,49.37 88.75,50.62 89.11,50.82
-                    90.83,51.23 91.28,51.33 91.85,51.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Rainbow Cut" fill="transparent" points=
-                    "20.4,41.86 21.6,41.26 23,40.81 24.1,40.66 28.1,40.36 30.2,39.76
-                    33.2,38.36 34.28,37.24 34.32,36.58 34.75,35.91 36.42,35.21 38.29,34.51"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Railbender" fill="transparent" points=
-                    "21.5,35.7 26.49,31.68 27.89,30.4 29.08,29.72 36.27,27.85"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Rendezvous" fill="transparent" points=
-                    "67.44,54.97 67.34,55.59 68,57.52 68.17,57.83 68.33,58.26 68.49,58.87
-                    69.09,58.9 70.45,58.62 71.59,58.34"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Rettas Run" fill="transparent" points=
-                    "49.51,52.36 50.76,48.61 51.59,46.54 52.31,45.7 52.36,45.08 52.01,44.86"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Riflesight Notch" fill="transparent" points=
-                    "23.5,36.7 28.1,36.55 28.9,36.5 32,35.85 34,35.05 35.1,34.4
-                    36.7,34 37.4,33.93 38.3,34.01"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Rollins Ridge" fill="transparent" points=
-                    "44,26.8 46.25,26.78 48.75,26.83 50.23,26.43 50.83,26.23 52.83,26.03
-                    54.53,25.93"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Rollover" fill="transparent" points=
-                    "102.58,19.92 102.95,19.85, 107.78,19.96 111.09,19.75 112.32,19.75"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Roundhouse" fill="transparent" points=
-                    "31.8,19.09 33.44,21.55 35.06,22.18 36.87,22.4 40.87,22.3 42.02,21.85"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Roundhouse Upper" fill="transparent" points=
-                    "40.87,22.3 41.57,23.1 42.86,23.7 44.85,24.4 45.12,24.71 45.5,24.84"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Runaway" fill="transparent" points=
-                    "28.3,25 29.35,25.44 29.94,26.2 30.24,26.3 32.09,26.33 32.09,26.33
-                    29.35,25.44 29.35,25.44 32.12,25.93 32.49,26.33 32.49,26.33 33.38,27.14
-                    35.07,27.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Shadow Chute" fill="transparent" points=
-                    "110.87,25.99 115.85,25.99 119.85,25.66"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Shoo Fly" fill="transparent" points=
-                    "21.85,36.75 22.65,37.8 22.23,38.69 22.22,39.32 22.4,39.95 22.49,40.1
-                    22.29,40.5 21.64,40.75 21.52,41.01 21.6,41.26 22.05,41.66"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Shootout" fill="transparent" points=
-                    "89.89,53.14 87.92,51.91 86.78,51.64 86.33,51.47 86.14,51.09 86.09,50.72
-                    85.84,50.2 85.74,49.8 85.85,48.92"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Short Haul" fill="transparent" points=
-                    "20.27,27.78 21.81,28.28 23.55,28.58 25.19,28.63 26.11,28.55 26.82,28.27"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sidetrack" fill="transparent" points=
-                    "45.1,28.8 46,28.6 47.4,27.9 49,27.4 50.05,27.2"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Ski Papa" fill="transparent" points=
-                    "42.69,55.05 45.17,55.52 46.1,55.83 46.23,55.9 46.49,56.17 46.89,56.55
-                    47.16,56.89 47.09,57.34 46.33,58.02"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sky Pilot" fill="transparent" points=
-                    "61.84,21.15 62.34,21.24 62.84,21.15 63.84,20.85 66.84,20.13 68.04,20.13
-                    74.04,20.82 82.04,21.32"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sleeper" fill="transparent" points=
-                    "21.07,37.05 20.92,36.6 20.9,36.1 21.1,35.9 21.5,35.7 28,33.55
-                    31,32.45 32.9,31.85 33.15,31.75 39.05,30.85 39.75,30.55 40.35,30.15
-                    44.35,29.15 45.1,28.8 45.1,28.6 44,26.8"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sleepy Hollow" fill="transparent" points=
-                    "22.65,37.8 23.15,37.4 23.5,36.7 23.7,36.15 25.6,35.15 27.1,34.35
-                    28,33.55"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sluice Box" fill="transparent" points=
-                    "45.77,29.74 49.57,29.94 50.57,29.84"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sober Englishman" fill="transparent" points=
-                    "46.15,36.21 47.48,36.75 48.22,37.32 48.56,37.88 48.94,39.31 49.63,40.73
-                    49.98,41.04 50.52,41.34 51.77,41.85 51.97,42.11 52.01,42.36 52.1,43.37"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="South Basin" fill="transparent" points=
-                    "101.81,21.37 102.38,20.47 102.58,19.92 103.35,18.41 104.05,17.71 104.94,17.01
-                    105.93,16.25 107.25,15.71 108.31,15.30 109.9,14.71 111.09,14.61 114.5,14.34"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="South Headwall" fill="transparent" points=
-                    "114.5,14.34 115.29,13.51 116.12,12.83 117.44,12.18 118.24,11.83 119.16,11.27"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Stagecoach" fill="transparent" points=
-                    "85.69,43.38 88.19,43.66 90.44,44.35 90.97,44.78 91.2,45.41 93.22,46.17
-                    94.45,46.92 94.96,47.39 95.67,47.66"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sterling Way" fill="transparent" points=
-                    "44.35,36.46 44.4,36.36 45.08,35.75 46.41,35.03 47.44,34.42 48.47,33.6
-                    48.72,32.9 48.22,32.3 48.32,32.1 49.92,30.95"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Sundance" fill="transparent" points=
-                    "84.19,42.13 84.5,42.53 85.01,42.73 85.43,43.06 85.69,43.38 87.31,46.62
-                    88.05,47.11 88.45,47.32 89.51,47.59 91.33,48.03 92.29,48.47 93.22,49.05
-                    94.01,49.7 94.29,49.97 94.34,50.24"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Super Gauge Trail" fill="transparent" points=
-                    "23,40.81 29.55,37.21 33.13,35.61 36.5,34 39.64,32.47 42.57,31.14
-                    45.77,29.74 49.47,27.89"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Switchyard" fill="transparent" points=
-                    "62.9,31.5 62.74,30.74 62.36,30.26 62.18,29.77 61.73,29.36 61.48,28.94
-                    61.63,28.45 62.17,28.15 62.25,27.23 62.15,26.73 63.2,24.78"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Thunderbird" fill="transparent" points=
-                    "77.1,24.58 77.41,25.32 79.41,29.42 82.01,30.12 84.92,30.76 87.83,31.19
-                    89.26,31.64 90.08,32.09"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Thunderbird Traverse" fill="transparent" points=
-                    "62.25,27.23 64.11,27.86 67.11,28.6 70.81,29.12 73.51,29.31 77.21,29.46
-                    79.41,29.42"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Tie Siding" fill="transparent" points=
-                    "21.64,40.75 20.86,40.04 20.37,39.82 20.07,39.49 20.67,38.93 20.49,38.07
-                    20.42,37.76 20.65,37.44 21.9,36.8"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Tinhorn" fill="transparent" points=
-                    "65.65,56.92 68,57.52 70.52,58.09 71.59,58.34 73.55,58.49 74.48,58.44
-                    74.89,58.29 75.55,58.32 76.11,58.35 76.94,58.24 78.53,58.18 81.67,58.21
-                    82.19,58.13 82.58,57.99"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Trestle" fill="transparent" points=
-                    "19.57,25.8 23.54,25.5 23.94,25.3 25.04,25 28.3,25 29.3,24.9
-                    31.15,24.23 33.19,23.75 37.08,23.6 39.04,23.55 40.97,24 44.85,24.4"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Turnpike" fill="transparent" points=
-                    "23.2,56.62 23.43,57.27 23.8,57.55 24.63,57.93 25.35,58.44 26.51,59.67
-                    27.04,60.11 27.57,60.35 28.49,60.45 30.74,60.69 32.33,60.69 35.91,60.96
-                    38.02,60.89 40.54,60.51 41.17,60.33 43.71,59.97"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Tweedle Dee" fill="transparent" points=
-                    "65.19,53.43 66.29,53.87 67.01,54.7 67.44,54.97 68.2,55.35 70.58,55.72
-                    75.62,55.76"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Tweedle Dum" fill="transparent" points=
-                    "68.8,53.64 75.92,55.76"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Unnamed Trail" fill="transparent" points=
-                    "114.89,20.13 119.74,20.13"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Upper Egress" fill="transparent" points=
-                    "87.66,37.02 87.79,36.61 87.66,36.12 87.39,35.85 87.16,35.64 87.43,35.14
-                    88.02,33.96 90.08,32.09 91.03,31.32 92.54,30.23 93.75,29.23 93.99,28.98
-                    96.54,27.75 97.78,27.01 98.58,26.35 99.87,25.64 101.52,24.06 101.57,22.02
-                    101.81,21.37"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Vasquez Cirque Access" fill="transparent" points=
-                    "82.89,11.97 84.48,11.42 87.39,10.97 90.83,10.22 92.42,10.05 97.58,8.88
-                    100.03,7.83 102.48,6.97 107.18,6.11 111.22,5.63 114.39,6.04 116.45,6.55
-                    117.24,7 117.68,7.29 117.87,8.13 117.71,8.75 116.78,9.16 116.68,9.5
-                    116.98,9.85 117.97,9.95 118.49,10.06 119.03,11.01 119.16,11.27 120.32,11.59
-                    120.65,11.9 120.85,12.49 121.15,13.89 120.95,14.4 121.32,15.02 122.14,20.33"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Village Way - Bowl" fill="transparent" points=
-                    "56.82,25.3 58.14,25.09 60.52,24.68 62.91,24.82 63.7,24.68 69.79,24.68
-                    74.18,24.61 76.14,24.37 79.05,23.72 80.84,23.17 81.47,22.59 81.9,22
-                    82.04,21.32 82.12,20.45 82.03,17.86 81.85,16.5 81.47,15.53 80.48,13.58
-                    81.04,12.89 81.8,12.41 81.57,12.21"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Village Way - Parkway Bypass" fill="transparent" points=
-                    "30.74,58.86 32.73,59.43 33.79,59.58 35.51,59.91 35.91,60.08 38.82,60.23
-                    40.54,60.14 42.26,59.92 43.4,59.79 44.12,59.69"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Village Way - Switchyard to Mountain Road" fill="transparent" points=
-                    "41.17,60.33 39.17,60.48 37.17,60.63 36.57,60.68 34.57,60.51 33.79,60.43
-                    31.79,60.35 30.31,60.21 29.34,60.04 28.75,59.88 27.98,59.43 27.03,58.69
-                    26.51,57.95 26.41,57.68 26.51,57.42 25.84,56.79 25.01,56.48 24.58,56.29
-                    23.61,56.16 23.22,56.14"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Village Way - Tunnel to Parkway" fill="transparent" points=
-                    "55.52,25.83 58.02,26.13 61.82,27.13 61.82,27.83 62.17,28.15 62.67,28.75
-                    63.16,29.75 64.06,31.01 63.75,31.75 63.76,32.15 65.7,34.06 65.69,34.3
-                    65.5,34.56 65.18,35.81 65.38,36.11 65.35,36.81 64.65,37.06 63.7,37.52
-                    63.45,37.98 63.55,38.89 63.55,39.55 64.05,40.11 65.55,40.72 68.26,41.46
-                    69.53,42.06 70.12,42.08 70.57,42.5 70.63,42.84 70.98,43.21 71.74,43.7
-                    72.08,44.27 72.11,44.83 72.7,45.89 72.97,46.43 75.88,47.05 76.43,47.34
-                    76.28,47.52 74.62,48.09 73.1,48.18 69.52,48.02 68.52,48.14 67.51,48.26
-                    67.16,48.74 66.75,49.24 65.29,49.82 63.44,50.61 60.26,50.54 56.82,50.72
-                    52.88,51.16 49.51,52.36 48.74,52.73 40.93,53.38 37.46,54.2 35.91,54.87
-                    34.82,56.21 32.99,57.04 31.5,58.19 30.74,58.96"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Vista Dome" fill="transparent" points=
-                    "63.31,50.59 64.88,52.63 65.08,52.88"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Wagon Train" fill="transparent" points=
-                    "77.48,56.19 77.51,56.39 78.52,57.16 79.72,57.37 81.17,57.59 82.58,57.99
-                    84.18,58.3 86.57,58.54 87.23,58.81 87.76,59.1 88.32,59.52 88.98,59.96
-                    89.77,60.01 90.45,59.99 91,60.19 91.51,60.84 90.67,61.25 90.01,61.45
-                    89.49,61.41"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Waterfall" fill="transparent" points=
-                    "99.87,25.64 103.17,25.04 107.97,25.84 109.97,26.04 110.87,25.99 111.92,25.24
-                    112.77,24.49 113.27,23.56 113.37,22.62"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="West Headwall" fill="transparent" points=
-                    "114.4,14.34 117.18,14.13 118.5,14.13 119.56,14.06 119.82,14.05 121.15,13.89"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="White Rabbit" fill="transparent" points=
-                    "75.72,55.76 75.28,54.15 74.59,52.93 74.36,52.44"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="White Rabbit Lower" fill="transparent" points=
-                    "55.31,37.42 55.97,38.17 56.83,38.92 58.44,40.41 59.66,41.11 61.87,42.95
-                    64.07,44.59 65.97,45.83 67.12,46.55 67.6,47.31 68.47,48.07 69.8,49.21
-                    70.66,49.98 70.52,50.35"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Whistlestop" fill="transparent" points=
-                    "54.5,36.19 55,34.69 55.89,32.94 55.69,32.09 52.92,30.44 52.62,30.2
-                    52.33,30 51.13,29.89"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Wild Spur Trail Lower" fill="transparent" points=
-                    "86.78,51.64 87.03,53.43 87.35,54.12 88.07,55.01"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Wild Spur Trail Upper" fill="transparent" points=
-                    "85.69,47.94 85.23,46.53 85.3,45.73 84.76,45.12 84.38,44.76 84.39,44.39
-                    84.02,43.66 83.75,42.93 83.88,42.19"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
-                <polyline id="Wildwood Glade" fill="transparent" points=
-                    "45.85,26.02 45.48,25.43 45.5,24.84 46.8,24.64 48.7,24.64 49.7,24.74
-                    50,24.94 50.75,25.05 51.54,25.55"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
+                <polyline id="Kinnikinnic" points=
+                    "54.23,20.22 55.03,19.22 55.53,18.72 56.53,18.12 57.43,17.72
+                    58.43,17.12 59.03,16.62 59.73,15.62 60.23,14.62 60.38,14.32"/>
+                <polyline id="Larkspur" points=
+                    "62.19,21.24 62.44,21.09 64.03,20.24 67.03,18.99 69.03,18.64
+                    71.03,18.46 75.03,18.14 79.03,18.06 82.03,17.86"/>
+                <polyline id="Larry Sale" points=
+                    "21.74,55.04 22.93,55.28 23.53,55.22 25.98,54.97 27.04,54.83
+                    28.63,54.18 30.61,53.92 32.73,53.96 34.45,53.73 35.51,53.36
+                    36.7,52.88 38.02,52.91 38.78,52.87 39.18,52.77"/>
+                <polyline id="Left Hand" points=
+                    "74.88,25.13 77.41,25.32 81.03,25.39 84.72,24.95 89.02,24.65
+                    90.73,24.75 92.22,24.96 93.48,25.36 94.85,25.81 95.73,26.41
+                    96.27,27.11 96.54,27.75"/>
+                <polyline id="Little Pierre" points=
+                    "31.87,52.53 31.85,52.29 32.2,51.78 33.77,51.06 34.58,50.48
+                    36.14,49.77 37.22,49.18 37.73,48.42"/>
+                <polyline id="Little Raven" points=
+                    "81.03,25.39 82.13,26.14 84.43,28.29 86.53,29.94 87.08,30.57
+                    87.83,31.19"/>
+                <polyline id="Little Ten" points=
+                    "40.35,30.15 40.09,29.66 40.23,29.07 40.5,28.58 42.05,27.41
+                    44,26.8"/>
+                <polyline id="Lonesome Whistle Lower" points=
+                    "74.59,52.93 76.09,52.43 77.29,52.18 81.02,52.41 77.29,52.18
+                    78.74,51.38 79.19,50.78 80.39,49.98 81.49,49.38 81.55,48.83
+                    82.15,48.03 81.88,47.76 79.88,47.21 78.68,46.61 77.08,46.11
+                    76.38,45.21 75.58,44.71 75.38,44.11 73.88,43.21 71.88,42.21
+                    70.38,42.11"/>
+                <polyline id="Lonesome Whistle Upper" points=
+                    "52.33,30 55.32,29.56 56.61,29.49 57.7,29.71 60,30.15
+                    62.9,31.5 63.75,31.75"/>
+                <polyline id="Long Haul" points=
+                    "18.42,27.4 20.27,27.78 22.12,27.53 23.42,27.83 24.42,27.88
+                    25.97,27.92 26.82,28.27 30.02,28.32"/>
+                <polyline id="Lower Egress" points=
+                    "87.66,37.02 88.98,37.73 91.5,38.83 92.06,39.28 92.42,39.72
+                    92.82,40.13 95.2,40.85 96.46,41.54 96.89,42.16 97.06,42.67
+                    96.69,43.39 96.66,44.66 96.5,45.21 96.23,45.54 96.16,45.86
+                    96.33,46.27 96.46,46.57 96.27,47.12 95.67,47.66"/>
+                <polyline id="Lower Hughes" points=
+                    "21.88,54.35 23.99,53.8 25.05,53.7 25.98,53.51 27.83,52.81
+                    28.23,52.81 29.55,52.71 31.87,52.53 33.13,52.16 36.57,51.89
+                    38.01,52.13"/>
+                <polyline id="Lower Parkway" points=
+                    "23.08,55.9 25.45,55.87 27.04,56.05 28.59,56.15 28.91,56.79
+                    28.99,57.74 29.19,58.24 29.59,58.61 30.94,59.16"/>
+                <polyline id="Lupin" points=
+                    "60.82,21.81 64.24,21.81 67.51,22.12 69.51,22.64 71.95,23.58
+                    74.18,24.61"/>
+                <polyline id="Mad Tea Party" points=
+                    "63.17,50.66 65.69,50.79 67.8,50.93 68.86,51.07 69.89,51.48
+                    72.61,51.72"/>
+                <polyline id="March Hare Upper" points=
+                    "54.4,43.16 55.54,42.97 56.55,43.02 58.8,43.67 60.26,44.15
+                    61.4,44.72 62.79,45.49 64.68,47.01 65.76,47.49 67.24,47.77
+                    68.52,48.14 67.24,47.77 65.76,47.49 66.38,48.23 67.16,48.78
+                    67.74,49.29 68.4,49.68 69.13,50.02 70.52,50.35 71.61,51.18
+                    72.52,51.5 72.8,51.78 74.33,52.43"/>
+                <polyline id="Marmot Flats" points=
+                    "39.89,55.35 39.78,56.1 40.74,57.34 41.2,57.75 42.26,58.02
+                    43.05,58.09 44.06,58.19"/>
+                <polyline id="Mary Jane" points=
+                    "22.9,41.96 24.5,42.36 26.5,42.46 28.6,42.36 30.6,42.16
+                    31.8,41.76 32.75,41.41 33.45,41.21 34.85,40.91 36.85,39.81
+                    37.15,39.46 37.55,38.96 38.65,38.36 42.35,36.86 44.35,36.46
+                    46.15,36.21 48.25,36.01 49.85,35.96 50.55,36.06 52.41,36.91
+                    54.36,37.36 52.41,36.91 50.55,36.06 51.56,35.21 52.16,35.51
+                    53.16,36.06 54.36,36.96"/>
+                <polyline id="Medicine Man" points=
+                    "84.72,24.95 87,26.6 88.88,28.24 89.86,29.78 91.03,31.32"/>
+                <polyline id="Mock Turtle" points=
+                    "75.55,58.32 75.75,57.57 76.16,57.11 75.81,56.38 76.11,55.97"/>
+                <polyline id="Mulligans Mile" points=
+                    "38.01,52.13 37.97,51.84 38.62,51.59 39.07,51.28 39.28,50.37
+                    39.45,49.73 39.6,48.88 39.56,48.36 39.78,48.11"/>
+                <polyline id="Narrow Gauge" points=
+                    "50.46,31.15 50.51,31.95 51.21,32.8 51.71,33.6 51.71,34.3"/>
+                <polyline id="Needles Eye" points=
+                    "20.08,34.1 19.33,33.37 19.31,32.95 19.48,32.53 21.48,31.29,
+                    23.87,30.55 24.72,30.4"/>
+                <polyline id="Nirvana" points=
+                    "102.52,22.99 104.57,22.59 106.57,22.45 108.07,22.76 109.17,23.22
+                    110.37,23.22 113.37,22.62 114.47,22.74 115.37,22.42 115.13,21.96
+                    115.93,21.38 116.85,21.21"/>
+                <polyline id="Norwegian" points=
+                    "28.23,52.81 29.05,51.97 29.85,51.51 30.52,51.27"/>
+                <polyline id="Olympia Spur" points=
+                    "50.55,36.06 51.56,35.21 53.34,34.38 54.36,33.59 54.44,33.11
+                    54.11,32.57 53.45,32.26 50.46,31.15 49.92,30.95"/>
+                <polyline id="Outhouse" points=
+                    "33.45,41.21 36.85,41.51 39.05,41.81 41.85,42.06 45.05,42.56
+                    50.45,43.71 52.25,43.61 53.05,43.71"/>
+                <polyline id="Outrigger Trail" points=
+                    "52.88,51.16 52.86,51.06 53.39,50.17 53.29,49.77 53.04,49.17
+                    53.69,48.17 54.5,46.67 54.85,45.82 54.7,45.17"/>
+                <polyline id="Over n Underwood" points=
+                    "53.48,54.73 59.88,54.03 64.88,52.63"/>
+                <polyline id="Paintbrush" points=
+                    "60.68,21.12 61.58,20.47 61.98,19.87 61.38,19.27 61.88,18.77
+                    62.98,17.77 63.68,17.07 64.18,16.07 64.38,15.57 64.88,15.07
+                    66.18,14.07 68.18,12.97"/>
+                <polyline id="Parrys Peek" points=
+                    "35.84,16.01 35.99,16.55 35.84,16.85 35.34,17.55 34.84,17.81
+                    34.44,17.87 33.94,17.92 33.24,18.06 32.74,18.17 32.14,18.29
+                    31.64,18.36 31.34,18.31 31.84,18.01 32.74,17.41 33.84,16.91
+                    34.74,16.51 35.84,16.01 36.64,15.61 37.24,15.11 38.24,14.11
+                    38.74,13.71 39.44,13.61 40.44,13.64 43.44,13.74 45.44,13.94
+                    47.44,14.24 49.74,14.39 51.49,14.59 57.18,14.52 60.38,14.32
+                    64.63,13.52 68.18,12.97 69.88,12.77 71.08,12.52 72.68,12.12
+                    74.18,11.87 75.68,11.71 78.48,11.6 79.48,11.7 80.68,11.78
+                    81.14,11.96"/>
+                <polyline id="Phantom Bridge" points=
+                    "32.9,31.85 33.36,30.67 34.61,29.49 38.12,27.73"/>
+                <polyline id="Pine Cliffs" points=
+                    "42.57,31.14 43.52,31.04 44.92,31.14 45.52,31.29 47.42,31.04
+                    48.72,31 49.97,30.95"/>
+                <polyline id="Pony Express Trail" points=
+                    "24.1,40.66 29.22,38.19 34.75,35.91"/>
+                <polyline id="Porcupine" points=
+                    "32.53,58.56 34.05,57.45 36.24,56.44 39.71,54.29"/>
+                <polyline id="Primrose" points=
+                    "60.84,21.88 62.12,23.34 63.7,24.68"/>
+                <polyline id="Quick Getaway" points=
+                    "52.01,44.86 52.61,44.76 54.7,45.17 57.79,45.13 59.48,45.48"/>
+                <polyline id="Quickdraw" points=
+                    "86.05,48.82 86.5,49.14 87.39,49.2 88.42,49.37 88.75,50.62
+                    89.11,50.82 90.83,51.23 91.28,51.33 91.85,51.95"/>
+                <polyline id="Rainbow Cut" points=
+                    "20.4,41.86 21.6,41.26 23,40.81 24.1,40.66 28.1,40.36
+                    30.2,39.76 33.2,38.36 34.28,37.24 34.32,36.58 34.75,35.91
+                    36.42,35.21 38.29,34.51"/>
+                <polyline id="Railbender" points=
+                    "21.5,35.7 26.49,31.68 27.89,30.4 29.08,29.72 36.27,27.85"/>
+                <polyline id="Rendezvous" points=
+                    "67.44,54.97 67.34,55.59 68,57.52 68.17,57.83 68.33,58.26
+                    68.49,58.87 69.09,58.9 70.45,58.62 71.59,58.34"/>
+                <polyline id="Rettas Run" points=
+                    "49.51,52.36 50.76,48.61 51.59,46.54 52.31,45.7 52.36,45.08
+                    52.01,44.86"/>
+                <polyline id="Riflesight Notch" points=
+                    "23.5,36.7 28.1,36.55 28.9,36.5 32,35.85 34,35.05
+                    35.1,34.4 36.7,34 37.4,33.93 38.3,34.01"/>
+                <polyline id="Rollins Ridge" points=
+                    "44,26.8 46.25,26.78 48.75,26.83 50.23,26.43 50.83,26.23
+                    52.83,26.03 54.53,25.93"/>
+                <polyline id="Rollover" points=
+                    "102.58,19.92 102.95,19.85 107.78,19.96 111.09,19.75 112.32,19.75"/>
+                <polyline id="Roundhouse" points=
+                    "31.8,19.09 33.44,21.55 35.06,22.18 36.87,22.4 40.87,22.3
+                    42.02,21.85"/>
+                <polyline id="Roundhouse Upper" points=
+                    "40.87,22.3 41.57,23.1 42.86,23.7 44.85,24.4 45.12,24.71
+                    45.5,24.84"/>
+                <polyline id="Runaway" points=
+                    "28.3,25 29.35,25.44 29.94,26.2 30.24,26.3 32.09,26.33
+                    32.09,26.33 29.35,25.44 29.35,25.44 32.12,25.93 32.49,26.33
+                    32.49,26.33 33.38,27.14 35.07,27.95"/>
+                <polyline id="Shadow Chute" points=
+                    "110.87,25.99 115.85,25.99 119.85,25.66"/>
+                <polyline id="Shoo Fly" points=
+                    "21.85,36.75 22.65,37.8 22.23,38.69 22.22,39.32 22.4,39.95
+                    22.49,40.1 22.29,40.5 21.64,40.75 21.52,41.01 21.6,41.26
+                    22.05,41.66"/>
+                <polyline id="Shootout" points=
+                    "89.89,53.14 87.92,51.91 86.78,51.64 86.33,51.47 86.14,51.09
+                    86.09,50.72 85.84,50.2 85.74,49.8 85.85,48.92"/>
+                <polyline id="Short Haul" points=
+                    "20.27,27.78 21.81,28.28 23.55,28.58 25.19,28.63 26.11,28.55
+                    26.82,28.27"/>
+                <polyline id="Sidetrack" points=
+                    "45.1,28.8 46,28.6 47.4,27.9 49,27.4 50.05,27.2"/>
+                <polyline id="Ski Papa" points=
+                    "42.69,55.05 45.17,55.52 46.1,55.83 46.23,55.9 46.49,56.17
+                    46.89,56.55 47.16,56.89 47.09,57.34 46.33,58.02"/>
+                <polyline id="Sky Pilot" points=
+                    "61.84,21.15 62.34,21.24 62.84,21.15 63.84,20.85 66.84,20.13
+                    68.04,20.13 74.04,20.82 82.04,21.32"/>
+                <polyline id="Sleeper" points=
+                    "21.07,37.05 20.92,36.6 20.9,36.1 21.1,35.9 21.5,35.7
+                    28,33.55 31,32.45 32.9,31.85 33.15,31.75 39.05,30.85
+                    39.75,30.55 40.35,30.15 44.35,29.15 45.1,28.8 45.1,28.6
+                    44,26.8"/>
+                <polyline id="Sleepy Hollow" points=
+                    "22.65,37.8 23.15,37.4 23.5,36.7 23.7,36.15 25.6,35.15
+                    27.1,34.35 28,33.55"/>
+                <polyline id="Sluice Box" points=
+                    "45.77,29.74 49.57,29.94 50.57,29.84"/>
+                <polyline id="Sober Englishman" points=
+                    "46.15,36.21 47.48,36.75 48.22,37.32 48.56,37.88 48.94,39.31
+                    49.63,40.73 49.98,41.04 50.52,41.34 51.77,41.85 51.97,42.11
+                    52.01,42.36 52.1,43.37"/>
+                <polyline id="South Basin" points=
+                    "101.81,21.37 102.38,20.47 102.58,19.92 103.35,18.41 104.05,17.71
+                    104.94,17.01 105.93,16.25 107.25,15.71 108.31,15.30 109.9,14.71
+                    111.09,14.61 114.5,14.34"/>
+                <polyline id="South Headwall" points=
+                    "114.5,14.34 115.29,13.51 116.12,12.83 117.44,12.18 118.24,11.83
+                    119.16,11.27"/>
+                <polyline id="Stagecoach" points=
+                    "85.69,43.38 88.19,43.66 90.44,44.35 90.97,44.78 91.2,45.41
+                    93.22,46.17 94.45,46.92 94.96,47.39 95.67,47.66"/>
+                <polyline id="Sterling Way" points=
+                    "44.35,36.46 44.4,36.36 45.08,35.75 46.41,35.03 47.44,34.42
+                    48.47,33.6 48.72,32.9 48.22,32.3 48.32,32.1 49.92,30.95"/>
+                <polyline id="Sundance" points=
+                    "84.19,42.13 84.5,42.53 85.01,42.73 85.43,43.06 85.69,43.38
+                    87.31,46.62 88.05,47.11 88.45,47.32 89.51,47.59 91.33,48.03
+                    92.29,48.47 93.22,49.05 94.01,49.7 94.29,49.97 94.34,50.24"/>
+                <polyline id="Super Gauge Trail" points=
+                    "23,40.81 29.55,37.21 33.13,35.61 36.5,34 39.64,32.47
+                    42.57,31.14 45.77,29.74 49.47,27.89"/>
+                <polyline id="Switchyard" points=
+                    "62.9,31.5 62.74,30.74 62.36,30.26 62.18,29.77 61.73,29.36
+                    61.48,28.94 61.63,28.45 62.17,28.15 62.25,27.23 62.15,26.73
+                    63.2,24.78"/>
+                <polyline id="Thunderbird" points=
+                    "77.1,24.58 77.41,25.32 79.41,29.42 82.01,30.12 84.92,30.76
+                    87.83,31.19 89.26,31.64 90.08,32.09"/>
+                <polyline id="Thunderbird Traverse" points=
+                    "62.25,27.23 64.11,27.86 67.11,28.6 70.81,29.12 73.51,29.31
+                    77.21,29.46 79.41,29.42"/>
+                <polyline id="Tie Siding" points=
+                    "21.64,40.75 20.86,40.04 20.37,39.82 20.07,39.49 20.67,38.93
+                    20.49,38.07 20.42,37.76 20.65,37.44 21.9,36.8"/>
+                <polyline id="Tinhorn" points=
+                    "65.65,56.92 68,57.52 70.52,58.09 71.59,58.34 73.55,58.49
+                    74.48,58.44 74.89,58.29 75.55,58.32 76.11,58.35 76.94,58.24
+                    78.53,58.18 81.67,58.21 82.19,58.13 82.58,57.99"/>
+                <polyline id="Trestle" points=
+                    "19.57,25.8 23.54,25.5 23.94,25.3 25.04,25 28.3,25
+                    29.3,24.9 31.15,24.23 33.19,23.75 37.08,23.6 39.04,23.55
+                    40.97,24 44.85,24.4"/>
+                <polyline id="Turnpike" points=
+                    "23.2,56.62 23.43,57.27 23.8,57.55 24.63,57.93 25.35,58.44
+                    26.51,59.67 27.04,60.11 27.57,60.35 28.49,60.45 30.74,60.69
+                    32.33,60.69 35.91,60.96 38.02,60.89 40.54,60.51 41.17,60.33
+                    43.71,59.97"/>
+                <polyline id="Tweedle Dee" points=
+                    "65.19,53.43 66.29,53.87 67.01,54.7 67.44,54.97 68.2,55.35
+                    70.58,55.72 75.62,55.76"/>
+                <polyline id="Tweedle Dum" points=
+                    "68.8,53.64 75.92,55.76"/>
+                <polyline id="Unnamed Trail" points=
+                    "114.89,20.13 119.74,20.13"/>
+                <polyline id="Upper Egress" points=
+                    "87.66,37.02 87.79,36.61 87.66,36.12 87.39,35.85 87.16,35.64
+                    87.43,35.14 88.02,33.96 90.08,32.09 91.03,31.32 92.54,30.23
+                    93.75,29.23 93.99,28.98 96.54,27.75 97.78,27.01 98.58,26.35
+                    99.87,25.64 101.52,24.06 101.57,22.02 101.81,21.37"/>
+                <polyline id="Vasquez Cirque Access" points=
+                    "82.89,11.97 84.48,11.42 87.39,10.97 90.83,10.22 92.42,10.05
+                    97.58,8.88 100.03,7.83 102.48,6.97 107.18,6.11 111.22,5.63
+                    114.39,6.04 116.45,6.55 117.24,7 117.68,7.29 117.87,8.13
+                    117.71,8.75 116.78,9.16 116.68,9.5 116.98,9.85 117.97,9.95
+                    118.49,10.06 119.03,11.01 119.16,11.27 120.32,11.59 120.65,11.9
+                    120.85,12.49 121.15,13.89 120.95,14.4 121.32,15.02 122.14,20.33"/>
+                <polyline id="Village Way - Bowl" points=
+                    "56.82,25.3 58.14,25.09 60.52,24.68 62.91,24.82 63.7,24.68
+                    69.79,24.68 74.18,24.61 76.14,24.37 79.05,23.72 80.84,23.17
+                    81.47,22.59 81.9,22 82.04,21.32 82.12,20.45 82.03,17.86
+                    81.85,16.5 81.47,15.53 80.48,13.58 81.04,12.89 81.8,12.41
+                    81.57,12.21"/>
+                <polyline id="Village Way - Parkway Bypass" points=
+                    "30.74,58.86 32.73,59.43 33.79,59.58 35.51,59.91 35.91,60.08
+                    38.82,60.23 40.54,60.14 42.26,59.92 43.4,59.79 44.12,59.69"/>
+                <polyline id="Village Way - Switchyard to Mountain Road" points=
+                    "41.17,60.33 39.17,60.48 37.17,60.63 36.57,60.68 34.57,60.51
+                    33.79,60.43 31.79,60.35 30.31,60.21 29.34,60.04 28.75,59.88
+                    27.98,59.43 27.03,58.69 26.51,57.95 26.41,57.68 26.51,57.42
+                    25.84,56.79 25.01,56.48 24.58,56.29 23.61,56.16 23.22,56.14"/>
+                <polyline id="Village Way - Tunnel to Parkway" points=
+                    "55.52,25.83 58.02,26.13 61.82,27.13 61.82,27.83 62.17,28.15
+                    62.67,28.75 63.16,29.75 64.06,31.01 63.75,31.75 63.76,32.15
+                    65.7,34.06 65.69,34.3 65.5,34.56 65.18,35.81 65.38,36.11
+                    65.35,36.81 64.65,37.06 63.7,37.52 63.45,37.98 63.55,38.89
+                    63.55,39.55 64.05,40.11 65.55,40.72 68.26,41.46 69.53,42.06
+                    70.12,42.08 70.57,42.5 70.63,42.84 70.98,43.21 71.74,43.7
+                    72.08,44.27 72.11,44.83 72.7,45.89 72.97,46.43 75.88,47.05
+                    76.43,47.34 76.28,47.52 74.62,48.09 73.1,48.18 69.52,48.02
+                    68.52,48.14 67.51,48.26 67.16,48.74 66.75,49.24 65.29,49.82
+                    63.44,50.61 60.26,50.54 56.82,50.72 52.88,51.16 49.51,52.36
+                    48.74,52.73 40.93,53.38 37.46,54.2 35.91,54.87 34.82,56.21
+                    32.99,57.04 31.5,58.19 30.74,58.96"/>
+                <polyline id="Vista Dome" points=
+                    "63.31,50.59 64.88,52.63 65.08,52.88"/>
+                <polyline id="Wagon Train" points=
+                    "77.48,56.19 77.51,56.39 78.52,57.16 79.72,57.37 81.17,57.59
+                    82.58,57.99 84.18,58.3 86.57,58.54 87.23,58.81 87.76,59.1
+                    88.32,59.52 88.98,59.96 89.77,60.01 90.45,59.99 91,60.19
+                    91.51,60.84 90.67,61.25 90.01,61.45 89.49,61.41"/>
+                <polyline id="Waterfall" points=
+                    "99.87,25.64 103.17,25.04 107.97,25.84 109.97,26.04 110.87,25.99
+                    111.92,25.24 112.77,24.49 113.27,23.56 113.37,22.62"/>
+                <polyline id="West Headwall" points=
+                    "114.4,14.34 117.18,14.13 118.5,14.13 119.56,14.06 119.82,14.05
+                    121.15,13.89"/>
+                <polyline id="White Rabbit" points=
+                    "75.72,55.76 75.28,54.15 74.59,52.93 74.36,52.44"/>
+                <polyline id="White Rabbit Lower" points=
+                    "55.31,37.42 55.97,38.17 56.83,38.92 58.44,40.41 59.66,41.11
+                    61.87,42.95 64.07,44.59 65.97,45.83 67.12,46.55 67.6,47.31
+                    68.47,48.07 69.8,49.21 70.66,49.98 70.52,50.35"/>
+                <polyline id="Whistlestop" points=
+                    "54.5,36.19 55,34.69 55.89,32.94 55.69,32.09 52.92,30.44
+                    52.62,30.2 52.33,30 51.13,29.89"/>
+                <polyline id="Wild Spur Trail Lower" points=
+                    "86.78,51.64 87.03,53.43 87.35,54.12 88.07,55.01"/>
+                <polyline id="Wild Spur Trail Upper" points=
+                    "85.69,47.94 85.23,46.53 85.3,45.73 84.76,45.12 84.38,44.76
+                    84.39,44.39 84.02,43.66 83.75,42.93 83.88,42.19"/>
+                <polyline id="Wildwood Glade" points=
+                    "45.85,26.02 45.48,25.43 45.5,24.84 46.8,24.64 48.7,24.64
+                    49.7,24.74 50,24.94 50.75,25.05 51.54,25.55"/>
                 <!--- NOTE: Manual inspection shows a typo here. The Json data retrieves this
                              trail as Willets Way, but on the map it shows as Willett's Way. -->
-                <polyline id="Willets Way" fill="transparent"
-                    points="52.98,20.22 53.88,19.22 54.38,18.22 54.58,17.22
-                    55.08,16.52 56.18,15.52 57.18,14.52"
-                    stroke="grey" stroke-miterlimit="10" stroke-width="0.3px"/>
+                <polyline id="Willets Way"
+                    points="52.98,20.22 53.88,19.22 54.38,18.22 54.58,17.22 55.08,16.52
+                    56.18,15.52 57.18,14.52"/>
                 <image
                     href="ski_trails/winter_park.png"
                     id="winterParkMap"
