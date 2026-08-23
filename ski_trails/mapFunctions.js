@@ -6,7 +6,7 @@
 var gDisplayCurrentStatus = true;
 var gTrailData = null;
 
-function assignTrailColors()
+function assignColorsOfTrailsFoundInJson()
 {
     const mtnAreas = gTrailData.MountainAreas;
     for (var areaIndex = 0; areaIndex < mtnAreas.length; areaIndex++)
@@ -52,16 +52,29 @@ function assignTrailColors()
             }
         }
     }
-} // assignTrailColors()
+} // assignColorsOfTrailsFoundInJson()
 
-function getJsonFromResponse(response)
+function assignColorsOfTrailsMissingFromJson()
 {
-    if (!response.ok)
+    const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
+    const nirvana = document.getElementById(kTrailNameNirvana);
+    if (isCirqueSledLiftOpen() || !gDisplayCurrentStatus)
     {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
     }
-    return response.json();
-} // getJsonFromResponse()
+    else
+    {
+        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+    }
+} // assignColorsOfTrailsMissingFromJson()
+
+function assignTrailColors()
+{
+    assignColorsOfTrailsFoundInJson();
+    assignColorsOfTrailsMissingFromJson();
+} // assignTrailColors()
 
 function assignTrailColorsAsync(jsonData)
 {
@@ -74,6 +87,20 @@ function assignTrailColorsAsync(jsonData)
         assignTrailColors();
     });
 } // assignTrailColorsAsync()
+
+function getJsonFromResponse(response)
+{
+    if (!response.ok)
+    {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+} // getJsonFromResponse()
+
+function isCirqueSledLiftOpen()
+{
+    return gTrailData.MountainAreas[6].Lifts[0].Status === kTrailStatusOpen;
+} // isCirqueSledLiftOpen()
 
 function onClickMap()
 {
