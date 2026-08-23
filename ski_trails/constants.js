@@ -14,10 +14,8 @@ const kTrailDifficultyIntermediate         = "Intermediate";
 
 // Trail statuses:
 //  The response from mtnpowder has been found to have various formats for the 'closed' status.
-const kTrailStatusClosed1 = "closed";
-const kTrailStatusClosed2 = "Closed";
-const kTrailStatusClosed3 = "Closed for Season";
-const kTrailStatusOpen    = "Open";
+const kTrailStatusesClosed = ["closed", "Closed", "Closed for Season"];
+const kTrailStatusOpen     = "Open";
 
 // Miscellaneous constants:
 const kAttributeNameStroke          = "stroke";

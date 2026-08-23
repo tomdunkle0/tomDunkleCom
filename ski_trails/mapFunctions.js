@@ -34,9 +34,7 @@ function isCirqueSledLiftOpen()
 // The response from mtnpowder has been found to have various formats for the 'closed' status.
 function isTrailClosed(trailStatus)
 {
-    return trailStatus === kTrailStatusClosed1
-        || trailStatus === kTrailStatusClosed2
-        || trailStatus === kTrailStatusClosed3;
+    return kTrailStatusesClosed.includes(trailStatus);
 } // isTrailClosed()
 
 function onClickMap()
