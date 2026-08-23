@@ -7,7 +7,6 @@ function getMapContent()
 {
     return `
         <div>
-            <div></div> <!--- Top bounding div. -->
             <svg fill="transparent"
                  height="100%"
                  onClick="onClickMap()"
@@ -577,7 +576,6 @@ function getMapContent()
                     style="visibility: visible;"
                     />
             </svg>
-            <div></div> <!--- Bottom bounding div. -->
         </div>
     `;
 } // getMapContent()
