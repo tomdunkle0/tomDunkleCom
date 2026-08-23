@@ -3,7 +3,7 @@
  | Purpose: Defines functions related to the Winter Park ski resort map. |
 \*-----------------------------------------------------------------------*/
 
-var gDisplayCurrentStatus = true;
+var gDisplayCurrentTrailStatuses = true;
 var gTrailData = null;
 
 function assignColorsOfTrailsFoundInJson()
@@ -18,17 +18,17 @@ function assignColorsOfTrailsFoundInJson()
             const trailPolyline = document.getElementById(trailData.Name);
             if (trailPolyline !== null)
             {
-                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentStatus))
+                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentTrailStatuses))
                 {
                     assignTrailColorBasedOnDifficulty(trailData.Difficulty, trailPolyline);
                 }
 
-                if (gDisplayCurrentStatus)
+                if (gDisplayCurrentTrailStatuses)
                 {
                     const trailStatus = trailData.Status;
-                    if ((trailStatus === kTrailStatusClosed1)
-                     || (trailStatus === kTrailStatusClosed2)
-                     || (trailStatus === kTrailStatusClosed3)
+                    if (trailStatus === kTrailStatusClosed1
+                     || trailStatus === kTrailStatusClosed2
+                     || trailStatus === kTrailStatusClosed3
                     )
                     {
                         trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
@@ -43,7 +43,7 @@ function assignColorsOfTrailsMissingFromJson()
 {
     const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
     const nirvana = document.getElementById(kTrailNameNirvana);
-    if (isCirqueSledLiftOpen() || !gDisplayCurrentStatus)
+    if (isCirqueSledLiftOpen() || !gDisplayCurrentTrailStatuses)
     {
         vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
         nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
@@ -109,7 +109,7 @@ function isCirqueSledLiftOpen()
 
 function onClickMap()
 {
-    gDisplayCurrentStatus = !gDisplayCurrentStatus;
+    gDisplayCurrentTrailStatuses = !gDisplayCurrentTrailStatuses;
     assignTrailColors();
 } // onClickMap()
 

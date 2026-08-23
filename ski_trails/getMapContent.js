@@ -8,17 +8,15 @@ function getMapContent()
     return `
         <div>
             <div></div> <!--- Top bounding div. -->
-            <svg height="100%"
-               width="100vw"
-               onClick="onClickMap()"
-               preserveAspectRatio="none"
-               viewBox="0 0 129.71 63.28"
-               version="1.1"
-               fill="transparent"
-               stroke="grey"
-               stroke-miterlimit="10"
-               stroke-width="0.3px"
-               font-family="'Times New Roman'">
+            <svg fill="transparent"
+                 height="100%"
+                 onClick="onClickMap()"
+                 preserveAspectRatio="none"
+                 stroke="grey"
+                 stroke-miterlimit="10"
+                 stroke-width="0.3px"
+                 viewBox="0 0 129.71 63.28"
+                 width="100vw">
                 <!--- Reference circle. Use these to fix trail coordinate positioning. -->
                 <circle cx="43.98" cy="61.97" r="0.2" fill="green"/>
                 <polyline id="view_box" points=
