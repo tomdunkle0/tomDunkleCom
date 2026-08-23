@@ -14,14 +14,14 @@ function cacheTrailDataAndSetTrailColors(jsonData)
     setTrailColors();
 } // cacheTrailDataAndSetTrailColors()
 
-function getJsonFromResponse(response)
+function getJsonFromResponseAsync(response)
 {
     if (!response.ok)
     {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
-} // getJsonFromResponse()
+} // getJsonFromResponseAsync()
 
 function isCirqueSledLiftOpen()
 {
@@ -47,7 +47,7 @@ function onPageLoad()
 {
     document.body.innerHTML = getMapContent();
     fetch(kResortDataSourceUrl)
-        .then(getJsonFromResponse)
+        .then(getJsonFromResponseAsync)
         .then(setTrailColorsAsync)
         .catch(error => {
         console.error("Error fetching JSON:", error);
@@ -106,8 +106,8 @@ function setTrailColorsAsync(jsonData)
 {
     var bearerToken = jsonData.bearerToken;
     const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
-    fetch(url)
-        .then(getJsonFromResponse)
+    return fetch(url)
+        .then(getJsonFromResponseAsync)
         .then(cacheTrailDataAndSetTrailColors);
 } // setTrailColorsAsync()
 
