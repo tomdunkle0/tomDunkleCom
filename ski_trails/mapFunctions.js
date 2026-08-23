@@ -20,22 +20,7 @@ function assignColorsOfTrailsFoundInJson()
             {
                 if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentStatus))
                 {
-                    switch (trailData.Difficulty)
-                    {
-                        case kTrailDifficultyAdvancedIntermediate:
-                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
-                            break;
-                        case kTrailDifficultyEasy:
-                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
-                            break;
-                        case kTrailDifficultyExpert:
-                        case kTrailDifficultyExtremeTerrain:
-                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
-                            break;
-                        case kTrailDifficultyIntermediate:
-                            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
-                            break;
-                    }
+                    assignTrailColorBasedOnDifficulty(trailData.Difficulty, trailPolyline);
                 }
 
                 if (gDisplayCurrentStatus)
@@ -69,6 +54,26 @@ function assignColorsOfTrailsMissingFromJson()
         nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
     }
 } // assignColorsOfTrailsMissingFromJson()
+
+function assignTrailColorBasedOnDifficulty(trailDifficulty, trailPolyline)
+{
+    switch (trailDifficulty)
+    {
+        case kTrailDifficultyAdvancedIntermediate:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
+            break;
+        case kTrailDifficultyEasy:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
+            break;
+        case kTrailDifficultyExpert:
+        case kTrailDifficultyExtremeTerrain:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+            break;
+        case kTrailDifficultyIntermediate:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
+            break;
+    }
+} // assignTrailColorBasedOnDifficulty()
 
 function assignTrailColors()
 {
