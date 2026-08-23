@@ -4,7 +4,8 @@
 \*-----------------------------------------------------------------------*/
 
 var gDisplayCurrentTrailStatuses = true;
-var gTrailData = null;
+var gIsCirqueSledLiftOpen        = false;
+var gTrailData                   = null;
 
 function assignColorsOfTrailsFoundInJson()
 {
@@ -43,7 +44,7 @@ function assignColorsOfTrailsMissingFromJson()
 {
     const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
     const nirvana = document.getElementById(kTrailNameNirvana);
-    if (isCirqueSledLiftOpen() || !gDisplayCurrentTrailStatuses)
+    if (gIsCirqueSledLiftOpen || !gDisplayCurrentTrailStatuses)
     {
         vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
         nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
@@ -89,6 +90,7 @@ function assignTrailColorsAsync(jsonData)
         .then(getJsonFromResponse)
         .then(jsonData => {
         gTrailData = jsonData;
+        gIsCirqueSledLiftOpen = isCirqueSledLiftOpen();
         assignTrailColors();
     });
 } // assignTrailColorsAsync()
@@ -104,7 +106,10 @@ function getJsonFromResponse(response)
 
 function isCirqueSledLiftOpen()
 {
-    return gTrailData.MountainAreas[6].Lifts[0].Status === kTrailStatusOpen;
+    const mtnAreaIndexTheCirque = 6; // Hardcoded based on manual debugging.
+    const mtnAreaTheCirque = gTrailData.MountainAreas[mtnAreaIndexTheCirque];
+    const onlyLiftIndex = 0; // Hardcoded based on manual debugging.
+    return mtnAreaTheCirque.Lifts[onlyLiftIndex].Status === kTrailStatusOpen;
 } // isCirqueSledLiftOpen()
 
 function onClickMap()
