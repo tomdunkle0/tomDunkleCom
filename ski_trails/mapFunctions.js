@@ -7,92 +7,12 @@ var gDisplayCurrentTrailStatuses = true;
 var gIsCirqueSledLiftOpen        = false;
 var gTrailData                   = null;
 
-function assignColorsOfTrailsFoundInJson()
-{
-    const mtnAreas = gTrailData.MountainAreas;
-    for (var areaIndex = 0; areaIndex < mtnAreas.length; areaIndex++)
-    {
-        const trails = mtnAreas[areaIndex].Trails;
-        for (var trailIndex = 0; trailIndex < trails.length; trailIndex++)
-        {
-            const trailData = trails[trailIndex];
-            const trailPolyline = document.getElementById(trailData.Name);
-            if (trailPolyline !== null)
-            {
-                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentTrailStatuses))
-                {
-                    assignTrailColorBasedOnDifficulty(trailData.Difficulty, trailPolyline);
-                }
-
-                if (gDisplayCurrentTrailStatuses)
-                {
-                    if (isTrailClosed(trailData.Status))
-                    {
-                        trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
-                    }
-                }
-            }
-        }
-    }
-} // assignColorsOfTrailsFoundInJson()
-
-function assignColorsOfTrailsMissingFromJson()
-{
-    const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
-    const nirvana = document.getElementById(kTrailNameNirvana);
-    if (gIsCirqueSledLiftOpen || !gDisplayCurrentTrailStatuses)
-    {
-        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
-        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
-    }
-    else
-    {
-        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
-        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
-    }
-} // assignColorsOfTrailsMissingFromJson()
-
-function assignTrailColorBasedOnDifficulty(trailDifficulty, trailPolyline)
-{
-    switch (trailDifficulty)
-    {
-        case kTrailDifficultyAdvancedIntermediate:
-            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
-            break;
-        case kTrailDifficultyEasy:
-            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
-            break;
-        case kTrailDifficultyExpert:
-        case kTrailDifficultyExtremeTerrain:
-            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
-            break;
-        case kTrailDifficultyIntermediate:
-            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
-            break;
-    }
-} // assignTrailColorBasedOnDifficulty()
-
-function assignTrailColors()
-{
-    assignColorsOfTrailsFoundInJson();
-    assignColorsOfTrailsMissingFromJson();
-} // assignTrailColors()
-
-function assignTrailColorsAsync(jsonData)
-{
-    var bearerToken = jsonData.bearerToken;
-    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
-    fetch(url)
-        .then(getJsonFromResponse)
-        .then(cacheTrailDataAndAssignTrailColors);
-} // assignTrailColorsAsync()
-
-function cacheTrailDataAndAssignTrailColors(jsonData)
+function cacheTrailDataAndSetTrailColors(jsonData)
 {
     gTrailData = jsonData;
     gIsCirqueSledLiftOpen = isCirqueSledLiftOpen();
-    assignTrailColors();
-} // cacheTrailDataAndAssignTrailColors()
+    setTrailColors();
+} // cacheTrailDataAndSetTrailColors()
 
 function getJsonFromResponse(response)
 {
@@ -122,7 +42,7 @@ function isTrailClosed(trailStatus)
 function onClickMap()
 {
     gDisplayCurrentTrailStatuses = !gDisplayCurrentTrailStatuses;
-    assignTrailColors();
+    setTrailColors();
 } // onClickMap()
 
 function onPageLoad()
@@ -130,8 +50,88 @@ function onPageLoad()
     document.body.innerHTML = getMapContent();
     fetch(kResortDataSourceUrl)
         .then(getJsonFromResponse)
-        .then(assignTrailColorsAsync)
+        .then(setTrailColorsAsync)
         .catch(error => {
         console.error("Error fetching JSON:", error);
     });
 } // onPageLoad()
+
+function setColorsOfTrailsFoundInJson()
+{
+    const mtnAreas = gTrailData.MountainAreas;
+    for (var areaIndex = 0; areaIndex < mtnAreas.length; areaIndex++)
+    {
+        const trails = mtnAreas[areaIndex].Trails;
+        for (var trailIndex = 0; trailIndex < trails.length; trailIndex++)
+        {
+            const trailData = trails[trailIndex];
+            const trailPolyline = document.getElementById(trailData.Name);
+            if (trailPolyline !== null)
+            {
+                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentTrailStatuses))
+                {
+                    setTrailColorBasedOnDifficulty(trailData.Difficulty, trailPolyline);
+                }
+
+                if (gDisplayCurrentTrailStatuses)
+                {
+                    if (isTrailClosed(trailData.Status))
+                    {
+                        trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+                    }
+                }
+            }
+        }
+    }
+} // setColorsOfTrailsFoundInJson()
+
+function setColorsOfTrailsMissingFromJson()
+{
+    const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
+    const nirvana = document.getElementById(kTrailNameNirvana);
+    if (gIsCirqueSledLiftOpen || !gDisplayCurrentTrailStatuses)
+    {
+        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+    }
+    else
+    {
+        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+        nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+    }
+} // setColorsOfTrailsMissingFromJson()
+
+function setTrailColors()
+{
+    setColorsOfTrailsFoundInJson();
+    setColorsOfTrailsMissingFromJson();
+} // setTrailColors()
+
+function setTrailColorsAsync(jsonData)
+{
+    var bearerToken = jsonData.bearerToken;
+    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
+    fetch(url)
+        .then(getJsonFromResponse)
+        .then(cacheTrailDataAndSetTrailColors);
+} // setTrailColorsAsync()
+
+function setTrailColorBasedOnDifficulty(trailDifficulty, trailPolyline)
+{
+    switch (trailDifficulty)
+    {
+        case kTrailDifficultyAdvancedIntermediate:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorPurple);
+            break;
+        case kTrailDifficultyEasy:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorGreen);
+            break;
+        case kTrailDifficultyExpert:
+        case kTrailDifficultyExtremeTerrain:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+            break;
+        case kTrailDifficultyIntermediate:
+            trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlue);
+            break;
+    }
+} // setTrailColorBasedOnDifficulty()
