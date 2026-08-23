@@ -17,9 +17,6 @@ function getMapContent()
              width="100vw">
             <!--- Reference circle. Use these to fix trail coordinate positioning. -->
             <circle cx="43.98" cy="61.97" r="0.2" fill="green"/>
-            <polyline id="view_box" points=
-                "0,0 129.71,0 129.71,63.28 0,63.28 0,0"
-                stroke="transparent" stroke-width=".28222"/>
             <!--- All polylines' colors are set to grey instead of the default black.
                    This is because, in a case where we fail to retrieve a trail's metadata,
                    we want the trail to visually default to grey so that it's obvious that
@@ -515,14 +512,11 @@ function getMapContent()
                 57.18,14.52"/>
             <image
                 href="ski_trails/winter_park.png"
-                id="winterParkMap"
                 x="0"
                 y="0"
                 width="129.71"
                 height="63.28"
-                preserveAspectRatio="none"
-                style="visibility: visible;"
-                />
+                preserveAspectRatio="none"/>
         </svg>
     `;
 } // getMapContent()
