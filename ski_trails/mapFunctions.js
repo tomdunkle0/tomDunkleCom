@@ -66,17 +66,14 @@ function setColorsOfTrailsFoundInJson()
             const trailPolyline = document.getElementById(trailData.Name);
             if (trailPolyline !== null)
             {
-                if ((trailData.Status === kTrailStatusOpen) || (!gDisplayCurrentTrailStatuses))
+                if (trailData.Status === kTrailStatusOpen || !gDisplayCurrentTrailStatuses)
                 {
                     setTrailColorBasedOnDifficulty(trailData.Difficulty, trailPolyline);
                 }
 
-                if (gDisplayCurrentTrailStatuses)
+                if (gDisplayCurrentTrailStatuses && isTrailClosed(trailData.Status))
                 {
-                    if (isTrailClosed(trailData.Status))
-                    {
-                        trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
-                    }
+                    trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
                 }
             }
         }
