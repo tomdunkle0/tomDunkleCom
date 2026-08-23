@@ -84,12 +84,15 @@ function assignTrailColorsAsync(jsonData)
     const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
     fetch(url)
         .then(getJsonFromResponse)
-        .then(jsonData => {
-        gTrailData = jsonData;
-        gIsCirqueSledLiftOpen = isCirqueSledLiftOpen();
-        assignTrailColors();
-    });
+        .then(cacheTrailDataAndAssignTrailColors);
 } // assignTrailColorsAsync()
+
+function cacheTrailDataAndAssignTrailColors(jsonData)
+{
+    gTrailData = jsonData;
+    gIsCirqueSledLiftOpen = isCirqueSledLiftOpen();
+    assignTrailColors();
+} // cacheTrailDataAndAssignTrailColors()
 
 function getJsonFromResponse(response)
 {
