@@ -26,11 +26,7 @@ function assignColorsOfTrailsFoundInJson()
 
                 if (gDisplayCurrentTrailStatuses)
                 {
-                    const trailStatus = trailData.Status;
-                    if (trailStatus === kTrailStatusClosed1
-                     || trailStatus === kTrailStatusClosed2
-                     || trailStatus === kTrailStatusClosed3
-                    )
+                    if (isTrailClosed(trailData.Status))
                     {
                         trailPolyline.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
                     }
@@ -111,6 +107,14 @@ function isCirqueSledLiftOpen()
     const onlyLiftIndex = 0; // Hardcoded based on manual debugging.
     return mtnAreaTheCirque.Lifts[onlyLiftIndex].Status === kTrailStatusOpen;
 } // isCirqueSledLiftOpen()
+
+// The response from mtnpowder has been found to have various formats for the 'closed' status.
+function isTrailClosed(trailStatus)
+{
+    return trailStatus === kTrailStatusClosed1
+        || trailStatus === kTrailStatusClosed2
+        || trailStatus === kTrailStatusClosed3;
+} // isTrailClosed()
 
 function onClickMap()
 {
