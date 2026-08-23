@@ -14,6 +14,15 @@ function cacheTrailDataAndSetTrailColors(jsonData)
     setTrailColors();
 } // cacheTrailDataAndSetTrailColors()
 
+function fetchAndSetTrailColorsAsync(jsonData)
+{
+    var bearerToken = jsonData.bearerToken;
+    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
+    return fetch(url)
+        .then(getJsonFromResponseAsync)
+        .then(cacheTrailDataAndSetTrailColors);
+} // fetchAndSetTrailColorsAsync()
+
 function getJsonFromResponseAsync(response)
 {
     if (!response.ok)
@@ -48,7 +57,7 @@ function onPageLoad()
     document.body.innerHTML = getMapContent();
     fetch(kResortDataSourceUrl)
         .then(getJsonFromResponseAsync)
-        .then(setTrailColorsAsync)
+        .then(fetchAndSetTrailColorsAsync)
         .catch(error => {
         console.error("Error fetching JSON:", error);
     });
@@ -101,15 +110,6 @@ function setTrailColors()
     setColorsOfTrailsFoundInJson();
     setColorsOfTrailsMissingFromJson();
 } // setTrailColors()
-
-function setTrailColorsAsync(jsonData)
-{
-    var bearerToken = jsonData.bearerToken;
-    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
-    return fetch(url)
-        .then(getJsonFromResponseAsync)
-        .then(cacheTrailDataAndSetTrailColors);
-} // setTrailColorsAsync()
 
 function setTrailColorBasedOnDifficulty(trailDifficulty, trailPolyline)
 {
