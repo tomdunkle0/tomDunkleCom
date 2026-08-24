@@ -7,17 +7,16 @@ var gDisplayCurrentTrailStatuses = true;
 var gIsCirqueSledLiftOpen        = false;
 var gTrailData                   = null;
 
-function cacheTrailDataAndSetTrailColors(jsonData)
+function cacheTrailDataAndSetTrailColors(json)
 {
-    gTrailData = jsonData;
-    gIsCirqueSledLiftOpen = isCirqueSledLiftOpen();
+    gTrailData = json;
+    gIsCirqueSledLiftOpen = isCirqueSledLiftOpen(json);
     setTrailColors();
 } // cacheTrailDataAndSetTrailColors()
 
-function fetchAndSetTrailColorsAsync(jsonData)
+function fetchAndSetTrailColorsAsync(json)
 {
-    var bearerToken = jsonData.bearerToken;
-    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${bearerToken}&resortId=5`
+    const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${json.bearerToken}&resortId=5`
     return fetch(url)
         .then(getJsonFromResponseAsync)
         .then(cacheTrailDataAndSetTrailColors);
@@ -27,15 +26,15 @@ function getJsonFromResponseAsync(response)
 {
     if (!response.ok)
     {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Error getting JSON from web response! status: ${response.status}`);
     }
     return response.json();
 } // getJsonFromResponseAsync()
 
-function isCirqueSledLiftOpen()
+function isCirqueSledLiftOpen(json)
 {
     const mtnAreaIndexTheCirque = 6; // Hardcoded based on manual debugging.
-    const mtnAreaTheCirque = gTrailData.MountainAreas[mtnAreaIndexTheCirque];
+    const mtnAreaTheCirque = json.MountainAreas[mtnAreaIndexTheCirque];
     const onlyLiftIndex = 0; // Hardcoded based on manual debugging.
     return mtnAreaTheCirque.Lifts[onlyLiftIndex].Status === kTrailStatusOpen;
 } // isCirqueSledLiftOpen()
@@ -55,11 +54,12 @@ function onClickMap()
 function onPageLoad()
 {
     document.body.innerHTML = getMapContent();
-    fetch(kResortDataSourceUrl)
+    const resortDataSourceUrl = "https://v4.mtnfeed.com/resorts/winter-park.json";
+    fetch(resortDataSourceUrl)
         .then(getJsonFromResponseAsync)
         .then(fetchAndSetTrailColorsAsync)
         .catch(error => {
-        console.error("Error fetching JSON:", error);
+        console.error("Error getting and setting trail colors:", error);
     });
 } // onPageLoad()
 

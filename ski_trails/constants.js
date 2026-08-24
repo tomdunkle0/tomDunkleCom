@@ -19,6 +19,5 @@ const kTrailStatusOpen     = "Open";
 
 // Miscellaneous constants:
 const kAttributeNameStroke          = "stroke";
-const kResortDataSourceUrl          = "https://v4.mtnfeed.com/resorts/winter-park.json";
 const kTrailNameNirvana             = "Nirvana";
 const kTrailNameVasquezCirqueAccess = "Vasquez Cirque Access";
