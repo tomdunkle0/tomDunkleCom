@@ -17,7 +17,7 @@ function cacheTrailDataAndSetTrailColors(json)
 function fetchAndSetTrailColorsAsync(json)
 {
     const url = `https://mtnpowder.com/feed/v3.json?bearer_token=${json.bearerToken}&resortId=5`
-    return fetch(url)
+    return fetch(url) // Asynchronous.
         .then(getJsonFromResponseAsync)
         .then(cacheTrailDataAndSetTrailColors);
 } // fetchAndSetTrailColorsAsync()
@@ -28,7 +28,7 @@ function getJsonFromResponseAsync(response)
     {
         throw new Error(`Error getting JSON from web response! status: ${response.status}`);
     }
-    return response.json();
+    return response.json(); // Asynchronous.
 } // getJsonFromResponseAsync()
 
 function isCirqueSledLiftOpen(json)
@@ -55,7 +55,7 @@ function onPageLoad()
 {
     document.body.innerHTML = getMapContent();
     const resortDataSourceUrl = "https://v4.mtnfeed.com/resorts/winter-park.json";
-    fetch(resortDataSourceUrl)
+    fetch(resortDataSourceUrl) // Asynchronous.
         .then(getJsonFromResponseAsync)
         .then(fetchAndSetTrailColorsAsync)
         .catch(error => {
@@ -66,9 +66,9 @@ function onPageLoad()
 function setColorsOfTrailsFoundInJson()
 {
     const mtnAreas = gTrailData.MountainAreas;
-    for (var areaIndex = 0; areaIndex < mtnAreas.length; areaIndex++)
+    for (var mtnAreaIndex = 0; mtnAreaIndex < mtnAreas.length; mtnAreaIndex++)
     {
-        const trails = mtnAreas[areaIndex].Trails;
+        const trails = mtnAreas[mtnAreaIndex].Trails;
         for (var trailIndex = 0; trailIndex < trails.length; trailIndex++)
         {
             const trailData = trails[trailIndex];
@@ -91,16 +91,16 @@ function setColorsOfTrailsFoundInJson()
 
 function setColorsOfTrailsMissingFromJson()
 {
-    const vca = document.getElementById(kTrailNameVasquezCirqueAccess);
+    const vasquezCirqueAccess = document.getElementById(kTrailNameVasquezCirqueAccess);
     const nirvana = document.getElementById(kTrailNameNirvana);
     if (gIsCirqueSledLiftOpen || !gDisplayCurrentTrailStatuses)
     {
-        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
+        vasquezCirqueAccess.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
         nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorBlack);
     }
     else
     {
-        vca.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
+        vasquezCirqueAccess.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
         nirvana.setAttribute(kAttributeNameStroke, kPolylineStrokeColorRed);
     }
 } // setColorsOfTrailsMissingFromJson()

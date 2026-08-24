@@ -15,8 +15,6 @@ function getMapContent()
              stroke-width="0.3px"
              viewBox="0 0 129.71 63.28"
              width="100vw">
-            <!--- Reference circle. Use these to fix trail coordinate positioning. -->
-            <circle cx="43.98" cy="61.97" r="0.2" fill="green"/>
             <!--- All polylines' colors are set to grey instead of the default black.
                    This is because, in a case where we fail to retrieve a trail's metadata,
                    we want the trail to visually default to grey so that it's obvious that
@@ -294,7 +292,7 @@ function getMapContent()
             <polyline id="Narrow Gauge" points=
                 "50.46,31.15 50.51,31.95 51.21,32.8 51.71,33.6 51.71,34.3"/>
             <polyline id="Needles Eye" points=
-                "20.08,34.1 19.33,33.37 19.31,32.95 19.48,32.53 21.48,31.29, 23.87,30.55
+                "20.08,34.1 19.33,33.37 19.31,32.95 19.48,32.53 21.48,31.29 23.87,30.55
                 24.72,30.4"/>
             <polyline id="Nirvana" points=
                 "102.52,22.99 104.57,22.59 106.57,22.45 108.07,22.76 109.17,23.22 110.37,23.22
@@ -507,8 +505,8 @@ function getMapContent()
                 50,24.94 50.75,25.05 51.54,25.55"/>
             <!--- NOTE: Manual inspection shows a typo here. The Json data retrieves this
                          trail as Willets Way, but on the map it shows as Willett's Way. -->
-            <polyline id="Willets Way"
-                points="52.98,20.22 53.88,19.22 54.38,18.22 54.58,17.22 55.08,16.52 56.18,15.52
+            <polyline id="Willets Way" points=
+                "52.98,20.22 53.88,19.22 54.38,18.22 54.58,17.22 55.08,16.52 56.18,15.52
                 57.18,14.52"/>
             <image
                 href="ski_trails/winter_park.png"
