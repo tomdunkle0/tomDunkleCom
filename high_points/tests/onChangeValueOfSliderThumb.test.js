@@ -19,6 +19,7 @@ const kStateNameCalifornia         = constants.kStateNameCalifornia;
 const kStateNameColorado           = constants.kStateNameColorado;
 const kStateNameConnecticut        = constants.kStateNameConnecticut;
 const kStateNameDelaware           = constants.kStateNameDelaware;
+const kStateNameFlorida            = constants.kStateNameFlorida;
 const kStateNameGeorgia            = constants.kStateNameGeorgia;
 const kStateNameIdaho              = constants.kStateNameIdaho;
 const kStateNameIllinois           = constants.kStateNameIllinois;
@@ -78,6 +79,7 @@ const kYearSliderValueAfter2022 = testConstants.kYearSliderValueAfter2022;
 const kYearSliderValueAfter2023 = testConstants.kYearSliderValueAfter2023;
 const kYearSliderValueAfter2024 = testConstants.kYearSliderValueAfter2024;
 const kYearSliderValueAfter2025 = testConstants.kYearSliderValueAfter2025;
+const kYearSliderValueAfter2026 = testConstants.kYearSliderValueAfter2026;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -366,7 +368,50 @@ const casesForOnePolylineStatesHighPointedByTom = [
     [kYearSliderValueAfter2025, kStateNameVermont      ],
     [kYearSliderValueAfter2025, kStateNameVirginia     ],
     [kYearSliderValueAfter2025, kStateNameWestVirginia ],
-    [kYearSliderValueAfter2025, kStateNameWisconsin    ]
+    [kYearSliderValueAfter2025, kStateNameWisconsin    ],
+    [kYearSliderValueAfter2026, kStateNameAlabama      ],
+    [kYearSliderValueAfter2026, kStateNameArizona      ],
+    [kYearSliderValueAfter2026, kStateNameArkansas     ],
+    [kYearSliderValueAfter2026, kStateNameCalifornia   ],
+    [kYearSliderValueAfter2026, kStateNameColorado     ],
+    [kYearSliderValueAfter2026, kStateNameConnecticut  ],
+    [kYearSliderValueAfter2026, kStateNameDelaware     ],
+    [kYearSliderValueAfter2026, kStateNameFlorida      ],
+    [kYearSliderValueAfter2026, kStateNameGeorgia      ],
+    [kYearSliderValueAfter2026, kStateNameIdaho        ],
+    [kYearSliderValueAfter2026, kStateNameIllinois     ],
+    [kYearSliderValueAfter2026, kStateNameIndiana      ],
+    [kYearSliderValueAfter2026, kStateNameIowa         ],
+    [kYearSliderValueAfter2026, kStateNameKansas       ],
+    [kYearSliderValueAfter2026, kStateNameKentucky     ],
+    [kYearSliderValueAfter2026, kStateNameLouisiana    ],
+    [kYearSliderValueAfter2026, kStateNameMaine        ],
+    [kYearSliderValueAfter2026, kStateNameMaryland     ],
+    [kYearSliderValueAfter2026, kStateNameMassachusetts],
+    [kYearSliderValueAfter2026, kStateNameMinnesota    ],
+    [kYearSliderValueAfter2026, kStateNameMississippi  ],
+    [kYearSliderValueAfter2026, kStateNameMissouri     ],
+    [kYearSliderValueAfter2026, kStateNameNebraska     ],
+    [kYearSliderValueAfter2026, kStateNameNevada       ],
+    [kYearSliderValueAfter2026, kStateNameNewHampshire ],
+    [kYearSliderValueAfter2026, kStateNameNewJersey    ],
+    [kYearSliderValueAfter2026, kStateNameNewMexico    ],
+    [kYearSliderValueAfter2026, kStateNameNewYork      ],
+    [kYearSliderValueAfter2026, kStateNameNorthCarolina],
+    [kYearSliderValueAfter2026, kStateNameNorthDakota  ],
+    [kYearSliderValueAfter2026, kStateNameOhio         ],
+    [kYearSliderValueAfter2026, kStateNameOklahoma     ],
+    [kYearSliderValueAfter2026, kStateNamePennsylvania ],
+    [kYearSliderValueAfter2026, kStateNameRhodeIsland  ],
+    [kYearSliderValueAfter2026, kStateNameSouthCarolina],
+    [kYearSliderValueAfter2026, kStateNameSouthDakota  ],
+    [kYearSliderValueAfter2026, kStateNameTennessee    ],
+    [kYearSliderValueAfter2026, kStateNameTexas        ],
+    [kYearSliderValueAfter2026, kStateNameUtah         ],
+    [kYearSliderValueAfter2026, kStateNameVermont      ],
+    [kYearSliderValueAfter2026, kStateNameVirginia     ],
+    [kYearSliderValueAfter2026, kStateNameWestVirginia ],
+    [kYearSliderValueAfter2026, kStateNameWisconsin    ]
     ];
 
 const casesForOnePolylineStatesNotHighPointedByTom = [
@@ -377,6 +422,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2014, kStateNameColorado     ],
     [kYearSliderValueAfter2014, kStateNameConnecticut  ],
     [kYearSliderValueAfter2014, kStateNameDelaware     ],
+    [kYearSliderValueAfter2014, kStateNameFlorida      ],
     [kYearSliderValueAfter2014, kStateNameGeorgia      ],
     [kYearSliderValueAfter2014, kStateNameIdaho        ],
     [kYearSliderValueAfter2014, kStateNameIllinois     ],
@@ -419,6 +465,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2015, kStateNameColorado     ],
     [kYearSliderValueAfter2015, kStateNameConnecticut  ],
     [kYearSliderValueAfter2015, kStateNameDelaware     ],
+    [kYearSliderValueAfter2015, kStateNameFlorida      ],
     [kYearSliderValueAfter2015, kStateNameGeorgia      ],
     [kYearSliderValueAfter2015, kStateNameIdaho        ],
     [kYearSliderValueAfter2015, kStateNameIllinois     ],
@@ -460,6 +507,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2016, kStateNameColorado     ],
     [kYearSliderValueAfter2016, kStateNameConnecticut  ],
     [kYearSliderValueAfter2016, kStateNameDelaware     ],
+    [kYearSliderValueAfter2016, kStateNameFlorida      ],
     [kYearSliderValueAfter2016, kStateNameGeorgia      ],
     [kYearSliderValueAfter2016, kStateNameIdaho        ],
     [kYearSliderValueAfter2016, kStateNameIllinois     ],
@@ -499,6 +547,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2017, kStateNameColorado     ],
     [kYearSliderValueAfter2017, kStateNameConnecticut  ],
     [kYearSliderValueAfter2017, kStateNameDelaware     ],
+    [kYearSliderValueAfter2017, kStateNameFlorida      ],
     [kYearSliderValueAfter2017, kStateNameGeorgia      ],
     [kYearSliderValueAfter2017, kStateNameIdaho        ],
     [kYearSliderValueAfter2017, kStateNameIllinois     ],
@@ -535,6 +584,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2018, kStateNameCalifornia   ],
     [kYearSliderValueAfter2018, kStateNameConnecticut  ],
     [kYearSliderValueAfter2018, kStateNameDelaware     ],
+    [kYearSliderValueAfter2018, kStateNameFlorida      ],
     [kYearSliderValueAfter2018, kStateNameGeorgia      ],
     [kYearSliderValueAfter2018, kStateNameIdaho        ],
     [kYearSliderValueAfter2018, kStateNameIllinois     ],
@@ -565,6 +615,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2019, kStateNameCalifornia   ],
     [kYearSliderValueAfter2019, kStateNameConnecticut  ],
     [kYearSliderValueAfter2019, kStateNameDelaware     ],
+    [kYearSliderValueAfter2019, kStateNameFlorida      ],
     [kYearSliderValueAfter2019, kStateNameIdaho        ],
     [kYearSliderValueAfter2019, kStateNameIndiana      ],
     [kYearSliderValueAfter2019, kStateNameIowa         ],
@@ -583,6 +634,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2019, kStateNameWestVirginia ],
     [kYearSliderValueAfter2020, kStateNameAlabama      ],
     [kYearSliderValueAfter2020, kStateNameCalifornia   ],
+    [kYearSliderValueAfter2020, kStateNameFlorida      ],
     [kYearSliderValueAfter2020, kStateNameIdaho        ],
     [kYearSliderValueAfter2020, kStateNameIowa         ],
     [kYearSliderValueAfter2020, kStateNameMissouri     ],
@@ -593,6 +645,7 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2020, kStateNameTennessee    ],
     [kYearSliderValueAfter2020, kStateNameUtah         ],
     [kYearSliderValueAfter2020, kStateNameVirginia     ],
+    [kYearSliderValueAfter2021, kStateNameFlorida      ],
     [kYearSliderValueAfter2021, kStateNameIdaho        ],
     [kYearSliderValueAfter2021, kStateNameIowa         ],
     [kYearSliderValueAfter2021, kStateNameMissouri     ],
@@ -600,13 +653,17 @@ const casesForOnePolylineStatesNotHighPointedByTom = [
     [kYearSliderValueAfter2021, kStateNameNorthCarolina],
     [kYearSliderValueAfter2021, kStateNameUtah         ],
     [kYearSliderValueAfter2021, kStateNameVirginia     ],
+    [kYearSliderValueAfter2022, kStateNameFlorida      ],
     [kYearSliderValueAfter2022, kStateNameIdaho        ],
     [kYearSliderValueAfter2022, kStateNameNevada       ],
     [kYearSliderValueAfter2022, kStateNameNorthCarolina],
     [kYearSliderValueAfter2022, kStateNameVirginia     ],
+    [kYearSliderValueAfter2023, kStateNameFlorida      ],
     [kYearSliderValueAfter2023, kStateNameIdaho        ],
     [kYearSliderValueAfter2023, kStateNameNevada       ],
-    [kYearSliderValueAfter2024, kStateNameIdaho        ]
+    [kYearSliderValueAfter2024, kStateNameFlorida      ],
+    [kYearSliderValueAfter2024, kStateNameIdaho        ],
+    [kYearSliderValueAfter2025, kStateNameFlorida      ]
     ];
 
 const casesForStatesHighPointedByTom
@@ -628,7 +685,10 @@ const yearsSinceTomHighPointedMichigan = [
     kYearSliderValueAfter2020,
     kYearSliderValueAfter2021,
     kYearSliderValueAfter2022,
-    kYearSliderValueAfter2023
+    kYearSliderValueAfter2023,
+    kYearSliderValueAfter2024,
+    kYearSliderValueAfter2025,
+    kYearSliderValueAfter2026
     ];
 
 beforeEach(() => {
