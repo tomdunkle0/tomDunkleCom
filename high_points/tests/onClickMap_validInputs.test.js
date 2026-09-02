@@ -22,6 +22,7 @@ const kDirectoryNameHighPoints = constants.kDirectoryNameHighPoints;
 const kFileExtensionHtml       = constants.kFileExtensionHtml;
 const kFlorida                 = constants.kFlorida;
 const kFloridaCheckBox         = constants.kFloridaCheckBox;
+const kFloridaCheckMark        = constants.kFloridaCheckMark;
 const kGeorgia                 = constants.kGeorgia;
 const kGeorgiaCheckMark        = constants.kGeorgiaCheckMark;
 const kHawaii                  = constants.kHawaii;
@@ -106,6 +107,7 @@ const kStateNameCalifornia     = constants.kStateNameCalifornia;
 const kStateNameColorado       = constants.kStateNameColorado;
 const kStateNameConnecticut    = constants.kStateNameConnecticut;
 const kStateNameDelaware       = constants.kStateNameDelaware;
+const kStateNameFlorida        = constants.kStateNameFlorida;
 const kStateNameGeorgia        = constants.kStateNameGeorgia;
 const kStateNameIdaho          = constants.kStateNameIdaho;
 const kStateNameIllinois       = constants.kStateNameIllinois;
@@ -287,6 +289,8 @@ const polylinesWithUsableLinks = [
     [kConnecticutCheckMark,   kStateNameMassachusetts],
     [kDelaware,               kStateNameDelaware     ],
     [kDelawareCheckMark,      kStateNamePennsylvania ],
+    [kFlorida,                kStateNameFlorida      ],
+    [kFloridaCheckMark,       kStateNameFlorida      ],
     [kGeorgia,                kStateNameGeorgia      ],
     [kGeorgiaCheckMark,       kStateNameGeorgia      ],
     [kIdaho,                  kStateNameIdaho        ],
@@ -395,8 +399,6 @@ const polylinesWithoutUsableLinks = [
     kColoradoCheckBox,
     kConnecticutCheckBox,
     kDelawareCheckBox,
-    kFlorida,
-    kFloridaCheckBox,
     kGeorgiaCheckBox,
     kHawaii,
     kHawaiiCheckBox,

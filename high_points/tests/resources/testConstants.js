@@ -47,6 +47,7 @@ const kYearSliderValueAfter2022          = "2022";
 const kYearSliderValueAfter2023          = "2023";
 const kYearSliderValueAfter2024          = "2024";
 const kYearSliderValueAfter2025          = "2025";
+const kYearSliderValueAfter2026          = "2026";
 
 // Insignificant Islands:
 const kAlaskaIslands1 = kPrefixInsignificantIsland + kStateNameAlaska + kIslands + "1";
@@ -96,5 +97,6 @@ module.exports =
     kYearSliderValueAfter2022,
     kYearSliderValueAfter2023,
     kYearSliderValueAfter2024,
-    kYearSliderValueAfter2025
+    kYearSliderValueAfter2025,
+    kYearSliderValueAfter2026
 };

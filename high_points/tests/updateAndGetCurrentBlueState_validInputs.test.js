@@ -15,6 +15,7 @@ const kDelaware               = constants.kDelaware;
 const kDelawareCheckMark      = constants.kDelawareCheckMark;
 const kFlorida                = constants.kFlorida;
 const kFloridaCheckBox        = constants.kFloridaCheckBox;
+const kFloridaCheckMark       = constants.kFloridaCheckMark;
 const kGeorgia                = constants.kGeorgia;
 const kGeorgiaCheckMark       = constants.kGeorgiaCheckMark;
 const kHawaii                 = constants.kHawaii;
@@ -223,6 +224,7 @@ const casesForMovingFromANormallyGreenStateToAnotherState = [
     [kIowa,              kWisconsin        ],
     [kMichiganPeninsula, kWisconsin        ],
     [kMinnesota,         kWisconsin        ],
+    [kFlorida,           kAlabama          ],
     [kGeorgia,           kAlabama          ],
     [kMississippi,       kAlabama          ],
     [kTennessee,         kAlabama          ],
@@ -253,6 +255,7 @@ const casesForMovingFromANormallyGreenStateToAnotherState = [
     [kAlabama,           kFlorida          ],
     [kGeorgia,           kFlorida          ],
     [kAlabama,           kGeorgia          ],
+    [kFlorida,           kGeorgia          ],
     [kNorthCarolina,     kGeorgia          ],
     [kSouthCarolina,     kGeorgia          ],
     [kTennessee,         kGeorgia          ],
@@ -371,9 +374,7 @@ const casesForMovingFromANormallyRedStateToAnotherState = [
     [kWyoming,    kNebraska   ],
     [kMontana,    kSouthDakota],
     [kWyoming,    kSouthDakota],
-    [kMontana,    kNorthDakota],
-    [kFlorida,    kAlabama    ],
-    [kFlorida,    kGeorgia    ]
+    [kMontana,    kNorthDakota]
 ];
 
 describe(`when moving the mouse from normally-red state A to state B, calling
@@ -429,6 +430,7 @@ const normallyGreenBorderStates = [
     kAlabama,
     kIndiana,
     kMichiganMainland,
+    kFlorida,
     kGeorgia,
     kOhio,
     kSouthCarolina,
@@ -456,8 +458,7 @@ const normallyRedBorderStates = [
     kMaui,
     kOahu,
     kKauai,
-    kMontana,
-    kFlorida
+    kMontana
 ];
 
 const statesBorderingTheViewBox = normallyGreenBorderStates.concat(normallyRedBorderStates);
@@ -787,8 +788,7 @@ describe(`when moving the mouse between two check marks, calling updateAndGetCur
 
 const mostCasesForMovingBetweenACheckBoxAndAState = [
     [kOregonCheckBox,  kWashington],
-    [kMontanaCheckBox, kWyoming   ],
-    [kFloridaCheckBox, kAlabama   ]
+    [kMontanaCheckBox, kWyoming   ]
 ];
 
 const mostCasesForMovingBetweenACheckMarkAndAState = [
@@ -797,6 +797,7 @@ const mostCasesForMovingBetweenACheckMarkAndAState = [
     [kIowaCheckMark,          kMinnesota    ],
     [kTennesseeCheckMark,     kNorthCarolina],
     [kTennesseeCheckMark,     kVirginia     ],
+    [kFloridaCheckMark,       kAlabama      ],
     [kGeorgiaCheckMark,       kTennessee    ],
     [kGeorgiaCheckMark,       kNorthCarolina],
     [kSouthCarolinaCheckMark, kNorthCarolina],

@@ -8,6 +8,7 @@ const kConnecticutCheckMark   = constants.kConnecticutCheckMark;
 const kDelawareCheckMark      = constants.kDelawareCheckMark;
 const kFlorida                = constants.kFlorida;
 const kFloridaCheckBox        = constants.kFloridaCheckBox;
+const kFloridaCheckMark       = constants.kFloridaCheckMark;
 const kGeorgia                = constants.kGeorgia;
 const kGeorgiaCheckMark       = constants.kGeorgiaCheckMark;
 const kHawaii                 = constants.kHawaii;
@@ -72,6 +73,7 @@ const kInputAndExpectedOutputPairs = [
     [kConnecticutCheckMark,   kMassachusetts    ],
     [kDelawareCheckMark,      kPennsylvania     ],
     [kFloridaCheckBox,        kFlorida          ],
+    [kFloridaCheckMark,       kFlorida          ],
     [kGeorgiaCheckMark,       kGeorgia          ],
     [kHawaiiCheckBox,         kHawaii           ],
     [kIllinoisCheckMark,      kWisconsin        ],
