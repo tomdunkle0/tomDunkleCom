@@ -90,7 +90,10 @@ const casesForMichiganHighPointedByTom = [
     [kYearSliderValueAfter2020, kStateNameMichigan],
     [kYearSliderValueAfter2021, kStateNameMichigan],
     [kYearSliderValueAfter2022, kStateNameMichigan],
-    [kYearSliderValueAfter2023, kStateNameMichigan]
+    [kYearSliderValueAfter2023, kStateNameMichigan],
+    [kYearSliderValueAfter2024, kStateNameMichigan],
+    [kYearSliderValueAfter2025, kStateNameMichigan],
+    [kYearSliderValueAfter2026, kStateNameMichigan]
     ];
 
 const casesForMichiganNotHighPointedByTom = [
