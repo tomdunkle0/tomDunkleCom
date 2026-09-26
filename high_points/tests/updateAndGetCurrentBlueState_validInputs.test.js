@@ -912,6 +912,7 @@ const casesForMovingBetweenACheckBoxAndAStateAfterChangingYearSliderValue = [
     [kUtahCheckBox,          kWyoming      ],
     [kIowaCheckBox,          kMinnesota    ],
     [kTennesseeCheckBox,     kNorthCarolina],
+    [kFloridaCheckBox,       kAlabama      ],
     [kNorthCarolinaCheckBox, kTennessee    ],
     [kVirginiaCheckBox,      kTennessee    ],
     [kVirginiaCheckBox,      kNorthCarolina]
