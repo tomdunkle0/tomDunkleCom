@@ -30,6 +30,7 @@ const testConstants = require('./resources/testConstants');
 const kConnecticutCheckBox      = testConstants.kConnecticutCheckBox;
 const kUnpopulatedInputs        = testConstants.kUnpopulatedInputs;
 const kYearSliderValueAfter2018 = testConstants.kYearSliderValueAfter2018;
+const kYearSliderValueAfter2020 = testConstants.kYearSliderValueAfter2020;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -43,10 +44,10 @@ const kIdOfStateUnderTest     = kConnecticut;
 const kNotHighPointed         = false;
 
 beforeAll(() => {
-    // If kYearSliderValueAfter2018 is undefined, tests can still pass because
+    // If kYearSliderValueAfter2020 is undefined, tests can still pass because
     //  applying an unpopulated value to an object property results in defaulting
-    //  to the midpoint, which is actually 2018 on the scale of 2014 to 2022.
-    expect(isUnpopulated(kYearSliderValueAfter2018)).toBe(false);
+    //  to the midpoint, which is actually 2020 on the scale of 2014 to 2026.
+    expect(isUnpopulated(kYearSliderValueAfter2020)).toBe(false);
 }); // beforeAll()
 
 beforeEach(() => {
