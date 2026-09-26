@@ -250,6 +250,7 @@ test(`calling onClickMap() with a valid green state clears
         mapContainer.orientationChangeIntervalId */
 
 const normallyGreenStatesWhoseCheckBoxesHandleClickEvents = [
+    kStateNameFlorida,
     kStateNameIowa,
     kStateNameNorthCarolina,
     kStateNameTennessee,
