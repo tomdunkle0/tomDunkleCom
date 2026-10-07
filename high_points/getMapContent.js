@@ -144,13 +144,11 @@ function getMapContent()
                     55.43,71.05 56.02,71.31 55.93,71.89 55.1,72.31 54.6,72.72 54.03,72.64
                     53.77,73.14 53.27,73.22 52.86,72.55 52.78,71.39 52.53,70.98 52.86,70.15
                     53.27,69.81 53.86,69.98" fill="#FF9999"/>
-                <polyline id="iKaula" stroke="#000" points="39.98,65.23 39.9,65.32"
-                    fill="none"/>
+                <polyline id="iKaula" stroke="#000" points="39.98,65.23 39.9,65.32" fill="none"/>
                 <polyline id="rKauai" stroke="#000" points="43.14,64.82 43.56,64.4 43.39,64.07
                     42.97,63.9 42.14,64.07 41.81,64.57 42.4,64.65 42.47,64.9 43.06,64.82
                     43.47,64.82 43.14,64.82" fill="#FF9999"/>
-                <polyline id="iNiihau" stroke="#000" points="41.31,64.73 40.81,65.06"
-                    fill="none"/>
+                <polyline id="iNiihau" stroke="#000" points="41.31,64.73 40.81,65.06" fill="none"/>
                 <polyline id="iMolokai" stroke="#000" points="50.28,67.32 49.38,66.82"
                     fill="none"/>
                 <polyline id="gIdaho" cursor="pointer" stroke="#000" year="2025"
