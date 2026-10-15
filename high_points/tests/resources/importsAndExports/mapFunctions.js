@@ -44,6 +44,7 @@ const kDirectoryNameHighPoints     = constants.kDirectoryNameHighPoints;
 const kFileExtensionHtml           = constants.kFileExtensionHtml;
 const kFlorida                     = constants.kFlorida;
 const kFloridaCheckBox             = constants.kFloridaCheckBox;
+const kFloridaCheckMark            = constants.kFloridaCheckMark;
 const kGeorgia                     = constants.kGeorgia;
 const kGeorgiaCheckMark            = constants.kGeorgiaCheckMark;
 const kHawaii                      = constants.kHawaii;

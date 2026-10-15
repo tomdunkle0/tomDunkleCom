@@ -13,6 +13,8 @@ const kCalifornia             = constants.kCalifornia;
 const kCaliforniaCheckMark    = constants.kCaliforniaCheckMark;
 const kColorado               = constants.kColorado;
 const kColoradoCheckMark      = constants.kColoradoCheckMark;
+const kFlorida                = constants.kFlorida;
+const kFloridaCheckMark       = constants.kFloridaCheckMark;
 const kGeorgia                = constants.kGeorgia;
 const kGeorgiaCheckMark       = constants.kGeorgiaCheckMark;
 const kIdaho                  = constants.kIdaho;
@@ -88,6 +90,7 @@ const kInputAndExpectedOutputPairs = [
     [kArkansasCheckMark,      kArkansas         ],
     [kCaliforniaCheckMark,    kCalifornia       ],
     [kColoradoCheckMark,      kColorado         ],
+    [kFloridaCheckMark,       kFlorida          ],
     [kGeorgiaCheckMark,       kGeorgia          ],
     [kIdahoCheckMark,         kIdaho            ],
     [kIndianaCheckMark,       kIndiana          ],
