@@ -13,9 +13,18 @@ type deersim.js >> tests\environment\deersim.js
 type tests\resources\importsAndExports\generator.js > tests\environment\generator.js
 echo: >> tests\environment\generator.js
 type generator.js >> tests\environment\generator.js
+type tests\resources\importsAndExports\getDeerSprites.js > tests\environment\getDeerSprites.js
+echo: >> tests\environment\getDeerSprites.js
+type getDeerSprites.js >> tests\environment\getDeerSprites.js
+type tests\resources\importsAndExports\getFontSprites.js > tests\environment\getFontSprites.js
+echo: >> tests\environment\getFontSprites.js
+type getFontSprites.js >> tests\environment\getFontSprites.js
 type tests\resources\importsAndExports\getI84SimContent.js > tests\environment\getI84SimContent.js
 echo: >> tests\environment\getI84SimContent.js
 type getI84SimContent.js >> tests\environment\getI84SimContent.js
+type tests\resources\importsAndExports\getVehicleSprites.js > tests\environment\getVehicleSprites.js
+echo: >> tests\environment\getVehicleSprites.js
+type getVehicleSprites.js >> tests\environment\getVehicleSprites.js
 type tests\resources\importsAndExports\initializeCanvas.js > tests\environment\initializeCanvas.js
 echo: >> tests\environment\initializeCanvas.js
 type initializeCanvas.js >> tests\environment\initializeCanvas.js
