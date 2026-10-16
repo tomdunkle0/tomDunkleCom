@@ -57,6 +57,9 @@ type audioManager.js | findstr /v "play() pause()" >> tests\environment\audioMan
 type constants.js > tests\environment\constants.js
 echo: >> tests\environment\constants.js
 type tests\resources\importsAndExports\constants.js >> tests\environment\constants.js
+type userInterfaceStrings.js > tests\environment\userInterfaceStrings.js
+echo: >> tests\environment\userInterfaceStrings.js
+type tests\resources\importsAndExports\userInterfaceStrings.js >> tests\environment\userInterfaceStrings.js
 type tests\resources\importsAndExports\getDiscographyContent.js > tests\environment\getDiscographyContent.js
 echo: >> tests\environment\getDiscographyContent.js
 type getDiscographyContent.js >> tests\environment\getDiscographyContent.js
