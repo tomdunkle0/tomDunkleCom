@@ -3,10 +3,10 @@
  | Purpose: Defines all strings displayed on the user interface. |
 \*---------------------------------------------------------------*/
 
-const audioDirectoryPath = "discography/audio/"; // TODO -- TEST
+const audioDirectoryPath = "discography/audio/";
 
-const mbAlbumPath = audioDirectoryPath + "mt_banger/"; // TODO -- TEST
-const mbMp3FileNames = // TODO -- TEST
+const mbAlbumPath = audioDirectoryPath + "mt_banger/";
+const mbMp3FileNames =
 [
     "every muscle is moving",
     "comfort zone",
@@ -27,8 +27,8 @@ const mbMp3FileNames = // TODO -- TEST
     "you've been exposed!"
 ];
 
-const fuotcAlbumPath = audioDirectoryPath + "fair_use_of_the_cochlea/"; // TODO -- TEST
-const fuotcMp3FileNames = // TODO -- TEST
+const fuotcAlbumPath = audioDirectoryPath + "fair_use_of_the_cochlea/";
+const fuotcMp3FileNames =
 [
     "thanks",
     "everything in front",
@@ -40,8 +40,8 @@ const fuotcMp3FileNames = // TODO -- TEST
     "chambers road"
 ];
 
-const csAlbumPath = audioDirectoryPath + "cornelius_squatgood/"; // TODO -- TEST
-const csMp3FileNames = // TODO -- TEST
+const csAlbumPath = audioDirectoryPath + "cornelius_squatgood/";
+const csMp3FileNames =
 [
     "0utr0",
     "skyDiiive [uncovah'd]",
@@ -60,8 +60,8 @@ const csMp3FileNames = // TODO -- TEST
     "in which i quietly walk out of the room"
 ];
 
-const dfAlbumPath = audioDirectoryPath + "dumb_fun/"; // TODO -- TEST
-const dfMp3FileNames = // TODO -- TEST
+const dfAlbumPath = audioDirectoryPath + "dumb_fun/";
+const dfMp3FileNames =
 [
     "01_HowTheTimesHaveChangedCosmicZooII",
     "02_StandingWaterAtTheBrooklynMasonicTemple",
@@ -180,7 +180,7 @@ const mtBangerTrackSuffixes = // TODO -- TEST
     "YouveBeenExposed!"
 ];
 
-const mtBangerTrackTitles = // TODO -- TEST
+const mtBangerTrackTitles =
 [
     "every muscle is moving",
     "comfort zone",
@@ -201,7 +201,7 @@ const mtBangerTrackTitles = // TODO -- TEST
     "you've been exposed!"
 ];
 
-const mtBangerTrackTimes = // TODO -- TEST
+const mtBangerTrackTimes =
 [
     "1:20",
     "4:00",
@@ -234,7 +234,7 @@ const fairUseOfTheCochleaTrackSuffixes = // TODO -- TEST
     "ChambersRoad"
 ];
 
-const fairUseOfTheCochleaTrackTitles = // TODO -- TEST
+const fairUseOfTheCochleaTrackTitles =
 [
     "Thanks",
     "Everything in Front",
@@ -246,7 +246,7 @@ const fairUseOfTheCochleaTrackTitles = // TODO -- TEST
     "Chambers Road"
 ];
 
-const fairUseOfTheCochleaTrackTimes = // TODO -- TEST
+const fairUseOfTheCochleaTrackTimes =
 [
     "1:00",
     "3:37",
@@ -277,7 +277,7 @@ const corneliusSquatgoodTrackSuffixes = // TODO -- TEST
     "InWhichIQuietlyWalkOutOfTheRoom"
 ];
 
-const corneliusSquatgoodTrackTitles = // TODO -- TEST
+const corneliusSquatgoodTrackTitles =
 [
     "0utr0",
     "skyDiiive [uncovah'd]",
@@ -296,7 +296,7 @@ const corneliusSquatgoodTrackTitles = // TODO -- TEST
     "in which i quietly walk out of the room"
 ];
 
-const corneliusSquatgoodTrackTimes = // TODO -- TEST
+const corneliusSquatgoodTrackTimes =
 [
     "1:29",
     "3:48",
@@ -327,7 +327,7 @@ const dumbFunTrackSuffixes = // TODO -- TEST
     "IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
 ];
 
-const dumbFunTrackTitles = // TODO -- TEST
+const dumbFunTrackTitles =
 [
     "how the times have changed [cosmic zoo II]",
     "standing water in the brooklyn masonic temple",
@@ -339,7 +339,7 @@ const dumbFunTrackTitles = // TODO -- TEST
     "i still regret not putting trucknutz on the back of matt's car"
 ]
 
-const dumbFunTrackTimes = // TODO -- TEST
+const dumbFunTrackTimes =
 [
     "5:04",
     "3:08",
@@ -371,7 +371,7 @@ const wereAllPrawnsTrackSuffixes = // TODO -- TEST
     "TheIncriminatingEvidenceButton"
 ];
 
-const wereAllPrawnsTrackTitles = // TODO -- TEST
+const wereAllPrawnsTrackTitles =
 [
     "You Will Be My Jalapeño Dream",
     "Rancid Fettuccinne Seamstress",
@@ -391,7 +391,7 @@ const wereAllPrawnsTrackTitles = // TODO -- TEST
     "The Incriminating Evidence Button"
 ];
 
-const wereAllPrawnsTrackTimes = // TODO -- TEST
+const wereAllPrawnsTrackTimes =
 [
     "1:51",
     "4:04",
@@ -430,7 +430,7 @@ const skunkBassTrackSuffixes = // TODO -- TEST
     "SkatingOnDryIce"
 ];
 
-const skunkBassTrackTitles = // TODO -- TEST
+const skunkBassTrackTitles =
 [
     "minimize",
     "cooLLoop.toondrahhhhhh",
@@ -449,7 +449,7 @@ const skunkBassTrackTitles = // TODO -- TEST
     "skating on dry ice"
 ];
 
-const skunkBassTrackTimes = // TODO -- TEST
+const skunkBassTrackTimes =
 [
     "1:07",
     "2:30",
@@ -492,7 +492,7 @@ const psynkholeTrackSuffixes = // TODO -- TEST
     "PressItEqualizeIt"
 ];
 
-const psynkholeTrackTitles = // TODO -- TEST
+const psynkholeTrackTitles =
 [
     "Song About You",
     "Leap of Faith",
@@ -516,7 +516,7 @@ const psynkholeTrackTitles = // TODO -- TEST
     "Press It, Equalize It"
 ];
 
-const psynkholeTrackTimes = // TODO -- TEST
+const psynkholeTrackTimes =
 [
     "0:53",
     "4:34",
@@ -559,7 +559,7 @@ const the1320TrackSuffixes = // TODO: Make sure that this line is tested.
     "TheEndOfTheWorld"
 ];
 
-const the1320TrackTitles = // TODO: Make sure that this line is tested.
+const the1320TrackTitles =
 [
     "Run That Turkey!",
     "Duel on the Black Keys",
@@ -578,7 +578,7 @@ const the1320TrackTitles = // TODO: Make sure that this line is tested.
     "The End of the World"
 ];
 
-const the1320TrackTimes = // TODO: Make sure that this line is tested.
+const the1320TrackTimes =
 [
     "0:41",
     "4:53",
