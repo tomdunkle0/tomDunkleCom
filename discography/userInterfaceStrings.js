@@ -159,27 +159,6 @@ const the1320Mp3FileNames =
     "The End of the World"
 ];
 
-const mtBangerTrackSuffixes = // TODO -- TEST
-[
-    "EveryMuscleIsMoving",
-    "ComfortZone",
-    "BreakMyBones",
-    "CampbellHill",
-    "ElectricLullaby",
-    "HaloEffect",
-    "ChiliPowder",
-    "NoFeelings",
-    "VicariousPtII",
-    "Gold",
-    "NextToYou",
-    "Gone?",
-    "1,001",
-    "YouNeverSaid",
-    "Ghost",
-    "VicariousPtI",
-    "YouveBeenExposed!"
-];
-
 const mtBangerTrackTitles =
 [
     "every muscle is moving",
@@ -222,18 +201,6 @@ const mtBangerTrackTimes =
     "2:22"
 ];
 
-const fairUseOfTheCochleaTrackSuffixes = // TODO -- TEST
-[
-    "Thanks",
-    "EverythingInFront",
-    "SolarBurglarySwag",
-    "GregsBirdfeeder",
-    "FamiliarConversations",
-    "OhItHurtsToLiveAndBreathe",
-    "DelayedShipment",
-    "ChambersRoad"
-];
-
 const fairUseOfTheCochleaTrackTitles =
 [
     "Thanks",
@@ -256,25 +223,6 @@ const fairUseOfTheCochleaTrackTimes =
     "4:11",
     "0:30",
     "3:06"
-];
-
-const corneliusSquatgoodTrackSuffixes = // TODO -- TEST
-[
-    "0utr0",
-    "SkyDiiiveUncovahd",
-    "ABriefDisclaimerInTheInterestOfYourSafety",
-    "InterplanetaryDialUp",
-    "LiveFromInsideTwoWashingMachines",
-    "PreviewOfYourDeathTerlinguaSun",
-    "DigitalAcoustic",
-    "BINITUStELLTOWER",
-    "TheMachineryOfLife",
-    "SteamGoatSpaceGoatNeverGoatSpaceBanjoMix",
-    "BristolMeetsLongBeachOnAWarmSunnyAfternoon",
-    "StopThatTrain",
-    "StuntDoubleLoveAffair",
-    "Okay",
-    "InWhichIQuietlyWalkOutOfTheRoom"
 ];
 
 const corneliusSquatgoodTrackTitles =
@@ -315,18 +263,6 @@ const corneliusSquatgoodTrackTimes =
     "4:31"
 ];
 
-const dumbFunTrackSuffixes = // TODO -- TEST
-[
-    "HowTheTimesHaveChanged",
-    "StandingWaterAtTheBrooklynMasonicTemple",
-    "DumbFun",
-    "ItSeemsIveWanderedIntoTheWrongBakeryAgain",
-    "ElevatorFriends",
-    "Wistful",
-    "HoldTight",
-    "IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
-];
-
 const dumbFunTrackTitles =
 [
     "how the times have changed [cosmic zoo II]",
@@ -349,26 +285,6 @@ const dumbFunTrackTimes =
     "1:04",
     "2:45",
     "6:57"
-];
-
-const wereAllPrawnsTrackSuffixes = // TODO -- TEST
-[
-    "YouWillBeMyJalapenoDream",
-    "RancidFettuccinneSeamstress",
-    "Clamshell",
-    "Sunchange",
-    "ChemicalTruancyOperation",
-    "USAGELINKSDONOTCROSSPOLICESAUSAGELINKSDON",
-    "StackTheStepladdersToTheHeavens",
-    "WOWGREATCAT",
-    "WhereIsMyMind",
-    "B&EAtTheSourCreamFactory",
-    "TemptedByTheSpacePudding",
-    "IveGotToCallAPlumber",
-    "BehindMyStoicVegetableEyes",
-    "PapasPizzaAndRoastBeefWasProbablyAFront",
-    "EveryConversationIsAJamSession",
-    "TheIncriminatingEvidenceButton"
 ];
 
 const wereAllPrawnsTrackTitles =
@@ -411,25 +327,6 @@ const wereAllPrawnsTrackTimes =
     "13:30"
 ];
 
-const skunkBassTrackSuffixes = // TODO -- TEST
-[
-    "Minimize",
-    "CooLLooptoondrahhhhhh",
-    "Depthcharge",
-    "DONUTRETURN",
-    "Feelings",
-    "WhereIsRmVd",
-    "SkunkBass",
-    "Antibiotixxx",
-    "F4d3dh0u534nth3m",
-    "Coffee&Incense",
-    "FUUUUUUUCK",
-    "LikeSquids",
-    "Capsule",
-    "StayBombin",
-    "SkatingOnDryIce"
-];
-
 const skunkBassTrackTitles =
 [
     "minimize",
@@ -466,30 +363,6 @@ const skunkBassTrackTimes =
     "3:26",
     "1:42",
     "3:06"
-];
-
-const psynkholeTrackSuffixes = // TODO -- TEST
-[
-    "SongAboutYou",
-    "LeapOfFaith",
-    "InterplanetaryJamSesh",
-    "TakeUpThyAxeAndSetThisForestAblaze",
-    "CrawlingIntoTheFireplace",
-    "TheFunkBackTooManyTimes",
-    "InsideThePsynkhole",
-    "LeavesReplacement",
-    "OldFriend",
-    "Ut",
-    "SolipsistHymn",
-    "IUsedToWatchBirds",
-    "NuclearWarfare",
-    "CosmicZoo",
-    "NoExpirationDate",
-    "PostcardsLimited",
-    "DecentHat",
-    "Berries",
-    "Elohknysp",
-    "PressItEqualizeIt"
 ];
 
 const psynkholeTrackTitles =
@@ -538,25 +411,6 @@ const psynkholeTrackTimes =
     "3:25",
     "11:00",
     "3:55"
-];
-
-const the1320TrackSuffixes = // TODO: Make sure that this line is tested.
-[
-    "RunThatTurkey",
-    "DuelOnTheBlackKeys",
-    "ArcticOcean",
-    "Up",
-    "IntoTheOven",
-    ";068",
-    "Martyrs",
-    "LostInSpaceWithoutADrumkit",
-    "HashBrownSandwiches",
-    "Circus",
-    "ProdigalSon",
-    "GreyGoo",
-    "WorldPeanutInvasion",
-    "BewareTheTallGrass",
-    "TheEndOfTheWorld"
 ];
 
 const the1320TrackTitles =

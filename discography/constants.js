@@ -179,3 +179,149 @@ const kTrackIds =
     "sBewareTheTallGrass",
     "fTheEndOfTheWorld"
 ];
+
+const mtBangerTrackSuffixes = // TODO -- TEST
+[
+    "EveryMuscleIsMoving",
+    "ComfortZone",
+    "BreakMyBones",
+    "CampbellHill",
+    "ElectricLullaby",
+    "HaloEffect",
+    "ChiliPowder",
+    "NoFeelings",
+    "VicariousPtII",
+    "Gold",
+    "NextToYou",
+    "Gone?",
+    "1,001",
+    "YouNeverSaid",
+    "Ghost",
+    "VicariousPtI",
+    "YouveBeenExposed!"
+];
+
+const fairUseOfTheCochleaTrackSuffixes = // TODO -- TEST
+[
+    "Thanks",
+    "EverythingInFront",
+    "SolarBurglarySwag",
+    "GregsBirdfeeder",
+    "FamiliarConversations",
+    "OhItHurtsToLiveAndBreathe",
+    "DelayedShipment",
+    "ChambersRoad"
+];
+
+const corneliusSquatgoodTrackSuffixes = // TODO -- TEST
+[
+    "0utr0",
+    "SkyDiiiveUncovahd",
+    "ABriefDisclaimerInTheInterestOfYourSafety",
+    "InterplanetaryDialUp",
+    "LiveFromInsideTwoWashingMachines",
+    "PreviewOfYourDeathTerlinguaSun",
+    "DigitalAcoustic",
+    "BINITUStELLTOWER",
+    "TheMachineryOfLife",
+    "SteamGoatSpaceGoatNeverGoatSpaceBanjoMix",
+    "BristolMeetsLongBeachOnAWarmSunnyAfternoon",
+    "StopThatTrain",
+    "StuntDoubleLoveAffair",
+    "Okay",
+    "InWhichIQuietlyWalkOutOfTheRoom"
+];
+
+const dumbFunTrackSuffixes = // TODO -- TEST
+[
+    "HowTheTimesHaveChanged",
+    "StandingWaterAtTheBrooklynMasonicTemple",
+    "DumbFun",
+    "ItSeemsIveWanderedIntoTheWrongBakeryAgain",
+    "ElevatorFriends",
+    "Wistful",
+    "HoldTight",
+    "IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
+];
+
+const wereAllPrawnsTrackSuffixes = // TODO -- TEST
+[
+    "YouWillBeMyJalapenoDream",
+    "RancidFettuccinneSeamstress",
+    "Clamshell",
+    "Sunchange",
+    "ChemicalTruancyOperation",
+    "USAGELINKSDONOTCROSSPOLICESAUSAGELINKSDON",
+    "StackTheStepladdersToTheHeavens",
+    "WOWGREATCAT",
+    "WhereIsMyMind",
+    "B&EAtTheSourCreamFactory",
+    "TemptedByTheSpacePudding",
+    "IveGotToCallAPlumber",
+    "BehindMyStoicVegetableEyes",
+    "PapasPizzaAndRoastBeefWasProbablyAFront",
+    "EveryConversationIsAJamSession",
+    "TheIncriminatingEvidenceButton"
+];
+
+const skunkBassTrackSuffixes = // TODO -- TEST
+[
+    "Minimize",
+    "CooLLooptoondrahhhhhh",
+    "Depthcharge",
+    "DONUTRETURN",
+    "Feelings",
+    "WhereIsRmVd",
+    "SkunkBass",
+    "Antibiotixxx",
+    "F4d3dh0u534nth3m",
+    "Coffee&Incense",
+    "FUUUUUUUCK",
+    "LikeSquids",
+    "Capsule",
+    "StayBombin",
+    "SkatingOnDryIce"
+];
+
+const psynkholeTrackSuffixes = // TODO -- TEST
+[
+    "SongAboutYou",
+    "LeapOfFaith",
+    "InterplanetaryJamSesh",
+    "TakeUpThyAxeAndSetThisForestAblaze",
+    "CrawlingIntoTheFireplace",
+    "TheFunkBackTooManyTimes",
+    "InsideThePsynkhole",
+    "LeavesReplacement",
+    "OldFriend",
+    "Ut",
+    "SolipsistHymn",
+    "IUsedToWatchBirds",
+    "NuclearWarfare",
+    "CosmicZoo",
+    "NoExpirationDate",
+    "PostcardsLimited",
+    "DecentHat",
+    "Berries",
+    "Elohknysp",
+    "PressItEqualizeIt"
+];
+
+const the1320TrackSuffixes = // TODO: Make sure that this line is tested.
+[
+    "RunThatTurkey",
+    "DuelOnTheBlackKeys",
+    "ArcticOcean",
+    "Up",
+    "IntoTheOven",
+    ";068",
+    "Martyrs",
+    "LostInSpaceWithoutADrumkit",
+    "HashBrownSandwiches",
+    "Circus",
+    "ProdigalSon",
+    "GreyGoo",
+    "WorldPeanutInvasion",
+    "BewareTheTallGrass",
+    "TheEndOfTheWorld"
+];
