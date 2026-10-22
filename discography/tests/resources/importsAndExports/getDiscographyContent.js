@@ -1,32 +1,5 @@
 module.exports = getDiscographyContent;
 
-const constants = require('./constants'); // TODO: Make sure that this line is tested.
-const mtBangerTrackSuffixes = constants.mtBangerTrackSuffixes; // TODO: Make sure that this line is tested.
-const fairUseOfTheCochleaTrackSuffixes = constants.fairUseOfTheCochleaTrackSuffixes; // TODO: Make sure that this line is tested.
-const corneliusSquatgoodTrackSuffixes = constants.corneliusSquatgoodTrackSuffixes; // TODO: Make sure that this line is tested.
-const dumbFunTrackSuffixes = constants.dumbFunTrackSuffixes; // TODO: Make sure that this line is tested.
-const wereAllPrawnsTrackSuffixes = constants.wereAllPrawnsTrackSuffixes; // TODO: Make sure that this line is tested.
-const skunkBassTrackSuffixes = constants.skunkBassTrackSuffixes; // TODO: Make sure that this line is tested.
-const psynkholeTrackSuffixes = constants.psynkholeTrackSuffixes; // TODO: Make sure that this line is tested.
-const the1320TrackSuffixes = constants.the1320TrackSuffixes; // TODO: Make sure that this line is tested.
-const audioDirectoryPath = constants.audioDirectoryPath; // TODO: Make sure that this line is tested.
-const mbAlbumPath = constants.mbAlbumPath; // TODO: Make sure that this line is tested.
-const mbMp3FileNames = constants.mbMp3FileNames; // TODO: Make sure that this line is tested.
-const fuotcAlbumPath = constants.fuotcAlbumPath; // TODO: Make sure that this line is tested.
-const fuotcMp3FileNames = constants.fuotcMp3FileNames; // TODO: Make sure that this line is tested.
-const csAlbumPath = constants.csAlbumPath; // TODO: Make sure that this line is tested.
-const csMp3FileNames = constants.csMp3FileNames; // TODO: Make sure that this line is tested.
-const dfAlbumPath = constants.dfAlbumPath; // TODO: Make sure that this line is tested.
-const dfMp3FileNames = constants.dfMp3FileNames; // TODO: Make sure that this line is tested.
-const wapAlbumPath = constants.wapAlbumPath; // TODO: Make sure that this line is tested.
-const wapMp3FileNames = constants.wapMp3FileNames; // TODO: Make sure that this line is tested.
-const sbAlbumPath = constants.sbAlbumPath; // TODO: Make sure that this line is tested.
-const sbMp3FileNames = constants.sbMp3FileNames; // TODO: Make sure that this line is tested.
-const psynkholeAlbumPath = constants.psynkholeAlbumPath; // TODO: Make sure that this line is tested.
-const psynkholeMp3FileNames = constants.psynkholeMp3FileNames; // TODO: Make sure that this line is tested.
-const the1320AlbumPath = constants.the1320AlbumPath; // TODO: Make sure that this line is tested.
-const the1320Mp3FileNames = constants.the1320Mp3FileNames; // TODO: Make sure that this line is tested.
-
 const userInterfaceStrings = require('./userInterfaceStrings'); // TODO: Make sure that this line is tested.
 const mtBangerTrackTimes = userInterfaceStrings.mtBangerTrackTimes; // TODO: Make sure that this line is tested.
 const mtBangerTrackTitles = userInterfaceStrings.mtBangerTrackTitles; // TODO: Make sure that this line is tested.
