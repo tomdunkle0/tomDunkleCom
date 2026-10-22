@@ -8,6 +8,22 @@ module.exports =
     skunkBassTrackSuffixes, // TODO: Make sure that this line is tested.
     psynkholeTrackSuffixes, // TODO: Make sure that this line is tested.
     the1320TrackSuffixes, // TODO: Make sure that this line is tested.
+    mbAlbumPath, // TODO: Make sure that this line is tested.
+    mbMp3FileNames, // TODO: Make sure that this line is tested.
+    fuotcAlbumPath, // TODO: Make sure that this line is tested.
+    fuotcMp3FileNames, // TODO: Make sure that this line is tested.
+    csAlbumPath, // TODO: Make sure that this line is tested.
+    csMp3FileNames, // TODO: Make sure that this line is tested.
+    dfAlbumPath, // TODO: Make sure that this line is tested.
+    dfMp3FileNames, // TODO: Make sure that this line is tested.
+    wapAlbumPath, // TODO: Make sure that this line is tested.
+    wapMp3FileNames, // TODO: Make sure that this line is tested.
+    sbAlbumPath, // TODO: Make sure that this line is tested.
+    sbMp3FileNames, // TODO: Make sure that this line is tested.
+    psynkholeAlbumPath, // TODO: Make sure that this line is tested.
+    psynkholeMp3FileNames, // TODO: Make sure that this line is tested.
+    the1320AlbumPath, // TODO: Make sure that this line is tested.
+    the1320Mp3FileNames, // TODO: Make sure that this line is tested.
     kColorCodeLightBlue,
     kColorCodeWhite,
     kEventNameOnClick,
