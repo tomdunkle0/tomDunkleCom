@@ -8,11 +8,9 @@
     "t" = Track title             (visible string indicating the track title) */
 
 function getDiscographyContent() {
-    const audioDirectoryPath = "discography/audio/"; // TODO -- TEST
+    const audioDirectoryPath = "discography/audio/";
 
-    const mbAlbumPath = audioDirectoryPath + "mt_banger/"; // TODO -- TEST
-    // TODO: expand the "check every mp3 file" test to count the number of mp3 files,
-    //        so that adding a bogus file name to one of these arrays causes a failure.
+    const mbAlbumPath = audioDirectoryPath + "mt_banger/";
     const mbMp3FileNames =
     [
         "every muscle is moving",
@@ -32,7 +30,7 @@ function getDiscographyContent() {
         "ghost",
         "vicarious pt I",
         "you've been exposed!"
-    ]; // TODO -- TEST
+    ];
 
     const mtBangerTrackSuffixes = // TODO -- TEST
     [
@@ -55,7 +53,7 @@ function getDiscographyContent() {
         "YouveBeenExposed!"
     ];
 
-    const fuotcAlbumPath = audioDirectoryPath + "fair_use_of_the_cochlea/"; // TODO -- TEST
+    const fuotcAlbumPath = audioDirectoryPath + "fair_use_of_the_cochlea/";
     const fuotcMp3FileNames =
     [
         "thanks",
@@ -66,7 +64,7 @@ function getDiscographyContent() {
         "oh, it hurts to live and breathe",
         "delayed shipment",
         "chambers road"
-    ]; // TODO -- TEST
+    ];
 
     const fairUseOfTheCochleaTrackSuffixes = // TODO -- TEST
     [
@@ -80,7 +78,7 @@ function getDiscographyContent() {
         "ChambersRoad"
     ];
 
-    const csAlbumPath = audioDirectoryPath + "cornelius_squatgood/"; // TODO -- TEST
+    const csAlbumPath = audioDirectoryPath + "cornelius_squatgood/";
     const csMp3FileNames =
     [
         "0utr0",
@@ -98,7 +96,7 @@ function getDiscographyContent() {
         "stunt double love affair",
         "okay",
         "in which i quietly walk out of the room"
-    ]; // TODO -- TEST
+    ];
 
     const corneliusSquatgoodTrackSuffixes = // TODO -- TEST
     [
@@ -119,7 +117,7 @@ function getDiscographyContent() {
         "InWhichIQuietlyWalkOutOfTheRoom"
     ];
 
-    const dfAlbumPath = audioDirectoryPath + "dumb_fun/"; // TODO -- TEST
+    const dfAlbumPath = audioDirectoryPath + "dumb_fun/";
     const dfMp3FileNames =
     [
         "01_HowTheTimesHaveChangedCosmicZooII",
@@ -130,7 +128,7 @@ function getDiscographyContent() {
         "06_Wistful",
         "07_HoldTight",
         "08_IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
-    ]; // TODO -- TEST
+    ];
 
     const dumbFunTrackSuffixes = // TODO -- TEST
     [
@@ -144,7 +142,7 @@ function getDiscographyContent() {
         "IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
     ];
 
-    const wapAlbumPath = audioDirectoryPath + "were_all_prawns/"; // TODO -- TEST
+    const wapAlbumPath = audioDirectoryPath + "were_all_prawns/";
     const wapMp3FileNames =
     [
         "01_YouWillBeMyJalapenoDream",
@@ -163,7 +161,7 @@ function getDiscographyContent() {
         "14_PapasPizzaAndRoastBeefWasProbablyAFront",
         "15_EveryConversationIsAJamSession",
         "16_TheIncriminatingEvidenceButton"
-    ]; // TODO -- TEST
+    ];
 
     const wereAllPrawnsTrackSuffixes = // TODO -- TEST
     [
@@ -185,7 +183,7 @@ function getDiscographyContent() {
         "TheIncriminatingEvidenceButton"
     ];
 
-    const sbAlbumPath = audioDirectoryPath + "skunk_bass/"; // TODO -- TEST
+    const sbAlbumPath = audioDirectoryPath + "skunk_bass/";
     const sbMp3FileNames =
     [
         "minimize",
@@ -203,7 +201,7 @@ function getDiscographyContent() {
         "capsule",
         "stay-bombin'",
         "skating on dry ice"
-    ]; // TODO -- TEST
+    ];
 
     const skunkBassTrackSuffixes = // TODO -- TEST
     [
@@ -224,7 +222,7 @@ function getDiscographyContent() {
         "SkatingOnDryIce"
     ];
 
-    const psynkholeAlbumPath = audioDirectoryPath + "psynkhole/"; // TODO -- TEST
+    const psynkholeAlbumPath = audioDirectoryPath + "psynkhole/";
     const psynkholeMp3FileNames =
     [
         "Song About You",
@@ -247,7 +245,7 @@ function getDiscographyContent() {
         "Berries",
         "elohknysp",
         "Press It, Equalize It"
-    ]; // TODO -- TEST
+    ];
 
     const psynkholeTrackSuffixes = // TODO -- TEST
     [
@@ -273,7 +271,7 @@ function getDiscographyContent() {
         "PressItEqualizeIt"
     ];
 
-    const the1320AlbumPath = audioDirectoryPath + "1320/"; // TODO -- TEST
+    const the1320AlbumPath = audioDirectoryPath + "1320/";
     const the1320Mp3FileNames =
     [
         "Run that Turkey!",
@@ -291,7 +289,7 @@ function getDiscographyContent() {
         "World Peanut Invasion",
         "Beware the Tall Grass",
         "The End of the World"
-    ]; // TODO -- TEST
+    ];
 
     const the1320TrackSuffixes = // TODO: Make sure that this line is tested.
     [
