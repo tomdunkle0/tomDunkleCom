@@ -1,6 +1,11 @@
+// Jest includes:
+const each = require('jest-each').default; // TODO -- TEST
+
 // Constant includes:
 const constants = require('./environment/constants');
-const kStyle = constants.kStyle;
+const kPrefixPlayArrow = constants.kPrefixPlayArrow; // TODO -- TEST
+const kStyle           = constants.kStyle;
+const kTrackIds        = constants.kTrackIds; // TODO -- TEST
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
@@ -12,6 +17,7 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 
 // Function includes:
 const audioManager = require('./environment/audioManager');
+const removeFirstCharacter = audioManager.removeFirstCharacter; // TODO -- TEST
 const setPlayArrowVisibility = audioManager.setPlayArrowVisibility;
 const getDiscographyContent = require('./environment/getDiscographyContent');
 
@@ -23,23 +29,34 @@ beforeEach(() => {
     document.body.innerHTML = getDiscographyContent();
 }); // beforeEach()
 
-test(`passing false to setPlayArrowVisibility() sets the play arrow of a track invisible`, () => {
-    setPlayArrowVisibility(kTestTrackId, kShouldBeVisible);
-    const playArrow = document.getElementById(kTestTrackPlayArrowId);
-    expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityVisible);
+describe(`passing false to setPlayArrowVisibility() sets the play arrow of a track
+            invisible`, () => { // TODO -- TEST
+    each(kTrackIds).it( // TODO -- TEST
+            `passing false to setPlayArrowVisibility() with '%s' sets the play arrow invisible`, // TODO -- TEST
+            (trackId) => { // TODO -- TEST
+        setPlayArrowVisibility(trackId, kShouldBeVisible); // TODO -- TEST
+        const playArrowId = kPrefixPlayArrow + removeFirstCharacter(trackId) // TODO -- TEST
+        const playArrow = document.getElementById(playArrowId); // TODO -- TEST
+        expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityVisible);
 
-    setPlayArrowVisibility(kTestTrackId, kShouldNotBeVisible);
+        setPlayArrowVisibility(trackId, kShouldNotBeVisible); // TODO -- TEST
 
-    expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityHiddenWithoutSemicolon);
+        expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityHiddenWithoutSemicolon);
+    });
 }); /* passing false to setPlayArrowVisibility() sets the play arrow of a track invisible */
 
-test(`passing true to setPlayArrowVisibility() sets the play arrow of a track visible`, () => {
-    const playArrow = document.getElementById(kTestTrackPlayArrowId);
-    expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityHiddenWithSemicolon);
+describe(`passing true to setPlayArrowVisibility() sets the play arrow of a track visible`, () => { // TODO -- TEST
+    each(kTrackIds).it( // TODO -- TEST
+            `passing true to setPlayArrowVisibility() with '%s' sets the play arrow visible`, // TODO -- TEST
+            (trackId) => { // TODO -- TEST
+        const playArrowId = kPrefixPlayArrow + removeFirstCharacter(trackId); // TODO -- TEST
+        const playArrow = document.getElementById(playArrowId); // TODO -- TEST
+        expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityHiddenWithSemicolon);
 
-    setPlayArrowVisibility(kTestTrackId, kShouldBeVisible);
+        setPlayArrowVisibility(trackId, kShouldBeVisible); // TODO -- TEST
 
-    expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityVisible);
+        expect(playArrow.getAttribute(kStyle)).toBe(kVisibilityVisible);
+    });
 }); /* passing true to setPlayArrowVisibility() sets the play arrow of a track visible */
 
 test(`passing undefined to setPlayArrowVisibility() performs no action`, () => {

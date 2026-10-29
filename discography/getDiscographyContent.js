@@ -32,7 +32,7 @@ function getDiscographyContent() {
         "you've been exposed!"
     ];
 
-    const mtBangerTrackSuffixes = // TODO -- TEST
+    const mtBangerTrackSuffixes =
     [
         "EveryMuscleIsMoving",
         "ComfortZone",
@@ -66,7 +66,7 @@ function getDiscographyContent() {
         "chambers road"
     ];
 
-    const fairUseOfTheCochleaTrackSuffixes = // TODO -- TEST
+    const fairUseOfTheCochleaTrackSuffixes =
     [
         "Thanks",
         "EverythingInFront",
@@ -98,7 +98,7 @@ function getDiscographyContent() {
         "in which i quietly walk out of the room"
     ];
 
-    const corneliusSquatgoodTrackSuffixes = // TODO -- TEST
+    const corneliusSquatgoodTrackSuffixes =
     [
         "0utr0",
         "SkyDiiiveUncovahd",
@@ -130,7 +130,7 @@ function getDiscographyContent() {
         "08_IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
     ];
 
-    const dumbFunTrackSuffixes = // TODO -- TEST
+    const dumbFunTrackSuffixes =
     [
         "HowTheTimesHaveChanged",
         "StandingWaterAtTheBrooklynMasonicTemple",
@@ -163,7 +163,7 @@ function getDiscographyContent() {
         "16_TheIncriminatingEvidenceButton"
     ];
 
-    const wereAllPrawnsTrackSuffixes = // TODO -- TEST
+    const wereAllPrawnsTrackSuffixes =
     [
         "YouWillBeMyJalapenoDream",
         "RancidFettuccinneSeamstress",
@@ -203,7 +203,7 @@ function getDiscographyContent() {
         "skating on dry ice"
     ];
 
-    const skunkBassTrackSuffixes = // TODO -- TEST
+    const skunkBassTrackSuffixes =
     [
         "Minimize",
         "CooLLooptoondrahhhhhh",
@@ -247,7 +247,7 @@ function getDiscographyContent() {
         "Press It, Equalize It"
     ];
 
-    const psynkholeTrackSuffixes = // TODO -- TEST
+    const psynkholeTrackSuffixes =
     [
         "SongAboutYou",
         "LeapOfFaith",
@@ -291,7 +291,7 @@ function getDiscographyContent() {
         "The End of the World"
     ];
 
-    const the1320TrackSuffixes = // TODO: Make sure that this line is tested.
+    const the1320TrackSuffixes =
     [
         "RunThatTurkey",
         "DuelOnTheBlackKeys",
