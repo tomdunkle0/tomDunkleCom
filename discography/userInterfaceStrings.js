@@ -257,7 +257,7 @@ const phTrackTimes =
     "3:55"
 ];
 
-const the1320TrackTitles =
+const d1320TrackTitles =
 [
     "Run That Turkey!",
     "Duel on the Black Keys",
@@ -276,7 +276,7 @@ const the1320TrackTitles =
     "The End of the World"
 ];
 
-const the1320TrackTimes =
+const d1320TrackTimes =
 [
     "0:41",
     "4:53",

@@ -15,5 +15,5 @@ const sbTrackTimes = userInterfaceStrings.sbTrackTimes; // TODO: Make sure that 
 const sbTrackTitles = userInterfaceStrings.sbTrackTitles; // TODO: Make sure that this line is tested.
 const phTrackTimes = userInterfaceStrings.phTrackTimes; // TODO: Make sure that this line is tested.
 const phTrackTitles = userInterfaceStrings.phTrackTitles; // TODO: Make sure that this line is tested.
-const the1320TrackTimes = userInterfaceStrings.the1320TrackTimes; // TODO: Make sure that this line is tested.
-const the1320TrackTitles = userInterfaceStrings.the1320TrackTitles; // TODO: Make sure that this line is tested.
+const d1320TrackTimes = userInterfaceStrings.d1320TrackTimes; // TODO: Make sure that this line is tested.
+const d1320TrackTitles = userInterfaceStrings.d1320TrackTitles; // TODO: Make sure that this line is tested.

@@ -270,8 +270,8 @@ const phTrackSuffixes =
     "PressItEqualizeIt"
 ];
 
-const the1320AlbumPath = audioDirectoryPath + "1320/";
-const the1320Mp3FileNames =
+const d1320AlbumPath = audioDirectoryPath + "1320/";
+const d1320Mp3FileNames =
 [
     "Run that Turkey!",
     "Duel on the Black Keys",
@@ -290,7 +290,7 @@ const the1320Mp3FileNames =
     "The End of the World"
 ];
 
-const the1320TrackSuffixes =
+const d1320TrackSuffixes =
 [
     "RunThatTurkey",
     "DuelOnTheBlackKeys",
@@ -809,41 +809,41 @@ function getDiscographyContent() {
                     </div>
                     <div class="flex-column">
                         `
-                        + getTrackListColumn(the1320TrackSuffixes, the1320TrackTitles, the1320TrackTimes) +
+                        + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
                     <audio controls id="a$1320">
                         <source id="sRunThatTurkey"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[0]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[0]}.mp3">
                         <source id="sDuelOnTheBlackKeys"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[1]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[1]}.mp3">
                         <source id="sArcticOcean"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[2]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[2]}.mp3">
                         <source id="sUp"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[3]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[3]}.mp3">
                         <source id="sIntoTheOven"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[4]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[4]}.mp3">
                         <source id="s;068"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[5]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[5]}.mp3">
                         <source id="sMartyrs"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[6]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[6]}.mp3">
                         <source id="sLostInSpaceWithoutADrumkit"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[7]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[7]}.mp3">
                         <source id="sHashBrownSandwiches"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[8]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[8]}.mp3">
                         <source id="sCircus"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[9]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[9]}.mp3">
                         <source id="sProdigalSon"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[10]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[10]}.mp3">
                         <source id="sGreyGoo"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[11]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[11]}.mp3">
                         <source id="sWorldPeanutInvasion"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[12]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[12]}.mp3">
                         <source id="sBewareTheTallGrass"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[13]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[13]}.mp3">
                         <source id="fTheEndOfTheWorld"
-                                src="${the1320AlbumPath}${the1320Mp3FileNames[14]}.mp3">
+                                src="${d1320AlbumPath}${d1320Mp3FileNames[14]}.mp3">
                     </audio>
                     <div class="releaseNotes">
                         <p style="color: #FFFFFF;

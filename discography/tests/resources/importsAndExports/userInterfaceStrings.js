@@ -14,6 +14,6 @@ module.exports =
     sbTrackTitles, // TODO: Make sure that this line is tested.
     phTrackTimes, // TODO: Make sure that this line is tested.
     phTrackTitles, // TODO: Make sure that this line is tested.
-    the1320TrackTimes, // TODO: Make sure that this line is tested.
-    the1320TrackTitles // TODO: Make sure that this line is tested.
+    d1320TrackTimes, // TODO: Make sure that this line is tested.
+    d1320TrackTitles // TODO: Make sure that this line is tested.
 };
