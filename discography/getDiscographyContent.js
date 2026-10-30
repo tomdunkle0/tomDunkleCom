@@ -326,7 +326,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackTimes) +
+                      + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -399,7 +399,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackTimes) +
+                      + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -452,7 +452,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackTimes) +
+                      + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -520,7 +520,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackTimes) +
+                      + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -574,7 +574,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackTimes) +
+                      + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -659,7 +659,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackTimes) +
+                      + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -731,7 +731,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackTimes) +
+                      + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -809,7 +809,7 @@ function getDiscographyContent() {
                     </div>
                     <div class="flex-column">
                         `
-                        + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackTimes) +
+                      + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
