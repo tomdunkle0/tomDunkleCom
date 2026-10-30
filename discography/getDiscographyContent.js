@@ -32,7 +32,7 @@ function getDiscographyContent() {
         "you've been exposed!"
     ];
 
-    const mtBangerTrackSuffixes =
+    const mbTrackSuffixes =
     [
         "EveryMuscleIsMoving",
         "ComfortZone",
@@ -66,7 +66,7 @@ function getDiscographyContent() {
         "chambers road"
     ];
 
-    const fairUseOfTheCochleaTrackSuffixes =
+    const fuotcTrackSuffixes =
     [
         "Thanks",
         "EverythingInFront",
@@ -98,7 +98,7 @@ function getDiscographyContent() {
         "in which i quietly walk out of the room"
     ];
 
-    const corneliusSquatgoodTrackSuffixes =
+    const csTrackSuffixes =
     [
         "0utr0",
         "SkyDiiiveUncovahd",
@@ -130,7 +130,7 @@ function getDiscographyContent() {
         "08_IStillRegretNotPuttingTruckNutzOnTheBackOfMattsCar"
     ];
 
-    const dumbFunTrackSuffixes =
+    const dfTrackSuffixes =
     [
         "HowTheTimesHaveChanged",
         "StandingWaterAtTheBrooklynMasonicTemple",
@@ -163,7 +163,7 @@ function getDiscographyContent() {
         "16_TheIncriminatingEvidenceButton"
     ];
 
-    const wereAllPrawnsTrackSuffixes =
+    const wapTrackSuffixes =
     [
         "YouWillBeMyJalapenoDream",
         "RancidFettuccinneSeamstress",
@@ -203,7 +203,7 @@ function getDiscographyContent() {
         "skating on dry ice"
     ];
 
-    const skunkBassTrackSuffixes =
+    const sbTrackSuffixes =
     [
         "Minimize",
         "CooLLooptoondrahhhhhh",
@@ -222,8 +222,8 @@ function getDiscographyContent() {
         "SkatingOnDryIce"
     ];
 
-    const psynkholeAlbumPath = audioDirectoryPath + "psynkhole/";
-    const psynkholeMp3FileNames =
+    const phAlbumPath = audioDirectoryPath + "psynkhole/";
+    const phMp3FileNames =
     [
         "Song About You",
         "Leap of Faith",
@@ -247,7 +247,7 @@ function getDiscographyContent() {
         "Press It, Equalize It"
     ];
 
-    const psynkholeTrackSuffixes =
+    const phTrackSuffixes =
     [
         "SongAboutYou",
         "LeapOfFaith",
@@ -326,7 +326,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(mtBangerTrackSuffixes, mtBangerTrackTitles, mtBangerTrackTimes) +
+                        + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -399,7 +399,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(fairUseOfTheCochleaTrackSuffixes, fairUseOfTheCochleaTrackTitles, fairUseOfTheCochleaTrackTimes) +
+                        + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -452,7 +452,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(corneliusSquatgoodTrackSuffixes, corneliusSquatgoodTrackTitles, corneliusSquatgoodTrackTimes) +
+                        + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -520,7 +520,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(dumbFunTrackSuffixes, dumbFunTrackTitles, dumbFunTrackTimes) +
+                        + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -574,7 +574,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(wereAllPrawnsTrackSuffixes, wereAllPrawnsTrackTitles, wereAllPrawnsTrackTimes) +
+                        + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -659,7 +659,7 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(skunkBassTrackSuffixes, skunkBassTrackTitles, skunkBassTrackTimes) +
+                        + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -731,51 +731,51 @@ function getDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-                        + getTrackListColumn(psynkholeTrackSuffixes, psynkholeTrackTitles, psynkholeTrackTimes) +
+                        + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackTimes) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
                     <audio controls id="aPsynkhole">
                         <source id="sSongAboutYou"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[0]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[0]}.mp3">
                         <source id="sLeapOfFaith"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[1]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[1]}.mp3">
                         <source id="sInterplanetaryJamSesh"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[2]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[2]}.mp3">
                         <source id="sTakeUpThyAxeAndSetThisForestAblaze"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[3]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[3]}.mp3">
                         <source id="sCrawlingIntoTheFireplace"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[4]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[4]}.mp3">
                         <source id="sTheFunkBackTooManyTimes"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[5]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[5]}.mp3">
                         <source id="sInsideThePsynkhole"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[6]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[6]}.mp3">
                         <source id="sLeavesReplacement"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[7]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[7]}.mp3">
                         <source id="sOldFriend"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[8]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[8]}.mp3">
                         <source id="sUt"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[9]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[9]}.mp3">
                         <source id="sSolipsistHymn"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[10]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[10]}.mp3">
                         <source id="sIUsedToWatchBirds"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[11]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[11]}.mp3">
                         <source id="sNuclearWarfare"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[12]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[12]}.mp3">
                         <source id="sCosmicZoo"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[13]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[13]}.mp3">
                         <source id="sNoExpirationDate"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[14]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[14]}.mp3">
                         <source id="sPostcardsLimited"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[15]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[15]}.mp3">
                         <source id="sDecentHat"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[16]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[16]}.mp3">
                         <source id="sBerries"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[17]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[17]}.mp3">
                         <source id="sElohknysp"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[18]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[18]}.mp3">
                         <source id="fPressItEqualizeIt"
-                                src="${psynkholeAlbumPath}${psynkholeMp3FileNames[19]}.mp3">
+                                src="${phAlbumPath}${phMp3FileNames[19]}.mp3">
                     </audio>
                     <div class="releaseNotes">
                         <p style="color: #FFFFFF;

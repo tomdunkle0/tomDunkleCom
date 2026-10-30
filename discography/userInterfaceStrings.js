@@ -3,7 +3,7 @@
  | Purpose: Defines all strings displayed on the user interface. |
 \*---------------------------------------------------------------*/
 
-const mtBangerTrackTitles =
+const mbTrackTitles =
 [
     "every muscle is moving",
     "comfort zone",
@@ -24,7 +24,7 @@ const mtBangerTrackTitles =
     "you've been exposed!"
 ];
 
-const mtBangerTrackTimes =
+const mbTrackTimes =
 [
     "1:20",
     "4:00",
@@ -45,7 +45,7 @@ const mtBangerTrackTimes =
     "2:22"
 ];
 
-const fairUseOfTheCochleaTrackTitles =
+const fuotcTrackTitles =
 [
     "Thanks",
     "Everything in Front",
@@ -57,7 +57,7 @@ const fairUseOfTheCochleaTrackTitles =
     "Chambers Road"
 ];
 
-const fairUseOfTheCochleaTrackTimes =
+const fuotcTrackTimes =
 [
     "1:00",
     "3:37",
@@ -69,7 +69,7 @@ const fairUseOfTheCochleaTrackTimes =
     "3:06"
 ];
 
-const corneliusSquatgoodTrackTitles =
+const csTrackTitles =
 [
     "0utr0",
     "skyDiiive [uncovah'd]",
@@ -88,7 +88,7 @@ const corneliusSquatgoodTrackTitles =
     "in which i quietly walk out of the room"
 ];
 
-const corneliusSquatgoodTrackTimes =
+const csTrackTimes =
 [
     "1:29",
     "3:48",
@@ -107,7 +107,7 @@ const corneliusSquatgoodTrackTimes =
     "4:31"
 ];
 
-const dumbFunTrackTitles =
+const dfTrackTitles =
 [
     "how the times have changed [cosmic zoo II]",
     "standing water in the brooklyn masonic temple",
@@ -119,7 +119,7 @@ const dumbFunTrackTitles =
     "i still regret not putting trucknutz on the back of matt's car"
 ]
 
-const dumbFunTrackTimes =
+const dfTrackTimes =
 [
     "5:04",
     "3:08",
@@ -131,7 +131,7 @@ const dumbFunTrackTimes =
     "6:57"
 ];
 
-const wereAllPrawnsTrackTitles =
+const wapTrackTitles =
 [
     "You Will Be My Jalapeño Dream",
     "Rancid Fettuccinne Seamstress",
@@ -151,7 +151,7 @@ const wereAllPrawnsTrackTitles =
     "The Incriminating Evidence Button"
 ];
 
-const wereAllPrawnsTrackTimes =
+const wapTrackTimes =
 [
     "1:51",
     "4:04",
@@ -171,7 +171,7 @@ const wereAllPrawnsTrackTimes =
     "13:30"
 ];
 
-const skunkBassTrackTitles =
+const sbTrackTitles =
 [
     "minimize",
     "cooLLoop.toondrahhhhhh",
@@ -190,7 +190,7 @@ const skunkBassTrackTitles =
     "skating on dry ice"
 ];
 
-const skunkBassTrackTimes =
+const sbTrackTimes =
 [
     "1:07",
     "2:30",
@@ -209,7 +209,7 @@ const skunkBassTrackTimes =
     "3:06"
 ];
 
-const psynkholeTrackTitles =
+const phTrackTitles =
 [
     "Song About You",
     "Leap of Faith",
@@ -233,7 +233,7 @@ const psynkholeTrackTitles =
     "Press It, Equalize It"
 ];
 
-const psynkholeTrackTimes =
+const phTrackTimes =
 [
     "0:53",
     "4:34",
