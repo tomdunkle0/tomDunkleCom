@@ -881,9 +881,9 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO 
             trackNumber = paddingZero + trackNumber; // TODO -- TEST
         }
         trackSuffix = trackSuffixes[arrayIndex]; // TODO -- TEST
-        trackTitle = trackTitles[arrayIndex]; // TODO -- TEST
-        trackDuration = trackDurations[arrayIndex]; // TODO -- TEST
-        trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackDuration); // TODO -- TEST
+        trackTitle = trackTitles[arrayIndex];
+        trackDuration = trackDurations[arrayIndex];
+        trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackDuration);
     }
     return trackListColumn;
 } // getTrackListColumn()
