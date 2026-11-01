@@ -888,28 +888,28 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO 
     return trackListColumn;
 } // getTrackListColumn()
 
-function getTrackRow(suffix, trackNumber, trackTitle, trackDuration)
+function getTrackRow(trackSuffix, trackNumber, trackTitle, trackDuration)
 {
     return `
                         <div class="trackRow">
-                            <img id="p${suffix}"
+                            <img id="p${trackSuffix}"
                                  src="discography/playArrow.png"
                                  style="visibility: hidden;" />
                             <div class="trackNumber">
                                 <p class="trackText"
-                                   id="n${suffix}">
+                                   id="n${trackSuffix}">
                                     ${trackNumber}.)
                                 </p>
                             </div>
                             <div class="trackTitle">
                                 <p class="trackText"
-                                   id="t${suffix}">
+                                   id="t${trackSuffix}">
                                     ${trackTitle}
                                 </p>
                             </div>
                             <div class="trackDuration">
                                 <p class="trackText"
-                                   id="d${suffix}">
+                                   id="d${trackSuffix}">
                                     (${trackDuration})
                                 </p>
                             </div>
