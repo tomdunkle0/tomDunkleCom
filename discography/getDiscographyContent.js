@@ -865,27 +865,31 @@ function getDiscographyContent() { // TODO -- TEST
     `;
 } // getDiscographyContent()
 
-function getTrackListColumn(trackSuffixes, trackTitles, trackTimes) // TODO: Make sure that this function is tested.
+// TODO: create a test suite for getTrackListColumn().
+function getTrackListColumn(trackSuffixes, trackTitles, trackTimes) // TODO -- TEST
 {
-    var trackListColumn = ""; // TODO: Make sure that this line is tested.
-    for (var i = 0; i < trackSuffixes.length; i++) // TODO: Make sure that this line is tested.
+    const greatestSingleDigitNumber = 9; // TODO -- TEST
+    const paddingZero = "0"; // TODO -- TEST
+    var trackSuffix = ""; // TODO -- TEST
+    var trackTitle = ""; // TODO -- TEST
+    var trackTime = ""; // TODO -- TEST
+    var trackListColumn = ""; // TODO -- TEST
+    for (var arrayIndex = 0; arrayIndex < trackSuffixes.length; arrayIndex++) // TODO -- TEST
     {
-        var trackNumber = i + 1; // TODO -- TEST
-        var trackNumberStr = ""; // TODO -- TEST
-        if (i < 9) // TODO: Magic number. // TODO -- TEST
+        var trackNumber = (arrayIndex + 1).toString(); // TODO -- TEST
+        if (arrayIndex < greatestSingleDigitNumber) // TODO -- TEST
         {
-            trackNumberStr = "0" + (i + 1).toString(); // TODO -- TEST
+            trackNumber = paddingZero + trackNumber; // TODO -- TEST
         }
-        else
-        {
-            trackNumberStr = (i + 1).toString(); // TODO -- TEST
-        }
-        trackListColumn += getTrackRow(trackSuffixes[i], trackNumberStr, trackTitles[i], trackTimes[i]); // TODO -- TEST
+        trackSuffix = trackSuffixes[arrayIndex]; // TODO -- TEST
+        trackTitle = trackTitles[arrayIndex]; // TODO -- TEST
+        trackTime = trackTimes[arrayIndex]; // TODO -- TEST
+        trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackTime); // TODO -- TEST
     }
-    return trackListColumn; // TODO -- TEST
+    return trackListColumn;
 } // getTrackListColumn()
 
-function getTrackRow(suffix, trackNumber, trackTitle, trackDuration) // TODO: Make sure that this function is tested.
+function getTrackRow(suffix, trackNumber, trackTitle, trackDuration)
 {
     return `
                         <div class="trackRow">
@@ -910,5 +914,5 @@ function getTrackRow(suffix, trackNumber, trackTitle, trackDuration) // TODO: Ma
                                     (${trackDuration})
                                 </p>
                             </div>
-                        </div>`
+                        </div>`;
 } // getTrackRow()

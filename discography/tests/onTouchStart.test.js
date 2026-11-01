@@ -10,7 +10,8 @@ const kTestTrackNumberId = testConstants.kTestTrackNumberId;
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const onTouchStart = audioManager.onTouchStart;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');

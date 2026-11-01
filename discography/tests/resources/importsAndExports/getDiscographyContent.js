@@ -1,4 +1,9 @@
-module.exports = getDiscographyContent;
+module.exports =
+{
+    getDiscographyContent,
+    getTrackListColumn, // TODO: Make sure that this line is tested.
+    getTrackRow // TODO: Make sure that this line is tested.
+};
 
 const userInterfaceStrings = require('./userInterfaceStrings'); // TODO: Make sure that this line is tested.
 const mbTrackTimes = userInterfaceStrings.mbTrackTimes; // TODO: Make sure that this line is tested.

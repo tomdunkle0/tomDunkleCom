@@ -6,7 +6,8 @@ const kTestTrackId = testConstants.kTestTrackId;
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
 const isFinalTrackOnAlbum    = audioManager.isFinalTrackOnAlbum;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 // Miscellaneous constants:
 const kMinimumTrackCount = 8;

@@ -9,7 +9,8 @@ const kTestTrackId = testConstants.kTestTrackId;
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const isUnpopulated = audioManager.isUnpopulated;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 test(`given a populated string, isUnpopulated() returns false`, () => {
     const populatedString = "populated with at least one character";

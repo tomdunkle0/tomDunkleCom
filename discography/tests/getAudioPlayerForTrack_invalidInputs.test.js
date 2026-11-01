@@ -5,7 +5,8 @@ const kUnpopulated = constants.kUnpopulated;
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 test(`given a null trackId, getAudioPlayerForTrack() returns null`, () => {
     expect(getAudioPlayerForTrack(null)).toBe(null);

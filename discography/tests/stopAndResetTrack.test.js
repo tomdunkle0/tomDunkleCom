@@ -15,7 +15,8 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 const audioManager = require('./environment/audioManager');
 const addPlayEventListenerForEachAudioPlayer = audioManager.addPlayEventListenerForEachAudioPlayer;
 const stopAndResetTrack                      = audioManager.stopAndResetTrack;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');

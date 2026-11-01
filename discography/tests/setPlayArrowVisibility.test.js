@@ -19,7 +19,8 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 const audioManager = require('./environment/audioManager');
 const removeFirstCharacter = audioManager.removeFirstCharacter; // TODO -- TEST
 const setPlayArrowVisibility = audioManager.setPlayArrowVisibility;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 // Miscellaneous constants:
 const kShouldBeVisible    = true;

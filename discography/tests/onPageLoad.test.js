@@ -12,7 +12,8 @@ const testConstants = require('./resources/testConstants');
 const kAudioElementNodeName = testConstants.kAudioElementNodeName;
 
 // Function includes:
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 // Miscellaneous constants:
 const kNumberOfAlbumsOnPage     = 8;

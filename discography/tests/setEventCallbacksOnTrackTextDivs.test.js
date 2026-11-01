@@ -22,7 +22,8 @@ const audioManager = require('./environment/audioManager');
 const getFunctionCallStringForPlayTrack = audioManager.getFunctionCallStringForPlayTrack;
 const isUnpopulated                     = audioManager.isUnpopulated;
 const setEventCallbacksOnTrackTextDivs  = audioManager.setEventCallbacksOnTrackTextDivs;
-const getDiscographyContent = require('./environment/getDiscographyContent');
+const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
+const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
 
 beforeAll(() => {
     // If kEventNameOnClick, kEventNameOnMouseLeave, kEventNameOnMouseOver, kEventNameOnTouchEnd,
