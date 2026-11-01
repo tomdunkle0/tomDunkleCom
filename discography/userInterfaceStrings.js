@@ -24,7 +24,7 @@ const mbTrackTitles =
     "you've been exposed!"
 ];
 
-const mbTrackTimes =
+const mbTrackDurations =
 [
     "1:20",
     "4:00",
@@ -57,7 +57,7 @@ const fuotcTrackTitles =
     "Chambers Road"
 ];
 
-const fuotcTrackTimes =
+const fuotcTrackDurations =
 [
     "1:00",
     "3:37",
@@ -88,7 +88,7 @@ const csTrackTitles =
     "in which i quietly walk out of the room"
 ];
 
-const csTrackTimes =
+const csTrackDurations =
 [
     "1:29",
     "3:48",
@@ -119,7 +119,7 @@ const dfTrackTitles =
     "i still regret not putting trucknutz on the back of matt's car"
 ]
 
-const dfTrackTimes =
+const dfTrackDurations =
 [
     "5:04",
     "3:08",
@@ -151,7 +151,7 @@ const wapTrackTitles =
     "The Incriminating Evidence Button"
 ];
 
-const wapTrackTimes =
+const wapTrackDurations =
 [
     "1:51",
     "4:04",
@@ -190,7 +190,7 @@ const sbTrackTitles =
     "skating on dry ice"
 ];
 
-const sbTrackTimes =
+const sbTrackDurations =
 [
     "1:07",
     "2:30",
@@ -233,7 +233,7 @@ const phTrackTitles =
     "Press It, Equalize It"
 ];
 
-const phTrackTimes =
+const phTrackDurations =
 [
     "0:53",
     "4:34",
@@ -276,7 +276,7 @@ const d1320TrackTitles =
     "The End of the World"
 ];
 
-const d1320TrackTimes =
+const d1320TrackDurations =
 [
     "0:41",
     "4:53",

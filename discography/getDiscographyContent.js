@@ -327,7 +327,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackTimes) +
+          + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -400,7 +400,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackTimes) +
+          + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -453,7 +453,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackTimes) +
+          + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -521,7 +521,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackTimes) +
+          + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -575,7 +575,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackTimes) +
+          + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -660,7 +660,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackTimes) +
+          + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -732,7 +732,7 @@ function getDiscographyContent() { // TODO -- TEST
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackTimes) +
+          + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -810,7 +810,7 @@ function getDiscographyContent() { // TODO -- TEST
                     </div>
                     <div class="flex-column">
                         `
-          + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackTimes) +
+          + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -865,14 +865,13 @@ function getDiscographyContent() { // TODO -- TEST
     `;
 } // getDiscographyContent()
 
-// TODO: create a test suite for getTrackListColumn().
-function getTrackListColumn(trackSuffixes, trackTitles, trackTimes) // TODO -- TEST
+function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO -- TEST
 {
     const greatestSingleDigitNumber = 9; // TODO -- TEST
     const paddingZero = "0"; // TODO -- TEST
     var trackSuffix = ""; // TODO -- TEST
     var trackTitle = ""; // TODO -- TEST
-    var trackTime = ""; // TODO -- TEST
+    var trackDuration = ""; // TODO -- TEST
     var trackListColumn = ""; // TODO -- TEST
     for (var arrayIndex = 0; arrayIndex < trackSuffixes.length; arrayIndex++) // TODO -- TEST
     {
@@ -883,8 +882,8 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackTimes) // TODO -- T
         }
         trackSuffix = trackSuffixes[arrayIndex]; // TODO -- TEST
         trackTitle = trackTitles[arrayIndex]; // TODO -- TEST
-        trackTime = trackTimes[arrayIndex]; // TODO -- TEST
-        trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackTime); // TODO -- TEST
+        trackDuration = trackDurations[arrayIndex]; // TODO -- TEST
+        trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackDuration); // TODO -- TEST
     }
     return trackListColumn;
 } // getTrackListColumn()
