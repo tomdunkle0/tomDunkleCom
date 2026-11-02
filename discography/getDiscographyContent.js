@@ -875,7 +875,7 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO 
     var trackListColumn = ""; // TODO -- TEST
     for (var arrayIndex = 0; arrayIndex < trackSuffixes.length; arrayIndex++) // TODO -- TEST
     {
-        var trackNumber = (arrayIndex + 1).toString(); // TODO -- TEST
+        var trackNumber = (arrayIndex + 1).toString();
         if (arrayIndex < greatestSingleDigitNumber)
         {
             trackNumber = paddingZero + trackNumber;
