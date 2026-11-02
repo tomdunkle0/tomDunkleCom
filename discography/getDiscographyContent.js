@@ -876,11 +876,11 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO 
     for (var arrayIndex = 0; arrayIndex < trackSuffixes.length; arrayIndex++) // TODO -- TEST
     {
         var trackNumber = (arrayIndex + 1).toString(); // TODO -- TEST
-        if (arrayIndex < greatestSingleDigitNumber) // TODO -- TEST
+        if (arrayIndex < greatestSingleDigitNumber)
         {
-            trackNumber = paddingZero + trackNumber; // TODO -- TEST
+            trackNumber = paddingZero + trackNumber;
         }
-        trackSuffix = trackSuffixes[arrayIndex]; // TODO -- TEST
+        trackSuffix = trackSuffixes[arrayIndex];
         trackTitle = trackTitles[arrayIndex];
         trackDuration = trackDurations[arrayIndex];
         trackListColumn += getTrackRow(trackSuffix, trackNumber, trackTitle, trackDuration);
