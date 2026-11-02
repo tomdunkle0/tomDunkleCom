@@ -865,16 +865,16 @@ function getDiscographyContent() { // TODO -- TEST
     `;
 } // getDiscographyContent()
 
-function getTrackListColumn(trackSuffixes, trackTitles, trackDurations) // TODO -- TEST
+function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
 {
     // This function assumes that all three parameter arrays are the same length.
-    const parameterArrayLength = trackSuffixes.length; // TODO -- TEST
-    const greatestSingleDigitNumber = 9; // TODO -- TEST
-    const paddingZero = "0"; // TODO -- TEST
-    var trackSuffix = ""; // TODO -- TEST
-    var trackTitle = ""; // TODO -- TEST
-    var trackDuration = ""; // TODO -- TEST
-    var trackListColumn = ""; // TODO -- TEST
+    const parameterArrayLength = trackSuffixes.length;
+    const greatestSingleDigitNumber = 9;
+    const paddingZero = "0";
+    var trackSuffix = "";
+    var trackTitle = "";
+    var trackDuration = "";
+    var trackListColumn = "";
     for (var arrayIndex = 0; arrayIndex < parameterArrayLength; arrayIndex++)
     {
         var trackNumber = (arrayIndex + 1).toString();
