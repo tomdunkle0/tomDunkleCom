@@ -1,12 +1,15 @@
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getDiscographyContent = require('./environment/getDiscographyContent');
-const getDiscographyContents = getDiscographyContent.getDiscographyContent; // TODO -- TEST
 const getTrackListColumn = getDiscographyContent.getTrackListColumn; // TODO -- TEST
 
-beforeEach(() => {
-    document.body.innerHTML = getDiscographyContents(); // TODO: probably not needed.
-}); // beforeEach()
+// Test Constant includes:
+const testConstants = require('./resources/testConstants'); // TODO -- TEST
+const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
+
+// Test Function includes:
+const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
+const getDivWithClassAssignment = testFunctions.getDivWithClassAssignment; // TODO -- TEST
 
 const testTrackNumbers =
 [
@@ -66,10 +69,11 @@ test(`given valid lists of suffixes, track numbers, track titles, and track dura
     const returnValue = getTrackListColumn(testTrackSuffixes, testTrackNumbers, testTrackTitles, testTrackTimes); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    expect(trimmedReturnValue.startsWith("<div class=\"trackRow\">")).toBe(true); // TODO: Magic string. // TODO -- TEST
-    const count = trimmedReturnValue.split("<div class=\"trackRow\">").length - 1;
-    expect(count).toBe(10); // TODO: Magic number. // TODO -- TEST
-    expect(trimmedReturnValue.endsWith("</div>")).toBe(true); // TODO: Magic string. // TODO -- TEST
-    // TODO: confirm that there are 3 instances of trackRow.
+    const divOpeningTagTrackRow = getDivWithClassAssignment("trackRow"); // TODO: Magic string. // TODO -- TEST
+    expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
+    const count = trimmedReturnValue.split(divOpeningTagTrackRow).length - 1;
+    const expectedNumberOfTrackRows = 10; // TODO -- TEST
+    expect(count).toBe(expectedNumberOfTrackRows); // TODO -- TEST
+    expect(trimmedReturnValue.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
 }); /* given valid lists of suffixes, track numbers, track titles, and track durations,
         getTrackListColumn() returns a list of divs that are of type trackRow */

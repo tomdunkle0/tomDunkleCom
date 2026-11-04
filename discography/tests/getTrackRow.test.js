@@ -1,25 +1,37 @@
+// Constant includes:
+const constants = require('./environment/constants'); // TODO -- TEST
+const kStyleSheetClassNameTrackDuration = constants.kStyleSheetClassNameTrackDuration; // TODO -- TEST
+const kStyleSheetClassNameTrackNumber   = constants.kStyleSheetClassNameTrackNumber; // TODO -- TEST
+const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle; // TODO -- TEST
+
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getDiscographyContent = require('./environment/getDiscographyContent');
-const getDiscographyContents = getDiscographyContent.getDiscographyContent; // TODO -- TEST
 const getTrackRow = getDiscographyContent.getTrackRow; // TODO -- TEST
 
-beforeEach(() => {
-    document.body.innerHTML = getDiscographyContents(); // TODO: probably not needed.
-}); // beforeEach()
+// Test Constant includes:
+const testConstants = require('./resources/testConstants'); // TODO -- TEST
+const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
+const kDivOpeningTagClassAssignment = testConstants.kDivOpeningTagClassAssignment; // TODO -- TEST
+const kDivOpeningTagTrackRow = testConstants.kDivOpeningTagTrackRow; // TODO -- TEST
 
 const testTrackNumber = "1"; // TODO -- TEST
 const testTrackSuffix = "TestTrackSuffix"; // TODO -- TEST
 const testTrackTime = "3:30"; // TODO -- TEST
 const testTrackTitle = "Test Track"; // TODO -- TEST
 
+// Test Function includes:
+const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
+const getDivWithClassAssignment = testFunctions.getDivWithClassAssignment; // TODO -- TEST
+
 test(`given a valid suffix, track number, track title, and track duration, getTrackRow() returns a
         div of class trackRow`, () => {
     const returnValue = getTrackRow(testTrackSuffix, testTrackNumber, testTrackTitle, testTrackTime); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    expect(trimmedReturnValue.startsWith("<div class=\"trackRow\">")).toBe(true); // TODO: Magic string. // TODO -- TEST
-    expect(trimmedReturnValue.endsWith("</div>")).toBe(true); // TODO: Magic string. // TODO -- TEST
+    const divOpeningTagTrackRow = getDivWithClassAssignment("trackRow"); // TODO: Magic string. // TODO -- TEST
+    expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
+    expect(trimmedReturnValue.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
 }); /* given a valid suffix, track number, track title, and track duration, getTrackRow() returns a
         div of class trackRow */
 
@@ -29,9 +41,12 @@ test(`given a valid suffix, track number, track title, and track duration, getTr
     const returnValue = getTrackRow(testTrackSuffix, testTrackNumber, testTrackTitle, testTrackTime); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    expect(trimmedReturnValue).toContain("<div class=\"trackNumber\">"); // TODO -- TEST
-    expect(trimmedReturnValue).toContain("<div class=\"trackTitle\">"); // TODO -- TEST
-    expect(trimmedReturnValue).toContain("<div class=\"trackDuration\">"); // TODO -- TEST
+    const divOpeningTagTrackNumber = getDivWithClassAssignment(kStyleSheetClassNameTrackNumber); // TODO -- TEST
+    const divOpeningTagTrackTitle = getDivWithClassAssignment(kStyleSheetClassNameTrackTitle); // TODO -- TEST
+    const divOpeningTagTrackDuration = getDivWithClassAssignment(kStyleSheetClassNameTrackDuration); // TODO -- TEST
+    expect(trimmedReturnValue).toContain(divOpeningTagTrackNumber); // TODO -- TEST
+    expect(trimmedReturnValue).toContain(divOpeningTagTrackTitle); // TODO -- TEST
+    expect(trimmedReturnValue).toContain(divOpeningTagTrackDuration); // TODO -- TEST
 }); /* given a valid suffix, track number, track title, and track duration, getTrackRow() returns a
         string containing a div of class trackNumber, a div of class trackTitle, and a div of class
         trackDuration */
