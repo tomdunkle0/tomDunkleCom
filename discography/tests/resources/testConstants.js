@@ -13,8 +13,8 @@ const kPrefixTrackTitle    = constants.kPrefixTrackTitle;
 
 // Miscellaneous constants:
 const kAudioElementNodeName             = "AUDIO";
-const kDivClosingTag                    = "</div>"; // TODO -- TEST
-const kDivOpeningTagClassAssignment     = "<div class=\""; // TODO -- TEST
+const kDivClosingTag                    = "</div>";
+const kDivOpeningTagClassAssignment     = "<div class=\"";
 const kDivOpeningTagTermination         = "\">"; // TODO -- TEST
 const kEventTypePlay                    = "play";
 const kTestTrackIdSuffix                = "RunThatTurkey";
