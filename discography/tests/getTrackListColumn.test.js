@@ -1,3 +1,7 @@
+// Constant includes:
+const constants = require('./environment/constants'); // TODO -- TEST
+const kStyleSheetClassNameTrackRow = constants.kStyleSheetClassNameTrackRow; // TODO -- TEST
+
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getDiscographyContent = require('./environment/getDiscographyContent');
@@ -69,7 +73,7 @@ test(`given valid lists of suffixes, track numbers, track titles, and track dura
     const returnValue = getTrackListColumn(testTrackSuffixes, testTrackNumbers, testTrackTitles, testTrackTimes); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    const divOpeningTagTrackRow = getDivOpeningTag("trackRow"); // TODO: Magic string. // TODO -- TEST
+    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
     expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
     const count = trimmedReturnValue.split(divOpeningTagTrackRow).length - 1;
     const expectedNumberOfTrackRows = 10; // TODO -- TEST
