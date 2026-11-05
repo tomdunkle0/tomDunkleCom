@@ -6,10 +6,6 @@ module.exports =
     getStyleAttributeForColorCode
 };
 
-// Test Constant includes:
-const testConstants = require('./testConstants'); // TODO -- TEST
-const kDivOpeningTagClassAssignment = testConstants.kDivOpeningTagClassAssignment; // TODO -- TEST
-
 /*--------------------------------------------------------------------------*\
  | File: discography/tests/resources/testFunctions.js                       |
  | Purpose: Defines common functions used by tests of the discography page. |
@@ -24,8 +20,9 @@ function dispatchEventToAudioPlayer(audioPlayerId, type)
 
 function getDivWithClassAssignment(className) // TODO -- TEST
 {
+    const divOpeningTagClassAssignment = "<div class=\""; // TODO -- TEST
     const divOpeningTagTermination = "\">"; // TODO -- TEST
-    return kDivOpeningTagClassAssignment + className + divOpeningTagTermination; // TODO -- TEST
+    return divOpeningTagClassAssignment + className + divOpeningTagTermination; // TODO -- TEST
 } // getDivWithClassAssignment()
 
 function getParentElementForChildId(childId)

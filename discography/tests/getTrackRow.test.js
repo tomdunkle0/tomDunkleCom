@@ -12,7 +12,6 @@ const getTrackRow = getDiscographyContent.getTrackRow; // TODO -- TEST
 // Test Constant includes:
 const testConstants = require('./resources/testConstants'); // TODO -- TEST
 const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
-const kDivOpeningTagClassAssignment = testConstants.kDivOpeningTagClassAssignment; // TODO -- TEST
 const kDivOpeningTagTrackRow = testConstants.kDivOpeningTagTrackRow; // TODO -- TEST
 
 const testTrackNumber = "1"; // TODO -- TEST
