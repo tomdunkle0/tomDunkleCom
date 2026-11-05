@@ -36,8 +36,8 @@ const kTestTrackTitleId     = kPrefixTrackTitle + kTestTrackIdSuffix;
 module.exports =
 {
     kAudioElementNodeName,
-    kDivClosingTag, // TODO -- TEST
-    kDivOpeningTagClassAssignment, // TODO -- TEST
+    kDivClosingTag,
+    kDivOpeningTagClassAssignment,
     kEventTypePlay,
     kTestTrackDurationId,
     kTestTrackId,
