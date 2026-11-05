@@ -15,19 +15,6 @@ const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
 const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
 
-const testTrackNumbers =
-[
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10"
-]; // TODO -- TEST
 const testTrackSuffixes =
 [
     "TestTrack1Suffix",
@@ -41,7 +28,8 @@ const testTrackSuffixes =
     "TestTrack9Suffix",
     "TestTrack10Suffix"
 ]; // TODO -- TEST
-const testTrackTimes =
+
+const testTrackDurations =
 [
     "3:30",
     "4:15",
@@ -54,6 +42,7 @@ const testTrackTimes =
     "6:14",
     "1:55"
 ]; // TODO -- TEST
+
 const testTrackTitles =
 [
     "Test Track 1",
@@ -70,14 +59,14 @@ const testTrackTitles =
 
 test(`given valid lists of suffixes, track numbers, track titles, and track durations,
         getTrackListColumn() returns a list of divs that are of type trackRow`, () => {
-    const returnValue = getTrackListColumn(testTrackSuffixes, testTrackNumbers, testTrackTitles, testTrackTimes); // TODO -- TEST
+    const trackList = getTrackListColumn(testTrackSuffixes, testTrackTitles, testTrackDurations); // TODO -- TEST
 
-    const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
+    const trimmedTrackList = trackList.trim(); // TODO -- TEST
     const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
-    expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
-    const count = trimmedReturnValue.split(divOpeningTagTrackRow).length - 1;
+    expect(trimmedTrackList.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
+    const count = trimmedTrackList.split(divOpeningTagTrackRow).length - 1;
     const expectedNumberOfTrackRows = 10; // TODO -- TEST
     expect(count).toBe(expectedNumberOfTrackRows); // TODO -- TEST
-    expect(trimmedReturnValue.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
+    expect(trimmedTrackList.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
 }); /* given valid lists of suffixes, track numbers, track titles, and track durations,
         getTrackListColumn() returns a list of divs that are of type trackRow */
