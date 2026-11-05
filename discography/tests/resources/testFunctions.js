@@ -9,7 +9,6 @@ module.exports =
 // Test Constant includes:
 const testConstants = require('./testConstants'); // TODO -- TEST
 const kDivOpeningTagClassAssignment = testConstants.kDivOpeningTagClassAssignment; // TODO -- TEST
-const kDivOpeningTagTermination     = testConstants.kDivOpeningTagTermination; // TODO -- TEST
 
 /*--------------------------------------------------------------------------*\
  | File: discography/tests/resources/testFunctions.js                       |
@@ -25,7 +24,8 @@ function dispatchEventToAudioPlayer(audioPlayerId, type)
 
 function getDivWithClassAssignment(className) // TODO -- TEST
 {
-    return kDivOpeningTagClassAssignment + className + kDivOpeningTagTermination; // TODO -- TEST
+    const divOpeningTagTermination = "\">"; // TODO -- TEST
+    return kDivOpeningTagClassAssignment + className + divOpeningTagTermination; // TODO -- TEST
 } // getDivWithClassAssignment()
 
 function getParentElementForChildId(childId)

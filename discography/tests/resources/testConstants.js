@@ -15,7 +15,6 @@ const kPrefixTrackTitle    = constants.kPrefixTrackTitle;
 const kAudioElementNodeName             = "AUDIO";
 const kDivClosingTag                    = "</div>";
 const kDivOpeningTagClassAssignment     = "<div class=\"";
-const kDivOpeningTagTermination         = "\">"; // TODO -- TEST
 const kEventTypePlay                    = "play";
 const kTestTrackIdSuffix                = "RunThatTurkey";
 // TODO: This discrepancy of some strings having the semicolon and some strings not having
@@ -39,7 +38,6 @@ module.exports =
     kAudioElementNodeName,
     kDivClosingTag, // TODO -- TEST
     kDivOpeningTagClassAssignment, // TODO -- TEST
-    kDivOpeningTagTermination, // TODO -- TEST
     kEventTypePlay,
     kTestTrackDurationId,
     kTestTrackId,
