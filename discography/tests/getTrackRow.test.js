@@ -21,14 +21,14 @@ const testTrackTitle = "Test Track"; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
-const getDivWithClassAssignment = testFunctions.getDivWithClassAssignment; // TODO -- TEST
+const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
 
 test(`given a valid suffix, track number, track title, and track duration, getTrackRow() returns a
         div of class trackRow`, () => {
     const returnValue = getTrackRow(testTrackSuffix, testTrackNumber, testTrackTitle, testTrackTime); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    const divOpeningTagTrackRow = getDivWithClassAssignment("trackRow"); // TODO: Magic string. // TODO -- TEST
+    const divOpeningTagTrackRow = getDivOpeningTag("trackRow"); // TODO: Magic string. // TODO -- TEST
     expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
     expect(trimmedReturnValue.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
 }); /* given a valid suffix, track number, track title, and track duration, getTrackRow() returns a
@@ -40,9 +40,9 @@ test(`given a valid suffix, track number, track title, and track duration, getTr
     const returnValue = getTrackRow(testTrackSuffix, testTrackNumber, testTrackTitle, testTrackTime); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    const divOpeningTagTrackNumber = getDivWithClassAssignment(kStyleSheetClassNameTrackNumber); // TODO -- TEST
-    const divOpeningTagTrackTitle = getDivWithClassAssignment(kStyleSheetClassNameTrackTitle); // TODO -- TEST
-    const divOpeningTagTrackDuration = getDivWithClassAssignment(kStyleSheetClassNameTrackDuration); // TODO -- TEST
+    const divOpeningTagTrackNumber = getDivOpeningTag(kStyleSheetClassNameTrackNumber); // TODO -- TEST
+    const divOpeningTagTrackTitle = getDivOpeningTag(kStyleSheetClassNameTrackTitle); // TODO -- TEST
+    const divOpeningTagTrackDuration = getDivOpeningTag(kStyleSheetClassNameTrackDuration); // TODO -- TEST
     expect(trimmedReturnValue).toContain(divOpeningTagTrackNumber); // TODO -- TEST
     expect(trimmedReturnValue).toContain(divOpeningTagTrackTitle); // TODO -- TEST
     expect(trimmedReturnValue).toContain(divOpeningTagTrackDuration); // TODO -- TEST

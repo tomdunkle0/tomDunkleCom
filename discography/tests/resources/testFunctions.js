@@ -1,7 +1,7 @@
 module.exports =
 {
     dispatchEventToAudioPlayer,
-    getDivWithClassAssignment, // TODO -- TEST
+    getDivOpeningTag,
     getParentElementForChildId,
     getStyleAttributeForColorCode
 };
@@ -18,12 +18,12 @@ function dispatchEventToAudioPlayer(audioPlayerId, type)
     audioPlayer.dispatchEvent(event);
 } // dispatchEventToAudioPlayer()
 
-function getDivWithClassAssignment(className) // TODO -- TEST
+function getDivOpeningTag(className)
 {
     const divOpeningTagClassAssignment = "<div class=\"";
     const divOpeningTagTermination = "\">";
     return divOpeningTagClassAssignment + className + divOpeningTagTermination;
-} // getDivWithClassAssignment()
+} // getDivOpeningTag()
 
 function getParentElementForChildId(childId)
 {

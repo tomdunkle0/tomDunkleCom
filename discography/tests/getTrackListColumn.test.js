@@ -9,7 +9,7 @@ const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
-const getDivWithClassAssignment = testFunctions.getDivWithClassAssignment; // TODO -- TEST
+const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
 
 const testTrackNumbers =
 [
@@ -69,7 +69,7 @@ test(`given valid lists of suffixes, track numbers, track titles, and track dura
     const returnValue = getTrackListColumn(testTrackSuffixes, testTrackNumbers, testTrackTitles, testTrackTimes); // TODO -- TEST
 
     const trimmedReturnValue = returnValue.trim(); // TODO -- TEST
-    const divOpeningTagTrackRow = getDivWithClassAssignment("trackRow"); // TODO: Magic string. // TODO -- TEST
+    const divOpeningTagTrackRow = getDivOpeningTag("trackRow"); // TODO: Magic string. // TODO -- TEST
     expect(trimmedReturnValue.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
     const count = trimmedReturnValue.split(divOpeningTagTrackRow).length - 1;
     const expectedNumberOfTrackRows = 10; // TODO -- TEST
