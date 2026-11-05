@@ -20,9 +20,9 @@ function dispatchEventToAudioPlayer(audioPlayerId, type)
 
 function getDivWithClassAssignment(className) // TODO -- TEST
 {
-    const divOpeningTagClassAssignment = "<div class=\""; // TODO -- TEST
-    const divOpeningTagTermination = "\">"; // TODO -- TEST
-    return divOpeningTagClassAssignment + className + divOpeningTagTermination; // TODO -- TEST
+    const divOpeningTagClassAssignment = "<div class=\"";
+    const divOpeningTagTermination = "\">";
+    return divOpeningTagClassAssignment + className + divOpeningTagTermination;
 } // getDivWithClassAssignment()
 
 function getParentElementForChildId(childId)
