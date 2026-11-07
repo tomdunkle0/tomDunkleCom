@@ -2,6 +2,7 @@ module.exports =
 {
     dispatchEventToAudioPlayer,
     getDivOpeningTag,
+    getIdAssignmentForTestTrackChild, // TODO -- TEST
     getParentElementForChildId,
     getStyleAttributeForColorCode
 };
@@ -24,6 +25,13 @@ function getDivOpeningTag(className)
     const divOpeningTagTermination = "\">";
     return divOpeningTagClassAssignment + className + divOpeningTagTermination;
 } // getDivOpeningTag()
+
+function getIdAssignmentForTestTrackChild(idPrefix, idSuffix) // TODO -- TEST
+{
+    const idAssignmentOpening = "id=\""; // TODO -- TEST
+    const idAssignmentClosing = "\""; // TODO -- TEST
+    return idAssignmentOpening + idPrefix + idSuffix + idAssignmentClosing; // TODO -- TEST
+} // getIdAssignmentForTestTrackChild()
 
 function getParentElementForChildId(childId)
 {
