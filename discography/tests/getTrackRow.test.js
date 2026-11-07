@@ -24,14 +24,18 @@ const testTitle = "Test Track"; // TODO -- TEST
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
 const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
 
+// TODO: add tests confirming that the string returned from getTrackRow() contains each parameter.
+
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow`, () => {
-    const trackRow = getTrackRow(testSuffix, testNumber, testTitle, testDuration); // TODO -- TEST
+    const trackRow = getTrackRow(testSuffix, testNumber, testTitle, testDuration);
 
-    const trimmedTrackRow = trackRow.trim(); // TODO -- TEST
-    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
-    expect(trimmedTrackRow.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
-    expect(trimmedTrackRow.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
+    const trimmedTrackRow = trackRow.trim();
+    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow);
+    const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(divOpeningTagTrackRow);
+    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(kDivClosingTag);
+    expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
+    expect(trimmedTrackRowEndsWithClosingTag).toBe(true);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow */
 
