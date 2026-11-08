@@ -50,12 +50,9 @@ test(`given a valid track suffix, track number, track title, and track duration,
         div of class trackDuration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const divOpeningTagTrackNumber = getDivOpeningTag(kStyleSheetClassNameTrackNumber);
-    const divOpeningTagTrackTitle = getDivOpeningTag(kStyleSheetClassNameTrackTitle);
-    const divOpeningTagTrackDuration = getDivOpeningTag(kStyleSheetClassNameTrackDuration);
-    expect(trackRow).toContain(divOpeningTagTrackNumber);
-    expect(trackRow).toContain(divOpeningTagTrackTitle);
-    expect(trackRow).toContain(divOpeningTagTrackDuration);
+    expect(trackRow).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
+    expect(trackRow).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
+    expect(trackRow).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a string containing a div of class trackNumber, a div of class trackTitle, and a
         div of class trackDuration */

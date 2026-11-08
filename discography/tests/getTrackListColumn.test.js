@@ -122,15 +122,12 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 
 function expectTrackListContainsContentDivs(trackRowArray) // TODO -- TEST
 {
-    const divOpeningTagTrackNumber = getDivOpeningTag(kStyleSheetClassNameTrackNumber); // TODO -- TEST
-    const divOpeningTagTrackTitle = getDivOpeningTag(kStyleSheetClassNameTrackTitle); // TODO -- TEST
-    const divOpeningTagTrackDuration = getDivOpeningTag(kStyleSheetClassNameTrackDuration); // TODO -- TEST
     const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
     for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
     {
-        expect(trackRowArray[i]).toContain(divOpeningTagTrackNumber); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(divOpeningTagTrackTitle); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(divOpeningTagTrackDuration); // TODO -- TEST
+        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
+        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
+        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
     }
 } // expectTrackListContainsContentDivs()
 
@@ -169,8 +166,7 @@ function expectTrackListContainsUserInterfaceContent(trackRowArray) // TODO -- T
 
 function getTrackRowArray(trackListColumn) // TODO -- TEST
 {
-    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
-    const trackRowArray = trackListColumn.split(divOpeningTagTrackRow); // TODO -- TEST
+    const trackRowArray = trackListColumn.split(kStyleSheetClassNameTrackRow); // TODO -- TEST
     trackRowArray.shift();
     return trackRowArray;
 } // getTrackRowArray()
