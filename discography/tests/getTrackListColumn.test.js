@@ -1,5 +1,10 @@
 // Constant includes:
+const userInterfaceStrings = require('./environment/userInterfaceStrings'); // TODO -- TEST
+const kPaddingZero = userInterfaceStrings.kPaddingZero; // TODO -- TEST
+
+// Constant includes:
 const constants = require('./environment/constants'); // TODO -- TEST
+const kGreatestSingleDigitNumber        = constants.kGreatestSingleDigitNumber; // TODO -- TEST
 const kPrefixPlayArrow                  = constants.kPrefixPlayArrow; // TODO -- TEST
 const kPrefixTrackDuration              = constants.kPrefixTrackDuration; // TODO -- TEST
 const kPrefixTrackNumber                = constants.kPrefixTrackNumber; // TODO -- TEST
@@ -16,7 +21,10 @@ const getTrackListColumn = getDiscographyContent.getTrackListColumn; // TODO -- 
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants'); // TODO -- TEST
-const kDivClosingTag = testConstants.kDivClosingTag; // TODO -- TEST
+const kClosingParenthesis = testConstants.kClosingParenthesis; // TODO -- TEST
+const kDivClosingTag      = testConstants.kDivClosingTag; // TODO -- TEST
+const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
+const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
@@ -91,8 +99,8 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
     const divOpeningTagTrackDuration = getDivOpeningTag(kStyleSheetClassNameTrackDuration); // TODO -- TEST
     const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
     const trackListArray = trimmedTrackList.split(divOpeningTagTrackRow); // TODO -- TEST
-    // TODO: need to show why we eliminate the first (empty) array index.
-    for (var i = 1; i <= expectedNumberOfTrackRows; i++) // TODO -- TEST
+    trackListArray.shift(); // TODO -- TEST
+    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
     {
         expect(trackListArray[i]).toContain(divOpeningTagTrackNumber); // TODO -- TEST
         expect(trackListArray[i]).toContain(divOpeningTagTrackTitle); // TODO -- TEST
@@ -111,13 +119,13 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
     const expectedNumberOfTrackRows = 10; // TODO -- TEST
     const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
     const trackListArray = trimmedTrackList.split(divOpeningTagTrackRow); // TODO -- TEST
-    // TODO: need to show why we eliminate the first (empty) array index.
-    for (var i = 1; i <= expectedNumberOfTrackRows; i++) // TODO -- TEST
+    trackListArray.shift(); // TODO -- TEST
+    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
     {
-        const idAssignmentPlayArrow = getIdAssignmentForTestTrackChild(kPrefixPlayArrow, testTrackSuffixes[i - 1]); // TODO -- TEST
-        const idAssignmentTrackNumber = getIdAssignmentForTestTrackChild(kPrefixTrackNumber, testTrackSuffixes[i - 1]); // TODO -- TEST
-        const idAssignmentTrackTitle = getIdAssignmentForTestTrackChild(kPrefixTrackTitle, testTrackSuffixes[i - 1]); // TODO -- TEST
-        const idAssignmentTrackDuration = getIdAssignmentForTestTrackChild(kPrefixTrackDuration, testTrackSuffixes[i - 1]); // TODO -- TEST
+        const idAssignmentPlayArrow = getIdAssignmentForTestTrackChild(kPrefixPlayArrow, testTrackSuffixes[i]); // TODO -- TEST
+        const idAssignmentTrackNumber = getIdAssignmentForTestTrackChild(kPrefixTrackNumber, testTrackSuffixes[i]); // TODO -- TEST
+        const idAssignmentTrackTitle = getIdAssignmentForTestTrackChild(kPrefixTrackTitle, testTrackSuffixes[i]); // TODO -- TEST
+        const idAssignmentTrackDuration = getIdAssignmentForTestTrackChild(kPrefixTrackDuration, testTrackSuffixes[i]); // TODO -- TEST
         expect(trackListArray[i]).toContain(idAssignmentPlayArrow); // TODO -- TEST
         expect(trackListArray[i]).toContain(idAssignmentTrackNumber); // TODO -- TEST
         expect(trackListArray[i]).toContain(idAssignmentTrackTitle); // TODO -- TEST
@@ -136,16 +144,17 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
     const expectedNumberOfTrackRows = 10; // TODO -- TEST
     const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
     const trackListArray = trimmedTrackList.split(divOpeningTagTrackRow); // TODO -- TEST
-    // TODO: need to show why we eliminate the first (empty) array index.
-    for (var i = 1; i <= expectedNumberOfTrackRows; i++) // TODO -- TEST
+    trackListArray.shift(); // TODO -- TEST
+    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
     {
-        const listCounterSuffix = ".)"; // TODO -- TEST
-        const expectedListCounter = i.toString() + listCounterSuffix; // TODO -- TEST
-        const openingParenthesis = "("; // TODO -- TEST
-        const closingParenthesis = ")"; // TODO -- TEST
-        const expectedDurationText = openingParenthesis + testTrackDurations[i - 1] + closingParenthesis; // TODO -- TEST
+        var expectedListCounter = (i + 1).toString() + kListCounterSuffix; // TODO -- TEST
+        if (i < kGreatestSingleDigitNumber) // TODO -- TEST
+        {
+            expectedListCounter = kPaddingZero + expectedListCounter; // TODO -- TEST
+        }
+        const expectedDurationText = kOpeningParenthesis + testTrackDurations[i] + kClosingParenthesis; // TODO -- TEST
         expect(trackListArray[i]).toContain(expectedListCounter); // TODO -- TEST
-        expect(trackListArray[i]).toContain(testTrackTitles[i - 1]); // TODO -- TEST
+        expect(trackListArray[i]).toContain(testTrackTitles[i]); // TODO -- TEST
         expect(trackListArray[i]).toContain(expectedDurationText); // TODO -- TEST
     }
 }); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()

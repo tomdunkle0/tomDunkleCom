@@ -16,7 +16,10 @@ const getTrackRow = getDiscographyContent.getTrackRow;
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
-const kDivClosingTag = testConstants.kDivClosingTag;
+const kClosingParenthesis = testConstants.kClosingParenthesis; // TODO -- TEST
+const kDivClosingTag      = testConstants.kDivClosingTag;
+const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
+const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 
 // Micellaneous constants:
 const kTestDuration = "3:30";
@@ -79,11 +82,8 @@ test(`given a valid track suffix, track number, track title, and track duration,
         duration that will appear on the user interface`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const listCounterSuffix = ".)";
-    const expectedListCounter = kTestNumber + listCounterSuffix;
-    const openingParenthesis = "(";
-    const closingParenthesis = ")";
-    const expectedDurationText = openingParenthesis + kTestDuration + closingParenthesis;
+    const expectedListCounter = kTestNumber + kListCounterSuffix; // TODO -- TEST
+    const expectedDurationText = kOpeningParenthesis + kTestDuration + kClosingParenthesis; // TODO -- TEST
     expect(trackRow).toContain(expectedListCounter);
     expect(trackRow).toContain(kTestTitle);
     expect(trackRow).toContain(expectedDurationText);

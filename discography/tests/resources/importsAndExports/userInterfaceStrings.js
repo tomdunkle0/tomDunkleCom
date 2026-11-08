@@ -15,5 +15,6 @@ module.exports =
     phTrackDurations, // TODO: Make sure that this line is tested.
     phTrackTitles, // TODO: Make sure that this line is tested.
     d1320TrackDurations, // TODO: Make sure that this line is tested.
-    d1320TrackTitles // TODO: Make sure that this line is tested.
+    d1320TrackTitles, // TODO: Make sure that this line is tested.
+    kPaddingZero // TODO: Make sure that this line is tested.
 };

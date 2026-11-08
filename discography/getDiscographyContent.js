@@ -869,8 +869,6 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
 {
     // This function assumes that all three parameter arrays are the same length.
     const parameterArrayLength = trackSuffixes.length;
-    const greatestSingleDigitNumber = 9;
-    const paddingZero = "0";
     var trackSuffix = "";
     var trackTitle = "";
     var trackDuration = "";
@@ -878,9 +876,9 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
     for (var arrayIndex = 0; arrayIndex < parameterArrayLength; arrayIndex++)
     {
         var trackNumber = (arrayIndex + 1).toString();
-        if (arrayIndex < greatestSingleDigitNumber)
+        if (arrayIndex < kGreatestSingleDigitNumber) // TODO -- TEST
         {
-            trackNumber = paddingZero + trackNumber;
+            trackNumber = kPaddingZero + trackNumber; // TODO -- TEST
         }
         trackSuffix = trackSuffixes[arrayIndex];
         trackTitle = trackTitles[arrayIndex];

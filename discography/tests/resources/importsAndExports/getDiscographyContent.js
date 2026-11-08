@@ -5,6 +5,8 @@ module.exports =
     getTrackRow // TODO: Make sure that this line is tested.
 };
 
+const constants = require('./constants'); // TODO: Make sure that this line is tested.
+const kGreatestSingleDigitNumber = constants.kGreatestSingleDigitNumber; // TODO: Make sure that this line is tested.
 const userInterfaceStrings = require('./userInterfaceStrings'); // TODO: Make sure that this line is tested.
 const mbTrackDurations = userInterfaceStrings.mbTrackDurations; // TODO: Make sure that this line is tested.
 const mbTrackTitles = userInterfaceStrings.mbTrackTitles; // TODO: Make sure that this line is tested.
@@ -22,3 +24,4 @@ const phTrackDurations = userInterfaceStrings.phTrackDurations; // TODO: Make su
 const phTrackTitles = userInterfaceStrings.phTrackTitles; // TODO: Make sure that this line is tested.
 const d1320TrackDurations = userInterfaceStrings.d1320TrackDurations; // TODO: Make sure that this line is tested.
 const d1320TrackTitles = userInterfaceStrings.d1320TrackTitles; // TODO: Make sure that this line is tested.
+const kPaddingZero = userInterfaceStrings.kPaddingZero; // TODO: Make sure that this line is tested.
