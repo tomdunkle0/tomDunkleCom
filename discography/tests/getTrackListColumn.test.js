@@ -28,8 +28,7 @@ const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
-const getDivOpeningTag                 = testFunctions.getDivOpeningTag; // TODO -- TEST
-const getIdAssignment = testFunctions.getIdAssignment; // TODO -- TEST
+const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
 
 const kTestSuffixes =
 [
@@ -137,21 +136,21 @@ function expectTrackListContainsIdAssignments(trackRowArray) // TODO -- TEST
 {
     const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
     var trackRow = ""; // TODO -- TEST
-    var idAssignmentPlayArrow = ""; // TODO -- TEST
-    var idAssignmentTrackNumber = ""; // TODO -- TEST
-    var idAssignmentTrackTitle = ""; // TODO -- TEST
-    var idAssignmentTrackDuration = ""; // TODO -- TEST
+    var playArrowId = ""; // TODO -- TEST
+    var trackNumberId = ""; // TODO -- TEST
+    var trackTitleId = ""; // TODO -- TEST
+    var trackDurationId = ""; // TODO -- TEST
     for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
     {
         trackRow = trackRowArray[rowIndex]; // TODO -- TEST
-        idAssignmentPlayArrow = getIdAssignment(kPrefixPlayArrow, kTestSuffixes[rowIndex]); // TODO -- TEST
-        idAssignmentTrackNumber = getIdAssignment(kPrefixTrackNumber, kTestSuffixes[rowIndex]); // TODO -- TEST
-        idAssignmentTrackTitle = getIdAssignment(kPrefixTrackTitle, kTestSuffixes[rowIndex]); // TODO -- TEST
-        idAssignmentTrackDuration = getIdAssignment(kPrefixTrackDuration, kTestSuffixes[rowIndex]); // TODO -- TEST
-        expect(trackRow).toContain(idAssignmentPlayArrow); // TODO -- TEST
-        expect(trackRow).toContain(idAssignmentTrackNumber); // TODO -- TEST
-        expect(trackRow).toContain(idAssignmentTrackTitle); // TODO -- TEST
-        expect(trackRow).toContain(idAssignmentTrackDuration); // TODO -- TEST
+        playArrowId = kPrefixPlayArrow + kTestSuffixes[rowIndex]; // TODO -- TEST
+        trackNumberId = kPrefixTrackNumber + kTestSuffixes[rowIndex]; // TODO -- TEST
+        trackTitleId = kPrefixTrackTitle + kTestSuffixes[rowIndex]; // TODO -- TEST
+        trackDurationId = kPrefixTrackDuration + kTestSuffixes[rowIndex]; // TODO -- TEST
+        expect(trackRow).toContain(playArrowId); // TODO -- TEST
+        expect(trackRow).toContain(trackNumberId); // TODO -- TEST
+        expect(trackRow).toContain(trackTitleId); // TODO -- TEST
+        expect(trackRow).toContain(trackDurationId); // TODO -- TEST
     }
 } // expectTrackListContainsIdAssignments()
 

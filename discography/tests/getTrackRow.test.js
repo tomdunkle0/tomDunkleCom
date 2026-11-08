@@ -29,8 +29,7 @@ const kTestTitle = "Test Track";
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
-const getDivOpeningTag                 = testFunctions.getDivOpeningTag;
-const getIdAssignment = testFunctions.getIdAssignment; // TODO -- TEST
+const getDivOpeningTag = testFunctions.getDivOpeningTag;
 
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow`, () => {
@@ -62,14 +61,14 @@ test(`given a valid track suffix, track number, track title, and track duration,
         and track duration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const idAssignmentPlayArrow = getIdAssignment(kPrefixPlayArrow, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackNumber = getIdAssignment(kPrefixTrackNumber, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackTitle = getIdAssignment(kPrefixTrackTitle, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackDuration = getIdAssignment(kPrefixTrackDuration, kTestSuffix); // TODO -- TEST
-    expect(trackRow).toContain(idAssignmentPlayArrow);
-    expect(trackRow).toContain(idAssignmentTrackNumber);
-    expect(trackRow).toContain(idAssignmentTrackTitle);
-    expect(trackRow).toContain(idAssignmentTrackDuration);
+    const playArrowId = kPrefixPlayArrow + kTestSuffix; // TODO -- TEST
+    const trackNumberId = kPrefixTrackNumber + kTestSuffix; // TODO -- TEST
+    const trackTitleId = kPrefixTrackTitle + kTestSuffix; // TODO -- TEST
+    const trackDurationId = kPrefixTrackDuration + kTestSuffix; // TODO -- TEST
+    expect(trackRow).toContain(playArrowId); // TODO -- TEST
+    expect(trackRow).toContain(trackNumberId); // TODO -- TEST
+    expect(trackRow).toContain(trackTitleId); // TODO -- TEST
+    expect(trackRow).toContain(trackDurationId); // TODO -- TEST
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a string containing id assignments for the play arrow, track number, track title,
         and track duration */
