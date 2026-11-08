@@ -309,8 +309,7 @@ const d1320TrackSuffixes =
     "TheEndOfTheWorld"
 ];
 
-function getDiscographyContent() { // TODO -- TEST
-    // TODO: Make sure that this line is tested.
+function getDiscographyContent() {
     return `
         <div class="flex-column"
              id="zScrollColumn">
@@ -876,9 +875,9 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
     for (var arrayIndex = 0; arrayIndex < parameterArrayLength; arrayIndex++)
     {
         var trackNumber = (arrayIndex + 1).toString();
-        if (arrayIndex < kGreatestSingleDigitNumber) // TODO -- TEST
+        if (arrayIndex < kGreatestSingleDigitNumber)
         {
-            trackNumber = kPaddingZero + trackNumber; // TODO -- TEST
+            trackNumber = kPaddingZero + trackNumber;
         }
         trackSuffix = trackSuffixes[arrayIndex];
         trackTitle = trackTitles[arrayIndex];

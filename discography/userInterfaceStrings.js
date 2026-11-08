@@ -295,4 +295,4 @@ const d1320TrackDurations =
     "3:24"
 ];
 
-const kPaddingZero = "0"; // TODO -- TEST
+const kPaddingZero = "0";
