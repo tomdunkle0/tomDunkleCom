@@ -29,7 +29,7 @@ const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
 const getDivOpeningTag                 = testFunctions.getDivOpeningTag; // TODO -- TEST
-const getIdAssignmentForTestTrackChild = testFunctions.getIdAssignmentForTestTrackChild; // TODO -- TEST
+const getIdAssignment = testFunctions.getIdAssignment; // TODO -- TEST
 
 const kTestSuffixes =
 [
@@ -112,10 +112,10 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing lines of text representing the track number, title, and
         duration that will appear on the user interface for each item in the list`, () => {
-    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations); // TODO -- TEST
+    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations);
 
-    const trackRowArray = getTrackRowArray(trackListColumn); // TODO -- TEST
-    expectTrackListContainsUserInterfaceContent(trackRowArray); // TODO -- TEST
+    const trackRowArray = getTrackRowArray(trackListColumn);
+    expectTrackListContainsUserInterfaceContent(trackRowArray);
 }); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing lines of text representing the track number, title, and
         duration that will appear on the user interface for each item in the list */
@@ -123,50 +123,62 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 function expectTrackListContainsContentDivs(trackRowArray) // TODO -- TEST
 {
     const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
-    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
+    var trackRow = ""; // TODO -- TEST
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
     {
-        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
+        trackRow = trackRowArray[rowIndex]; // TODO -- TEST
+        expect(trackRow).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
+        expect(trackRow).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
+        expect(trackRow).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
     }
 } // expectTrackListContainsContentDivs()
 
 function expectTrackListContainsIdAssignments(trackRowArray) // TODO -- TEST
 {
     const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
-    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
+    var trackRow = ""; // TODO -- TEST
+    var idAssignmentPlayArrow = ""; // TODO -- TEST
+    var idAssignmentTrackNumber = ""; // TODO -- TEST
+    var idAssignmentTrackTitle = ""; // TODO -- TEST
+    var idAssignmentTrackDuration = ""; // TODO -- TEST
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
     {
-        const idAssignmentPlayArrow = getIdAssignmentForTestTrackChild(kPrefixPlayArrow, kTestSuffixes[i]); // TODO -- TEST
-        const idAssignmentTrackNumber = getIdAssignmentForTestTrackChild(kPrefixTrackNumber, kTestSuffixes[i]); // TODO -- TEST
-        const idAssignmentTrackTitle = getIdAssignmentForTestTrackChild(kPrefixTrackTitle, kTestSuffixes[i]); // TODO -- TEST
-        const idAssignmentTrackDuration = getIdAssignmentForTestTrackChild(kPrefixTrackDuration, kTestSuffixes[i]); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(idAssignmentPlayArrow); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(idAssignmentTrackNumber); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(idAssignmentTrackTitle); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(idAssignmentTrackDuration); // TODO -- TEST
+        trackRow = trackRowArray[rowIndex]; // TODO -- TEST
+        idAssignmentPlayArrow = getIdAssignment(kPrefixPlayArrow, kTestSuffixes[rowIndex]); // TODO -- TEST
+        idAssignmentTrackNumber = getIdAssignment(kPrefixTrackNumber, kTestSuffixes[rowIndex]); // TODO -- TEST
+        idAssignmentTrackTitle = getIdAssignment(kPrefixTrackTitle, kTestSuffixes[rowIndex]); // TODO -- TEST
+        idAssignmentTrackDuration = getIdAssignment(kPrefixTrackDuration, kTestSuffixes[rowIndex]); // TODO -- TEST
+        expect(trackRow).toContain(idAssignmentPlayArrow); // TODO -- TEST
+        expect(trackRow).toContain(idAssignmentTrackNumber); // TODO -- TEST
+        expect(trackRow).toContain(idAssignmentTrackTitle); // TODO -- TEST
+        expect(trackRow).toContain(idAssignmentTrackDuration); // TODO -- TEST
     }
 } // expectTrackListContainsIdAssignments()
 
-function expectTrackListContainsUserInterfaceContent(trackRowArray) // TODO -- TEST
+function expectTrackListContainsUserInterfaceContent(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
-    for (var i = 0; i < expectedNumberOfTrackRows; i++) // TODO -- TEST
+    const expectedNumberOfTrackRows = trackRowArray.length;
+    var trackRow = "";
+    var expectedListCounter = "";
+    var expectedDuration = "";
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
-        var expectedListCounter = (i + 1).toString() + kListCounterSuffix; // TODO -- TEST
-        if (i < kGreatestSingleDigitNumber) // TODO -- TEST
+        trackRow = trackRowArray[rowIndex];
+        expectedListCounter = (rowIndex + 1).toString() + kListCounterSuffix;
+        if (rowIndex < kGreatestSingleDigitNumber)
         {
-            expectedListCounter = kPaddingZero + expectedListCounter; // TODO -- TEST
+            expectedListCounter = kPaddingZero + expectedListCounter;
         }
-        const expectedDurationText = kOpeningParenthesis + kTestDurations[i] + kClosingParenthesis; // TODO -- TEST
-        expect(trackRowArray[i]).toContain(expectedListCounter); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(kTestTitles[i]); // TODO -- TEST
-        expect(trackRowArray[i]).toContain(expectedDurationText); // TODO -- TEST
+        expectedDuration = kOpeningParenthesis + kTestDurations[rowIndex] + kClosingParenthesis;
+        expect(trackRow).toContain(expectedListCounter);
+        expect(trackRow).toContain(kTestTitles[rowIndex]);
+        expect(trackRow).toContain(expectedDuration);
     }
 } // expectTrackListContainsUserInterfaceContent()
 
-function getTrackRowArray(trackListColumn) // TODO -- TEST
+function getTrackRowArray(trackListColumn)
 {
-    const trackRowArray = trackListColumn.split(kStyleSheetClassNameTrackRow); // TODO -- TEST
+    const trackRowArray = trackListColumn.split(kStyleSheetClassNameTrackRow);
     trackRowArray.shift();
     return trackRowArray;
 } // getTrackRowArray()

@@ -30,7 +30,7 @@ const kTestTitle = "Test Track";
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
 const getDivOpeningTag                 = testFunctions.getDivOpeningTag;
-const getIdAssignmentForTestTrackChild = testFunctions.getIdAssignmentForTestTrackChild; // TODO -- TEST
+const getIdAssignment = testFunctions.getIdAssignment; // TODO -- TEST
 
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow`, () => {
@@ -62,10 +62,10 @@ test(`given a valid track suffix, track number, track title, and track duration,
         and track duration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const idAssignmentPlayArrow = getIdAssignmentForTestTrackChild(kPrefixPlayArrow, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackNumber = getIdAssignmentForTestTrackChild(kPrefixTrackNumber, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackTitle = getIdAssignmentForTestTrackChild(kPrefixTrackTitle, kTestSuffix); // TODO -- TEST
-    const idAssignmentTrackDuration = getIdAssignmentForTestTrackChild(kPrefixTrackDuration, kTestSuffix); // TODO -- TEST
+    const idAssignmentPlayArrow = getIdAssignment(kPrefixPlayArrow, kTestSuffix); // TODO -- TEST
+    const idAssignmentTrackNumber = getIdAssignment(kPrefixTrackNumber, kTestSuffix); // TODO -- TEST
+    const idAssignmentTrackTitle = getIdAssignment(kPrefixTrackTitle, kTestSuffix); // TODO -- TEST
+    const idAssignmentTrackDuration = getIdAssignment(kPrefixTrackDuration, kTestSuffix); // TODO -- TEST
     expect(trackRow).toContain(idAssignmentPlayArrow);
     expect(trackRow).toContain(idAssignmentTrackNumber);
     expect(trackRow).toContain(idAssignmentTrackTitle);
