@@ -100,10 +100,10 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing id assignments for the play arrow, track number, track title,
         and track duration for each item in the list`, () => {
-    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations); // TODO -- TEST
+    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations);
 
-    const trackRowArray = getTrackRowArray(trackListColumn); // TODO -- TEST
-    expectTrackListContainsIdAssignments(trackRowArray); // TODO -- TEST
+    const trackRowArray = getTrackRowArray(trackListColumn);
+    expectTrackListContainsIds(trackRowArray);
 }); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing id assignments for the play arrow, track number, track title,
         and track duration for each item in the list */
@@ -125,34 +125,36 @@ function expectTrackListContainsContentDivs(trackRowArray) // TODO -- TEST
     var trackRow = ""; // TODO -- TEST
     for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
     {
-        trackRow = trackRowArray[rowIndex]; // TODO -- TEST
-        expect(trackRow).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
-        expect(trackRow).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
-        expect(trackRow).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
+        trackRow = trackRowArray[rowIndex];
+        expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
+        expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
+        expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
     }
 } // expectTrackListContainsContentDivs()
 
-function expectTrackListContainsIdAssignments(trackRowArray) // TODO -- TEST
+function expectTrackListContainsIds(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
-    var trackRow = ""; // TODO -- TEST
-    var playArrowId = ""; // TODO -- TEST
-    var trackNumberId = ""; // TODO -- TEST
-    var trackTitleId = ""; // TODO -- TEST
-    var trackDurationId = ""; // TODO -- TEST
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
+    const expectedNumberOfTrackRows = trackRowArray.length;
+    var trackRow = "";
+    var trackSuffix = "";
+    var playArrowId = "";
+    var trackNumberId = "";
+    var trackTitleId = "";
+    var trackDurationId = "";
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
-        trackRow = trackRowArray[rowIndex]; // TODO -- TEST
-        playArrowId = kPrefixPlayArrow + kTestSuffixes[rowIndex]; // TODO -- TEST
-        trackNumberId = kPrefixTrackNumber + kTestSuffixes[rowIndex]; // TODO -- TEST
-        trackTitleId = kPrefixTrackTitle + kTestSuffixes[rowIndex]; // TODO -- TEST
-        trackDurationId = kPrefixTrackDuration + kTestSuffixes[rowIndex]; // TODO -- TEST
-        expect(trackRow).toContain(playArrowId); // TODO -- TEST
-        expect(trackRow).toContain(trackNumberId); // TODO -- TEST
-        expect(trackRow).toContain(trackTitleId); // TODO -- TEST
-        expect(trackRow).toContain(trackDurationId); // TODO -- TEST
+        trackRow = trackRowArray[rowIndex];
+        trackSuffix = kTestSuffixes[rowIndex];
+        playArrowId = kPrefixPlayArrow + trackSuffix;
+        trackNumberId = kPrefixTrackNumber + trackSuffix;
+        trackTitleId = kPrefixTrackTitle + trackSuffix;
+        trackDurationId = kPrefixTrackDuration + trackSuffix;
+        expect(trackRow).toContain(playArrowId);
+        expect(trackRow).toContain(trackNumberId);
+        expect(trackRow).toContain(trackTitleId);
+        expect(trackRow).toContain(trackDurationId);
     }
-} // expectTrackListContainsIdAssignments()
+} // expectTrackListContainsIds()
 
 function expectTrackListContainsUserInterfaceContent(trackRowArray)
 {
