@@ -40,7 +40,8 @@ test(`given a valid track suffix, track number, track title, and track duration,
     const termination = "\">"; // TODO -- TEST
     const divOpeningTagTrackRow = classAssignment + kStyleSheetClassNameTrackRow + termination; // TODO -- TEST
     const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(divOpeningTagTrackRow);
-    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(kDivClosingTag);
+    const divClosingTag = "</div>"; // TODO -- TEST
+    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(divClosingTag); // TODO -- TEST
     expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
     expect(trimmedTrackRowEndsWithClosingTag).toBe(true);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()

@@ -22,7 +22,6 @@ const getTrackListColumn = getDiscographyContent.getTrackListColumn; // TODO -- 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants'); // TODO -- TEST
 const kClosingParenthesis = testConstants.kClosingParenthesis; // TODO -- TEST
-const kDivClosingTag      = testConstants.kDivClosingTag; // TODO -- TEST
 const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
 const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 

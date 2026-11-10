@@ -14,7 +14,6 @@ const kPrefixTrackTitle    = constants.kPrefixTrackTitle;
 // Miscellaneous constants:
 const kAudioElementNodeName             = "AUDIO";
 const kClosingParenthesis               = ")"; // TODO -- TEST
-const kDivClosingTag                    = "</div>";
 const kEventTypePlay                    = "play";
 const kListCounterSuffix                = ".)"; // TODO -- TEST
 const kOpeningParenthesis               = "("; // TODO -- TEST
@@ -39,7 +38,6 @@ module.exports =
 {
     kAudioElementNodeName,
     kClosingParenthesis, // TODO -- TEST
-    kDivClosingTag,
     kEventTypePlay,
     kListCounterSuffix, // TODO -- TEST
     kOpeningParenthesis, // TODO -- TEST
