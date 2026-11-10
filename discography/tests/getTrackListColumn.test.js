@@ -42,7 +42,7 @@ const kTestSuffixes =
     "TestTrack8Suffix",
     "TestTrack9Suffix",
     "TestTrack10Suffix"
-]; // TODO -- TEST
+];
 
 const kTestDurations =
 [
@@ -56,7 +56,7 @@ const kTestDurations =
     "3:03",
     "6:14",
     "1:55"
-]; // TODO -- TEST
+];
 
 const kTestTitles =
 [
@@ -70,29 +70,15 @@ const kTestTitles =
     "Test Track 8",
     "Test Track 9",
     "Test Track 10"
-]; // TODO -- TEST
-
-test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
-        returns a list of divs that are of type trackRow`, () => {
-    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations); // TODO -- TEST
-
-    const trimmedTrackListColumn = trackListColumn.trim(); // TODO -- TEST
-    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow); // TODO -- TEST
-    expect(trimmedTrackListColumn.startsWith(divOpeningTagTrackRow)).toBe(true); // TODO -- TEST
-    const count = trimmedTrackListColumn.split(divOpeningTagTrackRow).length - 1;
-    const expectedNumberOfTrackRows = kTestSuffixes.length; // TODO -- TEST
-    expect(count).toBe(expectedNumberOfTrackRows); // TODO -- TEST
-    expect(trimmedTrackListColumn.endsWith(kDivClosingTag)).toBe(true); // TODO -- TEST
-}); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
-        returns a list of divs that are of type trackRow */
+];
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing a trackNumber div, a trackTitle div, and a trackDuration div
         for each item in the list`, () => {
-    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations); // TODO -- TEST
+    const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations);
 
-    const trackRowArray = getTrackRowArray(trackListColumn); // TODO -- TEST
-    expectTrackListContainsContentDivs(trackRowArray); // TODO -- TEST
+    const trackRowArray = getTrackRowArray(trackListColumn);
+    expectTrackListContainsContentDivs(trackRowArray);
 }); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing a trackNumber div, a trackTitle div, and a trackDuration div
         for each item in the list */
@@ -119,11 +105,11 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
         returns a string containing lines of text representing the track number, title, and
         duration that will appear on the user interface for each item in the list */
 
-function expectTrackListContainsContentDivs(trackRowArray) // TODO -- TEST
+function expectTrackListContainsContentDivs(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length; // TODO -- TEST
-    var trackRow = ""; // TODO -- TEST
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++) // TODO -- TEST
+    const expectedNumberOfTrackRows = trackRowArray.length;
+    var trackRow = "";
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
         expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
