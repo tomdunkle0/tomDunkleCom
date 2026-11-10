@@ -26,10 +26,6 @@ const kDivClosingTag      = testConstants.kDivClosingTag; // TODO -- TEST
 const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
 const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
 
-// Test Function includes:
-const testFunctions = require('./resources/testFunctions'); // TODO -- TEST
-const getDivOpeningTag = testFunctions.getDivOpeningTag; // TODO -- TEST
-
 const kTestSuffixes =
 [
     "TestTrack1Suffix",

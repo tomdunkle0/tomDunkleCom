@@ -36,7 +36,9 @@ test(`given a valid track suffix, track number, track title, and track duration,
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
     const trimmedTrackRow = trackRow.trim();
-    const divOpeningTagTrackRow = getDivOpeningTag(kStyleSheetClassNameTrackRow);
+    const classAssignment = "<div class=\""; // TODO -- TEST
+    const termination = "\">"; // TODO -- TEST
+    const divOpeningTagTrackRow = classAssignment + kStyleSheetClassNameTrackRow + termination; // TODO -- TEST
     const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(divOpeningTagTrackRow);
     const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(kDivClosingTag);
     expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
