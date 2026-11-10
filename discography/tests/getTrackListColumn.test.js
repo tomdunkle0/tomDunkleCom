@@ -1,29 +1,28 @@
-// Constant includes:
-const userInterfaceStrings = require('./environment/userInterfaceStrings'); // TODO -- TEST
-const kPaddingZero = userInterfaceStrings.kPaddingZero; // TODO -- TEST
+// User interface string includes:
+const userInterfaceStrings = require('./environment/userInterfaceStrings');
+const kPaddingZero = userInterfaceStrings.kPaddingZero;
 
 // Constant includes:
-const constants = require('./environment/constants'); // TODO -- TEST
-const kGreatestSingleDigitNumber        = constants.kGreatestSingleDigitNumber; // TODO -- TEST
-const kPrefixPlayArrow                  = constants.kPrefixPlayArrow; // TODO -- TEST
-const kPrefixTrackDuration              = constants.kPrefixTrackDuration; // TODO -- TEST
-const kPrefixTrackNumber                = constants.kPrefixTrackNumber; // TODO -- TEST
-const kPrefixTrackTitle                 = constants.kPrefixTrackTitle; // TODO -- TEST
-const kStyleSheetClassNameTrackDuration = constants.kStyleSheetClassNameTrackDuration; // TODO -- TEST
-const kStyleSheetClassNameTrackNumber   = constants.kStyleSheetClassNameTrackNumber; // TODO -- TEST
-const kStyleSheetClassNameTrackRow      = constants.kStyleSheetClassNameTrackRow; // TODO -- TEST
-const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle; // TODO -- TEST
+const constants = require('./environment/constants');
+const kGreatestSingleDigitNumber        = constants.kGreatestSingleDigitNumber;
+const kPrefixPlayArrow                  = constants.kPrefixPlayArrow;
+const kPrefixTrackDuration              = constants.kPrefixTrackDuration;
+const kPrefixTrackNumber                = constants.kPrefixTrackNumber;
+const kPrefixTrackTitle                 = constants.kPrefixTrackTitle;
+const kStyleSheetClassNameTrackDuration = constants.kStyleSheetClassNameTrackDuration;
+const kStyleSheetClassNameTrackNumber   = constants.kStyleSheetClassNameTrackNumber;
+const kStyleSheetClassNameTrackRow      = constants.kStyleSheetClassNameTrackRow;
+const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle;
 
 // Function includes:
-const audioManager = require('./environment/audioManager');
 const getDiscographyContent = require('./environment/getDiscographyContent');
-const getTrackListColumn = getDiscographyContent.getTrackListColumn; // TODO -- TEST
+const getTrackListColumn = getDiscographyContent.getTrackListColumn;
 
 // Test Constant includes:
-const testConstants = require('./resources/testConstants'); // TODO -- TEST
-const kClosingParenthesis = testConstants.kClosingParenthesis; // TODO -- TEST
-const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
-const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
+const testConstants = require('./resources/testConstants');
+const kClosingParenthesis = testConstants.kClosingParenthesis;
+const kListCounterSuffix  = testConstants.kListCounterSuffix;
+const kOpeningParenthesis = testConstants.kOpeningParenthesis;
 
 const kTestSuffixes =
 [
