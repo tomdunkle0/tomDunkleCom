@@ -10,22 +10,20 @@ const kStyleSheetClassNameTrackRow      = constants.kStyleSheetClassNameTrackRow
 const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle;
 
 // Function includes:
-const audioManager = require('./environment/audioManager');
 const getDiscographyContent = require('./environment/getDiscographyContent');
 const getTrackRow = getDiscographyContent.getTrackRow;
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
-const kClosingParenthesis = testConstants.kClosingParenthesis; // TODO -- TEST
-const kDivClosingTag      = testConstants.kDivClosingTag;
-const kListCounterSuffix  = testConstants.kListCounterSuffix; // TODO -- TEST
-const kOpeningParenthesis = testConstants.kOpeningParenthesis; // TODO -- TEST
+const kClosingParenthesis = testConstants.kClosingParenthesis;
+const kListCounterSuffix  = testConstants.kListCounterSuffix;
+const kOpeningParenthesis = testConstants.kOpeningParenthesis;
 
 // Micellaneous constants:
 const kTestDuration = "3:30";
-const kTestNumber = "1";
-const kTestSuffix = "TestTrackSuffix";
-const kTestTitle = "Test Track";
+const kTestNumber   = "1";
+const kTestSuffix   = "TestTrackSuffix";
+const kTestTitle    = "Test Track";
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -36,12 +34,12 @@ test(`given a valid track suffix, track number, track title, and track duration,
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
     const trimmedTrackRow = trackRow.trim();
-    const classAssignment = "<div class=\""; // TODO -- TEST
-    const termination = "\">"; // TODO -- TEST
-    const divOpeningTagTrackRow = classAssignment + kStyleSheetClassNameTrackRow + termination; // TODO -- TEST
+    const classAssignment = "<div class=\"";
+    const termination = "\">";
+    const divOpeningTagTrackRow = classAssignment + kStyleSheetClassNameTrackRow + termination;
     const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(divOpeningTagTrackRow);
-    const divClosingTag = "</div>"; // TODO -- TEST
-    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(divClosingTag); // TODO -- TEST
+    const divClosingTag = "</div>";
+    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(divClosingTag);
     expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
     expect(trimmedTrackRowEndsWithClosingTag).toBe(true);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
@@ -52,9 +50,9 @@ test(`given a valid track suffix, track number, track title, and track duration,
         div of class trackDuration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    expect(trackRow).toContain(kStyleSheetClassNameTrackNumber); // TODO -- TEST
-    expect(trackRow).toContain(kStyleSheetClassNameTrackTitle); // TODO -- TEST
-    expect(trackRow).toContain(kStyleSheetClassNameTrackDuration); // TODO -- TEST
+    expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
+    expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
+    expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a string containing a div of class trackNumber, a div of class trackTitle, and a
         div of class trackDuration */
@@ -64,14 +62,14 @@ test(`given a valid track suffix, track number, track title, and track duration,
         and track duration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const playArrowId = kPrefixPlayArrow + kTestSuffix; // TODO -- TEST
-    const trackNumberId = kPrefixTrackNumber + kTestSuffix; // TODO -- TEST
-    const trackTitleId = kPrefixTrackTitle + kTestSuffix; // TODO -- TEST
-    const trackDurationId = kPrefixTrackDuration + kTestSuffix; // TODO -- TEST
-    expect(trackRow).toContain(playArrowId); // TODO -- TEST
-    expect(trackRow).toContain(trackNumberId); // TODO -- TEST
-    expect(trackRow).toContain(trackTitleId); // TODO -- TEST
-    expect(trackRow).toContain(trackDurationId); // TODO -- TEST
+    const playArrowId = kPrefixPlayArrow + kTestSuffix;
+    const trackNumberId = kPrefixTrackNumber + kTestSuffix;
+    const trackTitleId = kPrefixTrackTitle + kTestSuffix;
+    const trackDurationId = kPrefixTrackDuration + kTestSuffix;
+    expect(trackRow).toContain(playArrowId);
+    expect(trackRow).toContain(trackNumberId);
+    expect(trackRow).toContain(trackTitleId);
+    expect(trackRow).toContain(trackDurationId);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a string containing id assignments for the play arrow, track number, track title,
         and track duration */
@@ -81,8 +79,8 @@ test(`given a valid track suffix, track number, track title, and track duration,
         duration that will appear on the user interface`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
-    const expectedListCounter = kTestNumber + kListCounterSuffix; // TODO -- TEST
-    const expectedDurationText = kOpeningParenthesis + kTestDuration + kClosingParenthesis; // TODO -- TEST
+    const expectedListCounter = kTestNumber + kListCounterSuffix;
+    const expectedDurationText = kOpeningParenthesis + kTestDuration + kClosingParenthesis;
     expect(trackRow).toContain(expectedListCounter);
     expect(trackRow).toContain(kTestTitle);
     expect(trackRow).toContain(expectedDurationText);
