@@ -1,6 +1,6 @@
 module.exports =
 {
-    getDiscographyContent,
+    getAllDiscographyContent, // TODO: Make sure that this line is tested.
     getTrackListColumn, // TODO: Make sure that this line is tested.
     getTrackRow // TODO: Make sure that this line is tested.
 };

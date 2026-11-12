@@ -309,7 +309,7 @@ const d1320TrackSuffixes =
     "TheEndOfTheWorld"
 ];
 
-function getDiscographyContent() {
+function getAllDiscographyContent() {
     return `
         <div class="flex-column"
              id="zScrollColumn">
@@ -862,7 +862,7 @@ function getDiscographyContent() {
             </div>
         </div>
     `;
-} // getDiscographyContent()
+} // getAllDiscographyContent()
 
 function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
 {

@@ -1,11 +1,11 @@
 // Jest includes:
-const each = require('jest-each').default; // TODO -- TEST
+const each = require('jest-each').default;
 
 // Constant includes:
 const constants = require('./environment/constants');
-const kPrefixPlayArrow = constants.kPrefixPlayArrow; // TODO -- TEST
+const kPrefixPlayArrow = constants.kPrefixPlayArrow;
 const kStyle           = constants.kStyle;
-const kTrackIds        = constants.kTrackIds; // TODO -- TEST
+const kTrackIds        = constants.kTrackIds;
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');
@@ -17,17 +17,17 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 
 // Function includes:
 const audioManager = require('./environment/audioManager');
-const removeFirstCharacter = audioManager.removeFirstCharacter; // TODO -- TEST
+const removeFirstCharacter   = audioManager.removeFirstCharacter;
 const setPlayArrowVisibility = audioManager.setPlayArrowVisibility;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Miscellaneous constants:
 const kShouldBeVisible    = true;
 const kShouldNotBeVisible = false;
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 describe(`passing false to setPlayArrowVisibility() sets the play arrow of a track

@@ -16,8 +16,8 @@ const kTestTrackTitleId    = testConstants.kTestTrackTitleId;
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const updateTrackFontColor = audioManager.updateTrackFontColor;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -27,7 +27,7 @@ const getParentElementForChildId    = testFunctions.getParentElementForChildId;
 const testTrackTextIds = [kTestTrackDurationId, kTestTrackNumberId, kTestTrackTitleId];
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 describe(`given an initialized track text div, updateTrackFontColor() can set the font color of the

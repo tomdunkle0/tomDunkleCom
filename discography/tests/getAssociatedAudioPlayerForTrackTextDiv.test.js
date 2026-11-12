@@ -14,15 +14,15 @@ const kTestTrackNumberId    = testConstants.kTestTrackNumberId;
 const audioManager = require('./environment/audioManager');
 const getAssociatedAudioPlayerForTrackTextDiv
     = audioManager.getAssociatedAudioPlayerForTrackTextDiv;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
 const getParentElementForChildId = testFunctions.getParentElementForChildId;
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 test(`given a valid trackTextDiv, getAssociatedAudioPlayerForTrackTextDiv() returns a valid audio

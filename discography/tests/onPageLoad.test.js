@@ -12,8 +12,8 @@ const testConstants = require('./resources/testConstants');
 const kAudioElementNodeName = testConstants.kAudioElementNodeName;
 
 // Function includes:
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Miscellaneous constants:
 const kNumberOfAlbumsOnPage     = 8;
@@ -21,7 +21,7 @@ const kOneChild                 = 1;
 const kStyleSheetClassNameAlbum = "album";
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 test(`on page load, each album has a dedicated audio player`, () => {

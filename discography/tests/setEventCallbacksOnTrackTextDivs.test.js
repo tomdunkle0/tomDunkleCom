@@ -22,8 +22,8 @@ const audioManager = require('./environment/audioManager');
 const getFunctionCallStringForPlayTrack = audioManager.getFunctionCallStringForPlayTrack;
 const isUnpopulated                     = audioManager.isUnpopulated;
 const setEventCallbacksOnTrackTextDivs  = audioManager.setEventCallbacksOnTrackTextDivs;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 beforeAll(() => {
     // If kEventNameOnClick, kEventNameOnMouseLeave, kEventNameOnMouseOver, kEventNameOnTouchEnd,
@@ -36,7 +36,7 @@ beforeAll(() => {
     expect(isUnpopulated(kEventNameOnTouchEnd)).toBe(false);
     expect(isUnpopulated(kEventNameOnTouchStart)).toBe(false);
 
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeAll()
 
 test(`calling setEventCallbacksOnTrackTextDivs() sets callback functions for touch and click events

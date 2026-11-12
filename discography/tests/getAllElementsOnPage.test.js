@@ -1,11 +1,11 @@
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getAllElementsOnPage = audioManager.getAllElementsOnPage;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 test(`calling getAllElementsOnPage() returns a sufficiently large number of elements`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 
     const allElements = getAllElementsOnPage();
 

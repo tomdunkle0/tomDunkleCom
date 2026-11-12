@@ -15,8 +15,8 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 const audioManager = require('./environment/audioManager');
 const addPlayEventListenerForEachAudioPlayer = audioManager.addPlayEventListenerForEachAudioPlayer;
 const isUnpopulated                          = audioManager.isUnpopulated;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -31,7 +31,7 @@ beforeAll(() => {
 }); // beforeAll()
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
     addPlayEventListenerForEachAudioPlayer();
     dispatchEventToAudioPlayer(kPlayer1320, kEventTypePlay);
 }); // beforeEach()

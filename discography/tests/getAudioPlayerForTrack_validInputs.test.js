@@ -5,11 +5,11 @@ const kTestTrackId = testConstants.kTestTrackId;
 // Function includes:
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 test(`given a valid trackId, getAudioPlayerForTrack() returns an audio player`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 
     const audioPlayer = getAudioPlayerForTrack(kTestTrackId);
 

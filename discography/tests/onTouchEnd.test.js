@@ -12,15 +12,15 @@ const kTestTrackNumberId = testConstants.kTestTrackNumberId;
 const audioManager = require('./environment/audioManager');
 const onTouchEnd   = audioManager.onTouchEnd;
 const onTouchStart = audioManager.onTouchStart;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
 const getStyleAttributeForColorCode = testFunctions.getStyleAttributeForColorCode;
 
 test(`on touch end, the fill of the touched state changes to white`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
     const arbitraryTrackText = document.getElementById(kTestTrackNumberId);
     const callingDiv = arbitraryTrackText.parentElement;
     onTouchStart(callingDiv);

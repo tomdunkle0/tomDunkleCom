@@ -6,14 +6,14 @@ const kTestTrackId = testConstants.kTestTrackId;
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
 const isFinalTrackOnAlbum    = audioManager.isFinalTrackOnAlbum;
-const gdc = require('./environment/getDiscographyContent'); // TODO -- TEST
-const getDiscographyContent = gdc.getDiscographyContent; // TODO -- TEST
+const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Miscellaneous constants:
 const kMinimumTrackCount = 8;
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 test(`given a track that is not the last on the album, isFinalTrackOnAlbum() returns
