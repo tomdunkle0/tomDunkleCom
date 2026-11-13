@@ -23,10 +23,11 @@ const getFunctionCallStringForPlayTrack = audioManager.getFunctionCallStringForP
 const isUnpopulated                     = audioManager.isUnpopulated;
 const setEventCallbacksOnTrackTextDivs  = audioManager.setEventCallbacksOnTrackTextDivs;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 beforeAll(() => {
     // If kEventNameOnClick, kEventNameOnMouseLeave, kEventNameOnMouseOver, kEventNameOnTouchEnd,
-    //  kEventNameOnTouchStart, or are undefined in the current context, then tests will still pass
+    //  or kEventNameOnTouchStart are undefined in the current context, then tests will still pass
     //  because the same undefined constant(s) will be used in this test suite to evaluate what
     //  event strings were populated on each track text div.
     expect(isUnpopulated(kEventNameOnClick)).toBe(false);
@@ -35,7 +36,7 @@ beforeAll(() => {
     expect(isUnpopulated(kEventNameOnTouchEnd)).toBe(false);
     expect(isUnpopulated(kEventNameOnTouchStart)).toBe(false);
 
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeAll()
 
 test(`calling setEventCallbacksOnTrackTextDivs() sets callback functions for touch and click events

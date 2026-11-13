@@ -13,7 +13,10 @@ const kPrefixTrackTitle    = constants.kPrefixTrackTitle;
 
 // Miscellaneous constants:
 const kAudioElementNodeName             = "AUDIO";
+const kClosingParenthesis               = ")";
 const kEventTypePlay                    = "play";
+const kListCounterSuffix                = ".)";
+const kOpeningParenthesis               = "(";
 const kTestTrackIdSuffix                = "RunThatTurkey";
 // TODO: This discrepancy of some strings having the semicolon and some strings not having
 //        it originated because the hardcoded HTML in getDiscographyContent() includes the
@@ -34,7 +37,10 @@ const kTestTrackTitleId     = kPrefixTrackTitle + kTestTrackIdSuffix;
 module.exports =
 {
     kAudioElementNodeName,
+    kClosingParenthesis,
     kEventTypePlay,
+    kListCounterSuffix,
+    kOpeningParenthesis,
     kTestTrackDurationId,
     kTestTrackId,
     kTestTrackNumberId,

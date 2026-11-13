@@ -16,6 +16,7 @@ const audioManager = require('./environment/audioManager');
 const addPlayEventListenerForEachAudioPlayer = audioManager.addPlayEventListenerForEachAudioPlayer;
 const stopAndResetTrack                      = audioManager.stopAndResetTrack;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -23,7 +24,7 @@ const dispatchEventToAudioPlayer = testFunctions.dispatchEventToAudioPlayer;
 
 test(`given the id of a track that is currently playing, stopAndResetTrack() sets the visibility of
         the associated play arrow to invisible`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
     addPlayEventListenerForEachAudioPlayer();
     dispatchEventToAudioPlayer(kPlayer1320, kEventTypePlay);
     const testTrackPlayArrow = document.getElementById(kTestTrackPlayArrowId);
