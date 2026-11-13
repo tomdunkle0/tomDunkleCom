@@ -15,6 +15,8 @@ const kStyleSheetClassNameTrackRow      = constants.kStyleSheetClassNameTrackRow
 const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle;
 
 // Function includes:
+const audioManager = require('./environment/audioManager');
+const isUnpopulated = audioManager.isUnpopulated;
 const getDiscographyContent = require('./environment/getDiscographyContent');
 const getTrackListColumn = getDiscographyContent.getTrackListColumn;
 
@@ -65,6 +67,17 @@ const kTestTitles =
     "Test Track 9",
     "Test Track 10"
 ];
+
+beforeAll(() => {
+    // If kGreatestSingleDigitNumber is undefined in the current context, then it is implied that
+    //  the undefined value consumed in this test suite is also being consumed in the test
+    //  environment by the production function getTrackListColumn(), causing that function to fail
+    //  to add the padding zero ("0") to the beginning of each of the first nine tracks' title
+    //  strings for the user interface. In such case, tests will erroneously pass because similar
+    //  logic in this test suite would cause expectTrackListContainsUserInterfaceContent() to
+    //  expect the same incorrect strings that are produced by getTrackListColumn().
+    expect(isUnpopulated(kGreatestSingleDigitNumber)).toBe(false);
+}); // beforeAll()
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing a trackNumber div, a trackTitle div, and a trackDuration div

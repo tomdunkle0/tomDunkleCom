@@ -14,7 +14,7 @@ module.exports =
     kFunctionCallMakeTextWhite,
     kFunctionCallOnTouchEnd,
     kFunctionCallOnTouchStart,
-    kGreatestSingleDigitNumber, // TODO -- TEST
+    kGreatestSingleDigitNumber,
     kNoTracks,
     kNotVisible,
     kOnlyChildIndex,
