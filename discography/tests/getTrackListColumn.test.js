@@ -69,14 +69,15 @@ const kTestTitles =
 ];
 
 beforeAll(() => {
-    // If kGreatestSingleDigitNumber is undefined in the current context, then it is implied that
-    //  the undefined value consumed in this test suite is also being consumed in the test
-    //  environment by the production function getTrackListColumn(), causing that function to fail
-    //  to add the padding zero ("0") to the beginning of each of the first nine tracks' title
-    //  strings for the user interface. In such case, tests will erroneously pass because similar
-    //  logic in this test suite would cause expectTrackListContainsUserInterfaceContent() to
-    //  expect the same incorrect strings that are produced by getTrackListColumn().
+    // If kGreatestSingleDigitNumber or kPaddingZero are undefined in the current context, then it
+    //  is implied that the undefined values consumed in this test suite are also being consumed in
+    //  the test environment by the production function getTrackListColumn(), causing that function
+    //  to fail to add the padding zero ("0") to the beginning of each of the first nine tracks'
+    //  title strings for the user interface. In such case, tests will erroneously pass because
+    //  similar logic in this test suite would cause expectTrackListContainsUserInterfaceContent()
+    //  to expect the same incorrect strings that are produced by getTrackListColumn().
     expect(isUnpopulated(kGreatestSingleDigitNumber)).toBe(false);
+    expect(isUnpopulated(kPaddingZero)).toBe(false);
 }); // beforeAll()
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()

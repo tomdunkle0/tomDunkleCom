@@ -1,13 +1,13 @@
 module.exports =
 {
-    getAllDiscographyContent, // TODO: Make sure that this line is tested.
-    getTrackListColumn, // TODO: Make sure that this line is tested.
-    getTrackRow // TODO: Make sure that this line is tested.
+    getAllDiscographyContent,
+    getTrackListColumn,
+    getTrackRow
 };
 
 const constants = require('./constants');
 const kGreatestSingleDigitNumber = constants.kGreatestSingleDigitNumber;
-const userInterfaceStrings = require('./userInterfaceStrings'); // TODO: Make sure that this line is tested.
+const userInterfaceStrings = require('./userInterfaceStrings');
 const mbTrackDurations    = userInterfaceStrings.mbTrackDurations;
 const mbTrackTitles       = userInterfaceStrings.mbTrackTitles;
 const fuotcTrackDurations = userInterfaceStrings.fuotcTrackDurations;
@@ -24,4 +24,4 @@ const phTrackDurations    = userInterfaceStrings.phTrackDurations;
 const phTrackTitles       = userInterfaceStrings.phTrackTitles;
 const d1320TrackDurations = userInterfaceStrings.d1320TrackDurations;
 const d1320TrackTitles    = userInterfaceStrings.d1320TrackTitles;
-const kPaddingZero        = userInterfaceStrings.kPaddingZero; // TODO: Make sure that this line is tested.
+const kPaddingZero        = userInterfaceStrings.kPaddingZero;

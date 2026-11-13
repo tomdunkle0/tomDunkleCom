@@ -16,5 +16,5 @@ module.exports =
     phTrackTitles,
     d1320TrackDurations,
     d1320TrackTitles,
-    kPaddingZero // TODO: Make sure that this line is tested.
+    kPaddingZero
 };
