@@ -5,11 +5,11 @@ $allJavaScripts = $deersimJavaScripts + $discographyJavaScripts + $highPointsJav
 
 $numberOfTestFailures = 0
 
-for ($jsIndex=0; $jsIndex -lt $allJavaScripts.Count; $jsIndex++)
+foreach ($javaScript in $allJavaScripts)
 {
     try
     {
-        $filePath = $allJavaScripts[$jsIndex].FullName
+        $filePath = $javaScript.FullName
         $linesOfCode = Get-Content -Path $filePath
         if ($linesOfCode.Count -gt 1000)
         {
