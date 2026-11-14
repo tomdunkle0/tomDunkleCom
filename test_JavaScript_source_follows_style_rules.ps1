@@ -10,8 +10,8 @@ for ($jsIndex=0; $jsIndex -lt $allJavaScripts.Count; $jsIndex++)
     try
     {
         $numberOfLines = 0
-        $content = Get-Content -Path $allJavaScripts[$jsIndex].FullName
-        foreach ($line in $content)
+        $linesOfCode = Get-Content -Path $allJavaScripts[$jsIndex].FullName
+        foreach ($line in $linesOfCode)
         {
             ++$numberOfLines
             if ($numberOfLines -gt 1000)
