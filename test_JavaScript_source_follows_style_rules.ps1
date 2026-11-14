@@ -11,7 +11,7 @@ foreach ($javaScript in $allJavaScripts)
     {
         $filePath = $javaScript.FullName
         $linesOfCode = Get-Content -Path $filePath
-        if ($linesOfCode.Count -gt 1000)
+        if ($linesOfCode.Count -ge 1000)
         {
             ++$numberOfTestFailures
             Write-Host TEST FAILURE in $filePath -ForegroundColor Red

@@ -867,15 +867,16 @@ function getAllDiscographyContent() {
 function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
 {
     // This function assumes that all three parameter arrays are the same length.
-    const parameterArrayLength = trackSuffixes.length;
+    const numberOfTracks = trackSuffixes.length;
+    var trackNumber = "";
     var trackSuffix = "";
     var trackTitle = "";
     var trackDuration = "";
     var trackListColumn = "";
-    for (var arrayIndex = 0; arrayIndex < parameterArrayLength; arrayIndex++)
+    for (var arrayIndex = 0; arrayIndex < numberOfTracks; arrayIndex++)
     {
-        var trackNumber = (arrayIndex + 1).toString();
-        if (arrayIndex < kGreatestSingleDigitNumber)
+        trackNumber = (arrayIndex + 1).toString();
+        if (trackNumber <= kGreatestSingleDigitNumber)
         {
             trackNumber = kPaddingZero + trackNumber;
         }
