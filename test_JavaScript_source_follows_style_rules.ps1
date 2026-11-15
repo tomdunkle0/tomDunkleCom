@@ -15,7 +15,7 @@ foreach ($javaScript in $allJavaScripts)
         {
             ++$numberOfTestFailures
             Write-Host TEST FAILURE in $filePath -ForegroundColor Red
-            Write-Host File is longer than 1000 lines.
+            Write-Host File is at least 1,000 lines long.
             Write-Host -----------------------------------
         }
         else

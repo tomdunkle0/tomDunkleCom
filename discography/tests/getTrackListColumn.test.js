@@ -1,6 +1,6 @@
 // User interface string includes:
 const userInterfaceStrings = require('./environment/userInterfaceStrings');
-const kPaddingZero = userInterfaceStrings.kPaddingZero;
+const uiPaddingZero = userInterfaceStrings.uiPaddingZero;
 
 // Constant includes:
 const constants = require('./environment/constants');
@@ -77,7 +77,7 @@ beforeAll(() => {
     //  similar logic in this test suite would cause expectTrackListContainsUserInterfaceContent()
     //  to expect the same incorrect strings that are produced by getTrackListColumn().
     expect(isUnpopulated(kGreatestSingleDigitNumber)).toBe(false);
-    expect(isUnpopulated(kPaddingZero)).toBe(false);
+    expect(isUnpopulated(uiPaddingZero)).toBe(false);
 }); // beforeAll()
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
@@ -162,7 +162,7 @@ function expectTrackListContainsUserInterfaceContent(trackRowArray)
         expectedListCounter = (rowIndex + 1).toString() + kListCounterSuffix;
         if (rowIndex < kGreatestSingleDigitNumber)
         {
-            expectedListCounter = kPaddingZero + expectedListCounter;
+            expectedListCounter = uiPaddingZero + expectedListCounter;
         }
         expectedDuration = kOpeningParenthesis + kTestDurations[rowIndex] + kClosingParenthesis;
         expect(trackRow).toContain(expectedListCounter);

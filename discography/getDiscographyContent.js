@@ -326,7 +326,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(mbTrackSuffixes, mbTrackTitles, mbTrackDurations) +
+          + getTrackListColumn(mbTrackSuffixes, uiMbTrackTitles, uiMbTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -399,7 +399,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(fuotcTrackSuffixes, fuotcTrackTitles, fuotcTrackDurations) +
+          + getTrackListColumn(fuotcTrackSuffixes, uiFuotcTrackTitles, uiFuotcTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -452,7 +452,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(csTrackSuffixes, csTrackTitles, csTrackDurations) +
+          + getTrackListColumn(csTrackSuffixes, uiCsTrackTitles, uiCsTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -520,7 +520,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(dfTrackSuffixes, dfTrackTitles, dfTrackDurations) +
+          + getTrackListColumn(dfTrackSuffixes, uiDfTrackTitles, uiDfTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -574,7 +574,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(wapTrackSuffixes, wapTrackTitles, wapTrackDurations) +
+          + getTrackListColumn(wapTrackSuffixes, uiWapTrackTitles, uiWapTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -659,7 +659,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(sbTrackSuffixes, sbTrackTitles, sbTrackDurations) +
+          + getTrackListColumn(sbTrackSuffixes, uiSbTrackTitles, uiSbTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -731,7 +731,7 @@ function getAllDiscographyContent() {
                         </p>
                     </div>
                     <div class="flex-column">`
-          + getTrackListColumn(phTrackSuffixes, phTrackTitles, phTrackDurations) +
+          + getTrackListColumn(phTrackSuffixes, uiPhTrackTitles, uiPhTrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -809,7 +809,7 @@ function getAllDiscographyContent() {
                     </div>
                     <div class="flex-column">
                         `
-          + getTrackListColumn(d1320TrackSuffixes, d1320TrackTitles, d1320TrackDurations) +
+          + getTrackListColumn(d1320TrackSuffixes, ui1320TrackTitles, ui1320TrackDurations) +
 `
                         <br><br> <!-- Space between track titles and audio player controls. --->
                     </div>
@@ -878,7 +878,7 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
         trackNumber = (arrayIndex + 1).toString();
         if (trackNumber <= kGreatestSingleDigitNumber)
         {
-            trackNumber = kPaddingZero + trackNumber;
+            trackNumber = uiPaddingZero + trackNumber;
         }
         trackSuffix = trackSuffixes[arrayIndex];
         trackTitle = trackTitles[arrayIndex];

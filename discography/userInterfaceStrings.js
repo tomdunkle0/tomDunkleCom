@@ -1,9 +1,9 @@
-/*---------------------------------------------------------------*\
- | File: userInterfaceStrings.js                                 |
- | Purpose: Defines all strings displayed on the user interface. |
-\*---------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*\
+ | File: userInterfaceStrings.js                                               |
+ | Purpose: Defines all strings displayed on the discography's user interface. |
+\*-----------------------------------------------------------------------------*/
 
-const mbTrackTitles =
+const uiMbTrackTitles =
 [
     "every muscle is moving",
     "comfort zone",
@@ -24,7 +24,7 @@ const mbTrackTitles =
     "you've been exposed!"
 ];
 
-const mbTrackDurations =
+const uiMbTrackDurations =
 [
     "1:20",
     "4:00",
@@ -45,7 +45,7 @@ const mbTrackDurations =
     "2:22"
 ];
 
-const fuotcTrackTitles =
+const uiFuotcTrackTitles =
 [
     "Thanks",
     "Everything in Front",
@@ -57,7 +57,7 @@ const fuotcTrackTitles =
     "Chambers Road"
 ];
 
-const fuotcTrackDurations =
+const uiFuotcTrackDurations =
 [
     "1:00",
     "3:37",
@@ -69,7 +69,7 @@ const fuotcTrackDurations =
     "3:06"
 ];
 
-const csTrackTitles =
+const uiCsTrackTitles =
 [
     "0utr0",
     "skyDiiive [uncovah'd]",
@@ -88,7 +88,7 @@ const csTrackTitles =
     "in which i quietly walk out of the room"
 ];
 
-const csTrackDurations =
+const uiCsTrackDurations =
 [
     "1:29",
     "3:48",
@@ -107,7 +107,7 @@ const csTrackDurations =
     "4:31"
 ];
 
-const dfTrackTitles =
+const uiDfTrackTitles =
 [
     "how the times have changed [cosmic zoo II]",
     "standing water in the brooklyn masonic temple",
@@ -119,7 +119,7 @@ const dfTrackTitles =
     "i still regret not putting trucknutz on the back of matt's car"
 ]
 
-const dfTrackDurations =
+const uiDfTrackDurations =
 [
     "5:04",
     "3:08",
@@ -131,7 +131,7 @@ const dfTrackDurations =
     "6:57"
 ];
 
-const wapTrackTitles =
+const uiWapTrackTitles =
 [
     "You Will Be My Jalapeño Dream",
     "Rancid Fettuccinne Seamstress",
@@ -151,7 +151,7 @@ const wapTrackTitles =
     "The Incriminating Evidence Button"
 ];
 
-const wapTrackDurations =
+const uiWapTrackDurations =
 [
     "1:51",
     "4:04",
@@ -171,7 +171,7 @@ const wapTrackDurations =
     "13:30"
 ];
 
-const sbTrackTitles =
+const uiSbTrackTitles =
 [
     "minimize",
     "cooLLoop.toondrahhhhhh",
@@ -190,7 +190,7 @@ const sbTrackTitles =
     "skating on dry ice"
 ];
 
-const sbTrackDurations =
+const uiSbTrackDurations =
 [
     "1:07",
     "2:30",
@@ -209,7 +209,7 @@ const sbTrackDurations =
     "3:06"
 ];
 
-const phTrackTitles =
+const uiPhTrackTitles =
 [
     "Song About You",
     "Leap of Faith",
@@ -233,7 +233,7 @@ const phTrackTitles =
     "Press It, Equalize It"
 ];
 
-const phTrackDurations =
+const uiPhTrackDurations =
 [
     "0:53",
     "4:34",
@@ -257,7 +257,7 @@ const phTrackDurations =
     "3:55"
 ];
 
-const d1320TrackTitles =
+const ui1320TrackTitles =
 [
     "Run That Turkey!",
     "Duel on the Black Keys",
@@ -276,7 +276,7 @@ const d1320TrackTitles =
     "The End of the World"
 ];
 
-const d1320TrackDurations =
+const ui1320TrackDurations =
 [
     "0:41",
     "4:53",
@@ -295,4 +295,4 @@ const d1320TrackDurations =
     "3:24"
 ];
 
-const kPaddingZero = "0";
+const uiPaddingZero = "0";
