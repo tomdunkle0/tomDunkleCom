@@ -32,8 +32,8 @@ test(`given a valid track suffix, track number, track title, and track duration,
     const trimmedTrackRow = trackRow.trim();
     const classAssignment = "<div class=\"";
     const termination = "\">";
-    const divOpeningTagTrackRow = classAssignment + kStyleSheetClassNameTrackRow + termination;
-    const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(divOpeningTagTrackRow);
+    const trackRowDivOpeningTag = classAssignment + kStyleSheetClassNameTrackRow + termination;
+    const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(trackRowDivOpeningTag);
     const divClosingTag = "</div>";
     const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(divClosingTag);
     expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
@@ -42,16 +42,16 @@ test(`given a valid track suffix, track number, track title, and track duration,
         returns a div of class trackRow */
 
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
-        returns a string containing a div of class trackNumber, a div of class trackTitle, and a
-        div of class trackDuration`, () => {
+        returns a string containing style sheet class names trackNumber, trackTitle, and
+        trackDuration`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
 
     expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
     expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
     expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
-        returns a string containing a div of class trackNumber, a div of class trackTitle, and a
-        div of class trackDuration */
+        returns a string containing style sheet class names trackNumber, trackTitle, and
+        trackDuration */
 
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a string containing id assignments for the play arrow, track number, track title,

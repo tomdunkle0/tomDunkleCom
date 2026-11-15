@@ -70,26 +70,26 @@ const kTestTitles =
 
 beforeAll(() => {
     // If kGreatestSingleDigitNumber or kPaddingZero are undefined in the current context, then it
-    //  is implied that the undefined values consumed in this test suite are also being consumed in
-    //  the test environment by the production function getTrackListColumn(), causing that function
-    //  to fail to add the padding zero ("0") to the beginning of each of the first nine tracks'
-    //  title strings for the user interface. In such case, tests will erroneously pass because
-    //  similar logic in this test suite would cause expectTrackListContainsUserInterfaceContent()
-    //  to expect the same incorrect strings that are produced by getTrackListColumn().
+    //  is implied that the undefined values consumed in this test suite are also consumed in the
+    //  test environment by the production function getTrackListColumn(), causing that function to
+    //  fail to add the padding zero ("0") to the beginning of each of the first nine tracks' title
+    //  strings for the user interface. In such case, tests will erroneously pass because similar
+    //  logic in this test suite would cause expectTrackListContainsUserInterfaceContent() to
+    //  expect the same incorrect strings that are produced by getTrackListColumn().
     expect(isUnpopulated(kGreatestSingleDigitNumber)).toBe(false);
     expect(isUnpopulated(uiPaddingZero)).toBe(false);
 }); // beforeAll()
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
-        returns a string containing a trackNumber div, a trackTitle div, and a trackDuration div
-        for each item in the list`, () => {
+        returns a string containing style sheet class names trackNumber, trackTitle, and
+        trackDuration for each item in the list`, () => {
     const trackListColumn = getTrackListColumn(kTestSuffixes, kTestTitles, kTestDurations);
 
     const trackRowArray = getTrackRowArray(trackListColumn);
-    expectTrackListContainsContentDivs(trackRowArray);
+    expectTrackListContainsStyleSheetClassNames(trackRowArray);
 }); /* given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
-        returns a string containing a trackNumber div, a trackTitle div, and a trackDuration div
-        for each item in the list */
+        returns a string containing style sheet class names trackNumber, trackTitle, and
+        trackDuration for each item in the list */
 
 test(`given valid lists of track suffixes, track titles, and track durations, getTrackListColumn()
         returns a string containing id assignments for the play arrow, track number, track title,
@@ -113,7 +113,7 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
         returns a string containing lines of text representing the track number, title, and
         duration that will appear on the user interface for each item in the list */
 
-function expectTrackListContainsContentDivs(trackRowArray)
+function expectTrackListContainsStyleSheetClassNames(trackRowArray)
 {
     const expectedNumberOfTrackRows = trackRowArray.length;
     var trackRow = "";
@@ -124,7 +124,7 @@ function expectTrackListContainsContentDivs(trackRowArray)
         expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
         expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
     }
-} // expectTrackListContainsContentDivs()
+} // expectTrackListContainsStyleSheetClassNames()
 
 function expectTrackListContainsIds(trackRowArray)
 {
