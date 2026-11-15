@@ -33,11 +33,11 @@ test(`given a valid track suffix, track number, track title, and track duration,
     const classAssignment = "<div class=\"";
     const termination = "\">";
     const trackRowDivOpeningTag = classAssignment + kStyleSheetClassNameTrackRow + termination;
-    const trimmedTrackRowStartsWithOpeningTag = trimmedTrackRow.startsWith(trackRowDivOpeningTag);
+    const trackRowStartsWithDivOpeningTag = trimmedTrackRow.startsWith(trackRowDivOpeningTag);
     const divClosingTag = "</div>";
-    const trimmedTrackRowEndsWithClosingTag = trimmedTrackRow.endsWith(divClosingTag);
-    expect(trimmedTrackRowStartsWithOpeningTag).toBe(true);
-    expect(trimmedTrackRowEndsWithClosingTag).toBe(true);
+    const trackRowEndsWithDivClosingTag = trimmedTrackRow.endsWith(divClosingTag);
+    expect(trackRowStartsWithDivOpeningTag).toBe(true);
+    expect(trackRowEndsWithDivClosingTag).toBe(true);
 }); /* given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow */
 

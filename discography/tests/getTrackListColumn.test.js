@@ -113,19 +113,6 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
         returns a string containing lines of text representing the track number, title, and
         duration that will appear on the user interface for each item in the list */
 
-function expectTrackListContainsStyleSheetClassNames(trackRowArray)
-{
-    const expectedNumberOfTrackRows = trackRowArray.length;
-    var trackRow = "";
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
-    {
-        trackRow = trackRowArray[rowIndex];
-        expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
-        expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
-        expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
-    }
-} // expectTrackListContainsStyleSheetClassNames()
-
 function expectTrackListContainsIds(trackRowArray)
 {
     const expectedNumberOfTrackRows = trackRowArray.length;
@@ -149,6 +136,19 @@ function expectTrackListContainsIds(trackRowArray)
         expect(trackRow).toContain(trackDurationId);
     }
 } // expectTrackListContainsIds()
+
+function expectTrackListContainsStyleSheetClassNames(trackRowArray)
+{
+    const expectedNumberOfTrackRows = trackRowArray.length;
+    var trackRow = "";
+    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
+    {
+        trackRow = trackRowArray[rowIndex];
+        expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
+        expect(trackRow).toContain(kStyleSheetClassNameTrackTitle);
+        expect(trackRow).toContain(kStyleSheetClassNameTrackDuration);
+    }
+} // expectTrackListContainsStyleSheetClassNames()
 
 function expectTrackListContainsUserInterfaceContent(trackRowArray)
 {
