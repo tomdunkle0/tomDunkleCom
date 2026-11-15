@@ -26,3 +26,4 @@ const uiPaddingZero         = userInterfaceStrings.uiPaddingZero;
 
 const constants = require('./constants');
 const kGreatestSingleDigitNumber = constants.kGreatestSingleDigitNumber;
+const kUnpopulated               = constants.kUnpopulated;

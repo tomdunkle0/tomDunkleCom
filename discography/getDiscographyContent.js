@@ -868,11 +868,11 @@ function getTrackListColumn(trackSuffixes, trackTitles, trackDurations)
 {
     // This function assumes that all three parameter arrays are the same length.
     const numberOfTracks = trackSuffixes.length;
-    var trackNumber = "";
-    var trackSuffix = "";
-    var trackTitle = "";
-    var trackDuration = "";
-    var trackListColumn = "";
+    var trackNumber = kUnpopulated;
+    var trackSuffix = kUnpopulated;
+    var trackTitle = kUnpopulated;
+    var trackDuration = kUnpopulated;
+    var trackListColumn = kUnpopulated;
     for (var arrayIndex = 0; arrayIndex < numberOfTracks; arrayIndex++)
     {
         trackNumber = (arrayIndex + 1).toString();
