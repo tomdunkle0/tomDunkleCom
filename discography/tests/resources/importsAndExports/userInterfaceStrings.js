@@ -1,20 +1,20 @@
 module.exports =
 {
-    uiMbTrackDurations,
     uiMbTrackTitles,
-    uiFuotcTrackDurations,
+    uiMbTrackDurations,
     uiFuotcTrackTitles,
-    uiCsTrackDurations,
+    uiFuotcTrackDurations,
     uiCsTrackTitles,
-    uiDfTrackDurations,
+    uiCsTrackDurations,
     uiDfTrackTitles,
-    uiWapTrackDurations,
+    uiDfTrackDurations,
     uiWapTrackTitles,
-    uiSbTrackDurations,
+    uiWapTrackDurations,
     uiSbTrackTitles,
-    uiPhTrackDurations,
+    uiSbTrackDurations,
     uiPhTrackTitles,
-    ui1320TrackDurations,
+    uiPhTrackDurations,
     ui1320TrackTitles,
+    ui1320TrackDurations,
     uiPaddingZero
 };

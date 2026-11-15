@@ -20,14 +20,14 @@ foreach ($javaScript in $allJavaScripts)
         }
         else
         {
-            foreach ($line in $linesOfCode)
+            foreach ($lineOfCode in $linesOfCode)
             {
-                if ($line.Length -gt 100)
+                if ($lineOfCode.Length -gt 100)
                 {
                     ++$numberOfTestFailures
                     Write-Host TEST FAILURE in $filePath -ForegroundColor Red
-                    Write-Host Line length $line.Length is greater than 100 characters.
-                    Write-Host $line
+                    Write-Host Line length $lineOfCode.Length is greater than 100 characters.
+                    Write-Host $lineOfCode
                     Write-Host -----------------------------------
                 }
             }
