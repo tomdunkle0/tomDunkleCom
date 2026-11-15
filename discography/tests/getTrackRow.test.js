@@ -25,10 +25,6 @@ const kTestNumber   = "1";
 const kTestSuffix   = "TestTrackSuffix";
 const kTestTitle    = "Test Track";
 
-// Test Function includes:
-const testFunctions = require('./resources/testFunctions');
-const getDivOpeningTag = testFunctions.getDivOpeningTag;
-
 test(`given a valid track suffix, track number, track title, and track duration, getTrackRow()
         returns a div of class trackRow`, () => {
     const trackRow = getTrackRow(kTestSuffix, kTestNumber, kTestTitle, kTestDuration);
