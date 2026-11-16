@@ -116,14 +116,14 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 
 function expectTrackListContainsIds(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length;
+    const numberOfTrackRows = trackRowArray.length;
     var trackRow = kUnpopulated;
     var trackSuffix = kUnpopulated;
     var playArrowId = kUnpopulated;
     var trackNumberId = kUnpopulated;
     var trackTitleId = kUnpopulated;
     var trackDurationId = kUnpopulated;
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
+    for (var rowIndex = 0; rowIndex < numberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
         trackSuffix = kTestSuffixes[rowIndex];
@@ -140,9 +140,9 @@ function expectTrackListContainsIds(trackRowArray)
 
 function expectTrackListContainsStyleSheetClassNames(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length;
+    const numberOfTrackRows = trackRowArray.length;
     var trackRow = kUnpopulated;
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
+    for (var rowIndex = 0; rowIndex < numberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
         expect(trackRow).toContain(kStyleSheetClassNameTrackNumber);
@@ -153,11 +153,11 @@ function expectTrackListContainsStyleSheetClassNames(trackRowArray)
 
 function expectTrackListContainsUserInterfaceContent(trackRowArray)
 {
-    const expectedNumberOfTrackRows = trackRowArray.length;
+    const numberOfTrackRows = trackRowArray.length;
     var trackRow = kUnpopulated;
     var expectedListCounter = kUnpopulated;
     var expectedDuration = kUnpopulated;
-    for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
+    for (var rowIndex = 0; rowIndex < numberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
         expectedListCounter = (rowIndex + 1).toString() + kListCounterSuffix;

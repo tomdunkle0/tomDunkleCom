@@ -17,7 +17,7 @@ const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 const testFunctions = require('./resources/testFunctions');
 const getStyleAttributeForColorCode = testFunctions.getStyleAttributeForColorCode;
 
-test(`on touch start, the fill of the touched state changes to light blue`, () => {
+test(`on touch start, the color of the touched text changes to light blue`, () => {
     document.body.innerHTML = getAllDiscographyContent();
     const arbitraryTrackText = document.getElementById(kTestTrackNumberId);
     const callingDiv = arbitraryTrackText.parentElement;

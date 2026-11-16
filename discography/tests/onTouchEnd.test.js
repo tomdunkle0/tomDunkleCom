@@ -19,7 +19,7 @@ const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 const testFunctions = require('./resources/testFunctions');
 const getStyleAttributeForColorCode = testFunctions.getStyleAttributeForColorCode;
 
-test(`on touch end, the fill of the touched state changes to white`, () => {
+test(`on touch end, the color of the touched text changes to white`, () => {
     document.body.innerHTML = getAllDiscographyContent();
     const arbitraryTrackText = document.getElementById(kTestTrackNumberId);
     const callingDiv = arbitraryTrackText.parentElement;
