@@ -26,6 +26,7 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 const audioManager = require('./environment/audioManager');
 const addPlayEventListenerForEachAudioPlayer = audioManager.addPlayEventListenerForEachAudioPlayer;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -43,7 +44,7 @@ const firstTrackPlayArrowAndAudioPlayerIdCombinations = [
 ];
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 describe(`after calling addPlayEventListenerForEachAudioPlayer(), dispatching a play event to an

@@ -14,13 +14,14 @@ const kVisibilityVisible                = testConstants.kVisibilityVisible;
 const audioManager = require('./environment/audioManager');
 const setPlayArrowVisibility = audioManager.setPlayArrowVisibility;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Miscellaneous constants:
 const kShouldBeVisible    = true;
 const kShouldNotBeVisible = false;
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 test(`passing false to setPlayArrowVisibility() sets the play arrow of a track invisible`, () => {

@@ -17,6 +17,7 @@ const kTestTrackTitleId     = testConstants.kTestTrackTitleId;
 const audioManager = require('./environment/audioManager');
 const getFunctionCallStringForPlayTrack = audioManager.getFunctionCallStringForPlayTrack;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 // Test Function includes:
 const testFunctions = require('./resources/testFunctions');
@@ -26,7 +27,7 @@ const getParentElementForChildId = testFunctions.getParentElementForChildId;
 const kPlayTestTrack = kPlayTrackFunctionCallPrefix + kTestTrackId + kPlayTrackFunctionCallSuffix;
 
 beforeEach(() => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 }); // beforeEach()
 
 test(`given a trackDuration paragraph, getFunctionCallStringForPlayTrack() returns a valid

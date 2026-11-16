@@ -243,7 +243,7 @@ var isValidIdForExistingAudioPlayer = function(audioPlayerId)
 
 var onPageLoad = function()
 {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
     addPlayEventListenerForEachAudioPlayer();
     setEventCallbacksOnTrackTextDivs();
     setAllTrackDurationWidthsToIdenticalValue();

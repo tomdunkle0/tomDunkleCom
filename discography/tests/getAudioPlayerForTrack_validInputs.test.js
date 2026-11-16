@@ -6,9 +6,10 @@ const kTestTrackId = testConstants.kTestTrackId;
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 test(`given a valid trackId, getAudioPlayerForTrack() returns an audio player`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
 
     const audioPlayer = getAudioPlayerForTrack(kTestTrackId);
 

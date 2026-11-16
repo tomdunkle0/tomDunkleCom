@@ -15,6 +15,7 @@ const kEventTypeTrackEnded              = "ended";
 const kFirstCharIndex                   = 0;
 const kFirstElementIndex                = 0;
 const kFunctionNameUpdateTrackFontColor = "updateTrackFontColor";
+const kGreatestSingleDigitNumber        = 9;
 const kNoTracks                         = 0;
 const kNotVisible                       = false;
 const kOnlyChildIndex                   = 0;

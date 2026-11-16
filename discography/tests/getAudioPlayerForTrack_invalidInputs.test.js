@@ -6,6 +6,7 @@ const kUnpopulated = constants.kUnpopulated;
 const audioManager = require('./environment/audioManager');
 const getAudioPlayerForTrack = audioManager.getAudioPlayerForTrack;
 const getDiscographyContent = require('./environment/getDiscographyContent');
+const getAllDiscographyContent = getDiscographyContent.getAllDiscographyContent;
 
 test(`given a null trackId, getAudioPlayerForTrack() returns null`, () => {
     expect(getAudioPlayerForTrack(null)).toBe(null);
@@ -20,7 +21,7 @@ test(`given an unpopulated trackId, getAudioPlayerForTrack() returns null`, () =
 }); /* given an unpopulated trackId, getAudioPlayerForTrack() returns null */
 
 test(`given an invalid trackId, getAudioPlayerForTrack() returns null`, () => {
-    document.body.innerHTML = getDiscographyContent();
+    document.body.innerHTML = getAllDiscographyContent();
     const invalidTrackId = "sNotARealSongName";
     // TODO: Add an expect statement asserting that the innerHTML body is populated.
 
