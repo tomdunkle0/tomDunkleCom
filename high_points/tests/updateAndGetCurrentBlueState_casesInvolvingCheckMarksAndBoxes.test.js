@@ -60,8 +60,8 @@ const kWisconsin              = constants.kWisconsin;
 // Map Function includes:
 const mapFunctions = require('./environment/mapFunctions');
 const getStateIdForMousedOverPolygon = mapFunctions.getStateIdForMousedOverPolygon;
-const onPageLoad                   = mapFunctions.onPageLoad;
-const updateAndGetCurrentBlueState = mapFunctions.updateAndGetCurrentBlueState;
+const onPageLoad                     = mapFunctions.onPageLoad;
+const updateAndGetCurrentBlueState   = mapFunctions.updateAndGetCurrentBlueState;
 
 // Test Constant includes:
 const testConstants = require('./resources/testConstants');

@@ -13,6 +13,7 @@ const kStyleSheetClassNameTrackDuration = constants.kStyleSheetClassNameTrackDur
 const kStyleSheetClassNameTrackNumber   = constants.kStyleSheetClassNameTrackNumber;
 const kStyleSheetClassNameTrackRow      = constants.kStyleSheetClassNameTrackRow;
 const kStyleSheetClassNameTrackTitle    = constants.kStyleSheetClassNameTrackTitle;
+const kUnpopulated                      = constants.kUnpopulated;
 
 // Function includes:
 const audioManager = require('./environment/audioManager');
@@ -116,12 +117,12 @@ test(`given valid lists of track suffixes, track titles, and track durations, ge
 function expectTrackListContainsIds(trackRowArray)
 {
     const expectedNumberOfTrackRows = trackRowArray.length;
-    var trackRow = "";
-    var trackSuffix = "";
-    var playArrowId = "";
-    var trackNumberId = "";
-    var trackTitleId = "";
-    var trackDurationId = "";
+    var trackRow = kUnpopulated;
+    var trackSuffix = kUnpopulated;
+    var playArrowId = kUnpopulated;
+    var trackNumberId = kUnpopulated;
+    var trackTitleId = kUnpopulated;
+    var trackDurationId = kUnpopulated;
     for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
@@ -140,7 +141,7 @@ function expectTrackListContainsIds(trackRowArray)
 function expectTrackListContainsStyleSheetClassNames(trackRowArray)
 {
     const expectedNumberOfTrackRows = trackRowArray.length;
-    var trackRow = "";
+    var trackRow = kUnpopulated;
     for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
@@ -153,9 +154,9 @@ function expectTrackListContainsStyleSheetClassNames(trackRowArray)
 function expectTrackListContainsUserInterfaceContent(trackRowArray)
 {
     const expectedNumberOfTrackRows = trackRowArray.length;
-    var trackRow = "";
-    var expectedListCounter = "";
-    var expectedDuration = "";
+    var trackRow = kUnpopulated;
+    var expectedListCounter = kUnpopulated;
+    var expectedDuration = kUnpopulated;
     for (var rowIndex = 0; rowIndex < expectedNumberOfTrackRows; rowIndex++)
     {
         trackRow = trackRowArray[rowIndex];
